@@ -1,0 +1,1688 @@
+{
+  "frozen_inputs": {
+    "buggy_lerobot_commit": "7f40b3bf82ef9d0fb96d3ba6dc8cc33dd6cd90fe",
+    "buggy_source_file_sha256": "bef8f912c8be5503051f8368608562456b700eacfda4d91911d8bdf629fac393",
+    "dataset": "lerobot/pusht",
+    "dataset_revision": "7628202a2180972f291ba1bc6723834921e72c19",
+    "metadata_path": "meta/episodes/chunk-000/file-000.parquet",
+    "metadata_sha256": "bc1226f33d3d1635ec1954f9942073709be8e106fde5f4f16b9d52edc4e0ebc4",
+    "proposed_fix_commit": "1e6a0d09bcc5de620344525311ad86575fa8c8da"
+  },
+  "limitations": [
+    "This runs the exact faulty index arithmetic as a minimal transcription, not the complete LeRobot Python API.",
+    "Only episode metadata is required; image/video payloads are not downloaded.",
+    "The proposed fix PR was open in the inspected record, so this result does not claim a released fix version."
+  ],
+  "rows": [
+    {
+      "absolute_index": 161,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 161,
+      "relative_index": 0
+    },
+    {
+      "absolute_index": 162,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 162",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 162,
+      "relative_index": 1
+    },
+    {
+      "absolute_index": 163,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 163",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 163,
+      "relative_index": 2
+    },
+    {
+      "absolute_index": 164,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 164",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 164,
+      "relative_index": 3
+    },
+    {
+      "absolute_index": 165,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 165",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 165,
+      "relative_index": 4
+    },
+    {
+      "absolute_index": 166,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 166",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 166,
+      "relative_index": 5
+    },
+    {
+      "absolute_index": 167,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 167",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 167,
+      "relative_index": 6
+    },
+    {
+      "absolute_index": 168,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 168",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 168,
+      "relative_index": 7
+    },
+    {
+      "absolute_index": 169,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 169",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 169,
+      "relative_index": 8
+    },
+    {
+      "absolute_index": 170,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 170",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 170,
+      "relative_index": 9
+    },
+    {
+      "absolute_index": 171,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 171",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 171,
+      "relative_index": 10
+    },
+    {
+      "absolute_index": 172,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 172",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 172,
+      "relative_index": 11
+    },
+    {
+      "absolute_index": 173,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 173",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 173,
+      "relative_index": 12
+    },
+    {
+      "absolute_index": 174,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 174",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 174,
+      "relative_index": 13
+    },
+    {
+      "absolute_index": 175,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 175",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 175,
+      "relative_index": 14
+    },
+    {
+      "absolute_index": 176,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 176",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 176,
+      "relative_index": 15
+    },
+    {
+      "absolute_index": 177,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 177",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 177,
+      "relative_index": 16
+    },
+    {
+      "absolute_index": 178,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 178",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 178,
+      "relative_index": 17
+    },
+    {
+      "absolute_index": 179,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 179",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 179,
+      "relative_index": 18
+    },
+    {
+      "absolute_index": 180,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 180",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 180,
+      "relative_index": 19
+    },
+    {
+      "absolute_index": 181,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 181",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 181,
+      "relative_index": 20
+    },
+    {
+      "absolute_index": 182,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 182",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 182,
+      "relative_index": 21
+    },
+    {
+      "absolute_index": 183,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 183",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 183,
+      "relative_index": 22
+    },
+    {
+      "absolute_index": 184,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 184",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 184,
+      "relative_index": 23
+    },
+    {
+      "absolute_index": 185,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 185",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 185,
+      "relative_index": 24
+    },
+    {
+      "absolute_index": 186,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 186",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 186,
+      "relative_index": 25
+    },
+    {
+      "absolute_index": 187,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 187",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 187,
+      "relative_index": 26
+    },
+    {
+      "absolute_index": 188,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 188",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 188,
+      "relative_index": 27
+    },
+    {
+      "absolute_index": 189,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 189",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 189,
+      "relative_index": 28
+    },
+    {
+      "absolute_index": 190,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 190",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 190,
+      "relative_index": 29
+    },
+    {
+      "absolute_index": 191,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 191",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 191,
+      "relative_index": 30
+    },
+    {
+      "absolute_index": 192,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 192",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 192,
+      "relative_index": 31
+    },
+    {
+      "absolute_index": 193,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 193",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 193,
+      "relative_index": 32
+    },
+    {
+      "absolute_index": 194,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 194",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 194,
+      "relative_index": 33
+    },
+    {
+      "absolute_index": 195,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 195",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 195,
+      "relative_index": 34
+    },
+    {
+      "absolute_index": 196,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 196",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 196,
+      "relative_index": 35
+    },
+    {
+      "absolute_index": 197,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 197",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 197,
+      "relative_index": 36
+    },
+    {
+      "absolute_index": 198,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 198",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 198,
+      "relative_index": 37
+    },
+    {
+      "absolute_index": 199,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 199",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 199,
+      "relative_index": 38
+    },
+    {
+      "absolute_index": 200,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 200",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 200,
+      "relative_index": 39
+    },
+    {
+      "absolute_index": 201,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 201",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 201,
+      "relative_index": 40
+    },
+    {
+      "absolute_index": 202,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 202",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 202,
+      "relative_index": 41
+    },
+    {
+      "absolute_index": 203,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 203",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 203,
+      "relative_index": 42
+    },
+    {
+      "absolute_index": 204,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 204",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 204,
+      "relative_index": 43
+    },
+    {
+      "absolute_index": 205,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 205",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 205,
+      "relative_index": 44
+    },
+    {
+      "absolute_index": 206,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 206",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 206,
+      "relative_index": 45
+    },
+    {
+      "absolute_index": 207,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 207",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 207,
+      "relative_index": 46
+    },
+    {
+      "absolute_index": 208,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 208",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 208,
+      "relative_index": 47
+    },
+    {
+      "absolute_index": 209,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 209",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 209,
+      "relative_index": 48
+    },
+    {
+      "absolute_index": 210,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 210",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 210,
+      "relative_index": 49
+    },
+    {
+      "absolute_index": 211,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 211",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 211,
+      "relative_index": 50
+    },
+    {
+      "absolute_index": 212,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 212",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 212,
+      "relative_index": 51
+    },
+    {
+      "absolute_index": 213,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 213",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 213,
+      "relative_index": 52
+    },
+    {
+      "absolute_index": 214,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 214",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 214,
+      "relative_index": 53
+    },
+    {
+      "absolute_index": 215,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 215",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 215,
+      "relative_index": 54
+    },
+    {
+      "absolute_index": 216,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 216",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 216,
+      "relative_index": 55
+    },
+    {
+      "absolute_index": 217,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 217",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 217,
+      "relative_index": 56
+    },
+    {
+      "absolute_index": 218,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 218",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 218,
+      "relative_index": 57
+    },
+    {
+      "absolute_index": 219,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 219",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 219,
+      "relative_index": 58
+    },
+    {
+      "absolute_index": 220,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 220",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 220,
+      "relative_index": 59
+    },
+    {
+      "absolute_index": 221,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 221",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 221,
+      "relative_index": 60
+    },
+    {
+      "absolute_index": 222,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 222",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 222,
+      "relative_index": 61
+    },
+    {
+      "absolute_index": 223,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 223",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 223,
+      "relative_index": 62
+    },
+    {
+      "absolute_index": 224,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 224",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 224,
+      "relative_index": 63
+    },
+    {
+      "absolute_index": 225,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 225",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 225,
+      "relative_index": 64
+    },
+    {
+      "absolute_index": 226,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 226",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 226,
+      "relative_index": 65
+    },
+    {
+      "absolute_index": 227,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 227",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 227,
+      "relative_index": 66
+    },
+    {
+      "absolute_index": 228,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 228",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 228,
+      "relative_index": 67
+    },
+    {
+      "absolute_index": 229,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 229",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 229,
+      "relative_index": 68
+    },
+    {
+      "absolute_index": 230,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 230",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 230,
+      "relative_index": 69
+    },
+    {
+      "absolute_index": 231,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 231",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 231,
+      "relative_index": 70
+    },
+    {
+      "absolute_index": 232,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 232",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 232,
+      "relative_index": 71
+    },
+    {
+      "absolute_index": 233,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 233",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 233,
+      "relative_index": 72
+    },
+    {
+      "absolute_index": 234,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 234",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 234,
+      "relative_index": 73
+    },
+    {
+      "absolute_index": 235,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 235",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 235,
+      "relative_index": 74
+    },
+    {
+      "absolute_index": 236,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 236",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 236,
+      "relative_index": 75
+    },
+    {
+      "absolute_index": 237,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 237",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 237,
+      "relative_index": 76
+    },
+    {
+      "absolute_index": 238,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 238",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 238,
+      "relative_index": 77
+    },
+    {
+      "absolute_index": 239,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 239",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 239,
+      "relative_index": 78
+    },
+    {
+      "absolute_index": 240,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 240",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 240,
+      "relative_index": 79
+    },
+    {
+      "absolute_index": 241,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 241",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 241,
+      "relative_index": 80
+    },
+    {
+      "absolute_index": 242,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 242",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 242,
+      "relative_index": 81
+    },
+    {
+      "absolute_index": 243,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 243",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 243,
+      "relative_index": 82
+    },
+    {
+      "absolute_index": 244,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 244",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 244,
+      "relative_index": 83
+    },
+    {
+      "absolute_index": 245,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 245",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 245,
+      "relative_index": 84
+    },
+    {
+      "absolute_index": 246,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 246",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 246,
+      "relative_index": 85
+    },
+    {
+      "absolute_index": 247,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 247",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 247,
+      "relative_index": 86
+    },
+    {
+      "absolute_index": 248,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 248",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 248,
+      "relative_index": 87
+    },
+    {
+      "absolute_index": 249,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 249",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 249,
+      "relative_index": 88
+    },
+    {
+      "absolute_index": 250,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 250",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 250,
+      "relative_index": 89
+    },
+    {
+      "absolute_index": 251,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 251",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 251,
+      "relative_index": 90
+    },
+    {
+      "absolute_index": 252,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 252",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 252,
+      "relative_index": 91
+    },
+    {
+      "absolute_index": 253,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 253",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 253,
+      "relative_index": 92
+    },
+    {
+      "absolute_index": 254,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 254",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 254,
+      "relative_index": 93
+    },
+    {
+      "absolute_index": 255,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 255",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 255,
+      "relative_index": 94
+    },
+    {
+      "absolute_index": 256,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 256",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 256,
+      "relative_index": 95
+    },
+    {
+      "absolute_index": 257,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 257",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 257,
+      "relative_index": 96
+    },
+    {
+      "absolute_index": 258,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 258",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 258,
+      "relative_index": 97
+    },
+    {
+      "absolute_index": 259,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 259",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 259,
+      "relative_index": 98
+    },
+    {
+      "absolute_index": 260,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 260",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 260,
+      "relative_index": 99
+    },
+    {
+      "absolute_index": 261,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 261",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 261,
+      "relative_index": 100
+    },
+    {
+      "absolute_index": 262,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 262",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 262,
+      "relative_index": 101
+    },
+    {
+      "absolute_index": 263,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 263",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 263,
+      "relative_index": 102
+    },
+    {
+      "absolute_index": 264,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 264",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 264,
+      "relative_index": 103
+    },
+    {
+      "absolute_index": 265,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 265",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 265,
+      "relative_index": 104
+    },
+    {
+      "absolute_index": 266,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 266",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 266,
+      "relative_index": 105
+    },
+    {
+      "absolute_index": 267,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 267",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 267,
+      "relative_index": 106
+    },
+    {
+      "absolute_index": 268,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 268",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 268,
+      "relative_index": 107
+    },
+    {
+      "absolute_index": 269,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 269",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 269,
+      "relative_index": 108
+    },
+    {
+      "absolute_index": 270,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 270",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 270,
+      "relative_index": 109
+    },
+    {
+      "absolute_index": 271,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 271",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 271,
+      "relative_index": 110
+    },
+    {
+      "absolute_index": 272,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 272",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 272,
+      "relative_index": 111
+    },
+    {
+      "absolute_index": 273,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 273",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 273,
+      "relative_index": 112
+    },
+    {
+      "absolute_index": 274,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 274",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 274,
+      "relative_index": 113
+    },
+    {
+      "absolute_index": 275,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 275",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 275,
+      "relative_index": 114
+    },
+    {
+      "absolute_index": 276,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 276",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 276,
+      "relative_index": 115
+    },
+    {
+      "absolute_index": 277,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 277",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 277,
+      "relative_index": 116
+    },
+    {
+      "absolute_index": 278,
+      "buggy_contract_accepted": false,
+      "buggy_contract_issues": [
+        "query index 161 != expected absolute index 278",
+        "padding flag True != expected False"
+      ],
+      "buggy_is_pad": true,
+      "buggy_query_index": 161,
+      "fixed_contract_accepted": true,
+      "fixed_is_pad": false,
+      "fixed_query_index": 278,
+      "relative_index": 117
+    }
+  ],
+  "sources": {
+    "dataset": "https://huggingface.co/datasets/lerobot/pusht",
+    "issue": "https://github.com/huggingface/lerobot/issues/2610",
+    "proposed_fix": "https://github.com/huggingface/lerobot/pull/2612"
+  },
+  "summary": {
+    "buggy_contract_violations": 118,
+    "buggy_frames_marked_pad": 118,
+    "case": "LeRobot issue #2610: delta timestamps plus episode filter",
+    "episode_end": 279,
+    "episode_frames": 118,
+    "episode_index": 1,
+    "episode_start": 161,
+    "evidence_class": "minimal upstream-code-path reproduction on public dataset metadata",
+    "fixed_contract_violations": 0,
+    "fixed_frames_marked_pad": 0,
+    "full_upstream_api_execution": false,
+    "reproduced": true
+  }
+}

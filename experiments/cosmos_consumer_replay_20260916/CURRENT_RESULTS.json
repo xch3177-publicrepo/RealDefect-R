@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-09-16T03:43:01.222911+00:00",
+  "accepted_current_result": "public_env_compat2/results.json",
+  "accepted_current_result_sha256": "963117b280467c7385517f1ac985b760cfeeffa68026fc431d21e9b30c4f7716",
+  "source_sha256": "775660f8c3e4aca583ebdf54e37b024e518b233baccf65f9ccf22cd4f45a75d0",
+  "status": "EXECUTED",
+  "same_scientific_counts_and_frame_digests_as_first_run": true,
+  "modern_versions": {
+    "huggingface_hub": "1.31.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.0"
+  },
+  "public_environment_versions": {
+    "huggingface_hub": "0.34.4",
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "pyarrow": "14.0.2"
+  },
+  "totals": {
+    "original": {
+      "records": 4,
+      "violating_fields": 16,
+      "violating_records": 2
+    },
+    "summary_corrected": {
+      "records": 4,
+      "violating_fields": 0,
+      "violating_records": 0
+    }
+  },
+  "notes": "Scientific protocol and predicate unchanged; urllib TLS-root correction only. Earlier scripts preserved within run directories.",
+  "execution_archive_result_sha256": "963117b280467c7385517f1ac985b760cfeeffa68026fc431d21e9b30c4f7716",
+  "hash_scope": "accepted_current_result_sha256 binds sanitized public bytes; execution_archive_result_sha256 binds the retained original execution artifact; numerical payload unchanged"
+}

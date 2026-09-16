@@ -1,0 +1,911 @@
+{
+  "cases": {
+    "RD1": {
+      "notes": {
+        "artifact": "windowed-sample selection output for PushT episode 1",
+        "declared_episode_bounds": [
+          161,
+          279
+        ],
+        "declared_total_frames": 25650,
+        "reference_information": "episode row bounds from meta/episodes; clamp-and-pad rule",
+        "source": "row-level records archived in real-defect-lerobot-2610.json"
+      },
+      "tables": {
+        "faulty_enriched": {
+          "columns": [
+            "absolute_index",
+            "delta_index",
+            "selected_index",
+            "is_pad",
+            "episode_start",
+            "episode_end",
+            "expected_selected_index",
+            "expected_is_pad"
+          ],
+          "dtypes": {
+            "absolute_index": "int64",
+            "delta_index": "int64",
+            "episode_end": "int64",
+            "episode_start": "int64",
+            "expected_is_pad": "bool",
+            "expected_selected_index": "int64",
+            "is_pad": "bool",
+            "selected_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD1__faulty_enriched.parquet",
+          "rows": 118,
+          "sha256": "c81eaec58d5b5093775220c68e94dfbd3e7a51adb19ebe130ec15dd00abe5bd6"
+        },
+        "faulty_public": {
+          "columns": [
+            "absolute_index",
+            "delta_index",
+            "selected_index",
+            "is_pad"
+          ],
+          "dtypes": {
+            "absolute_index": "int64",
+            "delta_index": "int64",
+            "is_pad": "bool",
+            "selected_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD1__faulty_public.parquet",
+          "rows": 118,
+          "sha256": "a9afcf8273276a0a3bbb744bc0ae2e22094f48272e0a0685f2d071fe41eb71b7"
+        },
+        "reference_enriched": {
+          "columns": [
+            "absolute_index",
+            "delta_index",
+            "selected_index",
+            "is_pad",
+            "episode_start",
+            "episode_end",
+            "expected_selected_index",
+            "expected_is_pad"
+          ],
+          "dtypes": {
+            "absolute_index": "int64",
+            "delta_index": "int64",
+            "episode_end": "int64",
+            "episode_start": "int64",
+            "expected_is_pad": "bool",
+            "expected_selected_index": "int64",
+            "is_pad": "bool",
+            "selected_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD1__reference_enriched.parquet",
+          "rows": 118,
+          "sha256": "1d106c5535d3d4406bbc88070a6596fd98282f3d710bc41d48af8f57db1eed6d"
+        },
+        "reference_public": {
+          "columns": [
+            "absolute_index",
+            "delta_index",
+            "selected_index",
+            "is_pad"
+          ],
+          "dtypes": {
+            "absolute_index": "int64",
+            "delta_index": "int64",
+            "is_pad": "bool",
+            "selected_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD1__reference_public.parquet",
+          "rows": 118,
+          "sha256": "5f86c5725dfb2bc219deef414dc1b51109578937a797b33f645195db1b152893"
+        }
+      }
+    },
+    "RD2": {
+      "notes": {
+        "artifact": "meta/episodes global row-interval fields across an output-file boundary",
+        "reference_information": "global prefix sum over episode lengths; intervals must chain",
+        "source": "row-level records archived in real-defect-lerobot-2057.json"
+      },
+      "tables": {
+        "faulty_enriched": {
+          "columns": [
+            "episode_index",
+            "length",
+            "dataset_from_index",
+            "dataset_to_index",
+            "expected_from_index",
+            "expected_to_index"
+          ],
+          "dtypes": {
+            "dataset_from_index": "int64",
+            "dataset_to_index": "int64",
+            "episode_index": "int64",
+            "expected_from_index": "int64",
+            "expected_to_index": "int64",
+            "length": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD2__faulty_enriched.parquet",
+          "rows": 5,
+          "sha256": "9a0b088c94d6e5d3247140a91365caf32f8777358bff801b8b9936c8b65c7020"
+        },
+        "faulty_public": {
+          "columns": [
+            "episode_index",
+            "length",
+            "dataset_from_index",
+            "dataset_to_index"
+          ],
+          "dtypes": {
+            "dataset_from_index": "int64",
+            "dataset_to_index": "int64",
+            "episode_index": "int64",
+            "length": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD2__faulty_public.parquet",
+          "rows": 5,
+          "sha256": "bde4722d48e9e2ef84829ac65b8af4ad9d5b2bfd7365330734f00d13f034cc54"
+        },
+        "reference_enriched": {
+          "columns": [
+            "episode_index",
+            "length",
+            "dataset_from_index",
+            "dataset_to_index",
+            "expected_from_index",
+            "expected_to_index"
+          ],
+          "dtypes": {
+            "dataset_from_index": "int64",
+            "dataset_to_index": "int64",
+            "episode_index": "int64",
+            "expected_from_index": "int64",
+            "expected_to_index": "int64",
+            "length": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD2__reference_enriched.parquet",
+          "rows": 5,
+          "sha256": "8e45ac42185e6e284af48255fde8e5ff5f6ff024c208dcb2f3cf30cbda6d95bb"
+        },
+        "reference_public": {
+          "columns": [
+            "episode_index",
+            "length",
+            "dataset_from_index",
+            "dataset_to_index"
+          ],
+          "dtypes": {
+            "dataset_from_index": "int64",
+            "dataset_to_index": "int64",
+            "episode_index": "int64",
+            "length": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD2__reference_public.parquet",
+          "rows": 5,
+          "sha256": "357249a28990ea72a68a3f6a0ce53229052987c2bbe5d83a704cc96a61a874f2"
+        }
+      }
+    },
+    "RD4": {
+      "notes": {
+        "artifact": "quaternion instances stored by the pinned upstream converter body",
+        "declared_instances": 23833,
+        "instances_equal_to_source_coefficients": 15141,
+        "reference_information": "source tuple plus declared source/target conventions",
+        "source": "re-executed pinned upstream converter body on the hash-verified official HDF5"
+      },
+      "tables": {
+        "faulty_enriched": {
+          "columns": [
+            "field_kind",
+            "field_path",
+            "instance_index",
+            "qx",
+            "qy",
+            "qz",
+            "qw",
+            "norm",
+            "source_qw",
+            "source_qx",
+            "source_qy",
+            "source_qz",
+            "source_convention",
+            "target_convention",
+            "orientation_error_deg"
+          ],
+          "dtypes": {
+            "field_kind": "object",
+            "field_path": "object",
+            "instance_index": "int64",
+            "norm": "float64",
+            "orientation_error_deg": "float64",
+            "qw": "float64",
+            "qx": "float64",
+            "qy": "float64",
+            "qz": "float64",
+            "source_convention": "object",
+            "source_qw": "float64",
+            "source_qx": "float64",
+            "source_qy": "float64",
+            "source_qz": "float64",
+            "target_convention": "object"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD4__faulty_enriched.parquet",
+          "rows": 23833,
+          "sha256": "7981942af4c39614b761a1780fa33f016445ebc3a522bc5b72bbb234a210e0fc"
+        },
+        "faulty_public": {
+          "columns": [
+            "field_kind",
+            "field_path",
+            "instance_index",
+            "qx",
+            "qy",
+            "qz",
+            "qw",
+            "norm"
+          ],
+          "dtypes": {
+            "field_kind": "object",
+            "field_path": "object",
+            "instance_index": "int64",
+            "norm": "float64",
+            "qw": "float64",
+            "qx": "float64",
+            "qy": "float64",
+            "qz": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD4__faulty_public.parquet",
+          "rows": 23833,
+          "sha256": "cf411a703e46471af638acbb46fb750c31ea973bb84e3a2aee91f266fb6efb05"
+        },
+        "reference_enriched": {
+          "columns": [
+            "field_kind",
+            "field_path",
+            "instance_index",
+            "qx",
+            "qy",
+            "qz",
+            "qw",
+            "norm",
+            "source_qw",
+            "source_qx",
+            "source_qy",
+            "source_qz",
+            "source_convention",
+            "target_convention",
+            "orientation_error_deg"
+          ],
+          "dtypes": {
+            "field_kind": "object",
+            "field_path": "object",
+            "instance_index": "int64",
+            "norm": "float64",
+            "orientation_error_deg": "float64",
+            "qw": "float64",
+            "qx": "float64",
+            "qy": "float64",
+            "qz": "float64",
+            "source_convention": "object",
+            "source_qw": "float64",
+            "source_qx": "float64",
+            "source_qy": "float64",
+            "source_qz": "float64",
+            "target_convention": "object"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD4__reference_enriched.parquet",
+          "rows": 23833,
+          "sha256": "af43a67b6c01abc37ee1343da74ad492b8399b26034ccf5a0f637dfcbace412f"
+        },
+        "reference_public": {
+          "columns": [
+            "field_kind",
+            "field_path",
+            "instance_index",
+            "qx",
+            "qy",
+            "qz",
+            "qw",
+            "norm"
+          ],
+          "dtypes": {
+            "field_kind": "object",
+            "field_path": "object",
+            "instance_index": "int64",
+            "norm": "float64",
+            "qw": "float64",
+            "qx": "float64",
+            "qy": "float64",
+            "qz": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD4__reference_public.parquet",
+          "rows": 23833,
+          "sha256": "4ed091ae71428a378eda299558649baa4a14a6539694883da240eb0dd59e5367"
+        }
+      }
+    },
+    "RD5": {
+      "notes": {
+        "artifact": "world-frame displacement produced by the Mink delta-action branch",
+        "base_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "base_transform_constant_across_demos": true,
+        "base_translation": [
+          -0.56,
+          0.0,
+          0.912
+        ],
+        "declared_controller_output_max": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "declared_controller_output_min": [
+          -0.05,
+          -0.05,
+          -0.05
+        ],
+        "declared_max_displacement_norm_m": 0.08660254037844388,
+        "reference_information": "base transform (R,t) and the absolute-vs-displacement distinction",
+        "source": "re-executed pinned transform functions on the hash-verified robomimic Lift HDF5"
+      },
+      "tables": {
+        "faulty_enriched": {
+          "columns": [
+            "demo_id",
+            "demo_number",
+            "step",
+            "action_x",
+            "action_y",
+            "action_z",
+            "world_delta_x",
+            "world_delta_y",
+            "world_delta_z",
+            "world_delta_norm_m",
+            "delta_x",
+            "delta_y",
+            "delta_z"
+          ],
+          "dtypes": {
+            "action_x": "float64",
+            "action_y": "float64",
+            "action_z": "float64",
+            "delta_x": "float64",
+            "delta_y": "float64",
+            "delta_z": "float64",
+            "demo_id": "object",
+            "demo_number": "int64",
+            "step": "int64",
+            "world_delta_norm_m": "float64",
+            "world_delta_x": "float64",
+            "world_delta_y": "float64",
+            "world_delta_z": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD5__faulty_enriched.parquet",
+          "rows": 9666,
+          "sha256": "5235c8bd4c3a6375e2191bc87ec4b140ba517f272fe352a560561e83caf03fd5"
+        },
+        "faulty_public": {
+          "columns": [
+            "demo_id",
+            "demo_number",
+            "step",
+            "action_x",
+            "action_y",
+            "action_z",
+            "world_delta_x",
+            "world_delta_y",
+            "world_delta_z",
+            "world_delta_norm_m"
+          ],
+          "dtypes": {
+            "action_x": "float64",
+            "action_y": "float64",
+            "action_z": "float64",
+            "demo_id": "object",
+            "demo_number": "int64",
+            "step": "int64",
+            "world_delta_norm_m": "float64",
+            "world_delta_x": "float64",
+            "world_delta_y": "float64",
+            "world_delta_z": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD5__faulty_public.parquet",
+          "rows": 9666,
+          "sha256": "ffd9cfb10bbd065c55d5d3f19d7c39a287520e80a3c08072d7c584f8bf82a7a0"
+        },
+        "reference_enriched": {
+          "columns": [
+            "demo_id",
+            "demo_number",
+            "step",
+            "action_x",
+            "action_y",
+            "action_z",
+            "world_delta_x",
+            "world_delta_y",
+            "world_delta_z",
+            "world_delta_norm_m",
+            "delta_x",
+            "delta_y",
+            "delta_z"
+          ],
+          "dtypes": {
+            "action_x": "float64",
+            "action_y": "float64",
+            "action_z": "float64",
+            "delta_x": "float64",
+            "delta_y": "float64",
+            "delta_z": "float64",
+            "demo_id": "object",
+            "demo_number": "int64",
+            "step": "int64",
+            "world_delta_norm_m": "float64",
+            "world_delta_x": "float64",
+            "world_delta_y": "float64",
+            "world_delta_z": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD5__reference_enriched.parquet",
+          "rows": 9666,
+          "sha256": "ad2c5d436f5365c9b86a000020a77ed8ab37996622a57d34752e61982845cb32"
+        },
+        "reference_public": {
+          "columns": [
+            "demo_id",
+            "demo_number",
+            "step",
+            "action_x",
+            "action_y",
+            "action_z",
+            "world_delta_x",
+            "world_delta_y",
+            "world_delta_z",
+            "world_delta_norm_m"
+          ],
+          "dtypes": {
+            "action_x": "float64",
+            "action_y": "float64",
+            "action_z": "float64",
+            "demo_id": "object",
+            "demo_number": "int64",
+            "step": "int64",
+            "world_delta_norm_m": "float64",
+            "world_delta_x": "float64",
+            "world_delta_y": "float64",
+            "world_delta_z": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD5__reference_public.parquet",
+          "rows": 9666,
+          "sha256": "508acc14868589534ca805a58ac6fb5df46d686d319ff4a61f5c35ebb28d9081"
+        }
+      }
+    },
+    "RD6": {
+      "notes": {
+        "anchor_encoder_counts": [
+          2405,
+          3110
+        ],
+        "anchor_expected_norm": [
+          0.0,
+          1.0
+        ],
+        "anchor_rad": [
+          0.5476311412751739,
+          1.6290875967345508
+        ],
+        "artifact": "DERIVED normalised gripper column over 36,900 pinned rows plus two anchor rows",
+        "declared_output_range": "[0,1]; both pinned branches document the gripper output as normalised to 0-1",
+        "derived_target_disclaimer": "not part of RD6's frozen replay scope; RD6's recorded result is unchanged",
+        "fixed_bounds_rad": [
+          0.5476,
+          1.6296
+        ],
+        "old_bounds_rad": [
+          0.4,
+          1.5
+        ],
+        "reference_information": "documented encoder anchors and their calibrated endpoints",
+        "transform": "pinned upstream _gripper_to_angular bodies extracted verbatim from the hash-verified RD6_old.py / RD6_fixed.py and executed with NumPy"
+      },
+      "tables": {
+        "faulty_enriched": {
+          "columns": [
+            "row_kind",
+            "side",
+            "source_index",
+            "gripper_raw",
+            "gripper_norm",
+            "expected_norm",
+            "anchor_encoder_counts"
+          ],
+          "dtypes": {
+            "anchor_encoder_counts": "float64",
+            "expected_norm": "float64",
+            "gripper_norm": "float64",
+            "gripper_raw": "float64",
+            "row_kind": "object",
+            "side": "object",
+            "source_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD6__faulty_enriched.parquet",
+          "rows": 73802,
+          "sha256": "114642eb9ba632bb44fe4b041b6579d7c391b3d8c15c07c7f6963ea5f5395e38"
+        },
+        "faulty_public": {
+          "columns": [
+            "row_kind",
+            "side",
+            "source_index",
+            "gripper_raw",
+            "gripper_norm"
+          ],
+          "dtypes": {
+            "gripper_norm": "float64",
+            "gripper_raw": "float64",
+            "row_kind": "object",
+            "side": "object",
+            "source_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD6__faulty_public.parquet",
+          "rows": 73802,
+          "sha256": "40cfd7bcb824a66ae72daef48cd0dd54ec493f83d1849bdcd825061ec3364ba1"
+        },
+        "reference_enriched": {
+          "columns": [
+            "row_kind",
+            "side",
+            "source_index",
+            "gripper_raw",
+            "gripper_norm",
+            "expected_norm",
+            "anchor_encoder_counts"
+          ],
+          "dtypes": {
+            "anchor_encoder_counts": "float64",
+            "expected_norm": "float64",
+            "gripper_norm": "float64",
+            "gripper_raw": "float64",
+            "row_kind": "object",
+            "side": "object",
+            "source_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD6__reference_enriched.parquet",
+          "rows": 73802,
+          "sha256": "32852d4a599ebbb5210a339687d64101c07abc0eb94b9e5f93a3a195e81b2c4c"
+        },
+        "reference_public": {
+          "columns": [
+            "row_kind",
+            "side",
+            "source_index",
+            "gripper_raw",
+            "gripper_norm"
+          ],
+          "dtypes": {
+            "gripper_norm": "float64",
+            "gripper_raw": "float64",
+            "row_kind": "object",
+            "side": "object",
+            "source_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD6__reference_public.parquet",
+          "rows": 73802,
+          "sha256": "274c2f54cb4048c4497666aa1539a3c8add3d0f1a7360e1b227844138ceace48"
+        }
+      }
+    },
+    "RD7": {
+      "notes": {
+        "artifact": "per-request returned-frame identity table across ten pinned videos",
+        "reference_information": "requested-time correspondence: expected frame PTS and RGB identity",
+        "source": "per-query records archived in real-defect-groot-172.json"
+      },
+      "tables": {
+        "faulty_enriched": {
+          "columns": [
+            "video_index",
+            "group",
+            "query_index",
+            "requested_seconds",
+            "returned_pts_seconds",
+            "returned_height",
+            "returned_width",
+            "returned_channels",
+            "returned_dtype",
+            "returned_rgb_sha256",
+            "expected_pts_seconds",
+            "expected_rgb_sha256_set",
+            "local_frame_interval_seconds"
+          ],
+          "dtypes": {
+            "expected_pts_seconds": "float64",
+            "expected_rgb_sha256_set": "object",
+            "group": "object",
+            "local_frame_interval_seconds": "float64",
+            "query_index": "int64",
+            "requested_seconds": "float64",
+            "returned_channels": "int64",
+            "returned_dtype": "object",
+            "returned_height": "int64",
+            "returned_pts_seconds": "float64",
+            "returned_rgb_sha256": "object",
+            "returned_width": "int64",
+            "video_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD7__faulty_enriched.parquet",
+          "rows": 2238,
+          "sha256": "e52244c185ccb9968b86a272d986de7bf487c1ce69efeb0bdc82e4f18ffa1e7a"
+        },
+        "faulty_public": {
+          "columns": [
+            "video_index",
+            "group",
+            "query_index",
+            "requested_seconds",
+            "returned_pts_seconds",
+            "returned_height",
+            "returned_width",
+            "returned_channels",
+            "returned_dtype",
+            "returned_rgb_sha256"
+          ],
+          "dtypes": {
+            "group": "object",
+            "query_index": "int64",
+            "requested_seconds": "float64",
+            "returned_channels": "int64",
+            "returned_dtype": "object",
+            "returned_height": "int64",
+            "returned_pts_seconds": "float64",
+            "returned_rgb_sha256": "object",
+            "returned_width": "int64",
+            "video_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD7__faulty_public.parquet",
+          "rows": 2238,
+          "sha256": "e432f1a76ecffb8e92de5a81493c13a54daea82807ba41b92278bec9429c6b1d"
+        },
+        "reference_enriched": {
+          "columns": [
+            "video_index",
+            "group",
+            "query_index",
+            "requested_seconds",
+            "returned_pts_seconds",
+            "returned_height",
+            "returned_width",
+            "returned_channels",
+            "returned_dtype",
+            "returned_rgb_sha256",
+            "expected_pts_seconds",
+            "expected_rgb_sha256_set",
+            "local_frame_interval_seconds"
+          ],
+          "dtypes": {
+            "expected_pts_seconds": "float64",
+            "expected_rgb_sha256_set": "object",
+            "group": "object",
+            "local_frame_interval_seconds": "float64",
+            "query_index": "int64",
+            "requested_seconds": "float64",
+            "returned_channels": "int64",
+            "returned_dtype": "object",
+            "returned_height": "int64",
+            "returned_pts_seconds": "float64",
+            "returned_rgb_sha256": "object",
+            "returned_width": "int64",
+            "video_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD7__reference_enriched.parquet",
+          "rows": 2238,
+          "sha256": "f72a9f0476cfe88234005804ef15a1034c1e48fcc581302e7271bf757609cd5a"
+        },
+        "reference_public": {
+          "columns": [
+            "video_index",
+            "group",
+            "query_index",
+            "requested_seconds",
+            "returned_pts_seconds",
+            "returned_height",
+            "returned_width",
+            "returned_channels",
+            "returned_dtype",
+            "returned_rgb_sha256"
+          ],
+          "dtypes": {
+            "group": "object",
+            "query_index": "int64",
+            "requested_seconds": "float64",
+            "returned_channels": "int64",
+            "returned_dtype": "object",
+            "returned_height": "int64",
+            "returned_pts_seconds": "float64",
+            "returned_rgb_sha256": "object",
+            "returned_width": "int64",
+            "video_index": "int64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD7__reference_public.parquet",
+          "rows": 2238,
+          "sha256": "6dec5ddcc919825c71f2aff841254905e3838a65bba584097360725d22d17432"
+        }
+      }
+    },
+    "RD8": {
+      "notes": {
+        "armb_fixture_source": "dataset-published meta/stats.json recovered from the frozen evidence archive",
+        "artifact": "norm_stats per-component statistics at the primary condition",
+        "primary_condition": {
+          "batch_size": 32,
+          "order_name": "natural"
+        },
+        "published_artifact_has_no_count_field": true,
+        "reference_information": "independently computed float64 full-array mean/std and the retained 1e-5 tolerance",
+        "source": "condition records archived in real-defect-openpi-570.json"
+      },
+      "tables": {
+        "armb_fixture": {
+          "columns": [
+            "feature_group",
+            "component_index",
+            "component_name",
+            "mean",
+            "std",
+            "q01",
+            "q99"
+          ],
+          "dtypes": {
+            "component_index": "int64",
+            "component_name": "object",
+            "feature_group": "object",
+            "mean": "float64",
+            "q01": "float64",
+            "q99": "float64",
+            "std": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD8__armb_fixture.parquet",
+          "rows": 28,
+          "sha256": "12b2156959d23b8336adf776de1f6d1d7345c959f6f3f0fdd2b3ddb77ca34c41"
+        },
+        "faulty_enriched": {
+          "columns": [
+            "feature_group",
+            "component_index",
+            "component_name",
+            "mean",
+            "std",
+            "q01",
+            "q99",
+            "reference_mean",
+            "reference_std",
+            "absolute_tolerance"
+          ],
+          "dtypes": {
+            "absolute_tolerance": "float64",
+            "component_index": "int64",
+            "component_name": "object",
+            "feature_group": "object",
+            "mean": "float64",
+            "q01": "float64",
+            "q99": "float64",
+            "reference_mean": "float64",
+            "reference_std": "float64",
+            "std": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD8__faulty_enriched.parquet",
+          "rows": 28,
+          "sha256": "fabaddce240b325068d7a9dc06a5eb2afee4d3a0528cde662544479781dad49d"
+        },
+        "faulty_public": {
+          "columns": [
+            "feature_group",
+            "component_index",
+            "component_name",
+            "mean",
+            "std",
+            "q01",
+            "q99"
+          ],
+          "dtypes": {
+            "component_index": "int64",
+            "component_name": "object",
+            "feature_group": "object",
+            "mean": "float64",
+            "q01": "float64",
+            "q99": "float64",
+            "std": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD8__faulty_public.parquet",
+          "rows": 28,
+          "sha256": "8056bfa104b643f494de61bb38deed2294df14a208adc09faa38141684b2996f"
+        },
+        "reference_enriched": {
+          "columns": [
+            "feature_group",
+            "component_index",
+            "component_name",
+            "mean",
+            "std",
+            "q01",
+            "q99",
+            "reference_mean",
+            "reference_std",
+            "absolute_tolerance"
+          ],
+          "dtypes": {
+            "absolute_tolerance": "float64",
+            "component_index": "int64",
+            "component_name": "object",
+            "feature_group": "object",
+            "mean": "float64",
+            "q01": "float64",
+            "q99": "float64",
+            "reference_mean": "float64",
+            "reference_std": "float64",
+            "std": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD8__reference_enriched.parquet",
+          "rows": 28,
+          "sha256": "adec6228982c77ecb7721db6950643532da6376cf12b762e3d4dc03cf41d5835"
+        },
+        "reference_public": {
+          "columns": [
+            "feature_group",
+            "component_index",
+            "component_name",
+            "mean",
+            "std",
+            "q01",
+            "q99"
+          ],
+          "dtypes": {
+            "component_index": "int64",
+            "component_name": "object",
+            "feature_group": "object",
+            "mean": "float64",
+            "q01": "float64",
+            "q99": "float64",
+            "std": "float64"
+          },
+          "path": "experiments/work/gx_baseline_20260914/artifacts/RD8__reference_public.parquet",
+          "rows": 28,
+          "sha256": "88e4f43988bdc5c06a4b045a5089f6e69e0b42b9ffffdedfa4518efaf8341355"
+        }
+      }
+    }
+  },
+  "environment": {
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "python_version": "3.12.3"
+  },
+  "excluded_cases": {
+    "RD3": "NA - single 4-element configuration constant, not a multi-record data artifact; its population analogue is RD4"
+  },
+  "generated_utc": "2026-09-16T03:43:57.085448+00:00",
+  "inputs": {
+    "experiments/work/gx_baseline_20260914/inputs/franka_stack_v51.hdf5": "e0954647328801b091b81604915acd4eff2093b2b26ff0b05753c8f85fbb61b3",
+    "experiments/work/gx_baseline_20260914/inputs/hdf5_dataset_file_handler_beta2_patch1.py": "b5c4365cfd46107dfe56288b092bbdb03d993dbb83e23415742965db7df8d793",
+    "experiments/work/gx_baseline_20260914/inputs/low_dim_v15.hdf5": "0d302b37fb08e99b00de287b833925589ad3b65d199306e55562938bcbd746f1",
+    "experiments/work/rd8_diagnostic_20260914/official-metadata/stats.json": "f55bfb3ee7e3984bd416cb9b3fcba72555dbf47e43a02c1948d29ac200a6b510",
+    "reproducibility/light_inputs/data/raw/lerobot/pusht/meta/episodes/chunk-000/file-000.parquet": "bc1226f33d3d1635ec1954f9942073709be8e106fde5f4f16b9d52edc4e0ebc4",
+    "reproducibility/light_inputs/upstream_pinned_sources/RD6_fixed.py": "be600dfd1ede817519ba65eed753278044e70c144c688528dfb818d1b6b31c7c",
+    "reproducibility/light_inputs/upstream_pinned_sources/RD6_old.py": "2b7eb887528a4339421185bbdd0958d0a94fa9b03dc300b0fe9bd8f4c7023abd"
+  },
+  "provenance": {
+    "reproducibility/results/real-defect-groot-172.json": "8957fea95b17c6798a142e517c1243e91acf0ab42d7c425ead6aa537835c9c5d",
+    "reproducibility/results/real-defect-lerobot-2057.json": "c5578544507ad62d64cc4927470daa1d4b2a2578d1784aff1effa7f05aff4ec6",
+    "reproducibility/results/real-defect-lerobot-2610.json": "adffd92c95b6aad49a29ac2be2aaea15e0c75b5fd957109ee7390f5f0b07c3a9",
+    "reproducibility/results/real-defect-openpi-557.json": "a8b7c48f762e4d6d87580dd48400f46cef887e6baa593792ccc7136e8fd440ee",
+    "reproducibility/results/real-defect-openpi-570.json": "cf7c0ca2c1449c44d3ed11af411976e65e134c8964caedf111fd68903501f5f1"
+  }
+}

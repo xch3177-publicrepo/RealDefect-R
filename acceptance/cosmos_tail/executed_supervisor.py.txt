@@ -1,0 +1,43 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,os,shutil,subprocess,sys,time
+import certifi
+ROOT=Path('<CANDIDATE_8>')
+OUT=Path('<COSMOS_RUN>')
+OUT.mkdir(exist_ok=False);(OUT/'logs').mkdir();RUNTIME=OUT/'runtime'
+records=[];checks=[]
+env={k:v for k,v in os.environ.items() if not any(s in k.upper() for s in ('TOKEN','API_KEY','AUTH_KEY'))}
+env.update(SSL_CERT_FILE=certifi.where(),REQUESTS_CA_BUNDLE=certifi.where(),HF_HUB_DISABLE_TELEMETRY='1',HF_HUB_DISABLE_IMPLICIT_TOKEN='1',HF_HOME=str(OUT/'hf-cache'),XDG_CACHE_HOME=str(OUT/'cache'),MPLCONFIGDIR=str(OUT/'mpl'),PYTHONDONTWRITEBYTECODE='1')
+started=datetime.now(timezone.utc).isoformat()
+def save(name,obj): (OUT/name).write_text(json.dumps(obj,indent=2)+'\n')
+def load(p):return json.loads(Path(p).read_text())
+def run(name,args,cwd=RUNTIME):
+ t=time.monotonic();p=OUT/'logs'/(name+'.log')
+ with p.open('w') as f:r=subprocess.run(args,cwd=cwd,env=env,stdout=f,stderr=subprocess.STDOUT)
+ records.append({'step':name,'argv':list(map(str,args)),'exit_code':r.returncode,'seconds':time.monotonic()-t,'log':'logs/'+p.name});save('commands.json',records);print(json.dumps(records[-1]),flush=True)
+ if r.returncode:raise RuntimeError(name+' exit '+str(r.returncode))
+def py(name,*args):run(name,[sys.executable,'-B',*args])
+def compare(name,fresh,frozen,fields):
+ a,b=load(fresh),load(frozen)
+ for key in fields:
+  passed=a[key]==b[key];checks.append({'check':name+'.'+key,'matches':passed,'actual':a[key],'expected':b[key]});save('SCIENTIFIC_COMPARISON.json',checks)
+  if not passed:raise ValueError('SCIENTIFIC_MISMATCH: '+name+'.'+key)
+try:
+ run('integrity',[sys.executable,'-B',str(ROOT/'verify_public.py')],ROOT)
+ shutil.copytree(ROOT,RUNTIME)
+ assert not (RUNTIME/'experiments/work').exists()
+ save('INPUT_SCOPE.json',{'candidate':str(ROOT),'candidate_manifest_sha256':hashlib.sha256((ROOT/'MANIFEST.json').read_bytes()).hexdigest(),'fresh_input_directory_before_recovery':True,'token_variables_removed_by_name_only':True,'HF_XDG_caches_new':True,'scope':'standalone Cosmos tail only: metadata, independent metadata, C1-C4, C5, scoped consumer; no GX, RD8PD or full all suite claim','started_utc':started})
+ py('Cosmos_metadata','experiments/replay_cosmos_metadata.py','--out',str(OUT/'cosmos-metadata'))
+ py('Cosmos_independent_metadata','experiments/verify_cosmos_referential_counts.py','--manifest',str(OUT/'cosmos-metadata/preaudit_verified_inputs.json'),'--out',str(OUT/'cosmos-independent.json'))
+ compare('Cosmos_metadata',OUT/'cosmos-metadata/rerun.json',ROOT/'experiments/results/20260912-cosmos-metadata/rerun.json',['summary'])
+ compare('Cosmos_independent',OUT/'cosmos-independent.json',ROOT/'experiments/results/20260912-cosmos-metadata/independent_referential_check.json',['splits'])
+ py('Cosmos_C1_C4','experiments/cosmos_frame_check_20260914/run_frame_check.py')
+ compare('Cosmos_C1_C4',RUNTIME/'experiments/cosmos_frame_check_20260914/cosmos_frame_check_results.json',ROOT/'experiments/cosmos_frame_check_20260914/cosmos_frame_check_results.json',['totals','summary_versus_frames','processed_files','per_episode_failure_count'])
+ py('Cosmos_C5',str(RUNTIME/'experiments/cosmos_c5_20260916/run_c5.py'),'--metadata-cache',str(RUNTIME/'experiments/work/cosmos3-droid'),'--out',str(OUT/'cosmos-c5'))
+ compare('Cosmos_C5',OUT/'cosmos-c5/results.json',ROOT/'experiments/cosmos_c5_20260916/run_20260916T033332Z/results.json',['totals','status','complete_coverage'])
+ py('Cosmos_consumer',str(RUNTIME/'experiments/cosmos_consumer_replay_20260916/run_consumer.py'),'--metadata-cache',str(RUNTIME/'experiments/work/cosmos3-droid'),'--out',str(OUT/'cosmos-consumer'))
+ compare('Cosmos_consumer',OUT/'cosmos-consumer/results.json',ROOT/'experiments/cosmos_consumer_replay_20260916/run_20260916T033508Z/results.json',['totals','status'])
+ summary={'status':'EXPECTED_SCIENTIFIC_OUTCOMES','scope':'standalone Cosmos tail only, not full public runner','started_utc':started,'finished_utc':datetime.now(timezone.utc).isoformat(),'executed_steps':[r['step'] for r in records],'all_comparisons_match':all(c['matches'] for c in checks),'comparison_count':len(checks)};code=0
+except Exception as exc:
+ summary={'status':'SCIENTIFIC_MISMATCH' if str(exc).startswith('SCIENTIFIC_MISMATCH:') else 'INFRASTRUCTURE_OR_EXECUTION_FAILURE','scope':'standalone Cosmos tail only','started_utc':started,'finished_utc':datetime.now(timezone.utc).isoformat(),'executed_steps':[r['step'] for r in records],'error':str(exc)};code=2
+save('RUN_SUMMARY.json',summary);print(json.dumps(summary,indent=2),flush=True);sys.exit(code)

@@ -1,0 +1,77 @@
+{
+  "created_utc": "2026-09-16T03:56:44.560320+00:00",
+  "phase": "final-smoke",
+  "items": [
+    {
+      "public_path": "final_packaging_smoke/RUN_SUMMARY.json",
+      "raw_sha256": "f309cceded6b6cdf5f348699ac16a25405778cc92ba4c739dd2cf344c5b54ace",
+      "public_sha256": "f309cceded6b6cdf5f348699ac16a25405778cc92ba4c739dd2cf344c5b54ace",
+      "bytes": 362,
+      "source": "<FINAL_SMOKE_RUN>/RUN_SUMMARY.json"
+    },
+    {
+      "public_path": "final_packaging_smoke/commands.json",
+      "raw_sha256": "4efc07a90dfaa5267f5d13d569313f6fa4a48c5bdeecc4f5b39ebfd2caceb384",
+      "public_sha256": "2a4ac3856fb805b0149c05dc2f20873365be6479765174a38374aa570c76beef",
+      "bytes": 1334,
+      "source": "<FINAL_SMOKE_RUN>/commands.json"
+    },
+    {
+      "public_path": "final_packaging_smoke/logs/RD3_RD6_scoped_smoke.log",
+      "raw_sha256": "9f0bb668ca673efdb0fce4c02326ae8cc7dc524aa495ffde90b1bf439ae7d6f2",
+      "public_sha256": "fbe69e121d2e7ed1de9650534329b141d83cbdd63eeccad8f63036478b63c8b1",
+      "bytes": 2144,
+      "source": "<FINAL_SMOKE_RUN>/logs/RD3_RD6_scoped_smoke.log"
+    },
+    {
+      "public_path": "final_packaging_smoke/logs/RD8_condition_matrix.log",
+      "raw_sha256": "b335a17b7e708887eacad0109cbac0ed789545ed2aec887fcecb4c23281d2948",
+      "public_sha256": "b335a17b7e708887eacad0109cbac0ed789545ed2aec887fcecb4c23281d2948",
+      "bytes": 2394,
+      "source": "<FINAL_SMOKE_RUN>/logs/RD8_condition_matrix.log"
+    },
+    {
+      "public_path": "final_packaging_smoke/logs/figure_generation.log",
+      "raw_sha256": "8476c2560ea9df8f0dadba48668578fa4a8819245f025438b99f65435dd0cf17",
+      "public_sha256": "8476c2560ea9df8f0dadba48668578fa4a8819245f025438b99f65435dd0cf17",
+      "bytes": 99,
+      "source": "<FINAL_SMOKE_RUN>/logs/figure_generation.log"
+    },
+    {
+      "public_path": "final_packaging_smoke/logs/integrity.log",
+      "raw_sha256": "d069f4bee631311b4024ce2923262595f7b4c13ded87fe376185d535bf423837",
+      "public_sha256": "d069f4bee631311b4024ce2923262595f7b4c13ded87fe376185d535bf423837",
+      "bytes": 48,
+      "source": "<FINAL_SMOKE_RUN>/logs/integrity.log"
+    },
+    {
+      "public_path": "final_packaging_smoke/logs/projection_recovery.log",
+      "raw_sha256": "322550b614f34f3ffaa2c2d967f66300fb87dd1ad9f3edac8a8086c653e43145",
+      "public_sha256": "322550b614f34f3ffaa2c2d967f66300fb87dd1ad9f3edac8a8086c653e43145",
+      "bytes": 110,
+      "source": "<FINAL_SMOKE_RUN>/logs/projection_recovery.log"
+    },
+    {
+      "public_path": "final_packaging_smoke/scoped_cases_summary.json",
+      "raw_sha256": "5d067d4d071ef4564d0f61d5c2147b851eea61812ed029f6556c812694869e44",
+      "public_sha256": "5d067d4d071ef4564d0f61d5c2147b851eea61812ed029f6556c812694869e44",
+      "bytes": 706,
+      "source": "<FINAL_SMOKE_RUN>/cases-smoke/run_summary.json"
+    },
+    {
+      "public_path": "final_packaging_smoke/PACKAGING_SMOKE_RECEIPT_candidate8_verified.json",
+      "raw_sha256": "7bbff40290fd05b991ac1817b2c7bd3c8ebb6017789b157aca95bd62f4f77b90",
+      "public_sha256": "7bbff40290fd05b991ac1817b2c7bd3c8ebb6017789b157aca95bd62f4f77b90",
+      "bytes": 2171,
+      "source": "completed final packaging smoke and read-only source comparison; prior comparison used a different preparatory candidate and is retained separately"
+    },
+    {
+      "public_path": "cases/EXECUTED_SOURCE_CORRESPONDENCE_candidate8.json",
+      "raw_sha256": "8fde33e5f9ecc687136afed1e67120acac1e67f5cca4f0c6cf54533f983dfbe4",
+      "public_sha256": "8fde33e5f9ecc687136afed1e67120acac1e67f5cca4f0c6cf54533f983dfbe4",
+      "bytes": 24051,
+      "source": "read-only candidate/runtime source hash inventory"
+    }
+  ],
+  "raw_and_public_hashes_distinct": true
+}

@@ -1,0 +1,141 @@
+[
+  {
+    "step": "integrity",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "<CANDIDATE_4>/verify_public.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.07834258407820016,
+    "log": "integrity.log"
+  },
+  {
+    "step": "projection_recovery",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/recover_projections.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.3133467910811305,
+    "log": "projection_recovery.log"
+  },
+  {
+    "step": "RD3_RD6_scoped_smoke",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "reproducibility/reproduce.py",
+      "--work-dir",
+      "<FAILED_EXTENDED_RUN>/cases-smoke",
+      "--cases",
+      "RD3,RD6"
+    ],
+    "exit_code": 0,
+    "seconds": 0.22527220903430134,
+    "log": "RD3_RD6_scoped_smoke.log"
+  },
+  {
+    "step": "RD8_condition_matrix",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/extract_rd8_condition_matrix.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.041141875088214874,
+    "log": "RD8_condition_matrix.log"
+  },
+  {
+    "step": "figure_generation",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "scripts/make_figures.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.0791902500204742,
+    "log": "figure_generation.log"
+  },
+  {
+    "step": "download_franka_stack_v51.hdf5",
+    "argv": [
+      "curl",
+      "-fLsS",
+      "--retry",
+      "3",
+      "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/IsaacLab/Mimic/franka_stack_datasets/dataset.hdf5",
+      "-o",
+      "<FAILED_EXTENDED_RUNTIME>/experiments/work/gx_baseline_20260914/inputs/franka_stack_v51.hdf5"
+    ],
+    "exit_code": 0,
+    "seconds": 0.8615719999652356,
+    "log": "download_franka_stack_v51.hdf5.log"
+  },
+  {
+    "step": "download_hdf5_dataset_file_handler_beta2_patch1.py",
+    "argv": [
+      "curl",
+      "-fLsS",
+      "--retry",
+      "3",
+      "https://raw.githubusercontent.com/isaac-sim/IsaacLab/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py",
+      "-o",
+      "<FAILED_EXTENDED_RUNTIME>/experiments/work/gx_baseline_20260914/inputs/hdf5_dataset_file_handler_beta2_patch1.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.09104841703083366,
+    "log": "download_hdf5_dataset_file_handler_beta2_patch1.py.log"
+  },
+  {
+    "step": "download_low_dim_v15.hdf5",
+    "argv": [
+      "curl",
+      "-fLsS",
+      "--retry",
+      "3",
+      "https://huggingface.co/datasets/robomimic/robomimic_datasets/resolve/33d08702ad61296b55a74c4f810ab54462f319e9/v1.5/lift/ph/low_dim_v15.hdf5",
+      "-o",
+      "<FAILED_EXTENDED_RUNTIME>/experiments/work/gx_baseline_20260914/inputs/low_dim_v15.hdf5"
+    ],
+    "exit_code": 0,
+    "seconds": 2.3856167499907315,
+    "log": "download_low_dim_v15.hdf5.log"
+  },
+  {
+    "step": "GX_fixture_build",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/gx_baseline_20260914/build_artifacts.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.4100844579515979,
+    "log": "GX_fixture_build.log"
+  },
+  {
+    "step": "GX_validation",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/gx_baseline_20260914/run_gx_baseline.py",
+      "--amend",
+      "Public snapshot clean rerun: regenerated fixture manifest; scientific rules unchanged"
+    ],
+    "exit_code": 0,
+    "seconds": 18.755229458096437,
+    "log": "GX_validation.log"
+  },
+  {
+    "step": "RD8_precision_diagnostic",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/rd8_precision_diagnostic.py",
+      "all_orders"
+    ],
+    "exit_code": 1,
+    "seconds": 0.20890787499956787,
+    "log": "RD8_precision_diagnostic.log"
+  }
+]

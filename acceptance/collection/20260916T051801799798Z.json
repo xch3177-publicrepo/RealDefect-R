@@ -1,0 +1,259 @@
+{
+  "created_utc": "2026-09-16T05:18:01.799933+00:00",
+  "phase": "extended",
+  "items": [
+    {
+      "public_path": "extended/RUN_SUMMARY.json",
+      "raw_sha256": "3dce8352d65f62c0dbc55ed9e9eb02cc5a3eb9e763ea23d3a3bd7eb85e5ceedd",
+      "public_sha256": "3dce8352d65f62c0dbc55ed9e9eb02cc5a3eb9e763ea23d3a3bd7eb85e5ceedd",
+      "bytes": 689,
+      "source": "<EXTENDED_RUN>/RUN_SUMMARY.json"
+    },
+    {
+      "public_path": "extended/commands.json",
+      "raw_sha256": "c5950156389da0399d73ebb2f029e9120b415c2f221277fce3469538fb88def7",
+      "public_sha256": "57a0864b8c1e2b30e90932570f92e3dc4756f482c98a361d42400b88907ea4e6",
+      "bytes": 5576,
+      "source": "<EXTENDED_RUN>/commands.json"
+    },
+    {
+      "public_path": "extended/SCIENTIFIC_COMPARISON.json",
+      "raw_sha256": "43571cc433687fdc795feea77a375cad46cb01e5a402eb2cd7bbc097ca170148",
+      "public_sha256": "43571cc433687fdc795feea77a375cad46cb01e5a402eb2cd7bbc097ca170148",
+      "bytes": 22269,
+      "source": "<EXTENDED_RUN>/SCIENTIFIC_COMPARISON.json"
+    },
+    {
+      "public_path": "extended/logs/Cosmos_C1_C4.log",
+      "raw_sha256": "42747f1f4da099d84d327844894ec74f80042a072badc9d05417cd04fa1cdb4d",
+      "public_sha256": "42747f1f4da099d84d327844894ec74f80042a072badc9d05417cd04fa1cdb4d",
+      "bytes": 8094,
+      "source": "<EXTENDED_RUN>/logs/Cosmos_C1_C4.log"
+    },
+    {
+      "public_path": "extended/logs/Cosmos_C5.log",
+      "raw_sha256": "6cc6862312b6160a2aeb700212ac2345e0de28799b7933860b57c1ee06a06d0a",
+      "public_sha256": "6cc6862312b6160a2aeb700212ac2345e0de28799b7933860b57c1ee06a06d0a",
+      "bytes": 7500,
+      "source": "<EXTENDED_RUN>/logs/Cosmos_C5.log"
+    },
+    {
+      "public_path": "extended/logs/Cosmos_consumer.log",
+      "raw_sha256": "451ba431025d98ee4bd1b6a4ae2c34299d0330c64c31323ad8e5378146c68adf",
+      "public_sha256": "451ba431025d98ee4bd1b6a4ae2c34299d0330c64c31323ad8e5378146c68adf",
+      "bytes": 655,
+      "source": "<EXTENDED_RUN>/logs/Cosmos_consumer.log"
+    },
+    {
+      "public_path": "extended/logs/Cosmos_independent_metadata.log",
+      "raw_sha256": "a804c053db6bf46a24d34a28f30a5e5be56553efb0509f366b75513694f50ee7",
+      "public_sha256": "a804c053db6bf46a24d34a28f30a5e5be56553efb0509f366b75513694f50ee7",
+      "bytes": 613,
+      "source": "<EXTENDED_RUN>/logs/Cosmos_independent_metadata.log"
+    },
+    {
+      "public_path": "extended/logs/Cosmos_metadata.log",
+      "raw_sha256": "470e32743b377bf16bc9664f7cf5d314477254dc1c57a00ff5c9086a5bb70cde",
+      "public_sha256": "63b599f75228884c4ae79cd6b174697aa00bf277ca11f473d326ad94a04d4ac8",
+      "bytes": 1926,
+      "source": "<EXTENDED_RUN>/logs/Cosmos_metadata.log"
+    },
+    {
+      "public_path": "extended/logs/GX_fixture_build.log",
+      "raw_sha256": "56f5d5d24eabcb18f6a5de2f47f4a1d199b6fe5f547f30135199767aa7cf0e7c",
+      "public_sha256": "56f5d5d24eabcb18f6a5de2f47f4a1d199b6fe5f547f30135199767aa7cf0e7c",
+      "bytes": 751,
+      "source": "<EXTENDED_RUN>/logs/GX_fixture_build.log"
+    },
+    {
+      "public_path": "extended/logs/GX_validation.log",
+      "raw_sha256": "00ff035fe4bacb00a37725e4e2c10955baba682e2c88041933f55d49518e3ad0",
+      "public_sha256": "00ff035fe4bacb00a37725e4e2c10955baba682e2c88041933f55d49518e3ad0",
+      "bytes": 42347,
+      "source": "<EXTENDED_RUN>/logs/GX_validation.log"
+    },
+    {
+      "public_path": "extended/logs/RD3_RD6_scoped_smoke.log",
+      "raw_sha256": "89de5541a1c1499412b0ab730b6674269dba713cfc5c7296cda69cd54cf68a96",
+      "public_sha256": "632be567e0fc9bc034d254bdd89872fd3444a0e759f4fe27c41a41ad7632d5b1",
+      "bytes": 2135,
+      "source": "<EXTENDED_RUN>/logs/RD3_RD6_scoped_smoke.log"
+    },
+    {
+      "public_path": "extended/logs/RD8_condition_matrix.log",
+      "raw_sha256": "8c050e399b5b6ec7431ce8de3c584be4271af8cd20defe999ec8d3720b9b6df0",
+      "public_sha256": "8c050e399b5b6ec7431ce8de3c584be4271af8cd20defe999ec8d3720b9b6df0",
+      "bytes": 2394,
+      "source": "<EXTENDED_RUN>/logs/RD8_condition_matrix.log"
+    },
+    {
+      "public_path": "extended/logs/RD8_precision_diagnostic.log",
+      "raw_sha256": "37cc0af24edf26fa23ef074aa0d2fddca3882c73028e9c47ec510be77307a472",
+      "public_sha256": "37cc0af24edf26fa23ef074aa0d2fddca3882c73028e9c47ec510be77307a472",
+      "bytes": 23869,
+      "source": "<EXTENDED_RUN>/logs/RD8_precision_diagnostic.log"
+    },
+    {
+      "public_path": "extended/logs/download_franka_stack_v51.hdf5.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<EXTENDED_RUN>/logs/download_franka_stack_v51.hdf5.log"
+    },
+    {
+      "public_path": "extended/logs/download_hdf5_dataset_file_handler_beta2_patch1.py.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<EXTENDED_RUN>/logs/download_hdf5_dataset_file_handler_beta2_patch1.py.log"
+    },
+    {
+      "public_path": "extended/logs/download_low_dim_v15.hdf5.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<EXTENDED_RUN>/logs/download_low_dim_v15.hdf5.log"
+    },
+    {
+      "public_path": "extended/logs/figure_generation.log",
+      "raw_sha256": "8476c2560ea9df8f0dadba48668578fa4a8819245f025438b99f65435dd0cf17",
+      "public_sha256": "8476c2560ea9df8f0dadba48668578fa4a8819245f025438b99f65435dd0cf17",
+      "bytes": 99,
+      "source": "<EXTENDED_RUN>/logs/figure_generation.log"
+    },
+    {
+      "public_path": "extended/logs/integrity.log",
+      "raw_sha256": "153053db014d3c37509ac09c25f5f79c4420c3c174594c88369415e344975659",
+      "public_sha256": "153053db014d3c37509ac09c25f5f79c4420c3c174594c88369415e344975659",
+      "bytes": 48,
+      "source": "<EXTENDED_RUN>/logs/integrity.log"
+    },
+    {
+      "public_path": "extended/logs/projection_recovery.log",
+      "raw_sha256": "322550b614f34f3ffaa2c2d967f66300fb87dd1ad9f3edac8a8086c653e43145",
+      "public_sha256": "322550b614f34f3ffaa2c2d967f66300fb87dd1ad9f3edac8a8086c653e43145",
+      "bytes": 110,
+      "source": "<EXTENDED_RUN>/logs/projection_recovery.log"
+    },
+    {
+      "public_path": "extended/cosmos_metadata/audit.stderr.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<EXTENDED_RUN>/cosmos-metadata/audit.stderr.log"
+    },
+    {
+      "public_path": "extended/cosmos_metadata/audit.stdout.log",
+      "raw_sha256": "e347dde735451132c8bcb5edee9a3cc68595aedb6c3947c28e96dd036ac65301",
+      "public_sha256": "1cccb8bd7b4cf06d74d48e4fa0c415fec21847ed011dc2c88974d22b3b4255c9",
+      "bytes": 401,
+      "source": "<EXTENDED_RUN>/cosmos-metadata/audit.stdout.log"
+    },
+    {
+      "public_path": "extended/cosmos_metadata/historical_comparison.json",
+      "raw_sha256": "2fd87b12309e6948a8423492496012d4e42227ed4f1920225e74c819350020a5",
+      "public_sha256": "2fd87b12309e6948a8423492496012d4e42227ed4f1920225e74c819350020a5",
+      "bytes": 558,
+      "source": "<EXTENDED_RUN>/cosmos-metadata/historical_comparison.json"
+    },
+    {
+      "public_path": "extended/cosmos_metadata/input_protocol.json",
+      "raw_sha256": "36d28224c66f83e94271bac24f4bafd61cf1013dde22a3a3dd4ac7cb5c74312c",
+      "public_sha256": "36d28224c66f83e94271bac24f4bafd61cf1013dde22a3a3dd4ac7cb5c74312c",
+      "bytes": 3572,
+      "source": "<EXTENDED_RUN>/cosmos-metadata/input_protocol.json"
+    },
+    {
+      "public_path": "extended/cosmos_metadata/preaudit_verified_inputs.json",
+      "raw_sha256": "c4f2b3ed848de3879c117d8385779a1ca0eff7513455d5549d45db34674c8244",
+      "public_sha256": "c4f2b3ed848de3879c117d8385779a1ca0eff7513455d5549d45db34674c8244",
+      "bytes": 5560,
+      "source": "<EXTENDED_RUN>/cosmos-metadata/preaudit_verified_inputs.json"
+    },
+    {
+      "public_path": "extended/cosmos_metadata/rerun.json",
+      "raw_sha256": "6d104188e23ed5bea25d377c3740d80075d78ad9c76abcdb5d81adefb2f2a7c9",
+      "public_sha256": "ca96cd9b2de4d88e6155a0a4518b749ee54c236d63bd00080841170e466ae98d",
+      "bytes": 65996,
+      "source": "<EXTENDED_RUN>/cosmos-metadata/rerun.json"
+    },
+    {
+      "public_path": "extended/cosmos_metadata/run.json",
+      "raw_sha256": "a0c9d0cd5e163767102537b98fedbd656e84bceaa039b3436c4e48ddbc7c1bfa",
+      "public_sha256": "812a6fcdb4239f35c6edd5107f504f5523045725fa3e47c11d98b0931c79bd91",
+      "bytes": 775,
+      "source": "<EXTENDED_RUN>/cosmos-metadata/run.json"
+    },
+    {
+      "public_path": "extended/cosmos_independent.json",
+      "raw_sha256": "452f0b6ea4d79d91fc8fd3e1539071ddf34d691e48ff59f9eb0e29b2f4526e2e",
+      "public_sha256": "452f0b6ea4d79d91fc8fd3e1539071ddf34d691e48ff59f9eb0e29b2f4526e2e",
+      "bytes": 7294,
+      "source": "<EXTENDED_RUN>/cosmos-independent.json"
+    },
+    {
+      "public_path": "extended/cosmos-c5/results.json",
+      "raw_sha256": "f928d0ce1b9c1a8857752da842595ba3f943fe137d825452a88e506ec5b1ee6b",
+      "public_sha256": "f928d0ce1b9c1a8857752da842595ba3f943fe137d825452a88e506ec5b1ee6b",
+      "bytes": 44591,
+      "source": "<EXTENDED_RUN>/cosmos-c5/results.json"
+    },
+    {
+      "public_path": "extended/cosmos-c5/range_receipts.jsonl",
+      "raw_sha256": "7d2cf68842057c6bd0add67cc25a87ae764c24acae3e51d866c1257e3fc8ea0e",
+      "public_sha256": "7d2cf68842057c6bd0add67cc25a87ae764c24acae3e51d866c1257e3fc8ea0e",
+      "bytes": 59650,
+      "source": "<EXTENDED_RUN>/cosmos-c5/range_receipts.jsonl"
+    },
+    {
+      "public_path": "extended/cosmos-consumer/results.json",
+      "raw_sha256": "f9666d33088f3d3722267bce3562faa0e54abc2f4ccb17719b3265de087ff8fd",
+      "public_sha256": "f9666d33088f3d3722267bce3562faa0e54abc2f4ccb17719b3265de087ff8fd",
+      "bytes": 12690,
+      "source": "<EXTENDED_RUN>/cosmos-consumer/results.json"
+    },
+    {
+      "public_path": "extended/fresh_results/FROZEN_PLAN.json",
+      "raw_sha256": "6117d7d39546a7e83a33d0f1bda9135c5532147b082f115dbfd67e301729a225",
+      "public_sha256": "6117d7d39546a7e83a33d0f1bda9135c5532147b082f115dbfd67e301729a225",
+      "bytes": 3528,
+      "source": "<EXTENDED_RUNTIME>/experiments/gx_baseline_20260914/FROZEN_PLAN.json"
+    },
+    {
+      "public_path": "extended/fresh_results/artifact_manifest.json",
+      "raw_sha256": "0a7e19c464d8d30f8a97910681dcd8439faca6938f5d9da87ba25808eb5958b9",
+      "public_sha256": "0a7e19c464d8d30f8a97910681dcd8439faca6938f5d9da87ba25808eb5958b9",
+      "bytes": 31371,
+      "source": "<EXTENDED_RUNTIME>/experiments/gx_baseline_20260914/artifact_manifest.json"
+    },
+    {
+      "public_path": "extended/fresh_results/gx_baseline_results.json",
+      "raw_sha256": "551d8a26a920d98f565738ec1b6d3d7fa26be7eb6b42626aae1e9ce3358fd7fe",
+      "public_sha256": "551d8a26a920d98f565738ec1b6d3d7fa26be7eb6b42626aae1e9ce3358fd7fe",
+      "bytes": 280229,
+      "source": "<EXTENDED_RUNTIME>/experiments/gx_baseline_20260914/gx_baseline_results.json"
+    },
+    {
+      "public_path": "extended/fresh_results/rd8_precision_diagnostic_all_orders.json",
+      "raw_sha256": "4c635cf6bbeefb2c7723c35a88d6e10e7167e977198923a10931011e1588c637",
+      "public_sha256": "4c635cf6bbeefb2c7723c35a88d6e10e7167e977198923a10931011e1588c637",
+      "bytes": 183430,
+      "source": "<EXTENDED_RUNTIME>/experiments/rd8_diagnostic_20260914/rd8_precision_diagnostic_all_orders.json"
+    },
+    {
+      "public_path": "extended/fresh_results/cosmos_frame_check_results.json",
+      "raw_sha256": "bb5321f10115ba2c6c01b14b92c15f168dcef1d546ebe1ade4438e323ec8e047",
+      "public_sha256": "bb5321f10115ba2c6c01b14b92c15f168dcef1d546ebe1ade4438e323ec8e047",
+      "bytes": 91012,
+      "source": "<EXTENDED_RUNTIME>/experiments/cosmos_frame_check_20260914/cosmos_frame_check_results.json"
+    },
+    {
+      "public_path": "extended/EXECUTED_SOURCE_CORRESPONDENCE.json",
+      "raw_sha256": "217aa31906b4666b9cbed0b3e5a42f0ca51ce6be2bc91c403fccaa0b70d12c14",
+      "public_sha256": "217aa31906b4666b9cbed0b3e5a42f0ca51ce6be2bc91c403fccaa0b70d12c14",
+      "bytes": 24121,
+      "source": "read-only candidate/runtime source hash inventory"
+    }
+  ],
+  "raw_and_public_hashes_distinct": true
+}

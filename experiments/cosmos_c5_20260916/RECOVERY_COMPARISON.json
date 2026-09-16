@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-09-16T03:38:48.851974+00:00",
+  "first_run": "run_20260916T033332Z/results.json",
+  "fresh_input_recovery": "clean_recovery/results.json",
+  "same_status": true,
+  "same_scientific_counts": true,
+  "same_frame_digests_and_outcomes": true,
+  "clean_inputs": {
+    "failure/episodes/file-000.parquet": "public_download",
+    "success/episodes/file-000.parquet": "public_download",
+    "success/episodes/file-001.parquet": "public_download",
+    "success/episodes/file-002.parquet": "public_download",
+    "success/episodes/file-003.parquet": "public_download",
+    "success/episodes/file-004.parquet": "public_download"
+  },
+  "first_result_sha256": "637e453e7d759ce6e2fb0c4b0e34a09284b32a828370fca9a2a17e8ab5eb9fc2",
+  "clean_result_sha256": "6cc47025173a14952c5df43d9757b4b7dcb2aa1ffc522db6ae76d8418aba64e4",
+  "scope": "Fresh public input recovery, same existing interpreter/dependencies; not a fresh dependency-environment claim."
+}

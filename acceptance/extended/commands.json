@@ -1,0 +1,210 @@
+[
+  {
+    "step": "integrity",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "<CANDIDATE_5>/verify_public.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.08294670796021819,
+    "log": "integrity.log"
+  },
+  {
+    "step": "projection_recovery",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/recover_projections.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.324606291949749,
+    "log": "projection_recovery.log"
+  },
+  {
+    "step": "RD3_RD6_scoped_smoke",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "reproducibility/reproduce.py",
+      "--work-dir",
+      "<EXTENDED_RUN>/cases-smoke",
+      "--cases",
+      "RD3,RD6"
+    ],
+    "exit_code": 0,
+    "seconds": 0.2439091249834746,
+    "log": "RD3_RD6_scoped_smoke.log"
+  },
+  {
+    "step": "RD8_condition_matrix",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/extract_rd8_condition_matrix.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.04100562504027039,
+    "log": "RD8_condition_matrix.log"
+  },
+  {
+    "step": "figure_generation",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "scripts/make_figures.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.08315779198892415,
+    "log": "figure_generation.log"
+  },
+  {
+    "step": "download_franka_stack_v51.hdf5",
+    "argv": [
+      "curl",
+      "-fLsS",
+      "--retry",
+      "3",
+      "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/IsaacLab/Mimic/franka_stack_datasets/dataset.hdf5",
+      "-o",
+      "<EXTENDED_RUNTIME>/experiments/work/gx_baseline_20260914/inputs/franka_stack_v51.hdf5"
+    ],
+    "exit_code": 0,
+    "seconds": 0.6368489580927417,
+    "log": "download_franka_stack_v51.hdf5.log"
+  },
+  {
+    "step": "download_hdf5_dataset_file_handler_beta2_patch1.py",
+    "argv": [
+      "curl",
+      "-fLsS",
+      "--retry",
+      "3",
+      "https://raw.githubusercontent.com/isaac-sim/IsaacLab/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py",
+      "-o",
+      "<EXTENDED_RUNTIME>/experiments/work/gx_baseline_20260914/inputs/hdf5_dataset_file_handler_beta2_patch1.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.09267241694033146,
+    "log": "download_hdf5_dataset_file_handler_beta2_patch1.py.log"
+  },
+  {
+    "step": "download_low_dim_v15.hdf5",
+    "argv": [
+      "curl",
+      "-fLsS",
+      "--retry",
+      "3",
+      "https://huggingface.co/datasets/robomimic/robomimic_datasets/resolve/33d08702ad61296b55a74c4f810ab54462f319e9/v1.5/lift/ph/low_dim_v15.hdf5",
+      "-o",
+      "<EXTENDED_RUNTIME>/experiments/work/gx_baseline_20260914/inputs/low_dim_v15.hdf5"
+    ],
+    "exit_code": 0,
+    "seconds": 2.1669335829792544,
+    "log": "download_low_dim_v15.hdf5.log"
+  },
+  {
+    "step": "GX_fixture_build",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/gx_baseline_20260914/build_artifacts.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.3843039999483153,
+    "log": "GX_fixture_build.log"
+  },
+  {
+    "step": "GX_validation",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/gx_baseline_20260914/run_gx_baseline.py",
+      "--amend",
+      "Public snapshot clean rerun: regenerated fixture manifest; scientific rules unchanged"
+    ],
+    "exit_code": 0,
+    "seconds": 5.953581999987364,
+    "log": "GX_validation.log"
+  },
+  {
+    "step": "RD8_precision_diagnostic",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/rd8_precision_diagnostic.py",
+      "all_orders"
+    ],
+    "exit_code": 0,
+    "seconds": 1862.681837417069,
+    "log": "RD8_precision_diagnostic.log"
+  },
+  {
+    "step": "Cosmos_metadata",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/replay_cosmos_metadata.py",
+      "--out",
+      "<EXTENDED_RUN>/cosmos-metadata"
+    ],
+    "exit_code": 0,
+    "seconds": 118.68454312498216,
+    "log": "Cosmos_metadata.log"
+  },
+  {
+    "step": "Cosmos_independent_metadata",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/verify_cosmos_referential_counts.py",
+      "--manifest",
+      "<EXTENDED_RUN>/cosmos-metadata/preaudit_verified_inputs.json",
+      "--out",
+      "<EXTENDED_RUN>/cosmos-independent.json"
+    ],
+    "exit_code": 0,
+    "seconds": 2.221642207936384,
+    "log": "Cosmos_independent_metadata.log"
+  },
+  {
+    "step": "Cosmos_C1_C4",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/cosmos_frame_check_20260914/run_frame_check.py"
+    ],
+    "exit_code": 0,
+    "seconds": 163.48638437502086,
+    "log": "Cosmos_C1_C4.log"
+  },
+  {
+    "step": "Cosmos_C5",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "<EXTENDED_RUNTIME>/experiments/cosmos_c5_20260916/run_c5.py",
+      "--metadata-cache",
+      "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid",
+      "--out",
+      "<EXTENDED_RUN>/cosmos-c5"
+    ],
+    "exit_code": 0,
+    "seconds": 123.99499608296901,
+    "log": "Cosmos_C5.log"
+  },
+  {
+    "step": "Cosmos_consumer",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "<EXTENDED_RUNTIME>/experiments/cosmos_consumer_replay_20260916/run_consumer.py",
+      "--metadata-cache",
+      "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid",
+      "--out",
+      "<EXTENDED_RUN>/cosmos-consumer"
+    ],
+    "exit_code": 0,
+    "seconds": 8.945998333976604,
+    "log": "Cosmos_consumer.log"
+  }
+]

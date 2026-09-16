@@ -1,0 +1,24 @@
+{
+  "status": "EXPECTED_SCIENTIFIC_OUTCOMES",
+  "suite": "extended",
+  "executed_steps": [
+    "integrity",
+    "projection_recovery",
+    "RD3_RD6_scoped_smoke",
+    "RD8_condition_matrix",
+    "figure_generation",
+    "download_franka_stack_v51.hdf5",
+    "download_hdf5_dataset_file_handler_beta2_patch1.py",
+    "download_low_dim_v15.hdf5",
+    "GX_fixture_build",
+    "GX_validation",
+    "RD8_precision_diagnostic",
+    "Cosmos_metadata",
+    "Cosmos_independent_metadata",
+    "Cosmos_C1_C4",
+    "Cosmos_C5",
+    "Cosmos_consumer"
+  ],
+  "RD8": "NOT_REPRODUCED is the expected scientific negative, not infrastructure failure",
+  "created_utc": "2026-09-16T04:22:03.187234+00:00"
+}

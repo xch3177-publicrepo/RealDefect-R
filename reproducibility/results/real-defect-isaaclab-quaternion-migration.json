@@ -1,0 +1,297 @@
+{
+  "audit": {
+    "contract": {
+      "accepted": false,
+      "converted_instances": 8692,
+      "declared_instances": 23833,
+      "failed_paths": [
+        {
+          "family": "cube_orientations",
+          "instances": 708,
+          "mean_orientation_error_deg": 147.6788939802206,
+          "path": "data/demo_0/obs/cube_orientations",
+          "undischarged": 708
+        },
+        {
+          "family": "eef_quat",
+          "instances": 236,
+          "mean_orientation_error_deg": 154.26833873248177,
+          "path": "data/demo_0/obs/eef_quat",
+          "undischarged": 236
+        },
+        {
+          "family": "object_embedded",
+          "instances": 708,
+          "mean_orientation_error_deg": 147.67889398022055,
+          "path": "data/demo_0/obs/object",
+          "undischarged": 708
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 699,
+          "mean_orientation_error_deg": 146.00550307948285,
+          "path": "data/demo_1/obs/cube_orientations",
+          "undischarged": 699
+        },
+        {
+          "family": "eef_quat",
+          "instances": 233,
+          "mean_orientation_error_deg": 154.5819838223306,
+          "path": "data/demo_1/obs/eef_quat",
+          "undischarged": 233
+        },
+        {
+          "family": "object_embedded",
+          "instances": 699,
+          "mean_orientation_error_deg": 146.00550307948285,
+          "path": "data/demo_1/obs/object",
+          "undischarged": 699
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 582,
+          "mean_orientation_error_deg": 154.547253170853,
+          "path": "data/demo_12/obs/cube_orientations",
+          "undischarged": 582
+        },
+        {
+          "family": "eef_quat",
+          "instances": 194,
+          "mean_orientation_error_deg": 151.5575743683788,
+          "path": "data/demo_12/obs/eef_quat",
+          "undischarged": 194
+        },
+        {
+          "family": "object_embedded",
+          "instances": 582,
+          "mean_orientation_error_deg": 154.547253170853,
+          "path": "data/demo_12/obs/object",
+          "undischarged": 582
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 627,
+          "mean_orientation_error_deg": 159.80112985277975,
+          "path": "data/demo_13/obs/cube_orientations",
+          "undischarged": 627
+        },
+        {
+          "family": "eef_quat",
+          "instances": 209,
+          "mean_orientation_error_deg": 146.38967398112254,
+          "path": "data/demo_13/obs/eef_quat",
+          "undischarged": 209
+        },
+        {
+          "family": "object_embedded",
+          "instances": 627,
+          "mean_orientation_error_deg": 159.80112985277975,
+          "path": "data/demo_13/obs/object",
+          "undischarged": 627
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 696,
+          "mean_orientation_error_deg": 147.1277123136038,
+          "path": "data/demo_14/obs/cube_orientations",
+          "undischarged": 696
+        },
+        {
+          "family": "eef_quat",
+          "instances": 232,
+          "mean_orientation_error_deg": 130.28388443256407,
+          "path": "data/demo_14/obs/eef_quat",
+          "undischarged": 232
+        },
+        {
+          "family": "object_embedded",
+          "instances": 696,
+          "mean_orientation_error_deg": 147.1277123136038,
+          "path": "data/demo_14/obs/object",
+          "undischarged": 696
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 555,
+          "mean_orientation_error_deg": 169.38434538436553,
+          "path": "data/demo_16/obs/cube_orientations",
+          "undischarged": 555
+        },
+        {
+          "family": "eef_quat",
+          "instances": 185,
+          "mean_orientation_error_deg": 167.57886980451025,
+          "path": "data/demo_16/obs/eef_quat",
+          "undischarged": 185
+        },
+        {
+          "family": "object_embedded",
+          "instances": 555,
+          "mean_orientation_error_deg": 169.3843453843655,
+          "path": "data/demo_16/obs/object",
+          "undischarged": 555
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 741,
+          "mean_orientation_error_deg": 144.55273267396078,
+          "path": "data/demo_2/obs/cube_orientations",
+          "undischarged": 741
+        },
+        {
+          "family": "eef_quat",
+          "instances": 247,
+          "mean_orientation_error_deg": 136.4578943829319,
+          "path": "data/demo_2/obs/eef_quat",
+          "undischarged": 247
+        },
+        {
+          "family": "object_embedded",
+          "instances": 741,
+          "mean_orientation_error_deg": 144.55273267396078,
+          "path": "data/demo_2/obs/object",
+          "undischarged": 741
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 654,
+          "mean_orientation_error_deg": 141.23622773099,
+          "path": "data/demo_6/obs/cube_orientations",
+          "undischarged": 654
+        },
+        {
+          "family": "eef_quat",
+          "instances": 218,
+          "mean_orientation_error_deg": 150.90318345348624,
+          "path": "data/demo_6/obs/eef_quat",
+          "undischarged": 218
+        },
+        {
+          "family": "object_embedded",
+          "instances": 654,
+          "mean_orientation_error_deg": 141.23622773099,
+          "path": "data/demo_6/obs/object",
+          "undischarged": 654
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 690,
+          "mean_orientation_error_deg": 139.39458674708249,
+          "path": "data/demo_8/obs/cube_orientations",
+          "undischarged": 690
+        },
+        {
+          "family": "eef_quat",
+          "instances": 230,
+          "mean_orientation_error_deg": 157.315537610766,
+          "path": "data/demo_8/obs/eef_quat",
+          "undischarged": 230
+        },
+        {
+          "family": "object_embedded",
+          "instances": 690,
+          "mean_orientation_error_deg": 139.39458674708249,
+          "path": "data/demo_8/obs/object",
+          "undischarged": 690
+        },
+        {
+          "family": "cube_orientations",
+          "instances": 537,
+          "mean_orientation_error_deg": 145.9236882955511,
+          "path": "data/demo_9/obs/cube_orientations",
+          "undischarged": 537
+        },
+        {
+          "family": "eef_quat",
+          "instances": 179,
+          "mean_orientation_error_deg": 155.10935361788944,
+          "path": "data/demo_9/obs/eef_quat",
+          "undischarged": 179
+        },
+        {
+          "family": "object_embedded",
+          "instances": 537,
+          "mean_orientation_error_deg": 145.9236882955511,
+          "path": "data/demo_9/obs/object",
+          "undischarged": 537
+        }
+      ],
+      "family_converted_instances": {
+        "cube_orientations": 0,
+        "eef_quat": 0,
+        "object_embedded": 0,
+        "root_pose": 8692
+      },
+      "family_instances": {
+        "cube_orientations": 6489,
+        "eef_quat": 2163,
+        "object_embedded": 6489,
+        "root_pose": 8692
+      },
+      "instance_weighted_coverage": 0.36470440146016025,
+      "undischarged_instances": 15141
+    },
+    "independent_metadata_observation": {
+      "consistent": false,
+      "data_total_attribute": 3901,
+      "excluded_from_quaternion_contract_decision": true,
+      "sum_action_rows": 2163,
+      "sum_episode_num_samples": 2163
+    },
+    "physical_oracle": {
+      "max_error_deg": 179.971740399486,
+      "mean_error_deg": 149.16989417321125,
+      "median_error_deg": 145.949801528689,
+      "nonzero_error_instances": 15141,
+      "over_90_degree_instances": 15141,
+      "p95_error_deg": 177.66408928521096,
+      "undischarged_instances_evaluated": 15141
+    },
+    "schema_baseline": {
+      "accepted": true,
+      "bytewise_unchanged_count": 220,
+      "same_dataset_paths": true,
+      "same_dtype_count": 300,
+      "same_shape_count": 300,
+      "source_dataset_count": 300,
+      "target_dataset_count": 300,
+      "target_format_version": 1
+    }
+  },
+  "frozen_inputs": {
+    "converter_commit": "ffff603eafc6b74264a5261cc0183d6a65390d78",
+    "converter_source_sha256": "b5c4365cfd46107dfe56288b092bbdb03d993dbb83e23415742965db7df8d793",
+    "dataset": "Isaac Lab v2.3.2 Franka stack human demonstrations",
+    "dataset_sha256": "e0954647328801b091b81604915acd4eff2093b2b26ff0b05753c8f85fbb61b3",
+    "dataset_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/IsaacLab/Mimic/franka_stack_datasets/dataset.hdf5",
+    "source_semantics_commit": "37ddf626871758333d6ed89cf64ad702aef127d0"
+  },
+  "limitations": [
+    "The frozen upstream class and static converter body execute unchanged; only unavailable package imports and the documented quaternion permutation are stubbed.",
+    "The independent physical oracle uses explicit Hamilton rotation matrices and does not import the upstream converter helper.",
+    "Repeated cube orientations stored in cube_orientations and object are separate serialized contract obligations but not independent physical samples.",
+    "The public source has an unrelated stale data.total attribute; it is reported separately and excluded from the quaternion contract decision.",
+    "This result applies to the inspected beta migration utility, not every Isaac Lab runtime path or dataset."
+  ],
+  "sources": {
+    "official_fixture_documentation": "https://isaac-sim.github.io/IsaacLab/v2.3.2/source/overview/imitation-learning/teleop_imitation.html",
+    "v2_task_field_provenance": "https://github.com/isaac-sim/IsaacLab/blob/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/mdp/observations.py",
+    "v3_converter": "https://github.com/isaac-sim/IsaacLab/blob/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py#L285-L351"
+  },
+  "summary": {
+    "case": "Isaac Lab legacy HDF5 WXYZ-to-XYZW partial migration",
+    "converted_quaternion_instances": 8692,
+    "declared_quaternion_instances": 23833,
+    "evidence_class": "unmodified released converter on official public demonstration HDF5",
+    "mean_missed_orientation_error_deg": 149.16989417321125,
+    "median_missed_orientation_error_deg": 145.949801528689,
+    "missed_over_90_degrees": 15141,
+    "missed_quaternion_instances": 15141,
+    "p95_missed_orientation_error_deg": 177.66408928521096,
+    "reproduced": true,
+    "robocontract_accepted": false,
+    "schema_baseline_accepted": true,
+    "semantic_coverage": 0.36470440146016025,
+    "target_format_version": 1
+  }
+}

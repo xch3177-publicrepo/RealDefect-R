@@ -1,0 +1,14 @@
+{
+  "name": "RD2",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/run_real_defect_2057.py"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:12.579288+00:00",
+  "finished_utc": "2026-09-16T03:39:12.621736+00:00",
+  "duration_seconds": 0.04243549995590001,
+  "exit_code": 0,
+  "output_file": "20260916T033912.579288Z_RD2.log"
+}

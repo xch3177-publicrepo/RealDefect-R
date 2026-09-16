@@ -1,0 +1,14 @@
+{
+  "name": "RD5",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/run_real_defect_robosuite_626.py"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:16.675172+00:00",
+  "finished_utc": "2026-09-16T03:39:17.507835+00:00",
+  "duration_seconds": 0.8327323329867795,
+  "exit_code": 0,
+  "output_file": "20260916T033916.675172Z_RD5.log"
+}

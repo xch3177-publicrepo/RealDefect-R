@@ -1,0 +1,46 @@
+\begin{figure}[t]
+\centering
+\definecolor{rdink}{HTML}{14181F}
+\definecolor{rdink2}{HTML}{4A5462}
+\definecolor{rdmute}{HTML}{667180}
+\definecolor{rdnavy}{HTML}{1F3A5F}
+\definecolor{rdnavy2}{HTML}{4A6E9B}
+\definecolor{rdteal}{HTML}{16706E}
+\definecolor{rdteal2}{HTML}{CFE3E2}
+\definecolor{rdcoral}{HTML}{BC4127}
+\definecolor{rdcoral2}{HTML}{F2DCD6}
+\definecolor{rdline}{HTML}{CFD5DC}
+\definecolor{rdfill}{HTML}{EDF0F3}
+\definecolor{rdfill2}{HTML}{F7F8FA}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\footnotesize,inner sep=0pt,line cap=round,line join=round]
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,0.000) {\textbf{Pinned sources, verified input, versioned rule}};
+\draw[rdink2,line width=0.5pt] (0.000,-0.230) -- (8.520,-0.230);
+\draw[rdink2,line width=0.6pt] (0.00,-1.37) rectangle (1.70,-0.83);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (0.850,-1.100) {Same input};
+\draw[rdink2,line width=0.6pt] (2.65,-0.95) rectangle (5.01,-0.41);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (3.830,-0.680) {Faulty path};
+\draw[rdteal,line width=0.6pt] (2.65,-1.79) rectangle (5.01,-1.25);
+\node[anchor=center,text=rdteal,inner sep=0pt,font=\sffamily\footnotesize] at (3.830,-1.520) {Reference path};
+\draw[rdink2,line width=0.5pt] (1.700,-1.100) -- (2.140,-1.100);
+\draw[rdink2,line width=0.5pt] (2.140,-1.520) -- (2.140,-0.680);
+\draw[rdink2,line width=0.7pt,-{Straight Barb[length=1.6pt,width=2.6pt]}] (2.140,-0.680) -- (2.560,-0.680);
+\draw[rdink2,line width=0.7pt,-{Straight Barb[length=1.6pt,width=2.6pt]}] (2.140,-1.520) -- (2.560,-1.520);
+\draw[rdink2,line width=0.5pt] (5.010,-0.680) -- (5.500,-0.680);
+\draw[rdink2,line width=0.5pt] (5.010,-1.520) -- (5.500,-1.520);
+\draw[rdink2,line width=0.5pt] (5.500,-1.520) -- (5.500,-0.680);
+\draw[rdink2,line width=0.7pt,-{Straight Barb[length=1.6pt,width=2.6pt]}] (5.500,-1.100) -- (6.040,-1.100);
+\draw[rdink2,line width=0.6pt] (6.12,-1.37) rectangle (8.52,-0.83);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (7.320,-1.100) {Apply $V_c(\cdot,R_c)$};
+\node[anchor=center,text=rdmute,inner sep=0pt,font=\sffamily\footnotesize] at (3.830,-2.070) {paired execution};
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,-2.640) {\textbf{RD4}};
+\draw[rdink2,line width=0.7pt,-{Straight Barb[length=1.6pt,width=2.6pt]}] (0.720,-2.640) -- (1.100,-2.640);
+\draw[rdink2,line width=0.6pt] (1.19,-2.91) rectangle (5.01,-2.37);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (3.100,-2.640) {Single-path coverage audit};
+\draw[rdink2,line width=0.7pt,-{Straight Barb[length=1.6pt,width=2.6pt]}] (5.020,-2.640) -- (6.040,-2.640);
+\draw[rdink2,line width=0.6pt] (6.12,-2.91) rectangle (8.52,-2.37);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (7.320,-2.640) {Retain outcome};
+\draw[rdink2,line width=0.7pt,-{Straight Barb[length=1.6pt,width=2.6pt]}] (7.320,-1.390) -- (7.320,-2.290);
+\end{tikzpicture}
+\caption{Execution structure. Both paired paths receive the same input and fixed criterion; RD4 instead audits one converter body. Logs retain scientific outcomes separately from recovery or execution failures (Table~\ref{tab:cases}).}
+\label{fig:replay-protocol}
+\end{figure}

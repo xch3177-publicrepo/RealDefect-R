@@ -1,0 +1,9 @@
+{
+  "condition_count": 44,
+  "event_count": 91,
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-openpi-570-audit.json",
+  "output_sha256": "8d45b6922446a1550eeed309f5f37c351c1a8179fbf73f0a395b1a22c029e5a6",
+  "projection_count": 123,
+  "result_sha256": "ef842ec62150e65893f0d1198ad255575539db52bc919af4cee143a7bdbfc05a",
+  "status": "AUDIT_PASS"
+}

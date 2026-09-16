@@ -1,0 +1,7 @@
+{
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-groot-172.json",
+  "reproduced": true,
+  "status": "REPRODUCED",
+  "videos": 10,
+  "videos_with_old_error": 10
+}

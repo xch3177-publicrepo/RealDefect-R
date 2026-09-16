@@ -1,0 +1,15 @@
+{
+  "all_equal": true,
+  "checks": {
+    "aggregate_summary_equal": true,
+    "failure.aggregate_single_shard_violations": true,
+    "failure.cross_shard": true,
+    "failure.cross_shard_video_lineage": true,
+    "failure.declared_count_checks": true,
+    "success.aggregate_single_shard_violations": true,
+    "success.cross_shard": true,
+    "success.cross_shard_video_lineage": true,
+    "success.declared_count_checks": true
+  },
+  "note": "Timing, absolute paths and fresh run metadata are excluded. Original results were never used as audit output."
+}

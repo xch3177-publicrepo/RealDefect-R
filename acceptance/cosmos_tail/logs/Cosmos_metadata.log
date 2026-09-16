@@ -1,0 +1,25 @@
+VERIFIED failure/info.json 4522 a2ed78c6fcbaa5a05f474474d78598906087b4fa4fc4f45730a05ccff4986b01
+VERIFIED failure/stats.json 34412 9a089db94a4e00594367300ff9391dca0643396d4e925f310bafcc311acb274c
+VERIFIED failure/tasks.parquet 5490 e42ab024bd0e41d7e90358618e77bc8df799d9b5453f0b2d45146e6c77eb08e7
+VERIFIED success/episodes/file-001.parquet 61590380 ee66a83456b1b92667955b893bfec38204459c82577563cd34080ced888d234b
+VERIFIED failure/episodes/file-000.parquet 75911196 45243e378c44b8fad4a6d52e1bf7e5dec4f645390ab66fd6593fc2e44cd2be73
+VERIFIED success/episodes/file-002.parquet 58286935 38a9226fb6fc8c2d2b6aaa7e4238bc8cc6321131fd2f06b951bec0f232f3e042
+VERIFIED success/episodes/file-003.parquet 71074101 b5215e4461bc6a3b7e6586f0c2773d8fb55eb3aa85004f35affcc565d792b508
+VERIFIED success/info.json 4526 bde3ee8b4c6a437ad530630bb8a6954ba9eafb80e3fdfc0e983252aeaff2d30a
+VERIFIED success/stats.json 34444 ebc095389765fc7ce1f25b64a37d2ead03e56aca8645a1977668e1ff4c58724b
+VERIFIED success/episodes/file-000.parquet 80080877 34c4593b97aa4696580ef974b77c711395cec22ed22ae99ef70b2bf4101b9917
+VERIFIED success/tasks.parquet 2409362 497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44
+VERIFIED success/episodes/file-004.parquet 39789260 c60734b53bef8c913665802ff18a11f1c4fe64b09ee4e8418eaaa148d9db9a7d
+RUN ["<ENVIRONMENT>/bin/python", "<COSMOS_RUNTIME>/original/scripts/audit_droid_full_metadata.py", "--data-root", "<COSMOS_RUNTIME>/experiments/work/cosmos3-droid", "--output", "<COSMOS_RUN>/cosmos-metadata/rerun.json"]
+{
+  "all_declared_count_checks_passed": true,
+  "declared_frames_represented": 22412712,
+  "episode_metadata_shards": 6,
+  "episode_rows": 71907,
+  "gpu_used": false,
+  "identity_inconsistent_rows": 61502,
+  "scope": "complete public episode metadata for both splits; no trajectories or videos",
+  "splits": 2,
+  "task_companion_mismatch_rows": 50853
+}
+wrote <COSMOS_RUN>/cosmos-metadata/rerun.json

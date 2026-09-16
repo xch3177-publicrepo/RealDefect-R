@@ -1,0 +1,9 @@
+RD1: faulty_public=118r, reference_public=118r, faulty_enriched=118r, reference_enriched=118r
+RD2: faulty_public=5r, reference_public=5r, faulty_enriched=5r, reference_enriched=5r
+RD4: faulty_public=23833r, reference_public=23833r, faulty_enriched=23833r, reference_enriched=23833r
+RD5: faulty_public=9666r, reference_public=9666r, faulty_enriched=9666r, reference_enriched=9666r
+RD6: faulty_public=73802r, reference_public=73802r, faulty_enriched=73802r, reference_enriched=73802r
+RD7: faulty_public=2238r, reference_public=2238r, faulty_enriched=2238r, reference_enriched=2238r
+RD8: faulty_public=28r, reference_public=28r, faulty_enriched=28r, reference_enriched=28r, armb_fixture=28r
+
+wrote experiments/gx_baseline_20260914/artifact_manifest.json

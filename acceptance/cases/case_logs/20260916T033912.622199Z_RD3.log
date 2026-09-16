@@ -1,0 +1,17 @@
+{
+  "buggy_angular_error_deg": 119.99999999999999,
+  "buggy_contract_accepted": false,
+  "buggy_max_basis_displacement": 1.4142135623730954,
+  "case": "Isaac Lab PR #4559: stale WXYZ grasp offset consumed as XYZW",
+  "evidence_class": "merged upstream bugfix with exact pre-fix and post-fix constants",
+  "fixed_angular_error_deg": 0.0,
+  "fixed_contract_accepted": true,
+  "native_config_accepts_buggy_tuple": true,
+  "reproduced": true,
+  "shape_range_norm_baseline_accepts_buggy_tuple": true,
+  "shape_range_norm_baseline_accepts_fixed_tuple": true
+}
+buggy issues:
+- undeclared quaternion-order change: reorder_quaternion is required
+- physical orientations diverge by 120 degrees
+wrote <CASES_RUN>/cases-all/code/results/real-defect-isaaclab-4559.json

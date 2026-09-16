@@ -1,0 +1,65 @@
+{
+  "frozen_inputs": {
+    "bug_parent": "53ed0ff33019aa29f4ca12aefaa67d2d53e65112",
+    "dataset": "robomimic Lift PH low_dim v1.5",
+    "dataset_sha256": "0d302b37fb08e99b00de287b833925589ad3b65d199306e55562938bcbd746f1",
+    "logic_fix_commit": "43a498d4e2adc445012fa9d6e00821d5c22a14e3",
+    "merge_commit": "1c947f05d307b2660fb7821118a316ea7447586f",
+    "upstream_path": "robosuite/examples/third_party_controller/mink_controller.py",
+    "v1.5.0_commit": "1a8701b90c07c6595ace4af9935d7c5ebe1baed3",
+    "v1.5.1_commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a"
+  },
+  "limitations": [
+    "The public Lift demonstrations were collected with OSC_POSE/world, not the affected Mink/base branch.",
+    "This is an exact branch replay driven by real public action values and each episode's official embedded model XML, not an end-to-end historical rollout.",
+    "A range checker applied to the serialized normalized input accepts it; an instrumented checker applied after the faulty internal transform could also flag the very large delta.",
+    "The physical endpoint discrepancy is algebraic and does not require MuJoCo dynamics to establish."
+  ],
+  "representative_nonzero_step": {
+    "base_translation_m": [
+      -0.56,
+      0.0,
+      0.912
+    ],
+    "buggy_world_delta_m": [
+      -0.5498000000000001,
+      0.00435,
+      0.9084
+    ],
+    "contract_accepted": false,
+    "correct_world_delta_m": [
+      0.0102,
+      0.00435,
+      -0.003600000000000006
+    ],
+    "demo_id": "demo_0",
+    "error_norm_m": 1.0702074565242012,
+    "source_delta_m": [
+      0.0102,
+      0.00435,
+      -0.003600000000000006
+    ],
+    "step": 1
+  },
+  "sources": {
+    "controller_docs": "https://robosuite.ai/docs/source/robosuite.controllers.parts.arm.html",
+    "merge_commit": "https://github.com/ARISE-Initiative/robosuite/commit/1c947f05d307b2660fb7821118a316ea7447586f",
+    "pull_request": "https://github.com/ARISE-Initiative/robosuite/pull/626",
+    "release_notes": "https://github.com/ARISE-Initiative/robosuite/releases"
+  },
+  "summary": {
+    "buggy_contract_violations": 9666,
+    "case": "robosuite PR #626: base translation leaked into Mink IK delta actions",
+    "evidence_class": "merged upstream bugfix with public-action and embedded-model exact branch replay",
+    "fixed_contract_accepted": true,
+    "fixed_contract_violations": 0,
+    "input_shape_range_baseline_accepted": true,
+    "max_endpoint_error_m": 1.0702074565242015,
+    "median_buggy_delta_norm_m": 1.0540523374091482,
+    "median_correct_delta_norm_m": 0.026583711473925964,
+    "median_endpoint_error_m": 1.0702074565242012,
+    "min_endpoint_error_m": 1.0702074565242012,
+    "public_transitions_replayed": 9666,
+    "reproduced": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "RD8",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/run_real_defect_openpi_570.py",
+    "--work-dir",
+    "<CASES_RUN>/cases-all/code/runs/rd8_fresh"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:40.709234+00:00",
+  "finished_utc": "2026-09-16T03:52:55.715257+00:00",
+  "duration_seconds": 795.0039661250776,
+  "exit_code": 1,
+  "output_file": "20260916T033940.709234Z_RD8.log"
+}

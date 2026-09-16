@@ -1,0 +1,60 @@
+[
+  {
+    "step": "integrity",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "<CANDIDATE_8>/verify_public.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.05420358304399997,
+    "log": "integrity.log"
+  },
+  {
+    "step": "projection_recovery",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/recover_projections.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.3772217910736799,
+    "log": "projection_recovery.log"
+  },
+  {
+    "step": "RD3_RD6_scoped_smoke",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "reproducibility/reproduce.py",
+      "--work-dir",
+      "<FINAL_SMOKE_RUN>/cases-smoke",
+      "--cases",
+      "RD3,RD6"
+    ],
+    "exit_code": 0,
+    "seconds": 0.26930320798419416,
+    "log": "RD3_RD6_scoped_smoke.log"
+  },
+  {
+    "step": "RD8_condition_matrix",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/rd8_diagnostic_20260914/extract_rd8_condition_matrix.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.04195049998816103,
+    "log": "RD8_condition_matrix.log"
+  },
+  {
+    "step": "figure_generation",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "scripts/make_figures.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.09262612496968359,
+    "log": "figure_generation.log"
+  }
+]

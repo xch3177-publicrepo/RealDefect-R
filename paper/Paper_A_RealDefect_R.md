@@ -1,0 +1,237 @@
+# RealDefect-R: Replayable Evidence for Semantic Verification in Shared Robot-Data Pipelines
+
+## Abstract
+
+Shared robot-learning data pipelines can preserve shape, type and range while changing physical meaning or temporal identity. A receiving party may lack the reference information needed to verify these meanings. RealDefect-R binds eight public defect histories from five ecosystems to pinned sources, verified input identities, executable decision rules, execution scopes and retained outcomes. Six paired mechanism replays and one converter-coverage audit meet their local rules; a normalization repair restores coverage but remains outside its numerical tolerance in 24 of 44 conditions. Across cases, correctness depends on coefficient conventions, calibration anchors, temporal correspondence, cross-layer identity and population references. Expressing the rules in Great Expectations separates all seven eligible artifact pairs, while declared-schema checks separate one: evidence of rule portability. A complete audit of a cross-organizational re-release finds 61,502 of 71,907 episode summaries inconsistent with collection identifiers. Four stated frame constraints pass, and a separately versioned row-wise index check finds zero violations across 22,412,712 frames. A scoped replay of one released metadata-update function on four preselected records (two affected, two controls) propagates the discrepancies into the two affected outputs; correcting only the eight targeted episode-index summary fields reduces their 16 field violations to zero. These results make reference information and execution scope explicit, supporting auditable verification across data hand-offs.
+
+## Index Terms
+
+data provenance, data versioning, reproducibility, shared data pipelines, robot learning datasets, defect corpus, data validation, dataset verification, replay
+
+## 1. Introduction
+
+Robot-learning datasets can be produced, transformed and consumed by different parties. Laboratories record demonstrations, framework maintainers convert them between formats and versions, publishers re-release them under a new name, and downstream teams train on the result. In such a shared pipeline the correctness problem is not unreadable values: a stage can emit values that are readable, correctly typed, in range and internally consistent while the physical quantity or temporal identity they denote has changed, and the next consumer inherits the new meaning with the old schema. For example, OpenPI provides vision-language-action policies and a DROID training pipeline [^26]. The release checks studied here concern the data hand-offs that supply such policies; the study evaluates artifact verification, without evaluating a trained policy.
+
+A cross-organizational re-release shows the shape of the problem. In a pinned Cosmos3-DROID release—NVIDIA's conversion of the multi-institution DROID dataset to LeRobot v3.0—global episode boundaries, declared counts and camera interval chains are coherent, and four stated constraints on the identity columns of all 22,412,712 frames hold without exception. Yet 61,502 of its 71,907 per-episode summaries report identifiers from the source laboratory's local numbering rather than the collection they now live in, and a compatible released merge path offsets exactly those fields on the assumption that they are global. The observed discrepancies concern relations between episode summaries and collection identifiers, despite the four passing frame-column constraints.
+
+The same gap appears at the level of a single value. An Isaac Lab repair changes a grasp offset from a scalar-first quaternion convention to a scalar-last one. Both arrays have four finite components and unit norm, and the old array is *literally equal* to its source. Interpreting it under the new convention gives a rotation 120 degrees away from the intended offset [^1]. Nothing in the stored coefficients records which convention produced them.
+
+Public issue trackers document many such failures, but a URL is not reusable evidence. Reuse needs the source version, the identity of the inputs read, the historical calculation exercised, the reference information the verdict depends on, the complete decision rule, and the scope over which it was applied. RealDefect-R supplies that chain for eight cases and keeps the outcomes as measured, including one that fails. It makes three contributions.
+
+- **A replayable evidence resource and its protocol.** Eight public histories across five ecosystems, bound to pinned sources, inputs verified at a stated granularity, case-specific reference information, executable rules, execution-scope labels, original results and a retained negative case. The protocol is part of the resource: it is what makes each row of Table I checkable.
+- **Observed reference requirements, and rule portability.** Comparing the replays makes explicit the reference information each rule uses—whether supplied externally or read from another part of the same release—and those rules then run natively in a pinned general-purpose validator and separate their faulty artifacts there. The experiment exposes the reference dependencies needed to instantiate executable checks.
+- **A collection-scale consistency audit.** The Cosmos3-DROID release, audited completely and reported in separated layers: a measured summary-layer disagreement, checked frame-level constraints with no failures, a controlled consumer consequence, and an explicitly unmeasured downstream effect.
+
+## 2. Problem Setting and Research Questions
+
+Let \(A\) be the artifact a pipeline stage receives, \(T_v\) the versioned software that transforms it, and \(B = T_v(A)\) what the stage publishes. A consumer applies a local check \(S_c(X_c)\)—shape, dtype, finiteness, range, readability or internal consistency—to stated fields \(X_c\), which may be inputs or outputs. RD5, for example, distinguishes a normalized input action from the transformed output displacement. The verdict the case requires is \(V_c(A, B, R_c)\), where \(R_c\) is reference information beyond the properties \(S_c\) establishes: a coordinate convention, a calibration anchor, a request/response correspondence, an identity relation to another layer of the same release, or a population statistic. In several cases below \(S_c(X_c)\) accepts while \(V_c(A, B, R_c)\) rejects.
+
+The notation identifies each check's object and reference. A passing local check establishes its stated property; a semantic verdict additionally needs its case-specific relation. The reference may be external or stored elsewhere in the same release. Three questions follow.
+
+- **RQ1.** Under what explicit execution scope and complete decision rule can these public histories be rebuilt, and which negative outcomes survive? (Section III)
+- **RQ2.** What reference information does each case's verdict depend on, and do case-specific rules carry into a general-purpose data validator? (Section IV)
+- **RQ3.** Which cross-layer identity relations hold in a collection-scale re-release, and what happens to affected summaries when a pinned consumer function processes them under a controlled intervention? (Section V)
+
+## 3. The RealDefect-R Resource
+
+### 3.1 Scope and selection
+
+The unit of analysis is a public defect case identified by its historical mechanism and source path; incorrect rows, decisions or transitions stay clustered inside it. The corpus holds two LeRobot, two Isaac Lab, one robosuite, two OpenPI and one Isaac-GR00T case, covering loading, preprocessing, migration, controller-input construction and statistics reduction. Identifiers RD1–RD8 are stable across source, registry and result files.
+
+A maintained case needs public provenance, an identifiable robot-data operation, a discrepancy in meaning or coverage, and enough evidence to define reference behavior. Installation-only failures, unrelated interfaces, untraceable claims and author-injected examples are excluded, and duplicate reports of one mechanism stay one case. Failure to reproduce an included case is retained, preventing outcome-based removal from the denominator.
+
+The collection is purposive and retrospective. The first six cases were already available when RD7 and RD8 were added; a local manifest and a strengthening amendment bind the later cases to sources, inputs, orders, metrics and decisions before their recorded analyses [^13]. All eight stay in the denominator. RealDefect-R is a replay resource for mechanism-level evaluation of documented pipeline failures—not a prevalence sample, an exhaustive taxonomy, or a benchmark of model degradation.
+
+### 3.2 Executable release and recovery
+
+<!-- FIGURE_REPLAY_PROTOCOL -->
+
+The fixed release snapshot binds the original case sources to the newer validator experiment, RD8 diagnostic, Cosmos checks and figure generator in one per-file manifest [^13]. Each replay uses a fresh run directory, separates archived expected outcomes from newly generated results, and records executable, inputs, timing, exit status and streams. Pinned upstream downloads and bundled low-dimensional derivatives have distinct recovery and licensing entries in the registry; full-file hashes, range-read identities and projection digests are not interchangeable.
+
+Fig. 1 gives the protocol. Paired paths receive the same inputs and unchanged complete decision rule. RD4 instead audits one upstream converter body against its declared field inventory. Dependency, download, hash and execution failures are infrastructure outcomes; a completed calculation that fails its scientific rule, such as RD8, is a separate retained result. The public replay commands and input recovery details accompany the snapshot.
+
+### 3.3 Execution objects and reference authority
+
+**E1** denotes exact upstream before/after execution, **E2** a historical branch or loop replay, and **E3** an exact-constant or minimal-path experiment. Table I records the actual scope rather than assigning the whole resource one fidelity label. RD4 is an **upstream-body audit**, with unused imports stubbed and a NumPy-equivalent permutation helper; no repaired converter is executed. RD7 reconstructs the historical selection branches using PyAV. Source revisions and public event dates retain distinct roles: RD1 replays the proposed-fix revision, although its PR merged later [^2].
+
+Reference authority also varies. RD1 shares an expected-window helper between construction and checking; RD6 uses anchors documented by the upstream repair; RD7's sequential reference decode uses the same decoder library as its selection branches. These dependencies accompany the relevant outcomes rather than being described as independent implementations.
+
+### 3.4 The eight cases
+
+<!-- LATEX_INPUT: tab_cases.tex -->
+
+Table I summarizes each operation, execution scope, reference requirement and outcome. The registry supplies source revisions, local checks and complete decision rules. Two distinctions matter when reading the counts.
+
+First, RD3 and RD4 are the *same* convention change at two scales, and their numbers must not be merged: RD3 is one configuration constant 120° from its intended rotation under the angular rule \(2\arccos(|q_{\mathrm{ref}}\cdot q_{\mathrm{out}}|)\), applied after normalization and convention alignment so \(q\) and \(-q\) stay equivalent, while RD4's 15,141 unconverted instances are each more than 90° away, mean 149.17°. Second, RD1 reports two metrics: all 118 of 118 window decisions violate the padding and contract rule, while comparing only the bare returned index against the source index leaves 117 of 118 differing, since one value coincides—quoting 118 as "118 wrong indices" would be wrong. RD8 is treated in Section IV-C.
+
+## 4. Reference Requirements and Rule Portability
+
+### 4.1 What each replay establishes
+
+Read across cases rather than down them, Table I gives three headline requirements, each demonstrated by checks we execute rather than assert.
+
+**Finding 1: Coefficient equality does not establish physical equivalence.** RD3's faulty tuple is literally equal to its source while its correctly reordered tuple differs numerically, and all 15,141 uncovered RD4 instances likewise retain their source coefficients. Checking orientation preservation needs the conventions in addition to the coefficients.
+
+**Finding 2: Round-trip consistency does not establish calibration correctness.** RD6's old forward and inverse gripper conversions agree *exactly* on the tested anchors while both disagree with the documented encoder endpoints—2,405 and 3,110 counts, zero at 2,048, 4,096 counts per revolution. The round-trip establishes agreement between two conversion functions; only the anchors relate them to the calibrated endpoints, so two mutually consistent conversions can share an incorrect physical reference.
+
+**Finding 3: Frame readability does not establish requested-time correspondence.** RD7 returns correctly shaped images in both branches, yet the old branch selects the wrong frames for all 200 non-control requests; pairing each request with its intended timestamp and frame identity is what exposes the error.
+
+Two further kinds extend the list. RD1 and RD2 need an **identity or interval relation**—absolute row identity, and continuity of the global episode intervals across output files—expressible from the artifact's own fields but not from any single row. RD8 needs a **population statistic**: an independently computed full-array reference, against which coverage and numerical agreement are separate requirements. The Cosmos audit in Section V is an identity relation of the same kind, between a summary and the frames it summarizes, with the reference inside the same release.
+
+The reference can be release-internal: RD5's declared controller range separates its faulty output, and Cosmos summaries can be compared with their own collection. The common finding is a need to state the relevant relation, rather than to assume structural acceptance establishes it.
+
+### 4.2 Carrying the case rules into a general-purpose validator
+
+We executed the case rules natively in Great Expectations 1.6.3 on paired faulty and reference artifacts [^18]. The experiment tests rule portability into an existing validation host. Its protocol, eligible cases, suites, fixtures and scoring rule were hashed before execution; failed and superseded runs remain in the release record.
+
+<!-- LATEX_INPUT: fig_gx_matrix.tikz -->
+
+Seven cases yield a columnar artifact with more than one record; RD3 is not applicable, its replay object being a single configuration constant whose defect appears at population scale as RD4. Fig. 2 summarizes pair outcomes; the seven pairings have different construction scopes: RD1, RD2, RD5, RD7 and RD8 pair a faulty output with the repaired branch's output; RD4's reference conversion is constructed by applying the declared permutation to every source tuple, because no repaired upstream converter is executed in this study; RD6 is a derived target whose anchor predicate constrains only the two calibration anchor rows of a 73,802-row batch, leaving the rest outside its scope rather than validating them, its frozen replay unit unchanged; and RD8's artifact is the archived primary condition alone, natural order at batch 32, chosen before these runs, so it says nothing about the other 43 conditions.
+
+The suites differ in the reference information available *and* in the predicates consuming it; framework, executor, versions and scoring are identical. **Declared** uses structure and range expectations justified from each artifact's declared schema and documentation. **Reference-fitted** applies one mechanical rule—column set, non-null, dtype, observed minimum and maximum, observed value set for low-cardinality columns—to a reference fixture, for six cases a disjoint split of the reference artifact by row, demonstration or video. RD8 is the exception: its 28-record artifact admits no exchangeable split, so the fixture is the separately published companion statistics table, a distinct artifact whose population may overlap the evaluated projection. **Case-informed** supplies the case's own reference information through Expectation classes registered into the framework. A pair is separated only when the faulty artifact is rejected *and* the paired reference artifact is accepted.
+
+The declared suite separates one pair of seven: RD5, where the controller declares a per-axis output range of ±0.05 m, so with this fixture's identity base rotation the displacement-norm bound is \(\sqrt{3}\times 0.05 = 0.0866\) m and three expectations reject all 9,666 faulty rows, whose norm reaches 1.127 m, while accepting the repaired artifact at 0.072 m. We recorded that expected separation before running. On RD6 it rejects *both* artifacts, because real gripper values leave the documented 0–1 range under the old and the repaired normalization alike. The reference-fitted suite separates only RD8, using the companion fixture above; on the other six it rejects both paired artifacts, since bounds fitted on one disjoint split do not cover the held-out split either. That concerns these seven artifacts under this one mechanical rule, not profiling systems in general.
+
+The case-informed suite rejects all seven faulty artifacts at exactly the counts the case records report and accepts all seven reference artifacts. Clamp-and-pad row identity, global interval chaining, quaternion convention, displacement versus position, calibration anchors, requested-time correspondence and agreement with an independent reference statistic are all expressible as Expectation classes, each separating its tested pair. The claim is positive and bounded: this corpus's rules and reference artifacts port to a general-purpose validation tool and separate faulty from reference outputs there. Because predicates and reference data vary together, this is a portability result rather than automatic discovery accuracy or a causal estimate of the value of reference information.
+
+This grounds the three findings in executed checks: the declared suite accepts all 23,833 RD4 quaternions—including the 15,141 retaining their source coefficients—while the convention-aware expectation rejects exactly those; it cannot separate the two RD6 branches, while the anchor expectation rejects both faulty anchors and accepts both reference ones; and it accepts all 2,238 RD7 responses as correctly shaped `uint8` images in both branches, while the correspondence expectation rejects exactly the 200 non-control requests.
+
+### 4.3 The negative case, kept complete
+
+RD8 replays a reducer that computes normalization statistics from only the first member of each batch [^8]. Its frozen input is all 123 episodes and 36,900 rows of a pinned ALOHA dataset, projected to 14-component state and action vectors plus episode, frame and timestamp columns. The runner preserves natural order plus ten complete episode-cluster orders, seeds 0–9, across batch sizes 1, 8, 32 and 128: 44 conditions, including every nonempty final partial batch. This differs deliberately from the historical loader's separate `drop_last=True` behavior and omits its action horizon, ALOHA transforms and image-bearing DataLoader, isolating the raw-feature reducer branch. An independently computed float64 full-array reference supplies count, mean, population standard deviation and percentiles; fixed means and standard deviations must meet absolute tolerance \(10^{-5}\) in every condition, while quantiles stay descriptive because the historical reducer uses an approximate histogram.
+
+The complete criterion has two parts and only one is met. Coverage is restored: at the primary condition the old path covers 1,154 of 36,900 rows and the fixed path all of them. Numerical agreement is not: 24 of 44 conditions fail, maximum absolute error 0.000323453329. The case stays negative, and the favorable coverage result does not replace the numerical condition.
+
+The failures are structured, and the structure rules out the obvious explanation. All 11 conditions fail at batch size 1, 8 of 11 at 8, 5 of 11 at 32 and none at 128; every failing condition involves a standard-deviation vector above tolerance and none fails on the mean alone. Batch size 1 is where the faulty and repaired paths are *exactly* equal, and it is also the worst condition, so the residual cannot come from the batching defect the case replays; it grows with the number of incremental reducer updates, from 289 at batch size 128 to 36,900 at batch size 1. A separately named diagnostic, RD8-PD, isolates it on identical inputs across all 44 conditions: re-running the pinned repaired reducer unmodified reproduces the archived per-condition errors in 44 of 44, and our recomputed float64 reference differs from the frozen one by exactly zero. Against that control, replacing the reducer's `E[x²]−E[x]²` variance with a numerically stable streaming update at unchanged float32 precision reduces the maximum standard-deviation error from 3.235×10⁻⁴ to 4.689×10⁻⁶ and leaves the mean error bit-identical, while independently moving the running accumulators to float64 reduces the maximum mean error from 2.804×10⁻⁵ to 1.22×10⁻¹⁴. The standard-deviation residual is thus attributable to the differencing variance and the mean residual to accumulation precision, as two separate effects. These variants are diagnostic instruments, not proposed upstream changes, and whether a \(10^{-5}\) deviation matters downstream is not measured.
+
+Keeping this case complete is the point. RD1–RD6 result files are byte-identical to the archived release results, RD7 creates new execution provenance while reproducing the archived counts, and the new RD8 run retains the archived 24-of-44 failure count and maximum error, while fresh environment, provenance and approximate-quantile fields are not assumed byte-identical.
+
+## 5. A Collection-Scale Re-release Audit
+
+At collection scale the question becomes: can a release have coherent global episode boundaries while its per-record summaries retain identifiers from elsewhere? Cosmos3-DROID's data card states that it converts raw DROID—collected across 18 laboratories at 13 institutions [^22]—to LeRobot v3.0 and re-releases it under NVIDIA's name [^21], so its counts come from raw DROID and differ from the DROID paper's trajectory totals. We audit every episode-metadata shard in both splits at revision `dabaaffe428d67cf93fd355b82658934ee59bfec`: six episode shards and six companion files, verified against complete SHA-256 digests and processed by the original collection audit rerun unchanged. The population is 71,907 records representing 22,412,712 declared frames.
+
+For each record, the global episode identifier must agree with its constant episode-index summary; the declared frame interval `[s,e)` must agree with the index summary's minimum `s`, maximum `e−1` and mean `(s+e−1)/2`; and a task-index summary must resolve through the companion task table to the task text stored on that episode. These relations use information already in the release. The audit separately checks shard membership, declared counts, global sequence and interval continuity, and the interval chains of all three camera streams.
+
+<!-- LATEX_INPUT: fig_cosmos_audit.tikz -->
+
+Fig. 3 separates the collection-scale summary counts from the four-record consumer intervention; the specified frame checks provide a complementary result.
+
+**The summary layer disagrees, and this is measured.** Declared counts, input hashes, global continuity and camera interval chains all pass. Nevertheless 61,502 records have identity summaries inconsistent with the global identifiers and 50,853 task summaries resolve to a different companion text. Every affected identity summary matches the source-lab-local counters, and all 71,907 task-index summaries match a vocabulary reconstructed in first-occurrence order within each lab. That pattern is consistent with retaining local summaries while renumbering the outer collection; we did not run the publisher's conversion and do not claim to have established its cause. A separately implemented vector and table calculation, importing none of the original audit code, reproduces both counts, their intersection, the lab-local pattern and the continuity checks, and exposes a split difference: in the failure split 10,649 identity-inconsistent records still resolve to equal task text, because the local and global task vocabularies contain repeated strings, whereas all 50,623 success-split mismatches affect both relationships. The new original-audit run matches all nine recorded groups of scientific fields in the historical result.
+
+**No violations of the four specified frame constraints are found.** The three image features are declared `video` dtype, so the frame-level Parquet files carry no image bytes. Reading only `episode_index`, `task_index`, `frame_index` and `index` over HTTP range requests, we processed all 74 declared frame-level files of both splits—all 71,907 episodes and all 22,412,712 frames. Integrity is therefore claimed at two levels: complete digests for the twelve metadata objects, range reads over four columns for the 74 frame files, whose full Parquet bytes are not hashed. Per episode we check that the frame count equals the declared length (C1), that the multiset of frame `index` values equals the declared global interval (C2), that the multiset of `frame_index` values equals `{0,…,length−1}` (C3), and that `task_index` is constant and resolves to the stored task text (C4). All four hold for all 71,907 episodes.
+
+C2 and C3 compare sorted values, establishing complete, duplicate-free index-set coverage rather than row-wise alignment. We therefore added **C5** as a separate versioned experiment: \(\texttt{index}_i = s_e + \texttt{frame\_index}_i\), with \(s_e\) taken from the pinned metadata of the row's episode \(e\). Fresh range reads of three identity columns covered all 74 files, 71,907 episodes and 22,412,712 rows, with **zero violating rows or episodes**. The artifact retains the separate C5 protocol, column digests and range receipts alongside the unchanged C1–C4 evidence. C5 establishes this row-wise relation; neither it nor C1–C4 tests physical storage order or visual content. The observed discrepancies concern the episode-summary relations.
+
+**A scoped consumer replay demonstrates a mechanism.** LeRobot v0.6.1, commit `7e241bd6`, uses `update_meta_data` during aggregation to offset `stats/episode_index/*`, assuming pre-merge global identifiers [^29]. Before execution, we selected the first affected record and first agreeing control in each split: affected episode IDs 3,389 and 7,016, and control ID 0 in each split. Their 1,095 actual frame rows provide the reference identities. We execute the exact pinned function body with an empty video mapping, fixed offsets, identical parameters and an unchanged frame-derived reference under two conditions: original summaries and a summary-only correction.
+
+Both the intervention and scoring target exactly eight `stats/episode_index/*` fields: `min`, `max`, `mean`, `q01`, `q10`, `q50`, `q90` and `q99`. Each field has one scored output per record. The original condition propagates eight incorrect fields in each affected record (2 × 8 = 16); correction reduces these violations to zero. Both controls pass in both conditions. Other metadata, including `stats/index/*`, is outside this verdict. Adding the same offset to a summary and its reference preserves their difference, so the result demonstrates error propagation in this pinned function rather than a new amplification mechanism.
+
+This controlled intervention is a mechanism demonstration on preselected records, not an estimate of occurrence in a full merge. Its scope is one metadata-update function; production use of this release by that path and downstream policy effects are unmeasured.
+
+## 6. Implications for Publishing and Consuming Shared Data
+
+The cases point at a few concrete practices, each grounded in the evidence beside it and stopping where that evidence stops.
+
+**Version the convention with the coefficients.** RD3 and RD4 are one convention change at two scales and must be quoted separately: RD3's single constant is 120° from its intended rotation, RD4's 15,141 unconverted instances all more than 90° away, mean 149.17°. A release carrying a quaternion, an axis order or a unit should carry the convention identifier and its version where the coefficients live, because the shape, finiteness and convention-unaware checks we executed accepted the faulty representations.
+
+**Publish the calibration endpoints, not just the transform pair.** RD6's two conversions agreed exactly with each other while both disagreed with the documented anchors, so round-trip self-consistency is not evidence of calibration. Publish the endpoint values and their provenance next to the normalization, so a consumer can re-derive them.
+
+**Expose the request alongside the response.** RD7's old branch returns valid images with no indication of which timestamps they answer; returning the realized frame identity or timestamp with the frame lets the caller check correspondence. This is an application-level practice, not a change to any framework.
+
+**Recompute or explicitly label per-record summaries when re-releasing.** In Cosmos3-DROID the per-episode summaries match source-lab-local counters. The checked local-structure properties do not establish their correspondence with collection identifiers. A re-release should recompute them in the new identifier namespace or declare them source-local, and a receiving system should check the summary layer against the collection layer rather than assume compatibility.
+
+**Version the algorithm, precision and tolerance with the statistics.** RD8's coverage defect is fixed while its numerical criterion is not, the residual separating into a variance-algorithm and an accumulation-precision component (Section IV-C). Publishing a statistic without the reducer's algorithm, accumulator precision, batching and tolerance leaves a consumer unable to tell a restored population from an agreeing number.
+
+These practices come from robot-data cases. Pipelines in sensing, IoT telemetry and scientific instrumentation share the structure—local summaries, unit and frame conventions, calibrated endpoints, re-published collections—so they plausibly transfer, but nothing outside robot data was measured here and no cross-domain result is claimed.
+
+## 7. Limitations and Reuse
+
+Execution fidelity is limited by the chosen branch. The case replays use Python 3.12.2, NumPy 1.26.4, PyArrow 14.0.2, h5py 3.11.0 and isolated PyAV 15.1.0 where required; the GX, RD8 diagnostic and earlier Cosmos audits ran under CPython 3.12.3 with NumPy 1.26.4 and the validator under Great Expectations 1.6.3 with pandas 2.1.4, as their result files record. C5 and the consumer replay first ran under Python 3.12.2, NumPy 2.2.6, pandas 2.3.3 and PyArrow 25.0.0; fresh-input repeats under the public package's NumPy 1.26.4 environment reproduce their scientific counts and frame digests. Historical RD8 records use NumPy 2.2.6, so the new run and the diagnostic test repeatability across an environment difference rather than exact binary reproduction. Branch transcriptions and compatibility substitutions remain experimental dependencies, and no complete training stack, hardware rollout or simulator task is run.
+
+Selection is retrospective: public reporting favors visible and diagnosable problems, and proprietary failures are absent. The local freeze strengthens auditability for RD7 and RD8 but cannot erase knowledge of the first six cases or substitute for external registration. Repeated rows within a case are not independent samples, so the corpus supports descriptive analysis and reuse without estimating prevalence or degradation.
+
+Oracle validity varies by case, and the qualifying conditions stay beside the results in Table I and Fig. 2 rather than only here: RD4's field inventory sets its coverage denominator and no repaired counterpart is executed; RD6 relies on upstream anchor authority and its portability target constrains 2 of 73,802 rows; RD7's reference and replay share a decoder library; RD1 covers one nonzero-start episode at zero request offset and RD5 translation rather than the repaired rotation branch. RD8's failure depends on its fixed complete numerical rule—coverage alone cannot establish accurate statistics—and a different justified rule would need a separately versioned experiment retaining the original negative result; it also verifies archived projections rather than rehashing the 72.1 GB of source objects.
+
+The two larger measurements carry their own limits. The validator comparison covers seven non-uniform pairs under suites that vary predicates as well as reference data: it demonstrates portability rather than isolating a cause or measuring general framework capability, and the reference-fitted suite's RD8 fixture is a distinct published artifact that may overlap the evaluated projection. The RD8 diagnostic's variants are instruments, not upstream behavior and not a defect claim. The Cosmos observations cover per-episode metadata consistency plus four frame-level identity columns at one revision: image and video content was never decoded, other columns were not examined, C2 and C3 establish index-set coverage, C5 establishes one row-wise relation rather than physical row order, the consumer experiment executes a scoped function on four selected records while downstream harm is not measured, and no claim extends to other revisions.
+
+For reuse, case identifiers, source and input hashes, licenses, oracle versions, environments and negative outcomes stay together. An external method evaluation should distinguish developer-visible cases from held-out additions: freezing a known corpus preserves its identity without making it an unseen benchmark.
+
+## 8. Related Work
+
+**Data validation and conventions.** TensorFlow Data Validation checks schemas and distributional anomalies, including training/serving skew [^16], Deequ executes declarative constraints and user-defined checks on Spark [^17], and Great Expectations supports custom expectations [^18]. We treat these systems as hosts for semantic checks: RealDefect-R supplies versioned failure evidence and the references needed to instantiate such checks, and Section IV-B tests that portability in GX. RLDS represents sequential decision data [^9], while ROS REP 103 standardizes units and coordinate conventions [^10]. Our cases make the consequences of violating such relations executable.
+
+**Provenance and versioned releases.** PROV-DM represents entities, activities, agents and derivations [^19], and Datasheets document dataset composition, collection and recommended use [^20]. DVC records data and pipeline versions alongside code [^27], while lakeFS provides branches, commits and merges for data in object storage [^28]. These establish how artifacts are identified and derived; the present resource additionally binds an artifact version to an executable semantic decision rule and its observed outcome. Ortega et al. capture provenance across simulation-test configuration, execution and post-processing [^25]. Our focus is the semantic and cross-layer relations of transformed or re-released data artifacts.
+
+**Defect resources and oracles.** Defects4J couples historical faulty/fixed program versions with exposing tests [^11]. Jahangirova et al. examine source correspondence and reproducibility in deep-learning fault benchmarks [^30]; Shiri Harzevili et al. benchmark library fuzzers against real TensorFlow and PyTorch faults [^31]. RealDefect-R exposes semantic references and replay scope rather than evaluating fuzzer effectiveness. It focuses on data whose local representation remains valid while a physical or temporal relation is wrong, and retains a case whose complete criterion fails after repair. The oracle problem explains the need for a justified reference against which an output is judged [^12]. Here that reference and the execution scope are published with each result.
+
+## 9. Conclusion
+
+RealDefect-R connects eight public robot-data failure mechanisms to pinned artifacts, executable rules and traceable runs, keeping the protocol that makes each one checkable inside the resource. Seven cases meet their local criteria—six paired mechanism replays and one upstream-body coverage audit—while RD8 retains its numerical failure at 24 of 44 conditions. Each applicable case rule was then expressed in a pinned external validator: declared-schema expectations separate one of seven pairs and rule-informed expectations separate all seven while accepting all seven reference artifacts, a portability result rather than defect discovery. A cross-organizational re-release was audited in separated layers: a measured summary-level disagreement, checked frame-level constraints showing none, a scoped consumer replay with a summary-only control, and no measured downstream effect.
+
+Each case-specific rule makes its reference information explicit—a convention, a calibration anchor, a temporal correspondence, a cross-layer identity or an independent population statistic—whether that information is supplied externally or is available elsewhere in the release. RD5's declared controller range and the Cosmos cross-layer reference are available within the release. A quaternion convention cannot be inferred from the coefficient values alone; it must be supplied explicitly, whether within the release or externally. Publishers and format maintainers decide whether that information accompanies a release, and versioning decides whether it survives a conversion; making those decisions inspectable—and replayable—is what this resource is for.
+
+## Data and Code Availability
+
+The minimal, sanitized replay package is available at the public RealDefect-R mirror as fixed version `public-v1.0.0-20260916` [^13]. The release provides a downloadable snapshot, per-file SHA-256 manifest and archive checksums. It contains the case registry and runners, projected inputs and small fixtures, GX experiment, RD8 diagnostic, Cosmos audits including C5 and the consumer replay, figure sources, protocols and retained outcomes. `REPRO.md` provides an unauthenticated retrieval command and separates offline integrity checks from fresh-input execution, including a short native-GX replay. RD8's expected scientific negative is distinguished from infrastructure failure. Private work paths, contact details, review correspondence and unrelated development records are excluded; upstream source identities and attribution are retained.
+
+Author-owned code is MIT-licensed and documentation is CC BY 4.0. A per-item inventory distinguishes bundled derivatives from recovered upstream inputs. It includes the 123 low-dimensional RD8 projections and required small fixtures with upstream notices; large HDF5 and video inputs are fetched at pinned identities and hash-checked. The approximately 72.1 GB of image-bearing ALOHA Parquet is neither bundled nor downloaded for RD8; its source-object identities and the projection digests are recorded separately. The release includes a clean-environment validation transcript.
+
+## AI Assistance Disclosure
+
+OpenAI Codex and Anthropic Claude assisted with language editing, LaTeX typesetting, literature retrieval, selected analysis scripts, experiment orchestration and figure preparation. The authors reviewed the manuscript, verified the reported results and citations, and take responsibility for the final text. AI tools are not evaluated methods in this study.
+
+## Sources
+
+[^26]: Physical Intelligence. [OpenPI: open-source vision-language-action models and DROID training examples.](https://github.com/Physical-Intelligence/openpi) Project documentation, accessed 16 September 2026.
+
+[^1]: NVIDIA / Isaac Lab. [“Fixes gear assembly environment for Isaac Sim 6.0 and XYZW quaternions,” PR 4559](https://github.com/isaac-sim/IsaacLab/pull/4559). Created 6 February 2026, merged 13 February 2026; metadata and changed files verified via the GitHub REST API.
+
+[^13]: RealDefect-R contributors. [Sanitized replay artifact, version public-v1.0.0-20260916.](https://github.com/xch3177-publicrepo/RealDefect-R/releases/tag/public-v1.0.0-20260916) Versioned source, input inventory, SHA-256 manifest and replay records, 2026.
+
+[^2]: Hugging Face / LeRobot. [“Delta timestamps + episodes filter is broken,” issue 2610](https://github.com/huggingface/lerobot/issues/2610), 9 December 2025; and [“Bugfix: Fix delta timestamps with episodes filter and add tests,” PR 2612](https://github.com/huggingface/lerobot/pull/2612), merged 16 January 2026; merge status verified via the live GitHub API.
+
+[^4]: Hugging Face / LeRobot. [“Bug in conversion from v2.1 script,” PR 2057](https://github.com/huggingface/lerobot/pull/2057). Created and merged 26 September 2025; metadata verified via the GitHub REST API.
+
+[^3]: NVIDIA / Isaac Lab. [HDF5 dataset handler at revision ffff603eafc6b74264a5261cc0183d6a65390d78](https://github.com/isaac-sim/IsaacLab/blob/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py#L285-L351), and demonstration documentation at revision `37ddf626871758333d6ed89cf64ad702aef127d0`. Retrieved 12 September 2026 UTC. The two revisions have different roles and are not a verified faulty/repaired pair.
+
+[^5]: ARISE Initiative / robosuite. [“[fix] fix mink IK with delta input type,” PR 626](https://github.com/ARISE-Initiative/robosuite/pull/626). Created 23 January 2025, merged 30 January 2025; metadata verified via the GitHub REST API.
+
+[^6]: Physical Intelligence / OpenPI. [“Fix aloha reset position and gripper scaling,” PR 557](https://github.com/Physical-Intelligence/openpi/pull/557). Created and merged 9 July 2025.
+
+[^7]: NVIDIA / Isaac-GR00T. [“Some bug about torchvision_av backend,” issue 172](https://github.com/NVIDIA/Isaac-GR00T/issues/172), 21 May 2025; and [“fix torch-vision-av seek issue,” PR 373](https://github.com/NVIDIA/Isaac-GR00T/pull/373), merged 19 September 2025.
+
+[^8]: Physical Intelligence / OpenPI. [“why just use batch[0] in compute_norm_stats,” issue 570](https://github.com/Physical-Intelligence/openpi/issues/570), 2025; [“Fix compute_norm_stats batching,” PR 619](https://github.com/Physical-Intelligence/openpi/pull/619), merged 27 August 2025; and [“Fix normalize tests and add multi-batch dimension test,” PR 623](https://github.com/Physical-Intelligence/openpi/pull/623), merged 28 August 2025.
+
+[^18]: Great Expectations. [“Customize Expectations.”](https://docs.greatexpectations.io/docs/core/customize_expectations/) GX Core documentation, accessed 12 September 2026.
+
+[^22]: Alexander Khazatsky, Karl Pertsch, Suraj Nair, et al. [“DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset.”](https://arxiv.org/abs/2403.12945) arXiv:2403.12945, 2024.
+
+[^21]: NVIDIA. [Cosmos3-DROID at revision dabaaffe428d67cf93fd355b82658934ee59bfec.](https://huggingface.co/datasets/nvidia/Cosmos3-DROID/tree/dabaaffe428d67cf93fd355b82658934ee59bfec) Both splits' episode metadata, companion tables and frame-level identity columns; the two integrity levels used are stated in Section V. The data card states the release converts raw DROID to LeRobot v3.0 under OpenMDW 1.1; accessed 15 September 2026 UTC.
+
+[^29]: Hugging Face / LeRobot. [Metadata update for dataset aggregation, v0.6.1.](https://github.com/huggingface/lerobot/blob/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/datasets/aggregate.py#L184-L347) Pinned function and source digests in the released consumer-replay protocol, accessed 16 September 2026.
+
+[^16]: Eric Breck et al. [“Data Validation for Machine Learning.”](https://proceedings.mlsys.org/paper_files/paper/2019/file/928f1160e52192e3e0017fb63ab65391-Paper.pdf) Proceedings of Machine Learning and Systems 1, 2019, pp. 334–347.
+
+[^17]: Sebastian Schelter et al. [“Automating Large-Scale Data Quality Verification.”](https://www.vldb.org/pvldb/vol11/p1781-schelter.pdf) PVLDB 11(12), 2018, pp. 1781–1794. DOI: 10.14778/3229863.3229867.
+
+[^9]: Sabela Ramos et al. [“RLDS: an Ecosystem to Generate, Share and Use Datasets in Reinforcement Learning.”](https://arxiv.org/abs/2111.02767) arXiv:2111.02767, 2021.
+
+[^10]: Tully Foote and Mike Purvis. [“REP 103: Standard Units of Measure and Coordinate Conventions.”](https://reps.openrobotics.org/rep-0103/) Open Robotics, 2010; accessed 12 September 2026 UTC.
+
+[^19]: Luc Moreau and Paolo Missier, eds. [“PROV-DM: The PROV Data Model.”](https://www.w3.org/TR/2013/REC-prov-dm-20130430/) W3C Recommendation, 30 April 2013.
+
+[^20]: Timnit Gebru et al. [“Datasheets for Datasets.”](https://arxiv.org/abs/1803.09010) Communications of the ACM 64(12), 2021, pp. 86–92. DOI: 10.1145/3458723.
+
+[^27]: DVC. [“Don't Just Track Your ML Experiments, Version Them.”](https://dvc.org/blog/ml-experiment-versioning/) Project documentation, 2021.
+
+[^28]: lakeFS. [“Version Data.”](https://docs.lakefs.io/guides/version-data/) Project documentation, accessed 16 September 2026.
+
+[^25]: Argentina Ortega et al. [“Replicable Simulation-Based Robot Validation through Provenance.”](https://arxiv.org/abs/2605.29973) arXiv:2605.29973, 2026.
+
+[^11]: René Just et al. [“Defects4J: A Database of Existing Faults to Enable Controlled Testing Studies for Java Programs.”](https://homes.cs.washington.edu/~mernst/pubs/bug-database-issta2014.pdf) Proceedings of ISSTA, 2014, pp. 437–440. DOI: 10.1145/2610384.2628055.
+
+[^12]: Earl T. Barr et al. [“The Oracle Problem in Software Testing: A Survey.”](https://discovery.ucl.ac.uk/id/eprint/1471263/) IEEE Transactions on Software Engineering 41(5), 2015, pp. 507–525. DOI: 10.1109/TSE.2014.2372785.
+
+[^30]: Gunel Jahangirova, Nargiz Humbatova, Jinhan Kim, Shin Yoo, and Paolo Tonella. [“Real Faults in Deep Learning Fault Benchmarks: How Real Are They?”](https://arxiv.org/abs/2412.16336) arXiv:2412.16336, 2024.
+
+[^31]: Nima Shiri Harzevili, Hung Viet Pham, and Song Wang. [“Benchmarking Deep Learning Fuzzers.”](https://arxiv.org/abs/2310.06912) arXiv:2310.06912, 2023.

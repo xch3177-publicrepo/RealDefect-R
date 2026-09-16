@@ -1,0 +1,12 @@
+{
+  "name": "RealDefect-R sanitized minimal public snapshot",
+  "version": "public-v1.0.0-20260916",
+  "built_utc": "2026-09-16T05:58:00.703842+00:00",
+  "working_source_commit": "63a0a56332aa05c6ffb4f3ac24b8be3d0309cf34",
+  "source_tree_was_dirty_at_build": false,
+  "source_content_rule": "SOURCE_MAP.json binds selected exact or sanitized source bytes; manifest binds every final package file including new experiments and paper; no private git history",
+  "historical_source_commit": "5d50746be318692bc46a417af65e781bd3946b88",
+  "license_selection": "mit-ccby",
+  "publication_status": "local package identity; remote availability is established by the public tag, not by this file",
+  "privacy_scope": "remove private paths, credentials and internal research/agent history; preserve public upstream provenance; not an anonymous dataset"
+}

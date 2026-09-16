@@ -1,0 +1,14 @@
+{
+  "name": "RD4",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/run_isaaclab_quaternion_migration.py"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:12.659215+00:00",
+  "finished_utc": "2026-09-16T03:39:16.674088+00:00",
+  "duration_seconds": 4.014879958005622,
+  "exit_code": 0,
+  "output_file": "20260916T033912.659215Z_RD4.log"
+}

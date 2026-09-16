@@ -1,0 +1,339 @@
+{
+  "consumer": {
+    "commit": "7e241bd630a3719a56157a497ce5d08f244784f1",
+    "extraction": "Exact ast source segment; future annotations prepended, pd/np dependencies supplied; function body unchanged.",
+    "full_file_sha256": "49b9e9e2962503eefb338e4a684b6d0003992ea9bd962acfee562ef98eaf6db1",
+    "function": "update_meta_data",
+    "function_text_sha256": "879cd210cb17363f03557a0dd8496da14d807a4a430474ea53f11d5185186d22",
+    "line_end": 347,
+    "line_start": 184,
+    "source_url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/datasets/aggregate.py"
+  },
+  "experiment": "COSMOS-CONSUMER-20260916",
+  "finished_utc": "2026-09-16T03:37:53.973030+00:00",
+  "fixed_offsets": {
+    "data_chunk": 0,
+    "data_file": 0,
+    "meta_chunk": 0,
+    "meta_file": 0,
+    "total_episodes": 100000,
+    "total_frames": 30000000
+  },
+  "frame_receipts": [
+    {
+      "end_exclusive": 78852071,
+      "path": "failure/data/chunk-000/file-002.parquet",
+      "returned_bytes": 65536,
+      "sha256": "495f65229d7ade5eb38b9b5ba3555261007b5f797f351f288cf64a6ea533321f",
+      "start": 78786535
+    },
+    {
+      "end_exclusive": 78838315,
+      "path": "failure/data/chunk-000/file-002.parquet",
+      "returned_bytes": 1677636,
+      "sha256": "1ca105e1397f561145e76d472074f934d4df1fb74518ed44951d0c18e92d3d0e",
+      "start": 77160679
+    },
+    {
+      "end_exclusive": 78031478,
+      "path": "failure/data/chunk-000/file-000.parquet",
+      "returned_bytes": 65536,
+      "sha256": "3683b725b8cc614e726e68f6878ab9ebedcab797ce000804a79c22edb2463aa4",
+      "start": 77965942
+    },
+    {
+      "end_exclusive": 78017814,
+      "path": "failure/data/chunk-000/file-000.parquet",
+      "returned_bytes": 1695433,
+      "sha256": "598c1d34697c43e3cbe81d93df7aa88ddd52f3619bc986056b7fdf83105fd660",
+      "start": 76322381
+    },
+    {
+      "end_exclusive": 77391950,
+      "path": "success/data/chunk-000/file-009.parquet",
+      "returned_bytes": 65536,
+      "sha256": "d15b71d6a0225836ffee3e092c60605342146c25e2d19d57ff68aa53726b512e",
+      "start": 77326414
+    },
+    {
+      "end_exclusive": 77366444,
+      "path": "success/data/chunk-000/file-009.parquet",
+      "returned_bytes": 1646760,
+      "sha256": "34982701134ec578fe1eca5ced0d1ed6023d38bd3207965fafc937ddad4f1d13",
+      "start": 75719684
+    },
+    {
+      "end_exclusive": 77129770,
+      "path": "success/data/chunk-000/file-000.parquet",
+      "returned_bytes": 65536,
+      "sha256": "03b3e6d59058f730acdadf90075171f792b2628a981c18f3281c225c5348e729",
+      "start": 77064234
+    },
+    {
+      "end_exclusive": 77106745,
+      "path": "success/data/chunk-000/file-000.parquet",
+      "returned_bytes": 1719939,
+      "sha256": "2246e23170f53bc93723ffa79d51d132635c1bc71cf0021efd617cd8316b52bb",
+      "start": 75386806
+    }
+  ],
+  "input_manifest_sha256": "b60e8e6811c13e1f096f812f6994994551b46c867bbd8bbadca08722c7b1afc7",
+  "metadata": [
+    {
+      "origin": "verified_public_download",
+      "path": "failure/episodes/file-000.parquet",
+      "sha256": "45243e378c44b8fad4a6d52e1bf7e5dec4f645390ab66fd6593fc2e44cd2be73"
+    },
+    {
+      "origin": "verified_public_download",
+      "path": "failure/tasks.parquet",
+      "sha256": "e42ab024bd0e41d7e90358618e77bc8df799d9b5453f0b2d45146e6c77eb08e7"
+    },
+    {
+      "origin": "verified_public_download",
+      "path": "success/episodes/file-000.parquet",
+      "sha256": "34c4593b97aa4696580ef974b77c711395cec22ed22ae99ef70b2bf4101b9917"
+    },
+    {
+      "origin": "verified_public_download",
+      "path": "success/episodes/file-001.parquet",
+      "sha256": "ee66a83456b1b92667955b893bfec38204459c82577563cd34080ced888d234b"
+    },
+    {
+      "origin": "verified_public_download",
+      "path": "success/episodes/file-002.parquet",
+      "sha256": "38a9226fb6fc8c2d2b6aaa7e4238bc8cc6321131fd2f06b951bec0f232f3e042"
+    },
+    {
+      "origin": "verified_public_download",
+      "path": "success/episodes/file-003.parquet",
+      "sha256": "b5215e4461bc6a3b7e6586f0c2773d8fb55eb3aa85004f35affcc565d792b508"
+    },
+    {
+      "origin": "verified_public_download",
+      "path": "success/episodes/file-004.parquet",
+      "sha256": "c60734b53bef8c913665802ff18a11f1c4fe64b09ee4e8418eaaa148d9db9a7d"
+    },
+    {
+      "origin": "verified_public_download",
+      "path": "success/tasks.parquet",
+      "sha256": "497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44"
+    }
+  ],
+  "protocol_sha256": "9f63e703a2fc1672b712516068f239ef7a94d2af083651148cee01fe7c7b190b",
+  "python": "3.12.2",
+  "records": [
+    {
+      "chunk_index": 0,
+      "conditions": {
+        "original": {
+          "output_episode_index": 103389,
+          "output_summary": {
+            "max": 100000.0,
+            "mean": 100000.0,
+            "min": 100000.0,
+            "q01": 100000.0,
+            "q10": 100000.0,
+            "q50": 100000.0,
+            "q90": 100000.0,
+            "q99": 100000.0
+          },
+          "violating_field_count": 8,
+          "violating_fields": [
+            "min",
+            "max",
+            "mean",
+            "q01",
+            "q10",
+            "q50",
+            "q90",
+            "q99"
+          ]
+        },
+        "summary_corrected": {
+          "output_episode_index": 103389,
+          "output_summary": {
+            "max": 103389.0,
+            "mean": 103389.0,
+            "min": 103389.0,
+            "q01": 103389.0,
+            "q10": 103389.0,
+            "q50": 103389.0,
+            "q90": 103389.0,
+            "q99": 103389.0
+          },
+          "violating_field_count": 0,
+          "violating_fields": []
+        }
+      },
+      "episode_index": 3389,
+      "expected_output_episode_summary": 103389,
+      "file_index": 2,
+      "frame_path": "failure/data/chunk-000/file-002.parquet",
+      "frame_rows": 232,
+      "kind": "affected",
+      "selected_frame_digest": "e45710b15463f2347bead0abdaff951df301950e9d9b25e334f3033737b2b89d",
+      "split": "failure"
+    },
+    {
+      "chunk_index": 0,
+      "conditions": {
+        "original": {
+          "output_episode_index": 100000,
+          "output_summary": {
+            "max": 100000.0,
+            "mean": 100000.0,
+            "min": 100000.0,
+            "q01": 100000.0,
+            "q10": 100000.0,
+            "q50": 100000.0,
+            "q90": 100000.0,
+            "q99": 100000.0
+          },
+          "violating_field_count": 0,
+          "violating_fields": []
+        },
+        "summary_corrected": {
+          "output_episode_index": 100000,
+          "output_summary": {
+            "max": 100000.0,
+            "mean": 100000.0,
+            "min": 100000.0,
+            "q01": 100000.0,
+            "q10": 100000.0,
+            "q50": 100000.0,
+            "q90": 100000.0,
+            "q99": 100000.0
+          },
+          "violating_field_count": 0,
+          "violating_fields": []
+        }
+      },
+      "episode_index": 0,
+      "expected_output_episode_summary": 100000,
+      "file_index": 0,
+      "frame_path": "failure/data/chunk-000/file-000.parquet",
+      "frame_rows": 220,
+      "kind": "control",
+      "selected_frame_digest": "59aabfdb05e709c8ecb367077120478fec3c7d8851e94c7aebbdf71ca9e660fa",
+      "split": "failure"
+    },
+    {
+      "chunk_index": 0,
+      "conditions": {
+        "original": {
+          "output_episode_index": 107016,
+          "output_summary": {
+            "max": 100000.0,
+            "mean": 100000.0,
+            "min": 100000.0,
+            "q01": 100000.0,
+            "q10": 100000.0,
+            "q50": 100000.0,
+            "q90": 100000.0,
+            "q99": 100000.0
+          },
+          "violating_field_count": 8,
+          "violating_fields": [
+            "min",
+            "max",
+            "mean",
+            "q01",
+            "q10",
+            "q50",
+            "q90",
+            "q99"
+          ]
+        },
+        "summary_corrected": {
+          "output_episode_index": 107016,
+          "output_summary": {
+            "max": 107016.0,
+            "mean": 107016.0,
+            "min": 107016.0,
+            "q01": 107016.0,
+            "q10": 107016.0,
+            "q50": 107016.0,
+            "q90": 107016.0,
+            "q99": 107016.0
+          },
+          "violating_field_count": 0,
+          "violating_fields": []
+        }
+      },
+      "episode_index": 7016,
+      "expected_output_episode_summary": 107016,
+      "file_index": 9,
+      "frame_path": "success/data/chunk-000/file-009.parquet",
+      "frame_rows": 172,
+      "kind": "affected",
+      "selected_frame_digest": "2f4d9ef082ae670dbec6cc5d68a66b055cbb9b1e07e74ec29eb3a8bfd9c4c3f7",
+      "split": "success"
+    },
+    {
+      "chunk_index": 0,
+      "conditions": {
+        "original": {
+          "output_episode_index": 100000,
+          "output_summary": {
+            "max": 100000.0,
+            "mean": 100000.0,
+            "min": 100000.0,
+            "q01": 100000.0,
+            "q10": 100000.0,
+            "q50": 100000.0,
+            "q90": 100000.0,
+            "q99": 100000.0
+          },
+          "violating_field_count": 0,
+          "violating_fields": []
+        },
+        "summary_corrected": {
+          "output_episode_index": 100000,
+          "output_summary": {
+            "max": 100000.0,
+            "mean": 100000.0,
+            "min": 100000.0,
+            "q01": 100000.0,
+            "q10": 100000.0,
+            "q50": 100000.0,
+            "q90": 100000.0,
+            "q99": 100000.0
+          },
+          "violating_field_count": 0,
+          "violating_fields": []
+        }
+      },
+      "episode_index": 0,
+      "expected_output_episode_summary": 100000,
+      "file_index": 0,
+      "frame_path": "success/data/chunk-000/file-000.parquet",
+      "frame_rows": 471,
+      "kind": "control",
+      "selected_frame_digest": "f43a3ff920bc122f069e58d035c72260ab958c6c05abecf2bf3b723f537ca91c",
+      "split": "success"
+    }
+  ],
+  "scope": "Execute exact whole update_meta_data function extracted from pinned source with annotations deferred; input selects metadata index/task/episode-stat fields, videos_idx empty. No video handling, complete merge, data-file output, production-use or model-harm claim.",
+  "script_sha256": "74cf926c93fd9060b2cb52b765eba07510a7fbb8ee58d0a3ae02aa2cd5d647f5",
+  "started_utc": "2026-09-16T03:37:46.009175+00:00",
+  "status": "EXECUTED",
+  "totals": {
+    "original": {
+      "records": 4,
+      "violating_fields": 16,
+      "violating_records": 2
+    },
+    "summary_corrected": {
+      "records": 4,
+      "violating_fields": 0,
+      "violating_records": 0
+    }
+  },
+  "versions": {
+    "huggingface_hub": "1.31.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.0"
+  }
+}

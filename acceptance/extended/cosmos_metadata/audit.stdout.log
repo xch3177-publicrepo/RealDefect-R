@@ -1,0 +1,12 @@
+{
+  "all_declared_count_checks_passed": true,
+  "declared_frames_represented": 22412712,
+  "episode_metadata_shards": 6,
+  "episode_rows": 71907,
+  "gpu_used": false,
+  "identity_inconsistent_rows": 61502,
+  "scope": "complete public episode metadata for both splits; no trajectories or videos",
+  "splits": 2,
+  "task_companion_mismatch_rows": 50853
+}
+wrote <EXTENDED_RUN>/cosmos-metadata/rerun.json

@@ -1,0 +1,8 @@
+{
+  "episodes": 123,
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-openpi-570.json",
+  "primary_material_effect": true,
+  "primary_old_action_row_coverage": 0.03127371273712737,
+  "reproduced": false,
+  "status": "NOT_REPRODUCED"
+}

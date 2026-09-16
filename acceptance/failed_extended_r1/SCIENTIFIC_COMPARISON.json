@@ -1,0 +1,122 @@
+[
+  {
+    "check": "GX.tally",
+    "matches": true,
+    "actual": {
+      "A_declared_schema": {
+        "DETECTED": 1,
+        "MISSED": 5,
+        "ALWAYS_FAIL": 1,
+        "REFERENCE_FALSE_POSITIVE_ONLY": 0,
+        "NOT_EXECUTED": 0
+      },
+      "B_disjoint_reference_fitted": {
+        "DETECTED": 1,
+        "MISSED": 0,
+        "ALWAYS_FAIL": 6,
+        "REFERENCE_FALSE_POSITIVE_ONLY": 0,
+        "NOT_EXECUTED": 0
+      },
+      "C_information_enriched": {
+        "DETECTED": 7,
+        "MISSED": 0,
+        "ALWAYS_FAIL": 0,
+        "REFERENCE_FALSE_POSITIVE_ONLY": 0,
+        "NOT_EXECUTED": 0
+      }
+    },
+    "expected": {
+      "A_declared_schema": {
+        "DETECTED": 1,
+        "MISSED": 5,
+        "ALWAYS_FAIL": 1,
+        "REFERENCE_FALSE_POSITIVE_ONLY": 0,
+        "NOT_EXECUTED": 0
+      },
+      "B_disjoint_reference_fitted": {
+        "DETECTED": 1,
+        "MISSED": 0,
+        "ALWAYS_FAIL": 6,
+        "REFERENCE_FALSE_POSITIVE_ONLY": 0,
+        "NOT_EXECUTED": 0
+      },
+      "C_information_enriched": {
+        "DETECTED": 7,
+        "MISSED": 0,
+        "ALWAYS_FAIL": 0,
+        "REFERENCE_FALSE_POSITIVE_ONLY": 0,
+        "NOT_EXECUTED": 0
+      }
+    }
+  },
+  {
+    "check": "GX.cases_evaluated",
+    "matches": true,
+    "actual": [
+      "RD1",
+      "RD2",
+      "RD4",
+      "RD5",
+      "RD6",
+      "RD7",
+      "RD8"
+    ],
+    "expected": [
+      "RD1",
+      "RD2",
+      "RD4",
+      "RD5",
+      "RD6",
+      "RD7",
+      "RD8"
+    ]
+  },
+  {
+    "check": "GX.denominator",
+    "matches": true,
+    "actual": 7,
+    "expected": 7
+  },
+  {
+    "check": "GX.preserved_plan.arms",
+    "matches": true,
+    "actual": [
+      "A_declared_schema",
+      "B_disjoint_reference_fitted",
+      "C_information_enriched"
+    ],
+    "expected": [
+      "A_declared_schema",
+      "B_disjoint_reference_fitted",
+      "C_information_enriched"
+    ]
+  },
+  {
+    "check": "GX.preserved_plan.cases",
+    "matches": true,
+    "actual": [
+      "RD1",
+      "RD2",
+      "RD4",
+      "RD5",
+      "RD6",
+      "RD7",
+      "RD8"
+    ],
+    "expected": [
+      "RD1",
+      "RD2",
+      "RD4",
+      "RD5",
+      "RD6",
+      "RD7",
+      "RD8"
+    ]
+  },
+  {
+    "check": "GX.preserved_plan.suites_sha256",
+    "matches": true,
+    "actual": "0ee7f8553ee043f404c73718c06b5f1801710546d5d9139b97457abb31434ce3",
+    "expected": "0ee7f8553ee043f404c73718c06b5f1801710546d5d9139b97457abb31434ce3"
+  }
+]

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<FAILED_EXTENDED_RUNTIME>/experiments/rd8_diagnostic_20260914/rd8_precision_diagnostic.py", line 56, in <module>
+    import RD8_fixed_stats as pinned  # noqa: E402  pinned upstream repaired reducer, imported unchanged
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<FAILED_EXTENDED_RUNTIME>/reproducibility/light_inputs/upstream_pinned_sources/RD8_fixed_stats.py", line 5, in <module>
+    import numpydantic
+ModuleNotFoundError: No module named 'numpydantic'

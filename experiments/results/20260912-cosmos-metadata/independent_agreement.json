@@ -1,0 +1,24 @@
+{
+  "all_pass": true,
+  "checks": {
+    "failure.frames": true,
+    "failure.global_checks": true,
+    "failure.identity": true,
+    "failure.local_identity": true,
+    "failure.local_task": true,
+    "failure.rows": true,
+    "failure.task": true,
+    "success.frames": true,
+    "success.global_checks": true,
+    "success.identity": true,
+    "success.local_identity": true,
+    "success.local_task": true,
+    "success.rows": true,
+    "success.task": true
+  },
+  "input_sha256": {
+    "independent_referential_check.json": "fac4f28d0bb97922e102266825fcd549e88d9bcc75a08afefb4a57867bdb9146",
+    "rerun.json": "bb3830f61ad478b6e8820a462afd9b82b18dcf229ddfe005b899ad7f28f874bf"
+  },
+  "note": "Post-run equality check of separately implemented calculations; no tolerance or source/result was changed to obtain agreement."
+}

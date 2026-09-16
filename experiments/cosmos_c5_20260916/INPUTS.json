@@ -1,0 +1,48 @@
+{
+  "repository": "nvidia/Cosmos3-DROID",
+  "revision": "dabaaffe428d67cf93fd355b82658934ee59bfec",
+  "files": [
+    {
+      "path": "failure/episodes/file-000.parquet",
+      "remote_path": "failure/meta/episodes/chunk-000/file-000.parquet",
+      "sha256": "45243e378c44b8fad4a6d52e1bf7e5dec4f645390ab66fd6593fc2e44cd2be73",
+      "size_bytes": 75911196,
+      "url": "https://huggingface.co/datasets/nvidia/Cosmos3-DROID/resolve/dabaaffe428d67cf93fd355b82658934ee59bfec/failure/meta/episodes/chunk-000/file-000.parquet?download=true"
+    },
+    {
+      "path": "success/episodes/file-000.parquet",
+      "remote_path": "success/meta/episodes/chunk-000/file-000.parquet",
+      "sha256": "34c4593b97aa4696580ef974b77c711395cec22ed22ae99ef70b2bf4101b9917",
+      "size_bytes": 80080877,
+      "url": "https://huggingface.co/datasets/nvidia/Cosmos3-DROID/resolve/dabaaffe428d67cf93fd355b82658934ee59bfec/success/meta/episodes/chunk-000/file-000.parquet?download=true"
+    },
+    {
+      "path": "success/episodes/file-001.parquet",
+      "remote_path": "success/meta/episodes/chunk-000/file-001.parquet",
+      "sha256": "ee66a83456b1b92667955b893bfec38204459c82577563cd34080ced888d234b",
+      "size_bytes": 61590380,
+      "url": "https://huggingface.co/datasets/nvidia/Cosmos3-DROID/resolve/dabaaffe428d67cf93fd355b82658934ee59bfec/success/meta/episodes/chunk-000/file-001.parquet?download=true"
+    },
+    {
+      "path": "success/episodes/file-002.parquet",
+      "remote_path": "success/meta/episodes/chunk-000/file-002.parquet",
+      "sha256": "38a9226fb6fc8c2d2b6aaa7e4238bc8cc6321131fd2f06b951bec0f232f3e042",
+      "size_bytes": 58286935,
+      "url": "https://huggingface.co/datasets/nvidia/Cosmos3-DROID/resolve/dabaaffe428d67cf93fd355b82658934ee59bfec/success/meta/episodes/chunk-000/file-002.parquet?download=true"
+    },
+    {
+      "path": "success/episodes/file-003.parquet",
+      "remote_path": "success/meta/episodes/chunk-000/file-003.parquet",
+      "sha256": "b5215e4461bc6a3b7e6586f0c2773d8fb55eb3aa85004f35affcc565d792b508",
+      "size_bytes": 71074101,
+      "url": "https://huggingface.co/datasets/nvidia/Cosmos3-DROID/resolve/dabaaffe428d67cf93fd355b82658934ee59bfec/success/meta/episodes/chunk-000/file-003.parquet?download=true"
+    },
+    {
+      "path": "success/episodes/file-004.parquet",
+      "remote_path": "success/meta/episodes/chunk-000/file-004.parquet",
+      "sha256": "c60734b53bef8c913665802ff18a11f1c4fe64b09ee4e8418eaaa148d9db9a7d",
+      "size_bytes": 39789260,
+      "url": "https://huggingface.co/datasets/nvidia/Cosmos3-DROID/resolve/dabaaffe428d67cf93fd355b82658934ee59bfec/success/meta/episodes/chunk-000/file-004.parquet?download=true"
+    }
+  ]
+}

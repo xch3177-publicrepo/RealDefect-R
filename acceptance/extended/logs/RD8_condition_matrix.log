@@ -1,0 +1,87 @@
+{
+  "generated_utc": "2026-09-16T03:43:52.764995+00:00",
+  "python_version": "3.12.3",
+  "source_result": "reproducibility/results/real-defect-openpi-570.json",
+  "source_result_sha256": "cf7c0ca2c1449c44d3ed11af411976e65e134c8964caedf111fd68903501f5f1",
+  "frozen_status": "NOT_REPRODUCED",
+  "frozen_tolerance": 1e-05,
+  "orders": [
+    "natural",
+    "episode_cluster_seed_0",
+    "episode_cluster_seed_1",
+    "episode_cluster_seed_2",
+    "episode_cluster_seed_3",
+    "episode_cluster_seed_4",
+    "episode_cluster_seed_5",
+    "episode_cluster_seed_6",
+    "episode_cluster_seed_7",
+    "episode_cluster_seed_8",
+    "episode_cluster_seed_9"
+  ],
+  "batch_sizes": [
+    1,
+    8,
+    32,
+    128
+  ],
+  "condition_count": 44,
+  "fixed_fail_count": 24,
+  "fixed_pass_count": 20,
+  "failure_drivers": {
+    "state.std": 19,
+    "actions.std": 19,
+    "state.mean": 7,
+    "actions.mean": 6
+  },
+  "failure_driver_breakdown": {
+    "conditions_failing_with_std_involved": 24,
+    "conditions_failing_with_mean_involved": 9,
+    "conditions_failing_on_mean_only": 0,
+    "mean_only_conditions": []
+  },
+  "max_fixed_error": {
+    "value": 0.00032345332924951786,
+    "statistic": "std",
+    "feature_group": "state",
+    "order_name": "episode_cluster_seed_5",
+    "batch_size": 1
+  },
+  "batch_size_one": {
+    "condition_count": 11,
+    "old_equals_fixed_exactly_for_every_order": true,
+    "fixed_passes_frozen_criterion_count": 0,
+    "fixed_fails_frozen_criterion_count": 11,
+    "max_fixed_mean_error": 2.8040971213227905e-05,
+    "max_fixed_std_error": 0.00032345332924951786
+  },
+  "by_batch_size": {
+    "1": {
+      "conditions": 11,
+      "fixed_pass": 0,
+      "fixed_fail": 11,
+      "max_fixed_mean_error": 2.8040971213227905e-05,
+      "max_fixed_std_error": 0.00032345332924951786
+    },
+    "8": {
+      "conditions": 11,
+      "fixed_pass": 3,
+      "fixed_fail": 8,
+      "max_fixed_mean_error": 3.938450399809668e-06,
+      "max_fixed_std_error": 4.9098051029108913e-05
+    },
+    "32": {
+      "conditions": 11,
+      "fixed_pass": 6,
+      "fixed_fail": 5,
+      "max_fixed_mean_error": 1.576508932954468e-06,
+      "max_fixed_std_error": 1.9469640895025675e-05
+    },
+    "128": {
+      "conditions": 11,
+      "fixed_pass": 11,
+      "fixed_fail": 0,
+      "max_fixed_mean_error": 8.076768580611571e-07,
+      "max_fixed_std_error": 7.928691550390665e-06
+    }
+  }
+}

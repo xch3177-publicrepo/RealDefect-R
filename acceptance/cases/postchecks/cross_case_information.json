@@ -1,0 +1,217 @@
+{
+  "created_utc": "2026-09-16T03:53:34.557822+00:00",
+  "scope": "case-local information-requirement comparison; not one uniform generic validator",
+  "script_sha256": "8701e8217cd5a492b2d522fcf0bfe44eb51c4195fd755b0ba88e02bbb8bd6d5a",
+  "input_hashes": {
+    "<CASES_RUN>/cases-all/code/results/real-defect-lerobot-2610.json": "adffd92c95b6aad49a29ac2be2aaea15e0c75b5fd957109ee7390f5f0b07c3a9",
+    "<CASES_RUN>/cases-all/code/results/real-defect-lerobot-2057.json": "c5578544507ad62d64cc4927470daa1d4b2a2578d1784aff1effa7f05aff4ec6",
+    "<CASES_RUN>/cases-all/code/results/real-defect-isaaclab-4559.json": "8fa6bc23ec73c22bbe8b499b2a997fe015514761d721a448bb5ab344067c07e4",
+    "<CASES_RUN>/cases-all/code/results/real-defect-isaaclab-quaternion-migration.json": "447d60647e12ef02cf3d261402898eb82e9682761d68f27d60e052e968534153",
+    "<CASES_RUN>/cases-all/code/data/raw/isaaclab/franka_stack_v51.hdf5": "e0954647328801b091b81604915acd4eff2093b2b26ff0b05753c8f85fbb61b3",
+    "<CASES_RUN>/cases-all/code/runs/isaaclab-quaternion-migration/native-output.hdf5": "608c7902338d4b0d7c966e459449c4332ab756165dec60c4955067679b98e5d6",
+    "<CASES_RUN>/cases-all/code/results/real-defect-robosuite-626.json": "222d3837f05f86f975cfa571b12ba472d45ae2201b6e7079ce06ccfc30f39d05",
+    "<CASES_RUN>/cases-all/code/results/real-defect-openpi-557.json": "a8b7c48f762e4d6d87580dd48400f46cef887e6baa593792ccc7136e8fd440ee",
+    "<CASES_RUN>/cases-all/code/results/real-defect-groot-172.json": "b0a1c04f8a7d514d4ae9cad2c0d97f6169fc9b5501ff834a00198eb9b710b15b",
+    "<CASES_RUN>/cases-all/code/results/real-defect-openpi-570.json": "ef842ec62150e65893f0d1198ad255575539db52bc919af4cee143a7bdbfc05a"
+  },
+  "NA": "no defined appropriate raw identity or inverse comparison for this case operation",
+  "NOT_EVALUATED": "a potential check exists but was not executed",
+  "rows": [
+    {
+      "case": "RD1",
+      "structure": {
+        "definition": "integer in-bound query index and Boolean padding flag; does not check padding meaning",
+        "count_per_branch": 118,
+        "passes": {
+          "buggy": true,
+          "fixed": true
+        }
+      },
+      "raw_equality": {
+        "definition": "zero-offset returned integer index equals original absolute row index",
+        "equal_counts": {
+          "buggy": 1,
+          "fixed": 118
+        },
+        "count": 118
+      },
+      "roundtrip": {
+        "status": "NA",
+        "reason": "clamped temporal selection has no specified inverse"
+      },
+      "reference": {
+        "rule": "absolute episode identity and padding meaning",
+        "old_violations": 118,
+        "fixed_violations": 0
+      }
+    },
+    {
+      "case": "RD2",
+      "structure": {
+        "definition": "nonnegative integer fields and individual end-start=length",
+        "count_per_branch": 5,
+        "passes": {
+          "buggy": true,
+          "fixed": true
+        }
+      },
+      "raw_equality": {
+        "status": "NA",
+        "reason": "source episode lengths and derived global intervals have different representations"
+      },
+      "roundtrip": {
+        "status": "NA",
+        "reason": "no inverse operation specified for metadata accumulation"
+      },
+      "reference": {
+        "rule": "global episode interval continuity",
+        "old_violations": 1,
+        "fixed_violations": 0
+      }
+    },
+    {
+      "case": "RD3",
+      "structure": {
+        "definition": "width four, finite values, unit norm within 1e-6",
+        "count_per_branch": 1,
+        "passes": {
+          "buggy": true,
+          "fixed": true
+        }
+      },
+      "raw_equality": {
+        "definition": "literal source WXYZ component array equals output XYZW array without convention decoding",
+        "equal": {
+          "buggy": true,
+          "fixed": false
+        }
+      },
+      "roundtrip": {
+        "status": "NOT_EVALUATED",
+        "reason": "no inverse-conversion experiment executed"
+      },
+      "reference": {
+        "rule": "intended physical orientation",
+        "old_error_deg": 119.99999999999999,
+        "fixed_error_deg": 0.0
+      }
+    },
+    {
+      "case": "RD4",
+      "structure": {
+        "definition": "declared quaternion arrays retain shape and finite values; fresh replay format/version baseline passes",
+        "count": 23833,
+        "passes": true,
+        "format_baseline_pass": true
+      },
+      "raw_equality": {
+        "definition": "literal source/target quaternion coefficients before convention decoding",
+        "equal_instances": 15141,
+        "instances": 23833
+      },
+      "roundtrip": {
+        "status": "NOT_EVALUATED",
+        "reason": "no inverse migration run"
+      },
+      "reference": {
+        "rule": "all declared fields receive the required convention conversion",
+        "unconverted_instances": 15141,
+        "converted_instances": 8692
+      }
+    },
+    {
+      "case": "RD5",
+      "structure": {
+        "definition": "fresh replay input action shape/range baseline only; output structural suite not evaluated",
+        "count": 9666,
+        "passes": true
+      },
+      "raw_equality": {
+        "status": "NA",
+        "reason": "dimensionless controller actions and world displacements are not raw-comparable"
+      },
+      "roundtrip": {
+        "status": "NOT_EVALUATED",
+        "reason": "no inverse-frame roundtrip executed"
+      },
+      "reference": {
+        "rule": "displacement excludes base translation",
+        "old_violations": 9666,
+        "fixed_violations": 0
+      }
+    },
+    {
+      "case": "RD6",
+      "structure": {
+        "definition": "two finite normalized anchor outputs, without imposing semantic endpoint bounds",
+        "count_per_branch": 2,
+        "passes": {
+          "old": true,
+          "fixed": true
+        }
+      },
+      "raw_equality": {
+        "status": "NA",
+        "reason": "encoder counts/radians and normalized endpoints use different representations"
+      },
+      "roundtrip": {
+        "status": "PASS_OLD",
+        "max_error_rad": 0.0,
+        "fixed": "NA: whole post-fix policy uses intentionally asymmetric transforms"
+      },
+      "reference": {
+        "rule": "upstream encoder anchors map to normalized zero/one",
+        "old_max_error": 0.13421012843197622,
+        "fixed_max_error": 0.00047357048562768345,
+        "absolute_tolerance": 0.001
+      }
+    },
+    {
+      "case": "RD7",
+      "structure": {
+        "definition": "fresh branch return count/shape/dtype/readability checks",
+        "videos": 10,
+        "both_branches_pass": true
+      },
+      "raw_equality": {
+        "status": "NA",
+        "reason": "frame correspondence requires a requested-time rule; arbitrary same-position equality is not a baseline"
+      },
+      "roundtrip": {
+        "status": "NA",
+        "reason": "timestamp-based selection is many-to-one and has no specified inverse"
+      },
+      "reference": {
+        "rule": "latest source PTS at/before request with declared fallback/ties",
+        "old_wrong_noncontrol": 200,
+        "fixed_wrong": 0,
+        "paired_queries": 2238
+      }
+    },
+    {
+      "case": "RD8",
+      "structure": {
+        "definition": "14 finite means/stds and nonnegative std, ignoring population coverage",
+        "conditions_per_branch": 44,
+        "passes": {
+          "old": true,
+          "fixed": true
+        }
+      },
+      "raw_equality": {
+        "status": "NA",
+        "reason": "a population and its aggregate statistics have no elementwise raw correspondence"
+      },
+      "roundtrip": {
+        "status": "NA",
+        "reason": "statistical aggregation is noninvertible"
+      },
+      "reference": {
+        "rule": "frozen population coverage plus float64 mean/population-std within 1e-5",
+        "fixed_full_coverage": true,
+        "fixed_numerical_conditions_failed": 24,
+        "conditions": 44
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUNTIME>/reproducibility/analysis/cross_case_information.py",
+    "--replay-root",
+    "<CASES_RUN>/cases-all/code",
+    "--output",
+    "<WORKING_PROJECT>/logs/20260916-round2/acceptance_raw/cases/postchecks/cross_case_information.json"
+  ],
+  "exit_code": 0,
+  "script_sha256": "8701e8217cd5a492b2d522fcf0bfe44eb51c4195fd755b0ba88e02bbb8bd6d5a",
+  "executed_utc": "2026-09-16T03:53:34.577338+00:00",
+  "purpose": "supplement candidate2 missing wrapper postchecks; inputs and scientific case outputs unchanged"
+}

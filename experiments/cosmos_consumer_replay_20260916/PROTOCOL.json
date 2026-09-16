@@ -1,0 +1,60 @@
+{
+  "frozen_utc": "2026-09-16T03:34:00.341148+00:00",
+  "experiment": "COSMOS-CONSUMER-20260916",
+  "selection": "Per split, lowest episode_index with mismatching min/max/mean summary and lowest fully matching control, selected before consumer execution; independent of C5 outcomes.",
+  "selection_records": [
+    {
+      "split": "failure",
+      "kind": "affected",
+      "episode_index": 3389,
+      "chunk_index": 0,
+      "file_index": 2
+    },
+    {
+      "split": "failure",
+      "kind": "control",
+      "episode_index": 0,
+      "chunk_index": 0,
+      "file_index": 0
+    },
+    {
+      "split": "success",
+      "kind": "affected",
+      "episode_index": 7016,
+      "chunk_index": 0,
+      "file_index": 9
+    },
+    {
+      "split": "success",
+      "kind": "control",
+      "episode_index": 0,
+      "chunk_index": 0,
+      "file_index": 0
+    }
+  ],
+  "consumer_commit": "7e241bd630a3719a56157a497ce5d08f244784f1",
+  "consumer_path": "src/lerobot/datasets/aggregate.py",
+  "consumer_function": "update_meta_data",
+  "consumer_full_file_sha256": "49b9e9e2962503eefb338e4a684b6d0003992ea9bd962acfee562ef98eaf6db1",
+  "fixed_offsets": {
+    "total_episodes": 100000,
+    "total_frames": 30000000,
+    "meta_chunk": 0,
+    "meta_file": 0,
+    "data_chunk": 0,
+    "data_file": 0
+  },
+  "intervention": "Replace only stats/episode_index/{min,max,mean,q01,q10,q50,q90,q99} with constant frame episode identity; original/control conditions share the same actual metadata selection, frame columns and parameters.",
+  "scope": "Execute exact whole update_meta_data function extracted from pinned source with annotations deferred; input selects metadata index/task/episode-stat fields, videos_idx empty. No video handling, complete merge, data-file output, production-use or model-harm claim.",
+  "oracle": "For every selected input, all eight output episode-summary values must equal its actual constant frame episode_index + total_episodes. Counts reported per selected record and per summary field.",
+  "frozen_summary_keys": [
+    "min",
+    "max",
+    "mean",
+    "q01",
+    "q10",
+    "q50",
+    "q90",
+    "q99"
+  ]
+}

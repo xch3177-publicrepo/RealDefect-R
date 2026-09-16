@@ -1,0 +1,98 @@
+{
+  "fixed_anchor_check": {
+    "accepted": true,
+    "expected_outputs": [
+      0.0,
+      1.0
+    ],
+    "issues": [],
+    "max_abs_error": 0.00047357048562768345,
+    "observed_outputs": [
+      2.8781215502676506e-05,
+      0.9995264295143723
+    ]
+  },
+  "frozen_inputs": {
+    "counts_per_revolution": 4096,
+    "dataset": "physical-intelligence/aloha_pen_uncap_diverse",
+    "dataset_revision": "e82d8b40b8ac66c0b40273dd80a077dfc40b732e",
+    "dataset_row": 0,
+    "encoder_counts": [
+      2405,
+      3110
+    ],
+    "encoder_zero": 2048,
+    "fix_commit": "acda45e1544031df86d5ac68e86892a510cb47af",
+    "merge_commit": "66dbde5240b8ce9f05ac039cfaf460bebdcb05cd",
+    "parent_commit": "072217ef94d2ac8710a2113048a398bc4b69efec"
+  },
+  "limitations": [
+    "The physical oracle validates the two encoder endpoints stated in the merged fix; it does not rerun VLA training or reproduce the reported task-performance degradation.",
+    "Only one public low-dimensional row is frozen locally; 36,900 is the server-reported dataset row count, not the number downloaded.",
+    "The old normalization pair is mathematically self-invertible, demonstrating why a fieldwise roundtrip is insufficient; the physical encoder anchors provide the ground truth.",
+    "OpenPI intentionally uses asymmetric state/action transforms after the fix, so this audit does not demand a single global bijection for the whole policy adapter."
+  ],
+  "old_anchor_check": {
+    "accepted": false,
+    "expected_outputs": [
+      0.0,
+      1.0
+    ],
+    "issues": [
+      "physical calibration anchor 0 differs by 0.13421",
+      "physical calibration anchor 1 differs by 0.117352"
+    ],
+    "max_abs_error": 0.13421012843197622,
+    "observed_outputs": [
+      0.13421012843197622,
+      1.1173523606677735
+    ]
+  },
+  "old_self_roundtrip_errors_rad": [
+    0.0,
+    0.0
+  ],
+  "public_row_transform": {
+    "fixed_action_model_values": [
+      -1.2351047133356332,
+      -0.9835104478746652
+    ],
+    "fixed_state_model_values": [
+      -0.7230121694663918,
+      -0.37141574459186544
+    ],
+    "old_action_model_values": [
+      -0.9886406484869392,
+      -0.7599185889769684
+    ],
+    "old_state_model_values": [
+      -0.5769992430569416,
+      -0.2311562142258167
+    ],
+    "raw_action_grippers": [
+      -0.03134247660636902,
+      0.08776667714118958
+    ],
+    "raw_state_grippers": [
+      0.13637855648994446,
+      0.3394544720649719
+    ]
+  },
+  "sources": {
+    "dataset": "https://huggingface.co/datasets/physical-intelligence/aloha_pen_uncap_diverse",
+    "fix_commit": "https://github.com/Physical-Intelligence/openpi/commit/acda45e1544031df86d5ac68e86892a510cb47af",
+    "policy_source": "https://github.com/Physical-Intelligence/openpi/blob/acda45e1544031df86d5ac68e86892a510cb47af/src/openpi/policies/aloha_policy.py#L137-L160",
+    "pull_request": "https://github.com/Physical-Intelligence/openpi/pull/557"
+  },
+  "summary": {
+    "case": "OpenPI PR #557: inaccurate ALOHA gripper calibration anchors",
+    "evidence_class": "merged VLA data-transform fix plus encoder-anchor oracle and public low-dimensional row",
+    "fixed_anchor_contract_accepted": true,
+    "fixed_anchor_max_error": 0.00047357048562768345,
+    "old_anchor_contract_accepted": false,
+    "old_anchor_max_error": 0.13421012843197622,
+    "old_self_roundtrip_baseline_accepted": true,
+    "public_dataset_rows": 36900,
+    "reproduced": true
+  }
+}

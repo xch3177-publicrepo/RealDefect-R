@@ -1,0 +1,9 @@
+{
+  "candidate": "<CANDIDATE_8>",
+  "candidate_manifest_sha256": "d099b56135507d4ca41e321635933f6802babab4d2cb2b051fdfa935ed68bf5c",
+  "fresh_input_directory_before_recovery": true,
+  "token_variables_removed_by_name_only": true,
+  "HF_XDG_caches_new": true,
+  "scope": "standalone Cosmos tail only: metadata, independent metadata, C1-C4, C5, scoped consumer; no GX, RD8PD or full all suite claim",
+  "started_utc": "2026-09-16T03:56:05.478506+00:00"
+}

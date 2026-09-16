@@ -1,0 +1,80 @@
+[
+  {
+    "file": "robomimic_dataset_card.md",
+    "url": "https://huggingface.co/datasets/robomimic/robomimic_datasets/resolve/33d08702ad61296b55a74c4f810ab54462f319e9/README.md",
+    "sha256": "e09a24720408bac08425dbaa0b7b55615e4440f1af0a61133303e4b5d5d6b09a",
+    "bytes": 1065
+  },
+  {
+    "file": "GR00T_sim_dataset_card.md",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/README.md",
+    "sha256": "cfcbb2c6b229f39a8e293fb43ed0ab33f1ad7cadba3bcc363fbb60a5c62bc862",
+    "bytes": 6876
+  },
+  {
+    "file": "CC-BY-4.0-legalcode.txt",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "bytes": 18657
+  },
+  {
+    "file": "PushT-DiffusionPolicy-MIT.txt",
+    "url": "https://raw.githubusercontent.com/real-stanford/diffusion_policy/main/LICENSE",
+    "sha256": "304e99a48271e10820f71a1b86ef395c06c100d7f68dd1d308790d1064fc4d41",
+    "bytes": 1106
+  },
+  {
+    "file": "aloha_dataset_card.md",
+    "url": "https://huggingface.co/datasets/physical-intelligence/aloha_pen_uncap_diverse/resolve/e82d8b40b8ac66c0b40273dd80a077dfc40b732e/README.md",
+    "sha256": "399b3fc8775a581f342751097ab9b862038fb1664948b3774138a02d44c86a7a",
+    "bytes": 6483
+  },
+  {
+    "file": "Cosmos_dataset_card.md",
+    "url": "https://huggingface.co/datasets/nvidia/Cosmos3-DROID/resolve/dabaaffe428d67cf93fd355b82658934ee59bfec/README.md",
+    "sha256": "d1cafdacaa7f0c5ff9613157d86387b0c29e6aca1ebd1fea63b076b406c5ee70",
+    "bytes": 11697
+  },
+  {
+    "file": "Apache-2.0.txt",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/7725f3be346a9aa03b772b6f93ea3bf565736416/LICENSE",
+    "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+    "bytes": 11356
+  },
+  {
+    "file": "IsaacLab-BSD-3-Clause.txt",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/37ddf626871758333d6ed89cf64ad702aef127d0/LICENSE",
+    "sha256": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62",
+    "bytes": 1630
+  },
+  {
+    "file": "robosuite-MIT.txt",
+    "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/43a498d4e2adc445012fa9d6e00821d5c22a14e3/LICENSE",
+    "sha256": "177978cbece0a4c454c2aaec5b3f145b39270814874c43109da9e829c39d9cba",
+    "bytes": 1474
+  },
+  {
+    "file": "Isaac-GR00T-Apache-2.0.txt",
+    "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/cdf6d6e3c48a9c033e2b188c8c3ff4cccc5ad04e/LICENSE",
+    "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "bytes": 11357
+  },
+  {
+    "file": "LeRobot-Apache-2.0.txt",
+    "url": "https://raw.githubusercontent.com/huggingface/lerobot/ec40ccde0d892d6ada167f371e93eef997b2e669/LICENSE",
+    "sha256": "0583375a0ec642ec79c447781f34322b0cfa66baff31258214d040f1f6d86d7c",
+    "bytes": 27627
+  },
+  {
+    "file": "PushT_dataset_card.md",
+    "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/README.md",
+    "sha256": "246e94b68f204bfcd05bb32e23631c3316b8de6152d7a85e693d4455540ef72f",
+    "bytes": 3538
+  },
+  {
+    "file": "LIBERO_dataset_card.md",
+    "url": "https://huggingface.co/datasets/HuggingFaceVLA/libero/resolve/affa19c0de0f6bce2a7edd26dddef8a532e7e6f6/README.md",
+    "sha256": "33546f19db7aa6e7a720f2f15359551b6f2e795db184d92811c0801b0ba9db28",
+    "bytes": 5322
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "case": "RD1",
+    "relative_path": "data/raw/lerobot/pusht/meta/episodes/chunk-000/file-000.parquet",
+    "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/meta/episodes/chunk-000/file-000.parquet",
+    "expected_sha256": "bc1226f33d3d1635ec1954f9942073709be8e106fde5f4f16b9d52edc4e0ebc4",
+    "actual_sha256": "bc1226f33d3d1635ec1954f9942073709be8e106fde5f4f16b9d52edc4e0ebc4",
+    "match": true,
+    "bytes": 106584,
+    "method": "existing",
+    "duration_seconds": 0.00011100003030151129
+  },
+  {
+    "case": "RD2",
+    "relative_path": "data/raw/lerobot/libero-v21/meta/episodes.jsonl",
+    "url": "https://huggingface.co/datasets/HuggingFaceVLA/libero/resolve/affa19c0de0f6bce2a7edd26dddef8a532e7e6f6/meta/episodes.jsonl",
+    "expected_sha256": "0479a2ced6117700e4638a1da54dccd9f60ae5f47485ea6d91390c869befcf08",
+    "actual_sha256": "0479a2ced6117700e4638a1da54dccd9f60ae5f47485ea6d91390c869befcf08",
+    "match": true,
+    "bytes": 180384,
+    "method": "existing",
+    "duration_seconds": 0.00018183398060500622
+  },
+  {
+    "case": "RD4",
+    "relative_path": "data/raw/isaaclab/franka_stack_v51.hdf5",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/IsaacLab/Mimic/franka_stack_datasets/dataset.hdf5",
+    "expected_sha256": "e0954647328801b091b81604915acd4eff2093b2b26ff0b05753c8f85fbb61b3",
+    "actual_sha256": "e0954647328801b091b81604915acd4eff2093b2b26ff0b05753c8f85fbb61b3",
+    "match": true,
+    "bytes": 3128784,
+    "method": "public immutable URL download",
+    "duration_seconds": 0.7165779590141028
+  },
+  {
+    "case": "RD4_converter",
+    "relative_path": "data/raw/isaaclab/hdf5_dataset_file_handler_beta2_patch1.py",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py",
+    "expected_sha256": "b5c4365cfd46107dfe56288b092bbdb03d993dbb83e23415742965db7df8d793",
+    "actual_sha256": "b5c4365cfd46107dfe56288b092bbdb03d993dbb83e23415742965db7df8d793",
+    "match": true,
+    "bytes": 13314,
+    "method": "public immutable URL download",
+    "duration_seconds": 0.19792345794849098
+  },
+  {
+    "case": "RD5",
+    "relative_path": "data/raw/robomimic/low_dim_v15.hdf5",
+    "url": "https://huggingface.co/datasets/robomimic/robomimic_datasets/resolve/33d08702ad61296b55a74c4f810ab54462f319e9/v1.5/lift/ph/low_dim_v15.hdf5",
+    "expected_sha256": "0d302b37fb08e99b00de287b833925589ad3b65d199306e55562938bcbd746f1",
+    "actual_sha256": "0d302b37fb08e99b00de287b833925589ad3b65d199306e55562938bcbd746f1",
+    "match": true,
+    "bytes": 29419200,
+    "method": "public immutable URL download",
+    "duration_seconds": 2.922948000021279
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000000.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000000.mp4",
+    "expected_sha256": "7f26f205284c9a4e0cc07f6f61e0b72e9326ad17d7f56641c8f0ced6b18e9a73",
+    "actual_sha256": "7f26f205284c9a4e0cc07f6f61e0b72e9326ad17d7f56641c8f0ced6b18e9a73",
+    "match": true,
+    "bytes": 1037599,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.827175582991913
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000001.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000001.mp4",
+    "expected_sha256": "57836598ba8d233e6e191b8256e9b1ff6dd592d288e9564986bb3299e0354c15",
+    "actual_sha256": "57836598ba8d233e6e191b8256e9b1ff6dd592d288e9564986bb3299e0354c15",
+    "match": true,
+    "bytes": 1035401,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.3404386250767857
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000002.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000002.mp4",
+    "expected_sha256": "e85e3e3aa37dc0f5fe18bd36cadb1a47bd44d3745b83ec5593a3c85b9439b2e0",
+    "actual_sha256": "e85e3e3aa37dc0f5fe18bd36cadb1a47bd44d3745b83ec5593a3c85b9439b2e0",
+    "match": true,
+    "bytes": 1144178,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.168502040905878
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000003.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000003.mp4",
+    "expected_sha256": "6ea55d7fb168702683b247b43bcd93a1c9f85214537258fa2bd3184a82aba26b",
+    "actual_sha256": "6ea55d7fb168702683b247b43bcd93a1c9f85214537258fa2bd3184a82aba26b",
+    "match": true,
+    "bytes": 1054146,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.0368335839593783
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000004.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000004.mp4",
+    "expected_sha256": "ef6882046d113856699601bce2600ed145408f17446c1ab04956b18866e5f721",
+    "actual_sha256": "ef6882046d113856699601bce2600ed145408f17446c1ab04956b18866e5f721",
+    "match": true,
+    "bytes": 1041422,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.2343789580045268
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000005.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000005.mp4",
+    "expected_sha256": "8f4ec992174361ec96c9fae1a7b8f6dce4497d70c6c56032d215d24e77412737",
+    "actual_sha256": "8f4ec992174361ec96c9fae1a7b8f6dce4497d70c6c56032d215d24e77412737",
+    "match": true,
+    "bytes": 1030162,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.217555332928896
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000006.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000006.mp4",
+    "expected_sha256": "0cc86ceae8676948f4caeae6a1d03121c81bfdc8853ec4986acfc44c348d4d2e",
+    "actual_sha256": "0cc86ceae8676948f4caeae6a1d03121c81bfdc8853ec4986acfc44c348d4d2e",
+    "match": true,
+    "bytes": 1056345,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.3398463749326766
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000007.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000007.mp4",
+    "expected_sha256": "7ae084ea65d597ae08d143106dd896ac4dd7df9266da6eb489207d76dd0eda6a",
+    "actual_sha256": "7ae084ea65d597ae08d143106dd896ac4dd7df9266da6eb489207d76dd0eda6a",
+    "match": true,
+    "bytes": 1144777,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.1203640409512445
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000008.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000008.mp4",
+    "expected_sha256": "19c143d438e3360a9ebf9d11433b75b5ecb14b315e6f2162b43f4c93322fcfda",
+    "actual_sha256": "19c143d438e3360a9ebf9d11433b75b5ecb14b315e6f2162b43f4c93322fcfda",
+    "match": true,
+    "bytes": 1057812,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.0944824169855565
+  },
+  {
+    "case": "RD7",
+    "relative_path": "runs/rd7_downloaded/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000009.mp4",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000009.mp4",
+    "expected_sha256": "b95526fb5d87031f49f85f72c652c06e131c52e43f2703059d979cfba4e3e743",
+    "actual_sha256": "b95526fb5d87031f49f85f72c652c06e131c52e43f2703059d979cfba4e3e743",
+    "match": true,
+    "bytes": 1036228,
+    "method": "public immutable URL download",
+    "duration_seconds": 1.3348146670032293
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "code_unchanged": true,
+  "command": [
+    "<ENVIRONMENT>/bin/python",
+    "<COSMOS_RUNTIME>/original/scripts/audit_droid_full_metadata.py",
+    "--data-root",
+    "<COSMOS_RUNTIME>/experiments/work/cosmos3-droid",
+    "--output",
+    "<COSMOS_RUN>/cosmos-metadata/rerun.json"
+  ],
+  "elapsed_s": 103.30306195898447,
+  "exit_code": 0,
+  "finished_utc": "2026-09-16T03:58:02.903844+00:00",
+  "platform": "macOS-15.6.1-arm64-arm-64bit",
+  "python": "3.12.3 (v3.12.3:f6650f9ad7, Apr  9 2024, 08:18:47) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "result_sha256": "740b35ea07633c69a08f1f9b2b6525b2367b5ff79424d2fa987cbda6fddb0701",
+  "runner_sha256": "e16691dd1c4f3ec9b6bece3bae0021563256ca82033e8f36b046048c46dcd7ce",
+  "started_utc": "2026-09-16T03:56:05.784087+00:00"
+}

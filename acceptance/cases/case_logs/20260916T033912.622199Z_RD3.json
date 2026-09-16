@@ -1,0 +1,14 @@
+{
+  "name": "RD3",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/run_real_defect_isaaclab_4559.py"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:12.622199+00:00",
+  "finished_utc": "2026-09-16T03:39:12.658761+00:00",
+  "duration_seconds": 0.03654549992643297,
+  "exit_code": 0,
+  "output_file": "20260916T033912.622199Z_RD3.log"
+}

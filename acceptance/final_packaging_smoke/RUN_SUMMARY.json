@@ -1,0 +1,13 @@
+{
+  "status": "EXPECTED_SCIENTIFIC_OUTCOMES",
+  "suite": "smoke",
+  "executed_steps": [
+    "integrity",
+    "projection_recovery",
+    "RD3_RD6_scoped_smoke",
+    "RD8_condition_matrix",
+    "figure_generation"
+  ],
+  "RD8": "NOT_REPRODUCED is the expected scientific negative, not infrastructure failure",
+  "created_utc": "2026-09-16T03:54:33.113772+00:00"
+}

@@ -1,0 +1,46 @@
+{
+  "collected_utc": "2026-09-16T03:56:44.518042+00:00",
+  "suite": "smoke",
+  "candidate_manifest_sha256": "d099b56135507d4ca41e321635933f6802babab4d2cb2b051fdfa935ed68bf5c",
+  "comparison_snapshot_manifest_sha256": "d099b56135507d4ca41e321635933f6802babab4d2cb2b051fdfa935ed68bf5c",
+  "same_candidate_manifest": true,
+  "scope": "integrity, projection identities, RD3/RD6, frozen RD8 matrix extraction, figure regeneration; not repeated all-eight or extended scientific experiments",
+  "source_correspondence": [
+    {
+      "path": "run_public.py",
+      "executed_sha256": "bc0f19fb7ce75654ce42a2eea1ad1baf6ae87e7d0b9e0d5dcfa5f0a7874655cb",
+      "snapshot_sha256": "bc0f19fb7ce75654ce42a2eea1ad1baf6ae87e7d0b9e0d5dcfa5f0a7874655cb",
+      "identical": true
+    },
+    {
+      "path": "verify_public.py",
+      "executed_sha256": "ddfd4fbbff48d7e87a2b4c701719fd1c8a156b2772676156af6624c8d66f47de",
+      "snapshot_sha256": "ddfd4fbbff48d7e87a2b4c701719fd1c8a156b2772676156af6624c8d66f47de",
+      "identical": true
+    },
+    {
+      "path": "reproducibility/reproduce.py",
+      "executed_sha256": "8eaa037f523ccc8fd6de9711bd73af3b47b93506f4042b11981719a8a8572a76",
+      "snapshot_sha256": "8eaa037f523ccc8fd6de9711bd73af3b47b93506f4042b11981719a8a8572a76",
+      "identical": true
+    },
+    {
+      "path": "scripts/make_figures.py",
+      "executed_sha256": "9ed4ff9a6863add2b2295ded124b722081396a74b0c2c8027eef7c29c2bb3781",
+      "snapshot_sha256": "9ed4ff9a6863add2b2295ded124b722081396a74b0c2c8027eef7c29c2bb3781",
+      "identical": true
+    },
+    {
+      "path": "experiments/rd8_diagnostic_20260914/recover_projections.py",
+      "executed_sha256": "ed1457314980d36ef4750ba58dbaaede7403dd84b2fe601f5fae12a4c4779071",
+      "snapshot_sha256": "ed1457314980d36ef4750ba58dbaaede7403dd84b2fe601f5fae12a4c4779071",
+      "identical": true
+    },
+    {
+      "path": "experiments/rd8_diagnostic_20260914/extract_rd8_condition_matrix.py",
+      "executed_sha256": "83cbbf6e13c1e3795f3f1876caa5bf9eaba53d7df1c64dc08218ac86213596a3",
+      "snapshot_sha256": "83cbbf6e13c1e3795f3f1876caa5bf9eaba53d7df1c64dc08218ac86213596a3",
+      "identical": true
+    }
+  ]
+}

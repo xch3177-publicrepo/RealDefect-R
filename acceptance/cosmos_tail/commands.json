@@ -1,0 +1,82 @@
+[
+  {
+    "step": "integrity",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "<CANDIDATE_8>/verify_public.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.10107204189989716,
+    "log": "logs/integrity.log"
+  },
+  {
+    "step": "Cosmos_metadata",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/replay_cosmos_metadata.py",
+      "--out",
+      "<COSMOS_RUN>/cosmos-metadata"
+    ],
+    "exit_code": 0,
+    "seconds": 117.25466562493239,
+    "log": "logs/Cosmos_metadata.log"
+  },
+  {
+    "step": "Cosmos_independent_metadata",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/verify_cosmos_referential_counts.py",
+      "--manifest",
+      "<COSMOS_RUN>/cosmos-metadata/preaudit_verified_inputs.json",
+      "--out",
+      "<COSMOS_RUN>/cosmos-independent.json"
+    ],
+    "exit_code": 0,
+    "seconds": 2.3649617499904707,
+    "log": "logs/Cosmos_independent_metadata.log"
+  },
+  {
+    "step": "Cosmos_C1_C4",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "experiments/cosmos_frame_check_20260914/run_frame_check.py"
+    ],
+    "exit_code": 0,
+    "seconds": 162.40584350004792,
+    "log": "logs/Cosmos_C1_C4.log"
+  },
+  {
+    "step": "Cosmos_C5",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "<COSMOS_RUNTIME>/experiments/cosmos_c5_20260916/run_c5.py",
+      "--metadata-cache",
+      "<COSMOS_RUNTIME>/experiments/work/cosmos3-droid",
+      "--out",
+      "<COSMOS_RUN>/cosmos-c5"
+    ],
+    "exit_code": 0,
+    "seconds": 121.71475566702429,
+    "log": "logs/Cosmos_C5.log"
+  },
+  {
+    "step": "Cosmos_consumer",
+    "argv": [
+      "<ENVIRONMENT>/bin/python",
+      "-B",
+      "<COSMOS_RUNTIME>/experiments/cosmos_consumer_replay_20260916/run_consumer.py",
+      "--metadata-cache",
+      "<COSMOS_RUNTIME>/experiments/work/cosmos3-droid",
+      "--out",
+      "<COSMOS_RUN>/cosmos-consumer"
+    ],
+    "exit_code": 0,
+    "seconds": 8.852465374977328,
+    "log": "logs/Cosmos_consumer.log"
+  }
+]

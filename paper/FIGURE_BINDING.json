@@ -1,0 +1,1101 @@
+{
+  "generator": "scripts/make_figures.py",
+  "sources": {
+    "RD1": {
+      "path": "reproducibility/results/real-defect-lerobot-2610.json",
+      "sha256": "adffd92c95b6aad49a29ac2be2aaea15e0c75b5fd957109ee7390f5f0b07c3a9"
+    },
+    "RD2": {
+      "path": "reproducibility/results/real-defect-lerobot-2057.json",
+      "sha256": "c5578544507ad62d64cc4927470daa1d4b2a2578d1784aff1effa7f05aff4ec6"
+    },
+    "RD3": {
+      "path": "reproducibility/results/real-defect-isaaclab-4559.json",
+      "sha256": "8fa6bc23ec73c22bbe8b499b2a997fe015514761d721a448bb5ab344067c07e4"
+    },
+    "RD4": {
+      "path": "reproducibility/results/real-defect-isaaclab-quaternion-migration.json",
+      "sha256": "447d60647e12ef02cf3d261402898eb82e9682761d68f27d60e052e968534153"
+    },
+    "RD5": {
+      "path": "reproducibility/results/real-defect-robosuite-626.json",
+      "sha256": "222d3837f05f86f975cfa571b12ba472d45ae2201b6e7079ce06ccfc30f39d05"
+    },
+    "RD6": {
+      "path": "reproducibility/results/real-defect-openpi-557.json",
+      "sha256": "a8b7c48f762e4d6d87580dd48400f46cef887e6baa593792ccc7136e8fd440ee"
+    },
+    "RD7": {
+      "path": "reproducibility/results/real-defect-groot-172.json",
+      "sha256": "3e01309737f3d086e4edd34bac11b045212878daf5a74675c64e01b501b9065f"
+    },
+    "RD8": {
+      "path": "reproducibility/results/real-defect-openpi-570.json",
+      "sha256": "abe0adcfdc1cd297528ee3396dc8d4e986ab13e2c76373883724f7d6af4ec0d8"
+    },
+    "RD8_MATRIX": {
+      "path": "experiments/rd8_diagnostic_20260914/rd8_condition_matrix.json",
+      "sha256": "8ae1688c02db87bd24a78fef409a89b51ae70dd60444872a1792e137b8b1919a"
+    },
+    "CROSS": {
+      "path": "reproducibility/results/cross_case_information.json",
+      "sha256": "dc1f0760acb4c18d30ff4d7baa98cdb0ac0df632199d41b71bed612265a01f68"
+    },
+    "GX": {
+      "path": "experiments/gx_baseline_20260914/gx_baseline_results.json",
+      "sha256": "d546d036d345bc6717dccba4f12a034f23648e279bb75f11973cec2ed02011b3"
+    },
+    "GX_MANIFEST": {
+      "path": "experiments/gx_baseline_20260914/artifact_manifest.json",
+      "sha256": "b90e7a153fbc68d7a19b05a2de51907bac195f8556e0cbfd22814c5642192fcb"
+    },
+    "COSMOS": {
+      "path": "experiments/results/20260912-cosmos-metadata/rerun.json",
+      "sha256": "d80ff6b1d30e75d4dc773093c5888a586f1d78d2417454e49c505367bb01e0f5"
+    },
+    "COSMOS_FRAMES": {
+      "path": "experiments/cosmos_frame_check_20260914/cosmos_frame_check_results.json",
+      "sha256": "eb75417afabb6ada7c1be7a7ee2df425ec2849882957b2ddb75c68a12c5ac897"
+    },
+    "COSMOS_C5": {
+      "path": "experiments/cosmos_c5_20260916/public_env_compat2/results.json",
+      "sha256": "4f3b599f1460c252acb6f0658ead4a566cd4e0922adfcd531546d41125aa702d"
+    },
+    "COSMOS_CONSUMER": {
+      "path": "experiments/cosmos_consumer_replay_20260916/public_env_compat2/results.json",
+      "sha256": "963117b280467c7385517f1ac985b760cfeeffa68026fc431d21e9b30c4f7716"
+    }
+  },
+  "figures": {
+    "replay_protocol": {
+      "rd1_reproduced": {
+        "source": "RD1",
+        "json_path": "summary.reproduced",
+        "value": true
+      },
+      "rd2_reproduced": {
+        "source": "RD2",
+        "json_path": "summary.reproduced",
+        "value": true
+      },
+      "rd4_reproduced": {
+        "source": "RD4",
+        "json_path": "summary.reproduced",
+        "value": true
+      },
+      "rd5_reproduced": {
+        "source": "RD5",
+        "json_path": "summary.reproduced",
+        "value": true
+      },
+      "rd6_reproduced": {
+        "source": "RD6",
+        "json_path": "summary.reproduced",
+        "value": true
+      },
+      "rd3_reproduced": {
+        "source": "RD3",
+        "json_path": "summary.reproduced",
+        "value": true
+      },
+      "rd7_status": {
+        "source": "RD7",
+        "json_path": "status",
+        "value": "REPRODUCED"
+      },
+      "rd8_status": {
+        "source": "RD8",
+        "json_path": "status",
+        "value": "NOT_REPRODUCED"
+      },
+      "rd8_fail": {
+        "source": "RD8_MATRIX",
+        "json_path": "fixed_fail_count",
+        "value": 24
+      },
+      "rd8_conditions": {
+        "source": "RD8_MATRIX",
+        "json_path": "condition_count",
+        "value": 44
+      },
+      "cases_meeting_local_rule": {
+        "source": "RD1..RD7",
+        "json_path": "derived: count of per-case reproduced flags",
+        "value": 7
+      }
+    },
+    "tab_cases": {
+      "rd1_padding_violations": {
+        "source": "RD1",
+        "json_path": "summary.buggy_contract_violations",
+        "value": 118
+      },
+      "rd1_units": {
+        "source": "RD1",
+        "json_path": "summary.episode_frames",
+        "value": 118
+      },
+      "rd1_fixed_violations": {
+        "source": "RD1",
+        "json_path": "summary.fixed_contract_violations",
+        "value": 0
+      },
+      "rd1_bare_index_equal": {
+        "source": "CROSS",
+        "json_path": "rows.0.raw_equality.equal_counts.buggy",
+        "value": 1
+      },
+      "rd1_bare_index_differing": {
+        "source": "CROSS",
+        "json_path": "derived: rows.0.raw_equality.count - equal_counts.buggy",
+        "value": 117
+      },
+      "rd1_start": {
+        "source": "RD1",
+        "json_path": "summary.episode_start",
+        "value": 161
+      },
+      "rd1_end": {
+        "source": "RD1",
+        "json_path": "summary.episode_end",
+        "value": 279
+      },
+      "rd2_violations": {
+        "source": "RD2",
+        "json_path": "summary.buggy_contract_violations",
+        "value": 1
+      },
+      "rd2_units": {
+        "source": "RD2",
+        "json_path": "summary.episodes_evaluated",
+        "value": 5
+      },
+      "rd2_fixed_violations": {
+        "source": "RD2",
+        "json_path": "summary.fixed_contract_violations",
+        "value": 0
+      },
+      "rd2_boundary_mb": {
+        "source": "RD2",
+        "json_path": "summary.target_file_size_mb",
+        "value": 100.0
+      },
+      "rd3_old_error_deg": {
+        "source": "RD3",
+        "json_path": "summary.buggy_angular_error_deg",
+        "value": 119.99999999999999
+      },
+      "rd3_fixed_error_deg": {
+        "source": "RD3",
+        "json_path": "summary.fixed_angular_error_deg",
+        "value": 0.0
+      },
+      "rd3_basis_displacement": {
+        "source": "RD3",
+        "json_path": "summary.buggy_max_basis_displacement",
+        "value": 1.4142135623730954
+      },
+      "rd4_missed": {
+        "source": "RD4",
+        "json_path": "summary.missed_quaternion_instances",
+        "value": 15141
+      },
+      "rd4_declared": {
+        "source": "RD4",
+        "json_path": "summary.declared_quaternion_instances",
+        "value": 23833
+      },
+      "rd4_coverage": {
+        "source": "RD4",
+        "json_path": "summary.semantic_coverage",
+        "value": 0.36470440146016025
+      },
+      "rd4_mean_deg": {
+        "source": "RD4",
+        "json_path": "summary.mean_missed_orientation_error_deg",
+        "value": 149.16989417321125
+      },
+      "rd4_median_deg": {
+        "source": "RD4",
+        "json_path": "summary.median_missed_orientation_error_deg",
+        "value": 145.949801528689
+      },
+      "rd4_over_90": {
+        "source": "RD4",
+        "json_path": "summary.missed_over_90_degrees",
+        "value": 15141
+      },
+      "rd4_schema_baseline_accepts": {
+        "source": "RD4",
+        "json_path": "summary.schema_baseline_accepted",
+        "value": true
+      },
+      "rd5_violations": {
+        "source": "RD5",
+        "json_path": "summary.buggy_contract_violations",
+        "value": 9666
+      },
+      "rd5_units": {
+        "source": "RD5",
+        "json_path": "summary.public_transitions_replayed",
+        "value": 9666
+      },
+      "rd5_fixed_violations": {
+        "source": "RD5",
+        "json_path": "summary.fixed_contract_violations",
+        "value": 0
+      },
+      "rd5_endpoint_error_m": {
+        "source": "RD5",
+        "json_path": "summary.max_endpoint_error_m",
+        "value": 1.0702074565242015
+      },
+      "rd6_old_anchor_error": {
+        "source": "RD6",
+        "json_path": "summary.old_anchor_max_error",
+        "value": 0.13421012843197622
+      },
+      "rd6_fixed_anchor_error": {
+        "source": "RD6",
+        "json_path": "summary.fixed_anchor_max_error",
+        "value": 0.00047357048562768345
+      },
+      "rd6_old_issues": {
+        "source": "RD6",
+        "json_path": "old_anchor_check.issues",
+        "value": [
+          "physical calibration anchor 0 differs by 0.13421",
+          "physical calibration anchor 1 differs by 0.117352"
+        ]
+      },
+      "rd6_anchor_expected": {
+        "source": "RD6",
+        "json_path": "old_anchor_check.expected_outputs",
+        "value": [
+          0.0,
+          1.0
+        ]
+      },
+      "rd6_fixed_issues": {
+        "source": "RD6",
+        "json_path": "fixed_anchor_check.issues",
+        "value": []
+      },
+      "rd6_old_roundtrip_accepted": {
+        "source": "RD6",
+        "json_path": "summary.old_self_roundtrip_baseline_accepted",
+        "value": true
+      },
+      "rd7_old_wrong_late": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.late.wrong_frame_count",
+        "value": 50
+      },
+      "rd7_old_wrong_regular": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.regular.wrong_frame_count",
+        "value": 100
+      },
+      "rd7_old_wrong_sparse": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.sparse.wrong_frame_count",
+        "value": 50
+      },
+      "rd7_queries_late": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.late.query_count",
+        "value": 50
+      },
+      "rd7_queries_regular": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.regular.query_count",
+        "value": 100
+      },
+      "rd7_queries_sparse": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.sparse.query_count",
+        "value": 50
+      },
+      "rd7_fixed_wrong_late": {
+        "source": "RD7",
+        "json_path": "aggregate.fixed.by_group.late.wrong_frame_count",
+        "value": 0
+      },
+      "rd7_fixed_wrong_regular": {
+        "source": "RD7",
+        "json_path": "aggregate.fixed.by_group.regular.wrong_frame_count",
+        "value": 0
+      },
+      "rd7_fixed_wrong_sparse": {
+        "source": "RD7",
+        "json_path": "aggregate.fixed.by_group.sparse.wrong_frame_count",
+        "value": 0
+      },
+      "rd7_control_queries": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.continuous_pts_negative_control.query_count",
+        "value": 2038
+      },
+      "rd7_control_correct": {
+        "source": "RD7",
+        "json_path": "aggregate.old.by_group.continuous_pts_negative_control.correct_count",
+        "value": 2038
+      },
+      "rd7_max_ts_error_s": {
+        "source": "RD7",
+        "json_path": "aggregate.old.all_queries.max_absolute_timestamp_error_seconds",
+        "value": 13.4
+      },
+      "rd8_fail": {
+        "source": "RD8_MATRIX",
+        "json_path": "fixed_fail_count",
+        "value": 24
+      },
+      "rd8_conditions": {
+        "source": "RD8_MATRIX",
+        "json_path": "condition_count",
+        "value": 44
+      },
+      "rd8_max_error": {
+        "source": "RD8_MATRIX",
+        "json_path": "max_fixed_error.value",
+        "value": 0.00032345332924951786
+      },
+      "rd8_tolerance": {
+        "source": "RD8_MATRIX",
+        "json_path": "frozen_tolerance",
+        "value": 1e-05
+      },
+      "rd8_old_coverage": {
+        "source": "RD8",
+        "json_path": "primary_condition.old_state_row_coverage",
+        "value": 0.03127371273712737
+      },
+      "rd8_rows": {
+        "source": "RD8",
+        "json_path": "projection.rows",
+        "value": 36900
+      },
+      "rd8_episodes": {
+        "source": "RD8",
+        "json_path": "projection.episodes",
+        "value": 123
+      },
+      "rd8_primary_batch": {
+        "source": "RD8",
+        "json_path": "primary_condition.batch_size",
+        "value": 32
+      },
+      "rd8_status": {
+        "source": "RD8",
+        "json_path": "status",
+        "value": "NOT_REPRODUCED"
+      },
+      "rd8_old_covered_rows": {
+        "source": "RD8",
+        "json_path": "derived: coverage * projection.rows",
+        "value": 1154
+      }
+    },
+    "fig_gx_matrix": {
+      "denominator": {
+        "source": "GX",
+        "json_path": "denominator",
+        "value": 7
+      },
+      "RD1_A_declared_schema": {
+        "source": "GX",
+        "json_path": "outcomes.0.verdict",
+        "value": "MISSED"
+      },
+      "RD1_A_declared_schema_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.0.branches.*.success",
+        "value": {
+          "faulty": true,
+          "reference": true
+        }
+      },
+      "RD1_B_disjoint_reference_fitted": {
+        "source": "GX",
+        "json_path": "outcomes.1.verdict",
+        "value": "ALWAYS_FAIL"
+      },
+      "RD1_B_disjoint_reference_fitted_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.1.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": false
+        }
+      },
+      "RD1_C_information_enriched": {
+        "source": "GX",
+        "json_path": "outcomes.2.verdict",
+        "value": "DETECTED"
+      },
+      "RD1_C_information_enriched_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.2.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD1_informed_counts": {
+        "source": "GX",
+        "json_path": "outcomes.2.branches.*.expectations.0",
+        "value": {
+          "faulty_unexpected": 118,
+          "elements": 118,
+          "reference_unexpected": 0
+        }
+      },
+      "RD2_A_declared_schema": {
+        "source": "GX",
+        "json_path": "outcomes.3.verdict",
+        "value": "MISSED"
+      },
+      "RD2_A_declared_schema_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.3.branches.*.success",
+        "value": {
+          "faulty": true,
+          "reference": true
+        }
+      },
+      "RD2_B_disjoint_reference_fitted": {
+        "source": "GX",
+        "json_path": "outcomes.4.verdict",
+        "value": "ALWAYS_FAIL"
+      },
+      "RD2_B_disjoint_reference_fitted_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.4.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": false
+        }
+      },
+      "RD2_C_information_enriched": {
+        "source": "GX",
+        "json_path": "outcomes.5.verdict",
+        "value": "DETECTED"
+      },
+      "RD2_C_information_enriched_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.5.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD2_informed_counts": {
+        "source": "GX",
+        "json_path": "outcomes.5.branches.*.expectations.0",
+        "value": {
+          "faulty_unexpected": 1,
+          "elements": 5,
+          "reference_unexpected": 0
+        }
+      },
+      "RD4_A_declared_schema": {
+        "source": "GX",
+        "json_path": "outcomes.6.verdict",
+        "value": "MISSED"
+      },
+      "RD4_A_declared_schema_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.6.branches.*.success",
+        "value": {
+          "faulty": true,
+          "reference": true
+        }
+      },
+      "RD4_B_disjoint_reference_fitted": {
+        "source": "GX",
+        "json_path": "outcomes.7.verdict",
+        "value": "ALWAYS_FAIL"
+      },
+      "RD4_B_disjoint_reference_fitted_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.7.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": false
+        }
+      },
+      "RD4_C_information_enriched": {
+        "source": "GX",
+        "json_path": "outcomes.8.verdict",
+        "value": "DETECTED"
+      },
+      "RD4_C_information_enriched_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.8.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD4_informed_counts": {
+        "source": "GX",
+        "json_path": "outcomes.8.branches.*.expectations.0",
+        "value": {
+          "faulty_unexpected": 15141,
+          "elements": 23833,
+          "reference_unexpected": 0
+        }
+      },
+      "RD5_A_declared_schema": {
+        "source": "GX",
+        "json_path": "outcomes.9.verdict",
+        "value": "DETECTED"
+      },
+      "RD5_A_declared_schema_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.9.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD5_B_disjoint_reference_fitted": {
+        "source": "GX",
+        "json_path": "outcomes.10.verdict",
+        "value": "ALWAYS_FAIL"
+      },
+      "RD5_B_disjoint_reference_fitted_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.10.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": false
+        }
+      },
+      "RD5_C_information_enriched": {
+        "source": "GX",
+        "json_path": "outcomes.11.verdict",
+        "value": "DETECTED"
+      },
+      "RD5_C_information_enriched_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.11.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD5_informed_counts": {
+        "source": "GX",
+        "json_path": "outcomes.11.branches.*.expectations.0",
+        "value": {
+          "faulty_unexpected": 9666,
+          "elements": 9666,
+          "reference_unexpected": 0
+        }
+      },
+      "RD6_A_declared_schema": {
+        "source": "GX",
+        "json_path": "outcomes.12.verdict",
+        "value": "ALWAYS_FAIL"
+      },
+      "RD6_A_declared_schema_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.12.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": false
+        }
+      },
+      "RD6_B_disjoint_reference_fitted": {
+        "source": "GX",
+        "json_path": "outcomes.13.verdict",
+        "value": "ALWAYS_FAIL"
+      },
+      "RD6_B_disjoint_reference_fitted_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.13.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": false
+        }
+      },
+      "RD6_C_information_enriched": {
+        "source": "GX",
+        "json_path": "outcomes.14.verdict",
+        "value": "DETECTED"
+      },
+      "RD6_C_information_enriched_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.14.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD6_informed_counts": {
+        "source": "GX",
+        "json_path": "outcomes.14.branches.*.expectations.0",
+        "value": {
+          "faulty_unexpected": 2,
+          "elements": 73802,
+          "reference_unexpected": 0
+        }
+      },
+      "RD7_A_declared_schema": {
+        "source": "GX",
+        "json_path": "outcomes.15.verdict",
+        "value": "MISSED"
+      },
+      "RD7_A_declared_schema_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.15.branches.*.success",
+        "value": {
+          "faulty": true,
+          "reference": true
+        }
+      },
+      "RD7_B_disjoint_reference_fitted": {
+        "source": "GX",
+        "json_path": "outcomes.16.verdict",
+        "value": "ALWAYS_FAIL"
+      },
+      "RD7_B_disjoint_reference_fitted_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.16.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": false
+        }
+      },
+      "RD7_C_information_enriched": {
+        "source": "GX",
+        "json_path": "outcomes.17.verdict",
+        "value": "DETECTED"
+      },
+      "RD7_C_information_enriched_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.17.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD7_informed_counts": {
+        "source": "GX",
+        "json_path": "outcomes.17.branches.*.expectations.0",
+        "value": {
+          "faulty_unexpected": 200,
+          "elements": 2238,
+          "reference_unexpected": 0
+        }
+      },
+      "RD8_A_declared_schema": {
+        "source": "GX",
+        "json_path": "outcomes.18.verdict",
+        "value": "MISSED"
+      },
+      "RD8_A_declared_schema_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.18.branches.*.success",
+        "value": {
+          "faulty": true,
+          "reference": true
+        }
+      },
+      "RD8_B_disjoint_reference_fitted": {
+        "source": "GX",
+        "json_path": "outcomes.19.verdict",
+        "value": "DETECTED"
+      },
+      "RD8_B_disjoint_reference_fitted_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.19.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD8_C_information_enriched": {
+        "source": "GX",
+        "json_path": "outcomes.20.verdict",
+        "value": "DETECTED"
+      },
+      "RD8_C_information_enriched_branch_success": {
+        "source": "GX",
+        "json_path": "outcomes.20.branches.*.success",
+        "value": {
+          "faulty": false,
+          "reference": true
+        }
+      },
+      "RD8_informed_counts": {
+        "source": "GX",
+        "json_path": "outcomes.20.branches.*.expectations.0",
+        "value": {
+          "faulty_unexpected": 28,
+          "elements": 28,
+          "reference_unexpected": 0
+        }
+      },
+      "rd3_excluded": {
+        "source": "GX",
+        "json_path": "excluded_cases.RD3",
+        "value": "NA - single 4-element configuration constant, not a multi-record data artifact; its population analogue is RD4"
+      },
+      "rd6_applicable_anchor_values": {
+        "source": "GX_MANIFEST",
+        "json_path": "cases.RD6.notes.anchor_expected_norm",
+        "value": [
+          0.0,
+          1.0
+        ]
+      },
+      "rd6_applicable_anchor_count": {
+        "source": "GX_MANIFEST",
+        "json_path": "derived: len(cases.RD6.notes.anchor_expected_norm)",
+        "value": 2
+      },
+      "rd6_rows_outside_rule_scope": {
+        "source": "GX+GX_MANIFEST",
+        "json_path": "derived: informed element_count minus applicable anchor count",
+        "value": 73800
+      },
+      "A_declared_schema:Faulty only rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (False, True)",
+        "value": 1
+      },
+      "A_declared_schema:Both accepted": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (True, True)",
+        "value": 5
+      },
+      "A_declared_schema:Both rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (False, False)",
+        "value": 1
+      },
+      "A_declared_schema:Reference only rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (True, False)",
+        "value": 0
+      },
+      "B_disjoint_reference_fitted:Faulty only rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (False, True)",
+        "value": 1
+      },
+      "B_disjoint_reference_fitted:Both accepted": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (True, True)",
+        "value": 0
+      },
+      "B_disjoint_reference_fitted:Both rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (False, False)",
+        "value": 6
+      },
+      "B_disjoint_reference_fitted:Reference only rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (True, False)",
+        "value": 0
+      },
+      "C_information_enriched:Faulty only rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (False, True)",
+        "value": 7
+      },
+      "C_information_enriched:Both accepted": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (True, True)",
+        "value": 0
+      },
+      "C_information_enriched:Both rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (False, False)",
+        "value": 0
+      },
+      "C_information_enriched:Reference only rejected": {
+        "source": "GX",
+        "json_path": "derived: count of branch-success pairs (True, False)",
+        "value": 0
+      }
+    },
+    "fig_cosmos_audit": {
+      "total_records": {
+        "source": "COSMOS",
+        "json_path": "summary.episode_rows",
+        "value": 71907
+      },
+      "total_frames": {
+        "source": "COSMOS",
+        "json_path": "summary.declared_frames_represented",
+        "value": 22412712
+      },
+      "total_identity_mismatch": {
+        "source": "COSMOS",
+        "json_path": "summary.identity_inconsistent_rows",
+        "value": 61502
+      },
+      "total_task_mismatch": {
+        "source": "COSMOS",
+        "json_path": "summary.task_companion_mismatch_rows",
+        "value": 50853
+      },
+      "success_records": {
+        "source": "COSMOS",
+        "json_path": "splits.success.summary.episode_rows",
+        "value": 57639
+      },
+      "success_identity_mismatch": {
+        "source": "COSMOS",
+        "json_path": "splits.success.summary.identity_inconsistent_rows",
+        "value": 50623
+      },
+      "success_task_mismatch": {
+        "source": "COSMOS",
+        "json_path": "splits.success.summary.task_companion_mismatch_rows",
+        "value": 50623
+      },
+      "failure_records": {
+        "source": "COSMOS",
+        "json_path": "splits.failure.summary.episode_rows",
+        "value": 14268
+      },
+      "failure_identity_mismatch": {
+        "source": "COSMOS",
+        "json_path": "splits.failure.summary.identity_inconsistent_rows",
+        "value": 10879
+      },
+      "failure_task_mismatch": {
+        "source": "COSMOS",
+        "json_path": "splits.failure.summary.task_companion_mismatch_rows",
+        "value": 230
+      },
+      "failure_split_text_masked": {
+        "source": "COSMOS",
+        "json_path": "derived: failure identity_inconsistent_rows - task_companion_mismatch_rows",
+        "value": 10649
+      },
+      "frame_files": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "totals.files",
+        "value": 74
+      },
+      "frame_episodes": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "totals.episodes",
+        "value": 71907
+      },
+      "frame_frames": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "totals.frames",
+        "value": 22412712
+      },
+      "frame_failures": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "per_episode_failure_count",
+        "value": 0
+      },
+      "frame_columns": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "columns_read",
+        "value": [
+          "episode_index",
+          "task_index",
+          "frame_index",
+          "index"
+        ]
+      },
+      "frame_bytes": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "transfer_accounting.bytes_fetched_this_run",
+        "value": 129323418
+      },
+      "frame_c1_length": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "totals.c1_length",
+        "value": 71907
+      },
+      "frame_c2_index_interval": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "totals.c2_index_interval",
+        "value": 71907
+      },
+      "frame_c3_frame_order": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "totals.c3_frame_order",
+        "value": 71907
+      },
+      "frame_c4_task_identity": {
+        "source": "COSMOS_FRAMES",
+        "json_path": "totals.c4_task_identity",
+        "value": 71907
+      },
+      "c5_files": {
+        "source": "COSMOS_C5",
+        "json_path": "totals.files",
+        "value": 74
+      },
+      "c5_episodes": {
+        "source": "COSMOS_C5",
+        "json_path": "totals.episodes",
+        "value": 71907
+      },
+      "c5_rows": {
+        "source": "COSMOS_C5",
+        "json_path": "totals.rows",
+        "value": 22412712
+      },
+      "c5_violating_rows": {
+        "source": "COSMOS_C5",
+        "json_path": "totals.violating_rows",
+        "value": 0
+      },
+      "c5_violating_episodes": {
+        "source": "COSMOS_C5",
+        "json_path": "totals.violating_episodes",
+        "value": 0
+      },
+      "c5_status": {
+        "source": "COSMOS_C5",
+        "json_path": "status",
+        "value": "PASS"
+      },
+      "c5_complete_coverage": {
+        "source": "COSMOS_C5",
+        "json_path": "complete_coverage",
+        "value": true
+      },
+      "consumer_status": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "status",
+        "value": "EXECUTED"
+      },
+      "consumer_commit": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "consumer.commit",
+        "value": "7e241bd630a3719a56157a497ce5d08f244784f1"
+      },
+      "consumer_function": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "consumer.function",
+        "value": "update_meta_data"
+      },
+      "consumer_records": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "totals.original.records",
+        "value": 4
+      },
+      "consumer_original_violating_records": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "totals.original.violating_records",
+        "value": 2
+      },
+      "consumer_original_violating_fields": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "totals.original.violating_fields",
+        "value": 16
+      },
+      "consumer_corrected_violating_records": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "totals.summary_corrected.violating_records",
+        "value": 0
+      },
+      "consumer_corrected_violating_fields": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "totals.summary_corrected.violating_fields",
+        "value": 0
+      },
+      "consumer_affected_records": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: count(records with kind = affected)",
+        "value": 2
+      },
+      "consumer_control_records": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: count(records with kind = control)",
+        "value": 2
+      },
+      "consumer_frame_rows": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: sum(records.*.frame_rows)",
+        "value": 1095
+      },
+      "consumer_affected_original_targeted_field_violations": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: sum(records where kind=affected, conditions.original.violating_field_count)",
+        "value": 16
+      },
+      "consumer_affected_summary_corrected_targeted_field_violations": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: sum(records where kind=affected, conditions.summary_corrected.violating_field_count)",
+        "value": 0
+      },
+      "consumer_control_original_targeted_field_violations": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: sum(records where kind=control, conditions.original.violating_field_count)",
+        "value": 0
+      },
+      "consumer_control_summary_corrected_targeted_field_violations": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: sum(records where kind=control, conditions.summary_corrected.violating_field_count)",
+        "value": 0
+      },
+      "success_idm_coherent": {
+        "source": "COSMOS",
+        "json_path": "derived: success.episode_rows minus idm",
+        "value": 7016
+      },
+      "success_tkm_coherent": {
+        "source": "COSMOS",
+        "json_path": "derived: success.episode_rows minus tkm",
+        "value": 7016
+      },
+      "failure_idm_coherent": {
+        "source": "COSMOS",
+        "json_path": "derived: failure.episode_rows minus idm",
+        "value": 3389
+      },
+      "failure_tkm_coherent": {
+        "source": "COSMOS",
+        "json_path": "derived: failure.episode_rows minus tkm",
+        "value": 14038
+      },
+      "consumer_scored_fields_per_cohort": {
+        "source": "COSMOS_CONSUMER",
+        "json_path": "derived: affected-record count times number of output_summary keys",
+        "value": 16
+      }
+    }
+  },
+  "layout": {
+    "replay_protocol": {
+      "width_cm": 8.52,
+      "drawing_height_cm": 2.91,
+      "single_column": true
+    },
+    "fig_gx_matrix": {
+      "width_cm": 8.52,
+      "drawing_height_cm": 3.78,
+      "single_column": true
+    },
+    "fig_cosmos_audit": {
+      "width_cm": 17.8,
+      "drawing_height_cm": 4.94,
+      "single_column": false
+    }
+  },
+  "outputs": {
+    "replay_protocol.tikz": "7bc7b62fb24319927577356a081a2cc21e2bb1dd7374d8995b0dccb5d6bc9a2b",
+    "tab_cases.tex": "8cfe330a7e30af864f5ccecadbd277f70f844d838825748a8b94e1f37960b4bc",
+    "fig_gx_matrix.tikz": "0a7fbca9efec393b29f338e4a22131b01727875b50b470acdfe5320d84deb60b",
+    "fig_cosmos_audit.tikz": "dceb7743972d1253221888b83de74cd1dc0a3a6a39bc1a0a7211f6a18d60eeb2"
+  },
+  "removed_outputs": {
+    "fig_replay_outcomes.tikz": "replaced by Table I (tab_cases.tex); the dumbbell chart mixed non-comparable per-case denominators on one axis",
+    "fig_check_matrix.tikz": "folded into Table I, whose per-case local-check column carries the same classification with its definition beside it"
+  }
+}

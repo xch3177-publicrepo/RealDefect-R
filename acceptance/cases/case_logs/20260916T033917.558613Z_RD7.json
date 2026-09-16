@@ -1,0 +1,16 @@
+{
+  "name": "RD7",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/run_real_defect_groot_172.py",
+    "--video-root",
+    "<CASES_RUN>/cases-all/code/runs/rd7_downloaded"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:17.558613+00:00",
+  "finished_utc": "2026-09-16T03:39:38.155647+00:00",
+  "duration_seconds": 20.596972084022127,
+  "exit_code": 0,
+  "output_file": "20260916T033917.558613Z_RD7.log"
+}

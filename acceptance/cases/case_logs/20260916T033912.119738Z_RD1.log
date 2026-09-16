@@ -1,0 +1,15 @@
+{
+  "buggy_contract_violations": 118,
+  "buggy_frames_marked_pad": 118,
+  "case": "LeRobot issue #2610: delta timestamps plus episode filter",
+  "episode_end": 279,
+  "episode_frames": 118,
+  "episode_index": 1,
+  "episode_start": 161,
+  "evidence_class": "minimal upstream-code-path reproduction on public dataset metadata",
+  "fixed_contract_violations": 0,
+  "fixed_frames_marked_pad": 0,
+  "full_upstream_api_execution": false,
+  "reproduced": true
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-lerobot-2610.json

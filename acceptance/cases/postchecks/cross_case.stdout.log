@@ -1,0 +1,7 @@
+{
+  "cases": 8,
+  "RD4_raw_equal": 15141,
+  "RD4_total": 23833,
+  "RD8_fixed_numeric_failures": 24,
+  "output": "<WORKING_PROJECT>/logs/20260916-round2/acceptance_raw/cases/postchecks/cross_case_information.json"
+}

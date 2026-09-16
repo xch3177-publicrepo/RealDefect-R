@@ -1,0 +1,38 @@
+{
+  "case": "OpenPI PR #557: inaccurate ALOHA gripper calibration anchors",
+  "evidence_class": "merged VLA data-transform fix plus encoder-anchor oracle and public low-dimensional row",
+  "fixed_anchor_contract_accepted": true,
+  "fixed_anchor_max_error": 0.00047357048562768345,
+  "old_anchor_contract_accepted": false,
+  "old_anchor_max_error": 0.13421012843197622,
+  "old_self_roundtrip_baseline_accepted": true,
+  "public_dataset_rows": 36900,
+  "reproduced": true
+}
+{
+  "fixed_action_model_values": [
+    -1.2351047133356332,
+    -0.9835104478746652
+  ],
+  "fixed_state_model_values": [
+    -0.7230121694663918,
+    -0.37141574459186544
+  ],
+  "old_action_model_values": [
+    -0.9886406484869392,
+    -0.7599185889769684
+  ],
+  "old_state_model_values": [
+    -0.5769992430569416,
+    -0.2311562142258167
+  ],
+  "raw_action_grippers": [
+    -0.03134247660636902,
+    0.08776667714118958
+  ],
+  "raw_state_grippers": [
+    0.13637855648994446,
+    0.3394544720649719
+  ]
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-openpi-557.json

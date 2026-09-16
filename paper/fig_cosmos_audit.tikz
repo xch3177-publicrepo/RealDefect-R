@@ -1,0 +1,83 @@
+\begin{figure*}[t]
+\centering
+\definecolor{rdink}{HTML}{14181F}
+\definecolor{rdink2}{HTML}{4A5462}
+\definecolor{rdmute}{HTML}{667180}
+\definecolor{rdnavy}{HTML}{1F3A5F}
+\definecolor{rdnavy2}{HTML}{4A6E9B}
+\definecolor{rdteal}{HTML}{16706E}
+\definecolor{rdteal2}{HTML}{CFE3E2}
+\definecolor{rdcoral}{HTML}{BC4127}
+\definecolor{rdcoral2}{HTML}{F2DCD6}
+\definecolor{rdline}{HTML}{CFD5DC}
+\definecolor{rdfill}{HTML}{EDF0F3}
+\definecolor{rdfill2}{HTML}{F7F8FA}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\footnotesize,inner sep=0pt,line cap=round,line join=round]
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,0.000) {\textbf{(a) Episode-summary relations}};
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (9.100,0.000) {\textbf{(b) Scoped consumer: targeted fields only}};
+\draw[rdline,line width=0.35pt] (3.120,-2.890) -- (3.120,-0.370);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (3.120,-3.110) {0\%};
+\draw[rdline,line width=0.35pt] (4.130,-2.890) -- (4.130,-0.370);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (4.130,-3.110) {25\%};
+\draw[rdline,line width=0.35pt] (5.140,-2.890) -- (5.140,-0.370);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (5.140,-3.110) {50\%};
+\draw[rdline,line width=0.35pt] (6.150,-2.890) -- (6.150,-0.370);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (6.150,-3.110) {75\%};
+\draw[rdline,line width=0.35pt] (7.160,-2.890) -- (7.160,-0.370);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (7.160,-3.110) {100\%};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.970,-0.630) {Identity};
+\path[fill=rdfill] (3.12,-0.81) rectangle (7.16,-0.45);
+\path[fill=rdcoral] (3.12,-0.81) rectangle (6.6682,-0.45);
+\node[anchor=west,text=rdcoral,inner sep=0pt,font=\sffamily\footnotesize] at (7.320,-0.630) {50,623};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.970,-1.210) {Task text};
+\path[fill=rdfill] (3.12,-1.39) rectangle (7.16,-1.03);
+\path[fill=rdcoral] (3.12,-1.39) rectangle (6.6682,-1.03);
+\node[anchor=west,text=rdcoral,inner sep=0pt,font=\sffamily\footnotesize] at (7.320,-1.210) {50,623};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.970,-2.080) {Identity};
+\path[fill=rdfill] (3.12,-2.2600000000000002) rectangle (7.16,-1.9000000000000001);
+\path[fill=rdcoral] (3.12,-2.2600000000000002) rectangle (6.2004,-1.9000000000000001);
+\node[anchor=west,text=rdcoral,inner sep=0pt,font=\sffamily\footnotesize] at (7.320,-2.080) {10,879};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.970,-2.660) {Task text};
+\path[fill=rdfill] (3.12,-2.8400000000000003) rectangle (7.16,-2.48);
+\path[fill=rdcoral] (3.12,-2.8400000000000003) rectangle (3.1851,-2.48);
+\node[anchor=west,text=rdcoral,inner sep=0pt,font=\sffamily\footnotesize] at (7.320,-2.660) {230};
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,-0.630) {\textbf{Success}};
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,-1.010) {$n=57,639$};
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,-2.080) {\textbf{Failure}};
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,-2.460) {$n=14,268$};
+\path[fill=rdcoral,draw=rdline,line width=0.4pt] (0,-3.70) rectangle (0.25,-3.48);
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (0.370,-3.590) {Discrepant};
+\path[fill=rdfill,draw=rdline,line width=0.4pt] (2.55,-3.70) rectangle (2.8,-3.48);
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (2.920,-3.590) {Coherent under stated relation};
+\draw[rdline,line width=0.5pt] (8.720,-3.800) -- (8.720,0.160);
+\draw[rdline,line width=0.35pt] (12.100,-2.250) -- (12.100,-0.400);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (12.100,-2.470) {0};
+\draw[rdline,line width=0.35pt] (13.475,-2.250) -- (13.475,-0.400);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (13.475,-2.470) {4};
+\draw[rdline,line width=0.35pt] (14.850,-2.250) -- (14.850,-0.400);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (14.850,-2.470) {8};
+\draw[rdline,line width=0.35pt] (16.225,-2.250) -- (16.225,-0.400);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (16.225,-2.470) {12};
+\draw[rdline,line width=0.35pt] (17.600,-2.250) -- (17.600,-0.400);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (17.600,-2.470) {16};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (11.910,-0.890) {Affected ($n=2$)};
+\draw[rdink2,line width=1.0pt] (12.100,-0.890) -- (17.600,-0.890);
+\fill[rdcoral] (17.600,-0.890) circle (2.1pt);
+\draw[rdteal,line width=0.85pt] (12.100,-0.790) -- (12.200,-0.890) -- (12.100,-0.990) -- (12.000,-0.890) -- cycle;
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (14.850,-0.590) {16 $\rightarrow$ 0};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (11.910,-1.780) {Controls ($n=2$)};
+\fill[rdcoral] (12.100,-1.780) circle (2.1pt);
+\draw[rdteal,line width=0.85pt] (12.100,-1.680) -- (12.200,-1.780) -- (12.100,-1.880) -- (12.000,-1.780) -- cycle;
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (12.100,-1.480) {0 $\rightarrow$ 0};
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (14.850,-2.960) {Incorrect fields (of 16 per cohort)};
+\fill[rdcoral] (9.18,-3.59) circle (2.1pt);
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (9.400,-3.590) {Original};
+\draw[rdteal,line width=0.85pt] (12.1,-3.49) -- (12.2,-3.59) -- (12.1,-3.69) -- (12,-3.59) -- cycle;
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (12.340,-3.590) {Summary-only correction};
+\draw[rdink2,line width=0.6pt] (0.000,-4.030) -- (17.800,-4.030);
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,-4.360) {\textbf{Frame checks:} C1--C4: 71,907/71,907 episodes pass each; C5: 0/22,412,712 violating rows.};
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (0.000,-4.770) {C2/C3: index multisets; C5: row-wise index relation. Physical order and visual content untested.};
+\end{tikzpicture}
+\caption{Cosmos3-DROID: (a) discrepancy proportions with raw counts; (b) exact pinned metadata-function replay on 4 selected records (1,095 frame rows). Only eight \texttt{stats/episode\_index/} fields per record are scored: min, max, mean, q01, q10, q50, q90, q99. Other metadata, complete merging and downstream harm are outside this comparison.}
+\label{fig:cosmos-audit}
+\end{figure*}

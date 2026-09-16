@@ -1,0 +1,5 @@
+{"split": "failure", "kind": "affected", "episode_index": 3389, "original_bad_fields": 8, "corrected_bad_fields": 0}
+{"split": "failure", "kind": "control", "episode_index": 0, "original_bad_fields": 0, "corrected_bad_fields": 0}
+{"split": "success", "kind": "affected", "episode_index": 7016, "original_bad_fields": 8, "corrected_bad_fields": 0}
+{"split": "success", "kind": "control", "episode_index": 0, "original_bad_fields": 0, "corrected_bad_fields": 0}
+{"status": "EXECUTED", "totals": {"original": {"records": 4, "violating_records": 2, "violating_fields": 16}, "summary_corrected": {"records": 4, "violating_records": 0, "violating_fields": 0}}}

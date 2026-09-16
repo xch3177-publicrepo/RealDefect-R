@@ -1,0 +1,16 @@
+{
+  "buggy_contract_accepted": false,
+  "buggy_contract_violations": 1,
+  "case": "LeRobot PR #2057: v2.1-to-v3 global frame offset reset",
+  "episodes_evaluated": 5,
+  "evidence_class": "merged upstream bugfix reproduced with public v2.1 metadata and file sizes",
+  "first_output_file_closes_after_episode": 2,
+  "fixed_contract_accepted": true,
+  "fixed_contract_violations": 0,
+  "full_upstream_converter_execution": false,
+  "reproduced": true,
+  "target_file_size_mb": 100.0
+}
+buggy issues:
+- episode 4 starts at 285, expected 1128
+wrote <CASES_RUN>/cases-all/code/results/real-defect-lerobot-2057.json

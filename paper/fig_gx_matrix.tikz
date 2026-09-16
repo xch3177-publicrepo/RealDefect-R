@@ -1,0 +1,59 @@
+\begin{figure}[t]
+\centering
+\definecolor{rdink}{HTML}{14181F}
+\definecolor{rdink2}{HTML}{4A5462}
+\definecolor{rdmute}{HTML}{667180}
+\definecolor{rdnavy}{HTML}{1F3A5F}
+\definecolor{rdnavy2}{HTML}{4A6E9B}
+\definecolor{rdteal}{HTML}{16706E}
+\definecolor{rdteal2}{HTML}{CFE3E2}
+\definecolor{rdcoral}{HTML}{BC4127}
+\definecolor{rdcoral2}{HTML}{F2DCD6}
+\definecolor{rdline}{HTML}{CFD5DC}
+\definecolor{rdfill}{HTML}{EDF0F3}
+\definecolor{rdfill2}{HTML}{F7F8FA}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\footnotesize,inner sep=0pt,line cap=round,line join=round]
+\node[anchor=west,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.300,0.000) {Number of paired outcomes};
+\draw[rdline,line width=0.35pt] (2.300,-2.480) -- (2.300,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (2.300,-2.680) {0};
+\draw[rdline,line width=0.35pt] (3.160,-2.480) -- (3.160,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (3.160,-2.680) {1};
+\draw[rdline,line width=0.35pt] (4.020,-2.480) -- (4.020,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (4.020,-2.680) {2};
+\draw[rdline,line width=0.35pt] (4.880,-2.480) -- (4.880,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (4.880,-2.680) {3};
+\draw[rdline,line width=0.35pt] (5.740,-2.480) -- (5.740,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (5.740,-2.680) {4};
+\draw[rdline,line width=0.35pt] (6.600,-2.480) -- (6.600,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (6.600,-2.680) {5};
+\draw[rdline,line width=0.35pt] (7.460,-2.480) -- (7.460,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (7.460,-2.680) {6};
+\draw[rdline,line width=0.35pt] (8.320,-2.480) -- (8.320,-0.350);
+\node[anchor=center,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (8.320,-2.680) {7};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.140,-0.660) {A: declared};
+\path[fill=rdteal,draw=white,line width=0.4pt] (2.300,-0.890) rectangle (3.160,-0.430);
+\node[anchor=center,text=white,inner sep=0pt,font=\sffamily\footnotesize\bfseries] at (2.730,-0.660) {1};
+\path[fill=rdfill,draw=white,line width=0.4pt] (3.160,-0.890) rectangle (7.460,-0.430);
+\node[anchor=center,text=rdink,inner sep=0pt,font=\sffamily\footnotesize\bfseries] at (5.310,-0.660) {5};
+\path[fill=rdnavy,draw=white,line width=0.4pt] (7.460,-0.890) rectangle (8.320,-0.430);
+\node[anchor=center,text=white,inner sep=0pt,font=\sffamily\footnotesize\bfseries] at (7.890,-0.660) {1};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.140,-1.410) {B: ref.-fitted};
+\path[fill=rdteal,draw=white,line width=0.4pt] (2.300,-1.640) rectangle (3.160,-1.180);
+\node[anchor=center,text=white,inner sep=0pt,font=\sffamily\footnotesize\bfseries] at (2.730,-1.410) {1};
+\path[fill=rdnavy,draw=white,line width=0.4pt] (3.160,-1.640) rectangle (8.320,-1.180);
+\node[anchor=center,text=white,inner sep=0pt,font=\sffamily\footnotesize\bfseries] at (5.740,-1.410) {6};
+\node[anchor=east,text=rdink,inner sep=0pt,font=\sffamily\footnotesize] at (2.140,-2.160) {C: case-informed};
+\path[fill=rdteal,draw=white,line width=0.4pt] (2.300,-2.390) rectangle (8.320,-1.930);
+\node[anchor=center,text=white,inner sep=0pt,font=\sffamily\footnotesize\bfseries] at (5.310,-2.160) {7};
+\path[fill=rdteal,draw=rdline,line width=0.4pt] (0.00,-3.26) rectangle (0.27,-3.04);
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (0.380,-3.150) {Faulty only rejected};
+\path[fill=rdfill,draw=rdline,line width=0.4pt] (4.30,-3.26) rectangle (4.57,-3.04);
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (4.680,-3.150) {Both accepted};
+\path[fill=rdnavy,draw=rdline,line width=0.4pt] (0.00,-3.72) rectangle (0.27,-3.50);
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (0.380,-3.610) {Both rejected};
+\path[fill=rdcoral,draw=rdline,line width=0.4pt] (4.30,-3.72) rectangle (4.57,-3.50);
+\node[anchor=west,text=rdink2,inner sep=0pt,font=\sffamily\footnotesize] at (4.680,-3.610) {Reference only rejected};
+\end{tikzpicture}
+\caption{Paired outcomes of supplied rules in Great Expectations (native, 7 pairs). Suites vary predicates and references; these counts are portability evidence, not accuracy. RD3 is NA; RD4 uses a constructed reference; RD6 covers only 2 anchors (73,800 other rows outside scope); RD8 evaluates its primary condition. All reference-only rejection counts are zero.}
+\label{fig:gx-matrix}
+\end{figure}

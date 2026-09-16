@@ -1,0 +1,7 @@
+{
+  "verified_objects": 15,
+  "verified_full_file_bytes": 43486336,
+  "downloaded_objects": 13,
+  "downloaded_full_file_bytes": 43199368,
+  "scope": "selected input payload sizes; excludes installation, network headers and extra pinned Python source fetches"
+}

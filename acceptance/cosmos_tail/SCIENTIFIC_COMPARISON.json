@@ -1,0 +1,664 @@
+[
+  {
+    "check": "Cosmos_metadata.summary",
+    "matches": true,
+    "actual": {
+      "all_declared_count_checks_passed": true,
+      "declared_frames_represented": 22412712,
+      "episode_metadata_shards": 6,
+      "episode_rows": 71907,
+      "gpu_used": false,
+      "identity_inconsistent_rows": 61502,
+      "scope": "complete public episode metadata for both splits; no trajectories or videos",
+      "splits": 2,
+      "task_companion_mismatch_rows": 50853
+    },
+    "expected": {
+      "all_declared_count_checks_passed": true,
+      "declared_frames_represented": 22412712,
+      "episode_metadata_shards": 6,
+      "episode_rows": 71907,
+      "gpu_used": false,
+      "identity_inconsistent_rows": 61502,
+      "scope": "complete public episode metadata for both splits; no trajectories or videos",
+      "splits": 2,
+      "task_companion_mismatch_rows": 50853
+    }
+  },
+  {
+    "check": "Cosmos_independent.splits",
+    "matches": true,
+    "actual": {
+      "failure": {
+        "by_lab": {
+          "AUTOLab": {
+            "declared_frames": 850849,
+            "episode_rows": 3389,
+            "identity_bad": 0,
+            "identity_only": 0,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "CLVR": {
+            "declared_frames": 76381,
+            "episode_rows": 388,
+            "identity_bad": 388,
+            "identity_only": 388,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "GuptaLab": {
+            "declared_frames": 33244,
+            "episode_rows": 182,
+            "identity_bad": 182,
+            "identity_only": 0,
+            "task_bad": 182,
+            "task_only": 0
+          },
+          "ILIAD": {
+            "declared_frames": 383603,
+            "episode_rows": 1169,
+            "identity_bad": 1169,
+            "identity_only": 1167,
+            "task_bad": 2,
+            "task_only": 0
+          },
+          "IPRL": {
+            "declared_frames": 343687,
+            "episode_rows": 1295,
+            "identity_bad": 1295,
+            "identity_only": 1292,
+            "task_bad": 3,
+            "task_only": 0
+          },
+          "IRIS": {
+            "declared_frames": 63371,
+            "episode_rows": 191,
+            "identity_bad": 191,
+            "identity_only": 191,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "PennPAL": {
+            "declared_frames": 21476,
+            "episode_rows": 100,
+            "identity_bad": 100,
+            "identity_only": 100,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "RAD": {
+            "declared_frames": 188754,
+            "episode_rows": 468,
+            "identity_bad": 468,
+            "identity_only": 465,
+            "task_bad": 3,
+            "task_only": 0
+          },
+          "RAIL": {
+            "declared_frames": 372523,
+            "episode_rows": 2686,
+            "identity_bad": 2686,
+            "identity_only": 2669,
+            "task_bad": 17,
+            "task_only": 0
+          },
+          "REAL": {
+            "declared_frames": 330861,
+            "episode_rows": 1505,
+            "identity_bad": 1505,
+            "identity_only": 1497,
+            "task_bad": 8,
+            "task_only": 0
+          },
+          "RPL": {
+            "declared_frames": 154731,
+            "episode_rows": 567,
+            "identity_bad": 567,
+            "identity_only": 561,
+            "task_bad": 6,
+            "task_only": 0
+          },
+          "TRI": {
+            "declared_frames": 548949,
+            "episode_rows": 1723,
+            "identity_bad": 1723,
+            "identity_only": 1714,
+            "task_bad": 9,
+            "task_only": 0
+          },
+          "WEIRD": {
+            "declared_frames": 353002,
+            "episode_rows": 605,
+            "identity_bad": 605,
+            "identity_only": 605,
+            "task_bad": 0,
+            "task_only": 0
+          }
+        },
+        "counts": {
+          "both_bad": 230,
+          "identity_bad": 10879,
+          "identity_bad_with_local_pattern": 10879,
+          "identity_only": 10649,
+          "local_task_matches": 14268,
+          "neither_bad": 3389,
+          "task_bad": 230,
+          "task_only": 0
+        },
+        "declared_frames": 3721431,
+        "episode_rows": 14268,
+        "global_checks": {
+          "dataset_intervals_contiguous": true,
+          "episode_ids_unique": true,
+          "episode_index_equals_complete_range": true,
+          "spans_equal_lengths": true
+        },
+        "shards": 1
+      },
+      "success": {
+        "by_lab": {
+          "AUTOLab": {
+            "declared_frames": 2702448,
+            "episode_rows": 7016,
+            "identity_bad": 0,
+            "identity_only": 0,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "CLVR": {
+            "declared_frames": 882504,
+            "episode_rows": 4702,
+            "identity_bad": 4702,
+            "identity_only": 0,
+            "task_bad": 4702,
+            "task_only": 0
+          },
+          "GuptaLab": {
+            "declared_frames": 176885,
+            "episode_rows": 1115,
+            "identity_bad": 1115,
+            "identity_only": 0,
+            "task_bad": 1115,
+            "task_only": 0
+          },
+          "ILIAD": {
+            "declared_frames": 648102,
+            "episode_rows": 2071,
+            "identity_bad": 2071,
+            "identity_only": 0,
+            "task_bad": 2071,
+            "task_only": 0
+          },
+          "IPRL": {
+            "declared_frames": 1516100,
+            "episode_rows": 4418,
+            "identity_bad": 4418,
+            "identity_only": 0,
+            "task_bad": 4418,
+            "task_only": 0
+          },
+          "IRIS": {
+            "declared_frames": 808927,
+            "episode_rows": 3171,
+            "identity_bad": 3171,
+            "identity_only": 0,
+            "task_bad": 3171,
+            "task_only": 0
+          },
+          "PennPAL": {
+            "declared_frames": 790574,
+            "episode_rows": 2794,
+            "identity_bad": 2794,
+            "identity_only": 0,
+            "task_bad": 2794,
+            "task_only": 0
+          },
+          "RAD": {
+            "declared_frames": 571046,
+            "episode_rows": 999,
+            "identity_bad": 999,
+            "identity_only": 0,
+            "task_bad": 999,
+            "task_only": 0
+          },
+          "RAIL": {
+            "declared_frames": 1005224,
+            "episode_rows": 5414,
+            "identity_bad": 5414,
+            "identity_only": 0,
+            "task_bad": 5414,
+            "task_only": 0
+          },
+          "REAL": {
+            "declared_frames": 913384,
+            "episode_rows": 3503,
+            "identity_bad": 3503,
+            "identity_only": 0,
+            "task_bad": 3503,
+            "task_only": 0
+          },
+          "RPL": {
+            "declared_frames": 950891,
+            "episode_rows": 1950,
+            "identity_bad": 1950,
+            "identity_only": 0,
+            "task_bad": 1950,
+            "task_only": 0
+          },
+          "TRI": {
+            "declared_frames": 5272517,
+            "episode_rows": 18102,
+            "identity_bad": 18102,
+            "identity_only": 0,
+            "task_bad": 18102,
+            "task_only": 0
+          },
+          "WEIRD": {
+            "declared_frames": 2452679,
+            "episode_rows": 2384,
+            "identity_bad": 2384,
+            "identity_only": 0,
+            "task_bad": 2384,
+            "task_only": 0
+          }
+        },
+        "counts": {
+          "both_bad": 50623,
+          "identity_bad": 50623,
+          "identity_bad_with_local_pattern": 50623,
+          "identity_only": 0,
+          "local_task_matches": 57639,
+          "neither_bad": 7016,
+          "task_bad": 50623,
+          "task_only": 0
+        },
+        "declared_frames": 18691281,
+        "episode_rows": 57639,
+        "global_checks": {
+          "dataset_intervals_contiguous": true,
+          "episode_ids_unique": true,
+          "episode_index_equals_complete_range": true,
+          "spans_equal_lengths": true
+        },
+        "shards": 5
+      }
+    },
+    "expected": {
+      "failure": {
+        "by_lab": {
+          "AUTOLab": {
+            "declared_frames": 850849,
+            "episode_rows": 3389,
+            "identity_bad": 0,
+            "identity_only": 0,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "CLVR": {
+            "declared_frames": 76381,
+            "episode_rows": 388,
+            "identity_bad": 388,
+            "identity_only": 388,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "GuptaLab": {
+            "declared_frames": 33244,
+            "episode_rows": 182,
+            "identity_bad": 182,
+            "identity_only": 0,
+            "task_bad": 182,
+            "task_only": 0
+          },
+          "ILIAD": {
+            "declared_frames": 383603,
+            "episode_rows": 1169,
+            "identity_bad": 1169,
+            "identity_only": 1167,
+            "task_bad": 2,
+            "task_only": 0
+          },
+          "IPRL": {
+            "declared_frames": 343687,
+            "episode_rows": 1295,
+            "identity_bad": 1295,
+            "identity_only": 1292,
+            "task_bad": 3,
+            "task_only": 0
+          },
+          "IRIS": {
+            "declared_frames": 63371,
+            "episode_rows": 191,
+            "identity_bad": 191,
+            "identity_only": 191,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "PennPAL": {
+            "declared_frames": 21476,
+            "episode_rows": 100,
+            "identity_bad": 100,
+            "identity_only": 100,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "RAD": {
+            "declared_frames": 188754,
+            "episode_rows": 468,
+            "identity_bad": 468,
+            "identity_only": 465,
+            "task_bad": 3,
+            "task_only": 0
+          },
+          "RAIL": {
+            "declared_frames": 372523,
+            "episode_rows": 2686,
+            "identity_bad": 2686,
+            "identity_only": 2669,
+            "task_bad": 17,
+            "task_only": 0
+          },
+          "REAL": {
+            "declared_frames": 330861,
+            "episode_rows": 1505,
+            "identity_bad": 1505,
+            "identity_only": 1497,
+            "task_bad": 8,
+            "task_only": 0
+          },
+          "RPL": {
+            "declared_frames": 154731,
+            "episode_rows": 567,
+            "identity_bad": 567,
+            "identity_only": 561,
+            "task_bad": 6,
+            "task_only": 0
+          },
+          "TRI": {
+            "declared_frames": 548949,
+            "episode_rows": 1723,
+            "identity_bad": 1723,
+            "identity_only": 1714,
+            "task_bad": 9,
+            "task_only": 0
+          },
+          "WEIRD": {
+            "declared_frames": 353002,
+            "episode_rows": 605,
+            "identity_bad": 605,
+            "identity_only": 605,
+            "task_bad": 0,
+            "task_only": 0
+          }
+        },
+        "counts": {
+          "both_bad": 230,
+          "identity_bad": 10879,
+          "identity_bad_with_local_pattern": 10879,
+          "identity_only": 10649,
+          "local_task_matches": 14268,
+          "neither_bad": 3389,
+          "task_bad": 230,
+          "task_only": 0
+        },
+        "declared_frames": 3721431,
+        "episode_rows": 14268,
+        "global_checks": {
+          "dataset_intervals_contiguous": true,
+          "episode_ids_unique": true,
+          "episode_index_equals_complete_range": true,
+          "spans_equal_lengths": true
+        },
+        "shards": 1
+      },
+      "success": {
+        "by_lab": {
+          "AUTOLab": {
+            "declared_frames": 2702448,
+            "episode_rows": 7016,
+            "identity_bad": 0,
+            "identity_only": 0,
+            "task_bad": 0,
+            "task_only": 0
+          },
+          "CLVR": {
+            "declared_frames": 882504,
+            "episode_rows": 4702,
+            "identity_bad": 4702,
+            "identity_only": 0,
+            "task_bad": 4702,
+            "task_only": 0
+          },
+          "GuptaLab": {
+            "declared_frames": 176885,
+            "episode_rows": 1115,
+            "identity_bad": 1115,
+            "identity_only": 0,
+            "task_bad": 1115,
+            "task_only": 0
+          },
+          "ILIAD": {
+            "declared_frames": 648102,
+            "episode_rows": 2071,
+            "identity_bad": 2071,
+            "identity_only": 0,
+            "task_bad": 2071,
+            "task_only": 0
+          },
+          "IPRL": {
+            "declared_frames": 1516100,
+            "episode_rows": 4418,
+            "identity_bad": 4418,
+            "identity_only": 0,
+            "task_bad": 4418,
+            "task_only": 0
+          },
+          "IRIS": {
+            "declared_frames": 808927,
+            "episode_rows": 3171,
+            "identity_bad": 3171,
+            "identity_only": 0,
+            "task_bad": 3171,
+            "task_only": 0
+          },
+          "PennPAL": {
+            "declared_frames": 790574,
+            "episode_rows": 2794,
+            "identity_bad": 2794,
+            "identity_only": 0,
+            "task_bad": 2794,
+            "task_only": 0
+          },
+          "RAD": {
+            "declared_frames": 571046,
+            "episode_rows": 999,
+            "identity_bad": 999,
+            "identity_only": 0,
+            "task_bad": 999,
+            "task_only": 0
+          },
+          "RAIL": {
+            "declared_frames": 1005224,
+            "episode_rows": 5414,
+            "identity_bad": 5414,
+            "identity_only": 0,
+            "task_bad": 5414,
+            "task_only": 0
+          },
+          "REAL": {
+            "declared_frames": 913384,
+            "episode_rows": 3503,
+            "identity_bad": 3503,
+            "identity_only": 0,
+            "task_bad": 3503,
+            "task_only": 0
+          },
+          "RPL": {
+            "declared_frames": 950891,
+            "episode_rows": 1950,
+            "identity_bad": 1950,
+            "identity_only": 0,
+            "task_bad": 1950,
+            "task_only": 0
+          },
+          "TRI": {
+            "declared_frames": 5272517,
+            "episode_rows": 18102,
+            "identity_bad": 18102,
+            "identity_only": 0,
+            "task_bad": 18102,
+            "task_only": 0
+          },
+          "WEIRD": {
+            "declared_frames": 2452679,
+            "episode_rows": 2384,
+            "identity_bad": 2384,
+            "identity_only": 0,
+            "task_bad": 2384,
+            "task_only": 0
+          }
+        },
+        "counts": {
+          "both_bad": 50623,
+          "identity_bad": 50623,
+          "identity_bad_with_local_pattern": 50623,
+          "identity_only": 0,
+          "local_task_matches": 57639,
+          "neither_bad": 7016,
+          "task_bad": 50623,
+          "task_only": 0
+        },
+        "declared_frames": 18691281,
+        "episode_rows": 57639,
+        "global_checks": {
+          "dataset_intervals_contiguous": true,
+          "episode_ids_unique": true,
+          "episode_index_equals_complete_range": true,
+          "spans_equal_lengths": true
+        },
+        "shards": 5
+      }
+    }
+  },
+  {
+    "check": "Cosmos_C1_C4.totals",
+    "matches": true,
+    "actual": {
+      "files": 74,
+      "frames": 22412712,
+      "episodes": 71907,
+      "frame_consistent_episodes": 71907,
+      "c1_length": 71907,
+      "c2_index_interval": 71907,
+      "c3_frame_order": 71907,
+      "c4_task_identity": 71907
+    },
+    "expected": {
+      "files": 74,
+      "frames": 22412712,
+      "episodes": 71907,
+      "frame_consistent_episodes": 71907,
+      "c1_length": 71907,
+      "c2_index_interval": 71907,
+      "c3_frame_order": 71907,
+      "c4_task_identity": 71907
+    }
+  },
+  {
+    "check": "Cosmos_C1_C4.summary_versus_frames",
+    "matches": true,
+    "actual": {
+      "summary_episode_index_matches_frames": 10405,
+      "summary_episode_index_differs_from_frames": 61502,
+      "summary_task_index_matches_frames": 21054,
+      "summary_task_index_differs_from_frames": 50853,
+      "summary_count_matches_frames": 71907,
+      "summary_count_differs_from_frames": 0
+    },
+    "expected": {
+      "summary_episode_index_matches_frames": 10405,
+      "summary_episode_index_differs_from_frames": 61502,
+      "summary_task_index_matches_frames": 21054,
+      "summary_task_index_differs_from_frames": 50853,
+      "summary_count_matches_frames": 71907,
+      "summary_count_differs_from_frames": 0
+    }
+  },
+  {
+    "check": "Cosmos_C1_C4.processed_files",
+    "matches": true,
+    "actual": 74,
+    "expected": 74
+  },
+  {
+    "check": "Cosmos_C1_C4.per_episode_failure_count",
+    "matches": true,
+    "actual": 0,
+    "expected": 0
+  },
+  {
+    "check": "Cosmos_C5.totals",
+    "matches": true,
+    "actual": {
+      "episodes": 71907,
+      "files": 74,
+      "rows": 22412712,
+      "violating_episodes": 0,
+      "violating_rows": 0
+    },
+    "expected": {
+      "episodes": 71907,
+      "files": 74,
+      "rows": 22412712,
+      "violating_episodes": 0,
+      "violating_rows": 0
+    }
+  },
+  {
+    "check": "Cosmos_C5.status",
+    "matches": true,
+    "actual": "PASS",
+    "expected": "PASS"
+  },
+  {
+    "check": "Cosmos_C5.complete_coverage",
+    "matches": true,
+    "actual": true,
+    "expected": true
+  },
+  {
+    "check": "Cosmos_consumer.totals",
+    "matches": true,
+    "actual": {
+      "original": {
+        "records": 4,
+        "violating_fields": 16,
+        "violating_records": 2
+      },
+      "summary_corrected": {
+        "records": 4,
+        "violating_fields": 0,
+        "violating_records": 0
+      }
+    },
+    "expected": {
+      "original": {
+        "records": 4,
+        "violating_fields": 16,
+        "violating_records": 2
+      },
+      "summary_corrected": {
+        "records": 4,
+        "violating_fields": 0,
+        "violating_records": 0
+      }
+    }
+  },
+  {
+    "check": "Cosmos_consumer.status",
+    "matches": true,
+    "actual": "EXECUTED",
+    "expected": "EXECUTED"
+  }
+]

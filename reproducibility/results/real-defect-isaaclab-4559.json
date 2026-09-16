@@ -1,0 +1,68 @@
+{
+  "buggy_check": {
+    "accepted": false,
+    "angular_error_deg": 119.99999999999999,
+    "angular_error_rad": 2.0943951023931953,
+    "issues": [
+      "undeclared quaternion-order change: reorder_quaternion is required",
+      "physical orientations diverge by 120 degrees"
+    ],
+    "max_basis_displacement": 1.4142135623730954
+  },
+  "buggy_xyzw": [
+    0.0,
+    0.7071067811865476,
+    0.7071067811865476,
+    0.0
+  ],
+  "fixed_check": {
+    "accepted": true,
+    "angular_error_deg": 0.0,
+    "angular_error_rad": 0.0,
+    "issues": [],
+    "max_basis_displacement": 0.0
+  },
+  "fixed_xyzw": [
+    0.7071067811865476,
+    0.7071067811865476,
+    0.0,
+    0.0
+  ],
+  "frozen_inputs": {
+    "convention_change_commit": "9659a5cefe7195c15b9b0c0cc519d86233b2e276",
+    "merged_fix_commit": "a880ba4d49aaa51262a76be06242b2eb42d20063",
+    "pre_fix_parent_commit": "9b36e719cc63ff3b206d7c843aca3f089e581df3",
+    "repository": "isaac-sim/IsaacLab",
+    "source_path": "source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/deploy/gear_assembly/config/ur_10e/joint_pos_env_cfg.py"
+  },
+  "legacy_wxyz": [
+    0.0,
+    0.7071067811865476,
+    0.7071067811865476,
+    0.0
+  ],
+  "limitations": [
+    "This is an exact code/configuration-path reproduction, not a full Isaac Sim rollout.",
+    "The physical consequence is computed analytically on SO(3); no renderer or dynamics is required.",
+    "The case contains one real affected configuration, so it is defect evidence rather than a statistical benchmark.",
+    "native_config_accepts_buggy_tuple reflects the absence of an order field/check at this numeric configuration boundary."
+  ],
+  "sources": {
+    "fix_commit": "https://github.com/isaac-sim/IsaacLab/commit/a880ba4d49aaa51262a76be06242b2eb42d20063",
+    "pull_request": "https://github.com/isaac-sim/IsaacLab/pull/4559",
+    "release": "https://github.com/isaac-sim/IsaacLab/releases/tag/v3.0.0-beta"
+  },
+  "summary": {
+    "buggy_angular_error_deg": 119.99999999999999,
+    "buggy_contract_accepted": false,
+    "buggy_max_basis_displacement": 1.4142135623730954,
+    "case": "Isaac Lab PR #4559: stale WXYZ grasp offset consumed as XYZW",
+    "evidence_class": "merged upstream bugfix with exact pre-fix and post-fix constants",
+    "fixed_angular_error_deg": 0.0,
+    "fixed_contract_accepted": true,
+    "native_config_accepts_buggy_tuple": true,
+    "reproduced": true,
+    "shape_range_norm_baseline_accepts_buggy_tuple": true,
+    "shape_range_norm_baseline_accepts_fixed_tuple": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "code_unchanged": true,
+  "command": [
+    "<LOCAL_PATH:dc0bb6d1b1b51f29>",
+    "original/scripts/audit_droid_full_metadata.py",
+    "--data-root",
+    "<LOCAL_PATH:4b37789d92d2c75a>",
+    "--output",
+    "<LOCAL_PATH:3281e63170a739e3>"
+  ],
+  "elapsed_s": 118.21230262494646,
+  "exit_code": 0,
+  "finished_utc": "2026-09-12T23:21:22.228300+00:00",
+  "platform": "macOS-15.6.1-arm64-arm-64bit",
+  "python": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 20:54:21) [Clang 16.0.6 ]",
+  "result_sha256": "bb3830f61ad478b6e8820a462afd9b82b18dcf229ddfe005b899ad7f28f874bf",
+  "runner_sha256": "e16691dd1c4f3ec9b6bece3bae0021563256ca82033e8f36b046048c46dcd7ce",
+  "started_utc": "2026-09-12T23:19:23.918689+00:00"
+}

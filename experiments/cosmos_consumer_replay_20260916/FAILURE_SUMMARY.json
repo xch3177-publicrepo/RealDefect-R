@@ -1,0 +1,12 @@
+{
+  "attempt": "public_env_compat",
+  "started_utc": "2026-09-16T03:39:10.838523+00:00",
+  "status": "EXECUTION_ERROR",
+  "phase": "pinned consumer source HTTPS download, before function execution",
+  "error_class": "URLError / SSL CERTIFICATE_VERIFY_FAILED",
+  "cause": "Fresh Python environment did not find a usable TLS root store for urllib; HuggingFace HTTP client was unaffected.",
+  "correction": "Use ssl.create_default_context(cafile=certifi.where()) for public urllib source/metadata fetches in both runners; TLS verification remains enabled. Scientific predicates, input identities and selection unchanged.",
+  "rerun": "public_env_compat2",
+  "prior_source_preserved": "public_env_compat/executed_run_consumer.py",
+  "raw_traceback_private": "Raw traceback preserves the local path in the private working repository; public derivative includes this sanitized summary instead."
+}

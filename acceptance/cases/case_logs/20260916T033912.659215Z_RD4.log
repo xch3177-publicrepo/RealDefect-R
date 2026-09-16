@@ -1,0 +1,17 @@
+{
+  "case": "Isaac Lab legacy HDF5 WXYZ-to-XYZW partial migration",
+  "converted_quaternion_instances": 8692,
+  "declared_quaternion_instances": 23833,
+  "evidence_class": "unmodified released converter on official public demonstration HDF5",
+  "mean_missed_orientation_error_deg": 149.16989417321125,
+  "median_missed_orientation_error_deg": 145.949801528689,
+  "missed_over_90_degrees": 15141,
+  "missed_quaternion_instances": 15141,
+  "p95_missed_orientation_error_deg": 177.66408928521096,
+  "reproduced": true,
+  "robocontract_accepted": false,
+  "schema_baseline_accepted": true,
+  "semantic_coverage": 0.36470440146016025,
+  "target_format_version": 1
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-isaaclab-quaternion-migration.json

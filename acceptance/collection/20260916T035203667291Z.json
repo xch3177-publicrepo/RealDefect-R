@@ -1,0 +1,133 @@
+{
+  "created_utc": "2026-09-16T03:52:03.667410+00:00",
+  "phase": "preparatory",
+  "items": [
+    {
+      "public_path": "failed_extended_r1/RUN_SUMMARY.json",
+      "raw_sha256": "506f738574ffc70bad457df31555919e75638f7de7e25d163eacb864b723e8df",
+      "public_sha256": "b7516b0042110824a8800ba32d9f28e1672e92186a098bcd68020d327b137118",
+      "bytes": 594,
+      "source": "<FAILED_EXTENDED_RUN>/RUN_SUMMARY.json"
+    },
+    {
+      "public_path": "failed_extended_r1/commands.json",
+      "raw_sha256": "b77bb62e86cc2d99e6a64a7a50f72617450259d9877434be9220ed167510dc99",
+      "public_sha256": "ee27963650c3579af9ad006867d03c614e1fe21bf8ab636b6a2da6106323ca29",
+      "bytes": 3824,
+      "source": "<FAILED_EXTENDED_RUN>/commands.json"
+    },
+    {
+      "public_path": "failed_extended_r1/SCIENTIFIC_COMPARISON.json",
+      "raw_sha256": "71994f6e59a4ad67fd570fea807015f1953caa95bcde9b93badf11c5efe560fb",
+      "public_sha256": "71994f6e59a4ad67fd570fea807015f1953caa95bcde9b93badf11c5efe560fb",
+      "bytes": 2435,
+      "source": "<FAILED_EXTENDED_RUN>/SCIENTIFIC_COMPARISON.json"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/GX_fixture_build.log",
+      "raw_sha256": "56f5d5d24eabcb18f6a5de2f47f4a1d199b6fe5f547f30135199767aa7cf0e7c",
+      "public_sha256": "56f5d5d24eabcb18f6a5de2f47f4a1d199b6fe5f547f30135199767aa7cf0e7c",
+      "bytes": 751,
+      "source": "<FAILED_EXTENDED_RUN>/logs/GX_fixture_build.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/GX_validation.log",
+      "raw_sha256": "ca32c45cc38628337cb7811ab80d5c11819f117aa94efe8b03bbfaa084b3709c",
+      "public_sha256": "ca32c45cc38628337cb7811ab80d5c11819f117aa94efe8b03bbfaa084b3709c",
+      "bytes": 42327,
+      "source": "<FAILED_EXTENDED_RUN>/logs/GX_validation.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/RD3_RD6_scoped_smoke.log",
+      "raw_sha256": "3a1f03cb8ce7fe6e79ca01376e4cf9103bb8089ba0b440b9c8e3c29468c687f3",
+      "public_sha256": "6ae26a600a75ba314278fac25b5404d96ae5feb952e2d7fba93c75481c4db437",
+      "bytes": 2156,
+      "source": "<FAILED_EXTENDED_RUN>/logs/RD3_RD6_scoped_smoke.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/RD8_condition_matrix.log",
+      "raw_sha256": "ed5a1724992c13f86485830ef246367feaa003b7005d3ce2c59ba7e438b4f2f3",
+      "public_sha256": "ed5a1724992c13f86485830ef246367feaa003b7005d3ce2c59ba7e438b4f2f3",
+      "bytes": 2394,
+      "source": "<FAILED_EXTENDED_RUN>/logs/RD8_condition_matrix.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/RD8_precision_diagnostic.log",
+      "raw_sha256": "9ce2e39778750e89f9c808176806437e21bb46bb4bf38d39fc73502bf2efceea",
+      "public_sha256": "ef62e4a3755815c7a2dbee850be6b0b2ddcbeefed6129299b29b1848368ab48e",
+      "bytes": 500,
+      "source": "<FAILED_EXTENDED_RUN>/logs/RD8_precision_diagnostic.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/download_franka_stack_v51.hdf5.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<FAILED_EXTENDED_RUN>/logs/download_franka_stack_v51.hdf5.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/download_hdf5_dataset_file_handler_beta2_patch1.py.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<FAILED_EXTENDED_RUN>/logs/download_hdf5_dataset_file_handler_beta2_patch1.py.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/download_low_dim_v15.hdf5.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<FAILED_EXTENDED_RUN>/logs/download_low_dim_v15.hdf5.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/figure_generation.log",
+      "raw_sha256": "8476c2560ea9df8f0dadba48668578fa4a8819245f025438b99f65435dd0cf17",
+      "public_sha256": "8476c2560ea9df8f0dadba48668578fa4a8819245f025438b99f65435dd0cf17",
+      "bytes": 99,
+      "source": "<FAILED_EXTENDED_RUN>/logs/figure_generation.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/integrity.log",
+      "raw_sha256": "87f68d70559e26b9279ad47b6f6fdce13527342ad8a196edacb279faf8abe4dd",
+      "public_sha256": "87f68d70559e26b9279ad47b6f6fdce13527342ad8a196edacb279faf8abe4dd",
+      "bytes": 48,
+      "source": "<FAILED_EXTENDED_RUN>/logs/integrity.log"
+    },
+    {
+      "public_path": "failed_extended_r1/logs/projection_recovery.log",
+      "raw_sha256": "322550b614f34f3ffaa2c2d967f66300fb87dd1ad9f3edac8a8086c653e43145",
+      "public_sha256": "322550b614f34f3ffaa2c2d967f66300fb87dd1ad9f3edac8a8086c653e43145",
+      "bytes": 110,
+      "source": "<FAILED_EXTENDED_RUN>/logs/projection_recovery.log"
+    },
+    {
+      "public_path": "environment/realdefect-public-install-20260916.log",
+      "raw_sha256": "2f2acb9c9d1cb42d3329beb4571cf139250c04854afef7b974f97828ac5f5399",
+      "public_sha256": "3c8158f8f674f37ed0400c73013294aa8f8baa2eefa7c124da89bf76aa194612",
+      "bytes": 14364,
+      "source": "<RUN_PATH:56c10c748ded4ad0>"
+    },
+    {
+      "public_path": "environment/realdefect-public-install-patch-20260916.log",
+      "raw_sha256": "5f69a8c8f43737871ccce0ecb43019897968026f7d10cb20a858512ea267e317",
+      "public_sha256": "54243d6939ed5468e36f109ac27fb7435ca5c0edc48b13c2d91a454520f9a92c",
+      "bytes": 1139,
+      "source": "<RUN_PATH:a5b9d596ea1d7cf7>"
+    },
+    {
+      "public_path": "environment/requirements.lock",
+      "raw_sha256": "955cd9aa64d3630c4516b3e10d24c58d684a49f10c27e407672d37f98bd7f948",
+      "public_sha256": "955cd9aa64d3630c4516b3e10d24c58d684a49f10c27e407672d37f98bd7f948",
+      "bytes": 881,
+      "source": "completed pip freeze after explicit numpydantic dependency correction"
+    },
+    {
+      "public_path": "environment/ENVIRONMENT.json",
+      "raw_sha256": "467cba9e047a18359d886c8ce786e5130d41847ffd7b00edbccb0c38bfc67501",
+      "public_sha256": "467cba9e047a18359d886c8ce786e5130d41847ffd7b00edbccb0c38bfc67501",
+      "bytes": 522,
+      "source": "environment query"
+    }
+  ],
+  "raw_and_public_hashes_distinct": true
+}

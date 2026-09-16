@@ -1,0 +1,370 @@
+{
+  "collected_utc": "2026-09-16T05:18:01.788352+00:00",
+  "candidate_manifest_sha256": "1bc61f401949d3145429fa781d63aaf26a4a10c62eb2158be32106cda7d30c9c",
+  "candidate_info": {
+    "name": "RealDefect-R sanitized minimal public snapshot",
+    "version": "public-v1.0.0-20260916",
+    "built_utc": "2026-09-16T03:42:53.785088+00:00",
+    "working_source_commit": "2b2c631e1080e7f3ce286e061f199696348b6329",
+    "source_tree_was_dirty_at_build": true,
+    "source_content_rule": "SOURCE_MAP.json binds selected exact or sanitized source bytes; manifest binds every final package file including new experiments and paper; no private git history",
+    "historical_source_commit": "5d50746be318692bc46a417af65e781bd3946b88",
+    "license_selection": "mit-ccby",
+    "publication_status": "local package identity; remote availability is established by the public tag, not by this file",
+    "privacy_scope": "remove private paths, credentials and internal research/agent history; preserve public upstream provenance; not an anonymous dataset"
+  },
+  "comparison_snapshot_manifest_sha256": "d099b56135507d4ca41e321635933f6802babab4d2cb2b051fdfa935ed68bf5c",
+  "files": [
+    {
+      "path": "experiments/cosmos_c5_20260916/run_c5.py",
+      "executed_runtime_available_sha256": "eb5f03f1361b8fa7ef9ccee6cd8cb0f8fb2013941b52e0db2de8997d8df18710",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "eb5f03f1361b8fa7ef9ccee6cd8cb0f8fb2013941b52e0db2de8997d8df18710",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "eb5f03f1361b8fa7ef9ccee6cd8cb0f8fb2013941b52e0db2de8997d8df18710",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/cosmos_consumer_replay_20260916/run_consumer.py",
+      "executed_runtime_available_sha256": "775660f8c3e4aca583ebdf54e37b024e518b233baccf65f9ccf22cd4f45a75d0",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "775660f8c3e4aca583ebdf54e37b024e518b233baccf65f9ccf22cd4f45a75d0",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "775660f8c3e4aca583ebdf54e37b024e518b233baccf65f9ccf22cd4f45a75d0",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/cosmos_frame_check_20260914/run_frame_check.py",
+      "executed_runtime_available_sha256": "09f6e9434da5cfd00038b8d5f1585201d55c6329575faca1857654691dc1cc54",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "09f6e9434da5cfd00038b8d5f1585201d55c6329575faca1857654691dc1cc54",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "09f6e9434da5cfd00038b8d5f1585201d55c6329575faca1857654691dc1cc54",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/gx_baseline_20260914/build_artifacts.py",
+      "executed_runtime_available_sha256": "99f5ba132a7b71365ca59fdb9f567a1d1a87553a1c14f70e969535b3b5defab4",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "99f5ba132a7b71365ca59fdb9f567a1d1a87553a1c14f70e969535b3b5defab4",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "99f5ba132a7b71365ca59fdb9f567a1d1a87553a1c14f70e969535b3b5defab4",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/gx_baseline_20260914/run_gx_baseline.py",
+      "executed_runtime_available_sha256": "f93d097241c097708eca438e08ce8bc1006d9808bc615abb31d91399b6e7d370",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "f93d097241c097708eca438e08ce8bc1006d9808bc615abb31d91399b6e7d370",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "f93d097241c097708eca438e08ce8bc1006d9808bc615abb31d91399b6e7d370",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/gx_baseline_20260914/suites.py",
+      "executed_runtime_available_sha256": "0ee7f8553ee043f404c73718c06b5f1801710546d5d9139b97457abb31434ce3",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "0ee7f8553ee043f404c73718c06b5f1801710546d5d9139b97457abb31434ce3",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "0ee7f8553ee043f404c73718c06b5f1801710546d5d9139b97457abb31434ce3",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/gx_baseline_20260914/verify_rotation_distance.py",
+      "executed_runtime_available_sha256": "018fca36fb17cf9b74236a04665cc091dc483893957211d3ac0a217fe2b0e543",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "018fca36fb17cf9b74236a04665cc091dc483893957211d3ac0a217fe2b0e543",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "018fca36fb17cf9b74236a04665cc091dc483893957211d3ac0a217fe2b0e543",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/rd8_diagnostic_20260914/extract_rd8_condition_matrix.py",
+      "executed_runtime_available_sha256": "83cbbf6e13c1e3795f3f1876caa5bf9eaba53d7df1c64dc08218ac86213596a3",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "83cbbf6e13c1e3795f3f1876caa5bf9eaba53d7df1c64dc08218ac86213596a3",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "83cbbf6e13c1e3795f3f1876caa5bf9eaba53d7df1c64dc08218ac86213596a3",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/rd8_diagnostic_20260914/rd8_precision_diagnostic.py",
+      "executed_runtime_available_sha256": "20e9fb8e9047202432f23577f5b235077982c061ee4b8d4a41176af6cc356e4c",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "20e9fb8e9047202432f23577f5b235077982c061ee4b8d4a41176af6cc356e4c",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "20e9fb8e9047202432f23577f5b235077982c061ee4b8d4a41176af6cc356e4c",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/rd8_diagnostic_20260914/recover_projections.py",
+      "executed_runtime_available_sha256": "ed1457314980d36ef4750ba58dbaaede7403dd84b2fe601f5fae12a4c4779071",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "ed1457314980d36ef4750ba58dbaaede7403dd84b2fe601f5fae12a4c4779071",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "ed1457314980d36ef4750ba58dbaaede7403dd84b2fe601f5fae12a4c4779071",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/replay_cosmos_metadata.py",
+      "executed_runtime_available_sha256": "e16691dd1c4f3ec9b6bece3bae0021563256ca82033e8f36b046048c46dcd7ce",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "e16691dd1c4f3ec9b6bece3bae0021563256ca82033e8f36b046048c46dcd7ce",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "e16691dd1c4f3ec9b6bece3bae0021563256ca82033e8f36b046048c46dcd7ce",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "experiments/verify_cosmos_referential_counts.py",
+      "executed_runtime_available_sha256": "10d7657f83dee36ce7d3d70dfa6d37bb684dd4430c29ebc20a28ba11b5f9106f",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "10d7657f83dee36ce7d3d70dfa6d37bb684dd4430c29ebc20a28ba11b5f9106f",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "10d7657f83dee36ce7d3d70dfa6d37bb684dd4430c29ebc20a28ba11b5f9106f",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/audit_droid_full_metadata.py",
+      "executed_runtime_available_sha256": "9d6a5a9f9a8692e48e2f05be24a8bee1ff473b9e82f530b3b89915c3177303a1",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "9d6a5a9f9a8692e48e2f05be24a8bee1ff473b9e82f530b3b89915c3177303a1",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "9d6a5a9f9a8692e48e2f05be24a8bee1ff473b9e82f530b3b89915c3177303a1",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/audit_real_defect_groot_172.py",
+      "executed_runtime_available_sha256": "138a6b85cc515903f552905b70430ef0070fff542aa9faeda2ab3f7021e0d54f",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "138a6b85cc515903f552905b70430ef0070fff542aa9faeda2ab3f7021e0d54f",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "138a6b85cc515903f552905b70430ef0070fff542aa9faeda2ab3f7021e0d54f",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/audit_real_defect_openpi_570.py",
+      "executed_runtime_available_sha256": "236bc423d8db77aef72a6c0c51e37c32106edba72bc2bd3be48b6c9f90ed8205",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "236bc423d8db77aef72a6c0c51e37c32106edba72bc2bd3be48b6c9f90ed8205",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "236bc423d8db77aef72a6c0c51e37c32106edba72bc2bd3be48b6c9f90ed8205",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_isaaclab_quaternion_migration.py",
+      "executed_runtime_available_sha256": "9320d04d029a71211f650b5414991b7bb13f41609a4c16555f3ed752a26623b6",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "9320d04d029a71211f650b5414991b7bb13f41609a4c16555f3ed752a26623b6",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "9320d04d029a71211f650b5414991b7bb13f41609a4c16555f3ed752a26623b6",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_real_defect_2057.py",
+      "executed_runtime_available_sha256": "2d0731b82b70d3f01d4da638f1d85a00c86a9a923291152db48d10b327653c2d",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "2d0731b82b70d3f01d4da638f1d85a00c86a9a923291152db48d10b327653c2d",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "2d0731b82b70d3f01d4da638f1d85a00c86a9a923291152db48d10b327653c2d",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_real_defect_2610.py",
+      "executed_runtime_available_sha256": "00766677680c7d1a564a6d0a010fcf617f2721a39ef6bdddddfbfd5d21982c77",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "00766677680c7d1a564a6d0a010fcf617f2721a39ef6bdddddfbfd5d21982c77",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "00766677680c7d1a564a6d0a010fcf617f2721a39ef6bdddddfbfd5d21982c77",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_real_defect_groot_172.py",
+      "executed_runtime_available_sha256": "9055c5d373fa3e771e07489a2e1db4f51d18945bab56ce958683253a21e3c51b",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "9055c5d373fa3e771e07489a2e1db4f51d18945bab56ce958683253a21e3c51b",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "9055c5d373fa3e771e07489a2e1db4f51d18945bab56ce958683253a21e3c51b",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_real_defect_isaaclab_4559.py",
+      "executed_runtime_available_sha256": "37607dc3e724b8cd9019df99534d371579207376d18714f6bb395c0efdd7e34f",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "37607dc3e724b8cd9019df99534d371579207376d18714f6bb395c0efdd7e34f",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "37607dc3e724b8cd9019df99534d371579207376d18714f6bb395c0efdd7e34f",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_real_defect_openpi_557.py",
+      "executed_runtime_available_sha256": "a512676764a6e15d8d5bf7bda8eeb1697b1553a2caf64a06d758d145bac366ae",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "a512676764a6e15d8d5bf7bda8eeb1697b1553a2caf64a06d758d145bac366ae",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "a512676764a6e15d8d5bf7bda8eeb1697b1553a2caf64a06d758d145bac366ae",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_real_defect_openpi_570.py",
+      "executed_runtime_available_sha256": "ad771d84ba1966958862bbc0070222a9aab25ef323203d92470ee9691385f226",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "ad771d84ba1966958862bbc0070222a9aab25ef323203d92470ee9691385f226",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "ad771d84ba1966958862bbc0070222a9aab25ef323203d92470ee9691385f226",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/scripts/run_real_defect_robosuite_626.py",
+      "executed_runtime_available_sha256": "d5703570e1dc778d2980a0c407ebc5683eb0d63de427e8f8ba466ead7e1b52d6",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "d5703570e1dc778d2980a0c407ebc5683eb0d63de427e8f8ba466ead7e1b52d6",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "d5703570e1dc778d2980a0c407ebc5683eb0d63de427e8f8ba466ead7e1b52d6",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/__init__.py",
+      "executed_runtime_available_sha256": "9e241a00b3fe511762427e657698470703ef8fdf2e08d550de62c1c91105340d",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "9e241a00b3fe511762427e657698470703ef8fdf2e08d550de62c1c91105340d",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "9e241a00b3fe511762427e657698470703ef8fdf2e08d550de62c1c91105340d",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/calibration.py",
+      "executed_runtime_available_sha256": "03152168f42d6c18b53afdefc652b01b8a46ee4f21a8520211983fb0088169a7",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "03152168f42d6c18b53afdefc652b01b8a46ee4f21a8520211983fb0088169a7",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "03152168f42d6c18b53afdefc652b01b8a46ee4f21a8520211983fb0088169a7",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/droid_metadata_audit.py",
+      "executed_runtime_available_sha256": "05ad5d2f1c86e658d16e5d5b1266a7518091a3227a2bf1bb062abf4b33a879da",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "05ad5d2f1c86e658d16e5d5b1266a7518091a3227a2bf1bb062abf4b33a879da",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "05ad5d2f1c86e658d16e5d5b1266a7518091a3227a2bf1bb062abf4b33a879da",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/droid_metadata_collection.py",
+      "executed_runtime_available_sha256": "76653efcc372370a8e2205d2e235b9a843620ef2c5e9c7ad9ee565bcdee50af5",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "76653efcc372370a8e2205d2e235b9a843620ef2c5e9c7ad9ee565bcdee50af5",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "76653efcc372370a8e2205d2e235b9a843620ef2c5e9c7ad9ee565bcdee50af5",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/episode_metadata.py",
+      "executed_runtime_available_sha256": "25d0488d9e3b8a4d2bb799398f7dbd2f576b1dae4ce98238e88d1318173fc0d8",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "25d0488d9e3b8a4d2bb799398f7dbd2f576b1dae4ce98238e88d1318173fc0d8",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "25d0488d9e3b8a4d2bb799398f7dbd2f576b1dae4ce98238e88d1318173fc0d8",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/episode_windows.py",
+      "executed_runtime_available_sha256": "2f743497c1b1d63fcc472c0afbe79cfd6bac71a8fa717b347596508d6c877222",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "2f743497c1b1d63fcc472c0afbe79cfd6bac71a8fa717b347596508d6c877222",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "2f743497c1b1d63fcc472c0afbe79cfd6bac71a8fa717b347596508d6c877222",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/isaaclab_migration.py",
+      "executed_runtime_available_sha256": "de4bc623793ea718699a9813fe2992a51baba7ff48dddd49e07cb83cbea27070",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "de4bc623793ea718699a9813fe2992a51baba7ff48dddd49e07cb83cbea27070",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "de4bc623793ea718699a9813fe2992a51baba7ff48dddd49e07cb83cbea27070",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/orientation.py",
+      "executed_runtime_available_sha256": "e13c3abd763829e39a88abe24439ae2f798b0796fd0da20f8a80fb5d805658fe",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "e13c3abd763829e39a88abe24439ae2f798b0796fd0da20f8a80fb5d805658fe",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "e13c3abd763829e39a88abe24439ae2f798b0796fd0da20f8a80fb5d805658fe",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "original/src/robocontract/rigid_transform.py",
+      "executed_runtime_available_sha256": "0d3d7dc688cf3ea9bba9bdf2920342c602568fe61e7ca8b1df2b10b820663d5e",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "0d3d7dc688cf3ea9bba9bdf2920342c602568fe61e7ca8b1df2b10b820663d5e",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "0d3d7dc688cf3ea9bba9bdf2920342c602568fe61e7ca8b1df2b10b820663d5e",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "reproducibility/analysis/cross_case_information.py",
+      "executed_runtime_available_sha256": "8701e8217cd5a492b2d522fcf0bfe44eb51c4195fd755b0ba88e02bbb8bd6d5a",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "8701e8217cd5a492b2d522fcf0bfe44eb51c4195fd755b0ba88e02bbb8bd6d5a",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "8701e8217cd5a492b2d522fcf0bfe44eb51c4195fd755b0ba88e02bbb8bd6d5a",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "reproducibility/reproduce.py",
+      "executed_runtime_available_sha256": "8eaa037f523ccc8fd6de9711bd73af3b47b93506f4042b11981719a8a8572a76",
+      "directly_executed_from_command_ledger": true,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "8eaa037f523ccc8fd6de9711bd73af3b47b93506f4042b11981719a8a8572a76",
+      "role": "scoped code available in executed runtime; executed-step ledger determines actual use",
+      "comparison_snapshot_sha256": "8eaa037f523ccc8fd6de9711bd73af3b47b93506f4042b11981719a8a8572a76",
+      "same_as_comparison_snapshot": true
+    },
+    {
+      "path": "run_public.py",
+      "executed_runtime_available_sha256": "bc0f19fb7ce75654ce42a2eea1ad1baf6ae87e7d0b9e0d5dcfa5f0a7874655cb",
+      "directly_executed_from_command_ledger": false,
+      "actual_case_source_matches_runtime_copy": true,
+      "candidate_source_sha256": "bc0f19fb7ce75654ce42a2eea1ad1baf6ae87e7d0b9e0d5dcfa5f0a7874655cb",
+      "role": "top-level orchestration wrapper",
+      "comparison_snapshot_sha256": "bc0f19fb7ce75654ce42a2eea1ad1baf6ae87e7d0b9e0d5dcfa5f0a7874655cb",
+      "same_as_comparison_snapshot": true
+    }
+  ],
+  "interpretation": "case execution used candidate2; extended execution used candidate5. Later top-level wrapper adds postchecks, stronger classification and token/cache isolation. Unchanged scientific script hashes establish code correspondence; this receipt does not falsely claim the entire final package was the originally executed candidate."
+}

@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-09-16T03:52:03.666142+00:00",
+  "interpreter": {
+    "python": "3.12.3 (v3.12.3:f6650f9ad7, Apr  9 2024, 08:18:47) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-15.6.1-arm64-arm-64bit"
+  },
+  "install_scope": "new virtual environment; initial and dependency-correction transcripts retained; freeze records post-correction environment, not a claim numpydantic existed when the failed run began",
+  "dependency_correction": "numpydantic==1.8.1; pydantic==2.13.5 already installed"
+}

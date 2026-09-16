@@ -1,0 +1,230 @@
+{
+  "buggy_contract_violations": 118,
+  "buggy_frames_marked_pad": 118,
+  "case": "LeRobot issue #2610: delta timestamps plus episode filter",
+  "episode_end": 279,
+  "episode_frames": 118,
+  "episode_index": 1,
+  "episode_start": 161,
+  "evidence_class": "minimal upstream-code-path reproduction on public dataset metadata",
+  "fixed_contract_violations": 0,
+  "fixed_frames_marked_pad": 0,
+  "full_upstream_api_execution": false,
+  "reproduced": true
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-lerobot-2610.json
+{
+  "buggy_contract_accepted": false,
+  "buggy_contract_violations": 1,
+  "case": "LeRobot PR #2057: v2.1-to-v3 global frame offset reset",
+  "episodes_evaluated": 5,
+  "evidence_class": "merged upstream bugfix reproduced with public v2.1 metadata and file sizes",
+  "first_output_file_closes_after_episode": 2,
+  "fixed_contract_accepted": true,
+  "fixed_contract_violations": 0,
+  "full_upstream_converter_execution": false,
+  "reproduced": true,
+  "target_file_size_mb": 100.0
+}
+buggy issues:
+- episode 4 starts at 285, expected 1128
+wrote <CASES_RUN>/cases-all/code/results/real-defect-lerobot-2057.json
+{
+  "buggy_angular_error_deg": 119.99999999999999,
+  "buggy_contract_accepted": false,
+  "buggy_max_basis_displacement": 1.4142135623730954,
+  "case": "Isaac Lab PR #4559: stale WXYZ grasp offset consumed as XYZW",
+  "evidence_class": "merged upstream bugfix with exact pre-fix and post-fix constants",
+  "fixed_angular_error_deg": 0.0,
+  "fixed_contract_accepted": true,
+  "native_config_accepts_buggy_tuple": true,
+  "reproduced": true,
+  "shape_range_norm_baseline_accepts_buggy_tuple": true,
+  "shape_range_norm_baseline_accepts_fixed_tuple": true
+}
+buggy issues:
+- undeclared quaternion-order change: reorder_quaternion is required
+- physical orientations diverge by 120 degrees
+wrote <CASES_RUN>/cases-all/code/results/real-defect-isaaclab-4559.json
+{
+  "case": "Isaac Lab legacy HDF5 WXYZ-to-XYZW partial migration",
+  "converted_quaternion_instances": 8692,
+  "declared_quaternion_instances": 23833,
+  "evidence_class": "unmodified released converter on official public demonstration HDF5",
+  "mean_missed_orientation_error_deg": 149.16989417321125,
+  "median_missed_orientation_error_deg": 145.949801528689,
+  "missed_over_90_degrees": 15141,
+  "missed_quaternion_instances": 15141,
+  "p95_missed_orientation_error_deg": 177.66408928521096,
+  "reproduced": true,
+  "robocontract_accepted": false,
+  "schema_baseline_accepted": true,
+  "semantic_coverage": 0.36470440146016025,
+  "target_format_version": 1
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-isaaclab-quaternion-migration.json
+{
+  "buggy_contract_violations": 9666,
+  "case": "robosuite PR #626: base translation leaked into Mink IK delta actions",
+  "evidence_class": "merged upstream bugfix with public-action and embedded-model exact branch replay",
+  "fixed_contract_accepted": true,
+  "fixed_contract_violations": 0,
+  "input_shape_range_baseline_accepted": true,
+  "max_endpoint_error_m": 1.0702074565242015,
+  "median_buggy_delta_norm_m": 1.0540523374091482,
+  "median_correct_delta_norm_m": 0.026583711473925964,
+  "median_endpoint_error_m": 1.0702074565242012,
+  "min_endpoint_error_m": 1.0702074565242012,
+  "public_transitions_replayed": 9666,
+  "reproduced": true
+}
+{
+  "base_translation_m": [
+    -0.56,
+    0.0,
+    0.912
+  ],
+  "buggy_world_delta_m": [
+    -0.5498000000000001,
+    0.00435,
+    0.9084
+  ],
+  "contract_accepted": false,
+  "correct_world_delta_m": [
+    0.0102,
+    0.00435,
+    -0.003600000000000006
+  ],
+  "demo_id": "demo_0",
+  "error_norm_m": 1.0702074565242012,
+  "source_delta_m": [
+    0.0102,
+    0.00435,
+    -0.003600000000000006
+  ],
+  "step": 1
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-robosuite-626.json
+{
+  "case": "OpenPI PR #557: inaccurate ALOHA gripper calibration anchors",
+  "evidence_class": "merged VLA data-transform fix plus encoder-anchor oracle and public low-dimensional row",
+  "fixed_anchor_contract_accepted": true,
+  "fixed_anchor_max_error": 0.00047357048562768345,
+  "old_anchor_contract_accepted": false,
+  "old_anchor_max_error": 0.13421012843197622,
+  "old_self_roundtrip_baseline_accepted": true,
+  "public_dataset_rows": 36900,
+  "reproduced": true
+}
+{
+  "fixed_action_model_values": [
+    -1.2351047133356332,
+    -0.9835104478746652
+  ],
+  "fixed_state_model_values": [
+    -0.7230121694663918,
+    -0.37141574459186544
+  ],
+  "old_action_model_values": [
+    -0.9886406484869392,
+    -0.7599185889769684
+  ],
+  "old_state_model_values": [
+    -0.5769992430569416,
+    -0.2311562142258167
+  ],
+  "raw_action_grippers": [
+    -0.03134247660636902,
+    0.08776667714118958
+  ],
+  "raw_state_grippers": [
+    0.13637855648994446,
+    0.3394544720649719
+  ]
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-openpi-557.json
+{
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-groot-172.json",
+  "reproduced": true,
+  "status": "REPRODUCED",
+  "videos": 10,
+  "videos_with_old_error": 10
+}
+{
+  "checkpoint_count": 10,
+  "event_count": 32,
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-groot-172-audit.json",
+  "output_sha256": "00aeb877a333398701a6467e098f17a959cdd47a4ba3b7a847aab703a5005bb8",
+  "result_sha256": "b0a1c04f8a7d514d4ae9cad2c0d97f6169fc9b5501ff834a00198eb9b710b15b",
+  "status": "AUDIT_PASS"
+}
+{
+  "episodes": 123,
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-openpi-570.json",
+  "primary_material_effect": true,
+  "primary_old_action_row_coverage": 0.03127371273712737,
+  "reproduced": false,
+  "status": "NOT_REPRODUCED"
+}
+{
+  "condition_count": 44,
+  "event_count": 91,
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-openpi-570-audit.json",
+  "output_sha256": "8d45b6922446a1550eeed309f5f37c351c1a8179fbf73f0a395b1a22c029e5a6",
+  "projection_count": 123,
+  "result_sha256": "ef842ec62150e65893f0d1198ad255575539db52bc919af4cee143a7bdbfc05a",
+  "status": "AUDIT_PASS"
+}
+{
+  "work_dir": "<CASES_RUN>/cases-all",
+  "outcomes": [
+    {
+      "case": "RD1",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD2",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD3",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD4",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD5",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD6",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD7",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD8",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "expected_recorded_outcome": true
+    }
+  ]
+}

@@ -1,0 +1,972 @@
+{
+  "case_selection": {
+    "fixed_cases": [
+      "RD1 LeRobot #2610",
+      "RD2 LeRobot #2057",
+      "RD3 IsaacLab #4559",
+      "RD4 IsaacLab HDF5 quaternion migration",
+      "RD5 robosuite #626",
+      "RD6 OpenPI #557",
+      "RD7 GR00T #172/#373",
+      "RD8 OpenPI #570/#619/#623"
+    ],
+    "no_replacement_rule": "RD7, RD8, and every mechanically selected input remain reportable after a failed, weak, null, incompatible, or unavailable outcome",
+    "repository_set": [
+      "huggingface/lerobot",
+      "isaac-sim/IsaacLab",
+      "ARISE-Initiative/robosuite",
+      "Physical-Intelligence/openpi",
+      "NVIDIA/Isaac-GR00T"
+    ],
+    "retrieval_method": "curated public issue/PR discovery in the fixed repository set; not an exhaustive or systematic search",
+    "sampling_claim": "auditable retrospective corpus, not prevalence sample"
+  },
+  "corpus_id": "P13-REALDEFECT-8",
+  "created_utc": "2026-08-06T08:29:44.050888+00:00",
+  "rd7_groot_172": {
+    "dataset": {
+      "candidate_count": 50656,
+      "candidate_paths_sha256": "48d1e500f907ce7ec70ccb71f270c9db8dfd06f757e19d4c9a4de6eafc58fe4a",
+      "eligibility": "all repository paths ending in .mp4",
+      "repo_id": "nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "revision": "ea7ac0b68f87da62f1e726771bba0fe74300802f",
+      "selected": [
+        {
+          "bytes": 1037599,
+          "git_blob_oid": "5d81027109b4ea2a0d0c9b1adb18fa3a0c78d536",
+          "lfs_sha256": "7f26f205284c9a4e0cc07f6f61e0b72e9326ad17d7f56641c8f0ced6b18e9a73",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000000.mp4"
+        },
+        {
+          "bytes": 1035401,
+          "git_blob_oid": "6e14de3e14d6e94e4274c5a8263c7b6c5baba58d",
+          "lfs_sha256": "57836598ba8d233e6e191b8256e9b1ff6dd592d288e9564986bb3299e0354c15",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000001.mp4"
+        },
+        {
+          "bytes": 1144178,
+          "git_blob_oid": "bb693b68f80dc0f44402358079d55b3678d4fc53",
+          "lfs_sha256": "e85e3e3aa37dc0f5fe18bd36cadb1a47bd44d3745b83ec5593a3c85b9439b2e0",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000002.mp4"
+        },
+        {
+          "bytes": 1054146,
+          "git_blob_oid": "985f7a102286b2b4f42f88f6824c920ba53190c3",
+          "lfs_sha256": "6ea55d7fb168702683b247b43bcd93a1c9f85214537258fa2bd3184a82aba26b",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000003.mp4"
+        },
+        {
+          "bytes": 1041422,
+          "git_blob_oid": "5dfd768594e839b541607c22b1ce158702a072a8",
+          "lfs_sha256": "ef6882046d113856699601bce2600ed145408f17446c1ab04956b18866e5f721",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000004.mp4"
+        },
+        {
+          "bytes": 1030162,
+          "git_blob_oid": "a0dc00c8b307bc663ceb6367b24cf2819a8c8b70",
+          "lfs_sha256": "8f4ec992174361ec96c9fae1a7b8f6dce4497d70c6c56032d215d24e77412737",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000005.mp4"
+        },
+        {
+          "bytes": 1056345,
+          "git_blob_oid": "67799e6dbfecd09388c9b973019cf3cb5b07c236",
+          "lfs_sha256": "0cc86ceae8676948f4caeae6a1d03121c81bfdc8853ec4986acfc44c348d4d2e",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000006.mp4"
+        },
+        {
+          "bytes": 1144777,
+          "git_blob_oid": "ea68d3b707f9a28d9328d665acbcbf217c5182d9",
+          "lfs_sha256": "7ae084ea65d597ae08d143106dd896ac4dd7df9266da6eb489207d76dd0eda6a",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000007.mp4"
+        },
+        {
+          "bytes": 1057812,
+          "git_blob_oid": "04f52fc3639b037c79e5f284d3faff8a2fc095f6",
+          "lfs_sha256": "19c143d438e3360a9ebf9d11433b75b5ecb14b315e6f2162b43f4c93322fcfda",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000008.mp4"
+        },
+        {
+          "bytes": 1036228,
+          "git_blob_oid": "40179b0cbec30fae8c83da71b45538a2b20fc362",
+          "lfs_sha256": "b95526fb5d87031f49f85f72c652c06e131c52e43f2703059d979cfba4e3e743",
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000009.mp4"
+        }
+      ],
+      "selection": "lexicographically first 10 eligible paths"
+    },
+    "evidence_target": "E2 exact historical loop replay on pinned public videos",
+    "queries": {
+      "duplicate_pts_equivalence": "all frames at the selected PTS are equivalent",
+      "late_duration_fractions": [
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        0.99
+      ],
+      "negative_control": "every decoded source PTS in original order",
+      "oracle_selection": "latest source PTS <= target; first frame if none",
+      "reported_regular_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0
+      ],
+      "sparse_duration_fractions": [
+        0.1,
+        0.3,
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    "source": {
+      "fix_commit": "cdf6d6e3c48a9c033e2b188c8c3ff4cccc5ad04e",
+      "fixed_blob_sha256": "5fc5cfbbf3e6c0c3860333d285a1a08af35d232e35cf679e989e43124bb3f106",
+      "issue": 172,
+      "merge_commit": "c8647d1bfe873b068e25e8ecdb9d33b935f063d1",
+      "parent_blob_sha256": "2b119dcfeb164f9f840b8fe2483dbf177b989dc7e0ac921e7f324a3be155a3d2",
+      "parent_commit": "d69b446ef33766fca481ff0ada48292706af5065",
+      "path": "gr00t/utils/video.py",
+      "pull_request": 373,
+      "repo": "NVIDIA/Isaac-GR00T"
+    }
+  },
+  "rd8_openpi_570": {
+    "dataset": {
+      "expected_episodes": 123,
+      "expected_frames": 36900,
+      "file_count": 123,
+      "file_paths_sha256": "425cfd21a7126627286b8c6601849273c9c1d7e4aec93c98ac4b5522b9bc48cf",
+      "files": [
+        {
+          "bytes": 576308575,
+          "git_blob_oid": "4462cdd75c983d0fe7c30e0757fe0c83e8e1beca",
+          "lfs_sha256": "f0cc336aadee7ee21225581998f80253b597721a3adbfcff8b1e4e6f25691bc2",
+          "path": "data/chunk-000/episode_000000.parquet"
+        },
+        {
+          "bytes": 592922161,
+          "git_blob_oid": "57e322a08711997dbf99eaf88f3a577fb8d8ac30",
+          "lfs_sha256": "63dce663c2a4855fb538176e2964c69c74bcbfe0df6a4d2671d9a4b79af18230",
+          "path": "data/chunk-000/episode_000001.parquet"
+        },
+        {
+          "bytes": 584900492,
+          "git_blob_oid": "5b6634b53dbc25f0c6b0bd51bfb04d274ac876b9",
+          "lfs_sha256": "cad4bfa84c35d2c60565e570b8dd56e3a9971caa36dc061e16b5fc9bfa1bf5fd",
+          "path": "data/chunk-000/episode_000002.parquet"
+        },
+        {
+          "bytes": 590774335,
+          "git_blob_oid": "8096fa84c2196d3c09a85f583b4d85748e7b1fd8",
+          "lfs_sha256": "9894f2b22561b74735ff34bc85a7dab37aab82f51067311214fe83bed48ca0ad",
+          "path": "data/chunk-000/episode_000003.parquet"
+        },
+        {
+          "bytes": 570447448,
+          "git_blob_oid": "00d9446681ef098366f5344873c038602753d1a1",
+          "lfs_sha256": "ff2ec19969ea5e09a27adf3e90283b264a6887bc531ee8af08c7f535497a72bc",
+          "path": "data/chunk-000/episode_000004.parquet"
+        },
+        {
+          "bytes": 586927077,
+          "git_blob_oid": "5b0e769f21d993e71ca94734912843e3f2844b30",
+          "lfs_sha256": "bef11697f25cbf229cbd9d0b5f75099584d12d294f6a6ba4ba4a3dfa333ce8e9",
+          "path": "data/chunk-000/episode_000005.parquet"
+        },
+        {
+          "bytes": 577930756,
+          "git_blob_oid": "f55718097b00a685bdf39789d1779c1c0e833267",
+          "lfs_sha256": "7c95bb7d8f9d6eb15ebac4ba56ee0743e9720fda7c431fe1ba61ea09d931a7fb",
+          "path": "data/chunk-000/episode_000006.parquet"
+        },
+        {
+          "bytes": 590304698,
+          "git_blob_oid": "e58baafb177cea8aaea202c4f12742809dd34c34",
+          "lfs_sha256": "4130f46b96c95b6c3d3aae9d57a52a30383f6a267ef0181ae9583611fbf3df3c",
+          "path": "data/chunk-000/episode_000007.parquet"
+        },
+        {
+          "bytes": 557795874,
+          "git_blob_oid": "0c4c00cfdfde90ebe083ba16086c9f09a5493b60",
+          "lfs_sha256": "0ee1c3e42207525789971e31bf9c7d4751203d1a0795bb315cfc7ccb3a2511a3",
+          "path": "data/chunk-000/episode_000008.parquet"
+        },
+        {
+          "bytes": 571553720,
+          "git_blob_oid": "bf3985543feb6b4c8e6ad26dad97a63152105a95",
+          "lfs_sha256": "b245cb6f32e664dcab479f3913a7269462fcaac1054be553e0b17ef09036372b",
+          "path": "data/chunk-000/episode_000009.parquet"
+        },
+        {
+          "bytes": 575503716,
+          "git_blob_oid": "80fe673ea8d4ff3a93a7e4277ab93cb5cd84e53a",
+          "lfs_sha256": "4a4fd32d2fd78bfbb1f1017ba53dcb06e2a3c0153299761888edbd60986d4783",
+          "path": "data/chunk-000/episode_000010.parquet"
+        },
+        {
+          "bytes": 572315907,
+          "git_blob_oid": "13423df7a948e91b84665f822d2535455cc0b0b0",
+          "lfs_sha256": "f1e53e561864e8ffed0e9351779722305cc718fc186bb222d2872de5b37530a8",
+          "path": "data/chunk-000/episode_000011.parquet"
+        },
+        {
+          "bytes": 575443656,
+          "git_blob_oid": "fae6572f8f2a80d9e90481c23b0b73944568ae89",
+          "lfs_sha256": "9ab1ce41fac22d944e51cfa2a53db51afe835017905aeeb6a1de331b4a39a554",
+          "path": "data/chunk-000/episode_000012.parquet"
+        },
+        {
+          "bytes": 602865992,
+          "git_blob_oid": "838237c73e2a9b04a595566571c925ed62887866",
+          "lfs_sha256": "e90d93a7a284441126abe6fb06c87757da01d3235a7e70c6559a0425818ee77b",
+          "path": "data/chunk-000/episode_000013.parquet"
+        },
+        {
+          "bytes": 571042805,
+          "git_blob_oid": "ae85e5ea65cc8eb1f007d28935713a611767a4ba",
+          "lfs_sha256": "64b9a948a75b56c9b47471d1a97f4c1b8a54b17076b907650046ca9cdfc46bb7",
+          "path": "data/chunk-000/episode_000014.parquet"
+        },
+        {
+          "bytes": 578756912,
+          "git_blob_oid": "e0e840dcc582bb621ee7e70a736a95d1a3d34db2",
+          "lfs_sha256": "3aed2c50f5d66587bbc504e5282c946928b17bfe543625f5f33b209011dcb234",
+          "path": "data/chunk-000/episode_000015.parquet"
+        },
+        {
+          "bytes": 569658492,
+          "git_blob_oid": "6f4486b2f8cd2a2aa2164ce9bf0af776e576e821",
+          "lfs_sha256": "5625507d90cc057ff631fcf355763e2978c08f42b92ebee985cdff955cce4ea1",
+          "path": "data/chunk-000/episode_000016.parquet"
+        },
+        {
+          "bytes": 573016168,
+          "git_blob_oid": "d902e4537beb205249e5dfc54c2b429c74c2c535",
+          "lfs_sha256": "7ec57cd84f119718f003bbfe01851050b6fb2f4657811562f5b181b76d55b38c",
+          "path": "data/chunk-000/episode_000017.parquet"
+        },
+        {
+          "bytes": 593724742,
+          "git_blob_oid": "c8f12c2ef3dfc9184c5a59243457cdb0013d3147",
+          "lfs_sha256": "30186a79fc2ab33deb626f6779a8a1c1e9bb3b3b68457b37f76e5d33def994a9",
+          "path": "data/chunk-000/episode_000018.parquet"
+        },
+        {
+          "bytes": 559708793,
+          "git_blob_oid": "a125896d082507f65094c3c29e89e09167579c6c",
+          "lfs_sha256": "c7b30b04d61de0fe159cd364bdc18a891be556b6aa5789c162bd43ac6680fc05",
+          "path": "data/chunk-000/episode_000019.parquet"
+        },
+        {
+          "bytes": 589149754,
+          "git_blob_oid": "ec5efc9cb51352de1a891d2eef1a9f90a14d4ac4",
+          "lfs_sha256": "b715610318ad7a483769436f227d3fede0cd1aa4d4f7abf9c590987157f27d7c",
+          "path": "data/chunk-000/episode_000020.parquet"
+        },
+        {
+          "bytes": 581048077,
+          "git_blob_oid": "47991964db145201dc6da4d29cf6ed4653a60387",
+          "lfs_sha256": "cdb2240ce34e03b0194eddcff7a039b9e56d57567aabaf7fb8a732119c2f68e5",
+          "path": "data/chunk-000/episode_000021.parquet"
+        },
+        {
+          "bytes": 575630319,
+          "git_blob_oid": "f367db335d6fe5eb7ba749c2f2616575c26fed04",
+          "lfs_sha256": "f68a59fec14595977fdc4bb83408a0370f3941bb483169703243d452ae744245",
+          "path": "data/chunk-000/episode_000022.parquet"
+        },
+        {
+          "bytes": 581591252,
+          "git_blob_oid": "e9422e4f67b06dbd537e873293f79a4ee0fb2ec2",
+          "lfs_sha256": "7fb9b881868c9ba92f0356043af8c01d9005a10741408049ab3979c52c02deb8",
+          "path": "data/chunk-000/episode_000023.parquet"
+        },
+        {
+          "bytes": 569679653,
+          "git_blob_oid": "a03f654faa1512be071d6515477e76f3e1aa8cb4",
+          "lfs_sha256": "e5f15b3bf2f2ebf2e0bdb3fdc68bda2060080ce2d6f4cc71cd66b322f800b943",
+          "path": "data/chunk-000/episode_000024.parquet"
+        },
+        {
+          "bytes": 587440694,
+          "git_blob_oid": "a9ef615d8f2c90d6fc088741d8e10d29b6d5b3e9",
+          "lfs_sha256": "7c65b33e28d1efbba8e3992a4d18de691b4b003095530930bf4fb4b9061c7232",
+          "path": "data/chunk-000/episode_000025.parquet"
+        },
+        {
+          "bytes": 588304073,
+          "git_blob_oid": "a8c8480d512f2d3a11beed614ea0304fdb082e63",
+          "lfs_sha256": "4a93cb4dcaaa00e5e4c7c78fa92235d10cbea7d93187aa3426ce19ab6045ff75",
+          "path": "data/chunk-000/episode_000026.parquet"
+        },
+        {
+          "bytes": 564378214,
+          "git_blob_oid": "7e412e3939e4dd980ce74f008241e5d795959442",
+          "lfs_sha256": "1dadc9e4d51d1c30f2e86efec94fa0aecf101bf5e8b3da6978d9e313c0fb8411",
+          "path": "data/chunk-000/episode_000027.parquet"
+        },
+        {
+          "bytes": 581891107,
+          "git_blob_oid": "aee8f17820f27124342aeedc4f5a6257a7f4aeea",
+          "lfs_sha256": "543b34cec2cbd62f3179c948c763c46a9d0dc1b196b8a4d1cf34de625b66f8b7",
+          "path": "data/chunk-000/episode_000028.parquet"
+        },
+        {
+          "bytes": 579252229,
+          "git_blob_oid": "bf7bdcd1d60325a9dad8e18db5d942d00c1d551f",
+          "lfs_sha256": "2ab8c9903bef4c9831fd112f70470de7f6eb73902241698c311f6daaf31fc30a",
+          "path": "data/chunk-000/episode_000029.parquet"
+        },
+        {
+          "bytes": 585596101,
+          "git_blob_oid": "dcbb5cfcdba18ac6b5c73036f197caa1a4631417",
+          "lfs_sha256": "43ccfba9ae67854024d06f8d783667fa00552f370fb2e32ad9bddd4cd6fe33ba",
+          "path": "data/chunk-000/episode_000030.parquet"
+        },
+        {
+          "bytes": 575238349,
+          "git_blob_oid": "149fc1f1e17712c7da25670fb05ea0f08837b555",
+          "lfs_sha256": "948c381d5dccd897c844efa92b96fe83fd85b38a5ef526760d671bb3c36fa9ea",
+          "path": "data/chunk-000/episode_000031.parquet"
+        },
+        {
+          "bytes": 601721715,
+          "git_blob_oid": "add639b308d244e13e574b38d4ae0b88f021923d",
+          "lfs_sha256": "8551f3a24ace2743ea08724222bab613974606564d9872fce698a29e4743d949",
+          "path": "data/chunk-000/episode_000032.parquet"
+        },
+        {
+          "bytes": 583622327,
+          "git_blob_oid": "116dabd4d1e22c7dd927239a1551d0e1e86b63c4",
+          "lfs_sha256": "131b3e25d19bdf505c5a949aef42cdaa86e8c9c3e49bedae93bfe529421da366",
+          "path": "data/chunk-000/episode_000033.parquet"
+        },
+        {
+          "bytes": 582532245,
+          "git_blob_oid": "5fb849d560a67232047d15def5baac0e7030613f",
+          "lfs_sha256": "262009965238df3adeca9abb81f6b520ceef6e4714bd2912d1fc481e77de14ee",
+          "path": "data/chunk-000/episode_000034.parquet"
+        },
+        {
+          "bytes": 585323625,
+          "git_blob_oid": "5dff6f8060158e1575417dc085486ab773254011",
+          "lfs_sha256": "4370d340a004c95b7eb818ebae7b66e32c17515d3636ac324593880ab53c3c92",
+          "path": "data/chunk-000/episode_000035.parquet"
+        },
+        {
+          "bytes": 593799576,
+          "git_blob_oid": "0934852c41cb5ecbeea34f43985e7a8b97078a08",
+          "lfs_sha256": "149d234a4045ec1b825a1b2bce48e630deb74d6713f848bf20a1ff9d809f137e",
+          "path": "data/chunk-000/episode_000036.parquet"
+        },
+        {
+          "bytes": 596861876,
+          "git_blob_oid": "eaf24fdf5ced9d104c53e049162af28e1ef3cb71",
+          "lfs_sha256": "261adb63e19a7a94e11a70b388499d51323e042a9fe22634e41cd014c893e7d1",
+          "path": "data/chunk-000/episode_000037.parquet"
+        },
+        {
+          "bytes": 580815302,
+          "git_blob_oid": "a5a365350982ae94ffdacb0d230a3c48ef095cb9",
+          "lfs_sha256": "1a17efa55110065297cce7a1637c0cdd8ba800156a452b97296f9cdad4648553",
+          "path": "data/chunk-000/episode_000038.parquet"
+        },
+        {
+          "bytes": 579757573,
+          "git_blob_oid": "ff9627bc67e03bfc8ba4a55486e13ada1666ce95",
+          "lfs_sha256": "3fe0b53fb3ef5b01797d7eeee58e507ee51904831d7d51572e97f8df59927ad9",
+          "path": "data/chunk-000/episode_000039.parquet"
+        },
+        {
+          "bytes": 590312426,
+          "git_blob_oid": "049f0d8ef00ee08e6f0d5522f3760bf558534729",
+          "lfs_sha256": "40a49bb7e961b9784e8305aab3901c74770f402cc6297446f98006a1526bb494",
+          "path": "data/chunk-000/episode_000040.parquet"
+        },
+        {
+          "bytes": 584933858,
+          "git_blob_oid": "3d5b8ad423bed5e095ab79e08cb265612fd51f0e",
+          "lfs_sha256": "4847a7a0225e660848cdcb5d344373d448e704bc17fe5dad78e8c602d13187ad",
+          "path": "data/chunk-000/episode_000041.parquet"
+        },
+        {
+          "bytes": 586998510,
+          "git_blob_oid": "f5999a88dff2a68fdf276c4cd7c3798f60251aca",
+          "lfs_sha256": "d3ecffedfd8ee00eaf630238b23d4150e3f99fd972079a8d121da6bed8281fed",
+          "path": "data/chunk-000/episode_000042.parquet"
+        },
+        {
+          "bytes": 593696941,
+          "git_blob_oid": "688e06215fbd94b3b86c31155c3e8d56d1ccf2a8",
+          "lfs_sha256": "7de61dac8e356d727bfa4b9968b11bac7d0c4213fa6beb88b2f7b683f983c42a",
+          "path": "data/chunk-000/episode_000043.parquet"
+        },
+        {
+          "bytes": 573597439,
+          "git_blob_oid": "400a8656f5180e28af80e0fc128ce8db429a3a9b",
+          "lfs_sha256": "26ca24b6d5b3912b7afc84265c95e5e7a2a239d9d5757a3a2fa8d46ee0df3624",
+          "path": "data/chunk-000/episode_000044.parquet"
+        },
+        {
+          "bytes": 589545190,
+          "git_blob_oid": "811d6d169d43ba058f82375616a70a1eb8f3a76c",
+          "lfs_sha256": "90cbdd9b36a380b648d39fb2150faab72f11d83b112230ccfecfdc04aa830571",
+          "path": "data/chunk-000/episode_000045.parquet"
+        },
+        {
+          "bytes": 585045620,
+          "git_blob_oid": "81ead9c48adf342fcc6ccbbb9e3017e3049a2b9b",
+          "lfs_sha256": "410bba1a4adad6c608e9dbe718ec83fcf2ebbc1216aab8167800393c409e7d4a",
+          "path": "data/chunk-000/episode_000046.parquet"
+        },
+        {
+          "bytes": 577314555,
+          "git_blob_oid": "04bc506835faae8ee54b2e1bcf306994b0c00b3a",
+          "lfs_sha256": "667e1db04567ab71049b1f696d4dccfe479c616f64fe887e69a131a301150f31",
+          "path": "data/chunk-000/episode_000047.parquet"
+        },
+        {
+          "bytes": 596902047,
+          "git_blob_oid": "7c496de3e71aef4d827646ec92442f27b0703670",
+          "lfs_sha256": "000d2d9267def4d589a9c0bfc62319351d2c1ada81f4eaac5bdc3bae8a471df5",
+          "path": "data/chunk-000/episode_000048.parquet"
+        },
+        {
+          "bytes": 583531954,
+          "git_blob_oid": "1d94165a39448822d857306bca6769d64c425af0",
+          "lfs_sha256": "b0ddacdb94b463e869858e387353eb3c7cc6f25117e3ba9153a376e7d399c82e",
+          "path": "data/chunk-000/episode_000049.parquet"
+        },
+        {
+          "bytes": 585913651,
+          "git_blob_oid": "64d7b9d7beaf2e2d10fda2e2e37d1e46c1ae7c42",
+          "lfs_sha256": "5e9b383c2fb156aeaba37cd3ea8e4d788307ea270f29601c6e466fa34f7b8d51",
+          "path": "data/chunk-000/episode_000050.parquet"
+        },
+        {
+          "bytes": 608000055,
+          "git_blob_oid": "f1e04d50d024427e6bc8d0c66012c7829d85788e",
+          "lfs_sha256": "d38d964366aafafe8c038a266311d4524094d0d9835aaa0ccadc48ffb7d947f0",
+          "path": "data/chunk-000/episode_000051.parquet"
+        },
+        {
+          "bytes": 573636656,
+          "git_blob_oid": "e00079624c8cd2cbc283769459ad45bff8383e7f",
+          "lfs_sha256": "21d8f2d8d601c23c6a789e11f135c62f16e0e27a2c2947f4ad379ec84b3f31e2",
+          "path": "data/chunk-000/episode_000052.parquet"
+        },
+        {
+          "bytes": 588767287,
+          "git_blob_oid": "aeead3d26f18297307f0a258d506abd0ba22f292",
+          "lfs_sha256": "0a34b4443eba52f1905e6e4b7f8b9c0b80da56ce1fc00483da3773d07a2e69c4",
+          "path": "data/chunk-000/episode_000053.parquet"
+        },
+        {
+          "bytes": 585682506,
+          "git_blob_oid": "62fc5417a3f59a470aeb677ac81c641c91968e3f",
+          "lfs_sha256": "69d53c814eee9142da9d22b9f0b9fc863d73920f6afc4237d1b7fcd12da8a237",
+          "path": "data/chunk-000/episode_000054.parquet"
+        },
+        {
+          "bytes": 596800481,
+          "git_blob_oid": "1fbb32f100b811a75e0a7f0a9e7d76363e50e25b",
+          "lfs_sha256": "853d884ab29c21e5574eeafd2c8453ce91d904630152050e28012d89e667a9d9",
+          "path": "data/chunk-000/episode_000055.parquet"
+        },
+        {
+          "bytes": 593443890,
+          "git_blob_oid": "0994e55cf561505ede35617ca3a09005228b58ae",
+          "lfs_sha256": "0c6087166f23a0912ab3161ade70f59f349429096333042e684c03737704f945",
+          "path": "data/chunk-000/episode_000056.parquet"
+        },
+        {
+          "bytes": 580587334,
+          "git_blob_oid": "40240c1f8779954069796765272bad46b46921ed",
+          "lfs_sha256": "887cbd24b81c81bef21872cb42cd3a86b2bcd43805db2955c21a138b444c2f5b",
+          "path": "data/chunk-000/episode_000057.parquet"
+        },
+        {
+          "bytes": 597148867,
+          "git_blob_oid": "8ac05c790a19ca878ffb4bdbcfddeab794c63b81",
+          "lfs_sha256": "e03a4464ca61321a151c7ec7ca585985195f97ee15338ab5d0e1736a5fd497a8",
+          "path": "data/chunk-000/episode_000058.parquet"
+        },
+        {
+          "bytes": 583977892,
+          "git_blob_oid": "5d36b79f479fc223b16a201c2f236ccdb6d20a6c",
+          "lfs_sha256": "47eb86626e07de4f7d2d02f427a9da832c03b8e3e996fa84db29bf4ac9b2b775",
+          "path": "data/chunk-000/episode_000059.parquet"
+        },
+        {
+          "bytes": 578871006,
+          "git_blob_oid": "cc36c76c9dd7e4c03fa5ebe07b83890681210b41",
+          "lfs_sha256": "6dd1f59787eacd786bb09cc984bc6b276095f237b60fc930d4cb7c814c9db705",
+          "path": "data/chunk-000/episode_000060.parquet"
+        },
+        {
+          "bytes": 579969865,
+          "git_blob_oid": "09501fe3e56cfd6e6cecf4249e6bae3e400495f9",
+          "lfs_sha256": "44a35397c4d942324c4d83da9f8c484e94224ea84710a31e6ae1af79b765025e",
+          "path": "data/chunk-000/episode_000061.parquet"
+        },
+        {
+          "bytes": 586086435,
+          "git_blob_oid": "d66807e68c723fdf3c316e94a94120218368ba52",
+          "lfs_sha256": "d7caaf43a2acb66f9a6a9897310f9fdff848286de6b84cd06b7a92b615ab4bb9",
+          "path": "data/chunk-000/episode_000062.parquet"
+        },
+        {
+          "bytes": 590674137,
+          "git_blob_oid": "41cdcc6eee53d9e999e76f70f7c1eb8d819a818f",
+          "lfs_sha256": "8b7903fddf0aabc9fabf6c9846198eb1cc074fbeef419a7e26be4eca7951d9e9",
+          "path": "data/chunk-000/episode_000063.parquet"
+        },
+        {
+          "bytes": 608717656,
+          "git_blob_oid": "0ca52388e37a2e60ea08c2c20b6c3241b1e39e1e",
+          "lfs_sha256": "71a9339b0cab5a1a46fa89b0755115849cb592a99b0ab5a6f788ed52e57f82a6",
+          "path": "data/chunk-000/episode_000064.parquet"
+        },
+        {
+          "bytes": 594954324,
+          "git_blob_oid": "5025336f9d1876bbc2cced9c0e5f7afdc9de38cf",
+          "lfs_sha256": "5cf356445cea8a5b6aec35bd15a102372572d321fdbca21217faf80d58f8d36a",
+          "path": "data/chunk-000/episode_000065.parquet"
+        },
+        {
+          "bytes": 590746142,
+          "git_blob_oid": "291ce300bce73c4e4a20c6e6ed7bd55024259c6f",
+          "lfs_sha256": "f16351c3ebf55fb669dff693bb5e7af753dfe4628b5c0cc3ceaed4c859d37bd4",
+          "path": "data/chunk-000/episode_000066.parquet"
+        },
+        {
+          "bytes": 588171376,
+          "git_blob_oid": "315e5db0c3643f0438a5d8c30041327ae8b346c6",
+          "lfs_sha256": "b5a3116b439ef02357e090cbb73893e9aa52e03b26a60a86c9664c02e6a6d1ef",
+          "path": "data/chunk-000/episode_000067.parquet"
+        },
+        {
+          "bytes": 587069289,
+          "git_blob_oid": "dbc933d917810dc4b0019ac923c0ef138eab5366",
+          "lfs_sha256": "56ff4326ba0de9f63ddff0ccf93bf9e7de8f99dfd79d35e2de751c9d5110857e",
+          "path": "data/chunk-000/episode_000068.parquet"
+        },
+        {
+          "bytes": 593163358,
+          "git_blob_oid": "8a2b71f64a1799fc3a04b54279aedd9547acd955",
+          "lfs_sha256": "8eb56d99b00e6003d1b9d7245d83bd7e3f6d7dadad27b89c7f3f89e78e5f1073",
+          "path": "data/chunk-000/episode_000069.parquet"
+        },
+        {
+          "bytes": 592434200,
+          "git_blob_oid": "adbd2a2fc26968c9635cce9c81f3c0e706dbcc5a",
+          "lfs_sha256": "bbb715173ac64de6852248c923a742ea1b67b8afe1d6967988910946df245ef8",
+          "path": "data/chunk-000/episode_000070.parquet"
+        },
+        {
+          "bytes": 588324728,
+          "git_blob_oid": "9be99b71b4b5e75a1fdbf4b83c68630516fbe929",
+          "lfs_sha256": "e025a9b96c76800aa33510ba4581d453113eafefc7e2808b7ffe39c4a7449fd1",
+          "path": "data/chunk-000/episode_000071.parquet"
+        },
+        {
+          "bytes": 583108370,
+          "git_blob_oid": "b82a779d78c49ab82bd6bf559f63697809db64d9",
+          "lfs_sha256": "8f0a9c935b1c0d0d372f6e48f23952dbdbfb51aaccf24e9bba79e90be0c6c72d",
+          "path": "data/chunk-000/episode_000072.parquet"
+        },
+        {
+          "bytes": 597328603,
+          "git_blob_oid": "40f7056952a1511c6945d9a040736d91e8aa6636",
+          "lfs_sha256": "d1d660c10a99f9e41d35b006d2927638e777f419763e0f2048d2b28458cc2be4",
+          "path": "data/chunk-000/episode_000073.parquet"
+        },
+        {
+          "bytes": 572668509,
+          "git_blob_oid": "3c21b87149839fb6d791cb9910357a01f4c89028",
+          "lfs_sha256": "eb3687f285c4e84404c4cb0e9b2a2bcda6a83d192655086ec60ab3c08e2e58e6",
+          "path": "data/chunk-000/episode_000074.parquet"
+        },
+        {
+          "bytes": 590579310,
+          "git_blob_oid": "d24d627cb18ac5c8f14b585f6080d689f94801c1",
+          "lfs_sha256": "4032389ad0c766c20522f0ee3173f83e690b5499c1db2ed0c5782943037caf09",
+          "path": "data/chunk-000/episode_000075.parquet"
+        },
+        {
+          "bytes": 589482718,
+          "git_blob_oid": "d4e844fe18613ce2be6e4b1c4a48dd44d89a21b6",
+          "lfs_sha256": "eca6633c9edc9ebac3e1774c325967a675de3cac72b54bcbfa68e7fda3df3d5b",
+          "path": "data/chunk-000/episode_000076.parquet"
+        },
+        {
+          "bytes": 591704988,
+          "git_blob_oid": "bf34b54bf92d9a26ec7ca55bd88b7258a19fdbc2",
+          "lfs_sha256": "2eae714f123188c5b4b6fbd43c1d5c373facb1aeb6bbbfdf623a5d7321ac2c4c",
+          "path": "data/chunk-000/episode_000077.parquet"
+        },
+        {
+          "bytes": 586218601,
+          "git_blob_oid": "fcaf8afc47622352ffc246b7481ceadd7ba5eb8f",
+          "lfs_sha256": "6113bf25faf0e20a6799a3497d7fdab8e75d1ec225c9a6ba8588ad03d1b11615",
+          "path": "data/chunk-000/episode_000078.parquet"
+        },
+        {
+          "bytes": 589039728,
+          "git_blob_oid": "b64eb15a59e5130ee02b91fd495bafdb26d730d9",
+          "lfs_sha256": "7a10fe6d3cec36e29a4fdc48d16e9f316a091f2c4d8c7ad2a770d5968fad1e03",
+          "path": "data/chunk-000/episode_000079.parquet"
+        },
+        {
+          "bytes": 588473745,
+          "git_blob_oid": "d29df0b8cb756ead8e4a2c9dccb720a5e1f5aa80",
+          "lfs_sha256": "0ce2a16963e09d3c7456b312da0aaadb219ecd3d1199d5376e16d2145d24fca6",
+          "path": "data/chunk-000/episode_000080.parquet"
+        },
+        {
+          "bytes": 601589143,
+          "git_blob_oid": "ee6478049e33c94ef83114050148ead2737e4771",
+          "lfs_sha256": "13e2c70d94a182ebe8cd41976511a323c1d79d129facbf30a65914d38820b9eb",
+          "path": "data/chunk-000/episode_000081.parquet"
+        },
+        {
+          "bytes": 612421275,
+          "git_blob_oid": "69dc2e6cb34602ab70a8061b082cc6fba5e2a063",
+          "lfs_sha256": "d933fdfb35e6f50fc72f2edfe68791f3c8073d773c1a618938c22e50e3858f88",
+          "path": "data/chunk-000/episode_000082.parquet"
+        },
+        {
+          "bytes": 584015595,
+          "git_blob_oid": "257de07f673a39f64017d9faa2f81dfbb9d609f0",
+          "lfs_sha256": "56d33a77a897720c9ddf09e4d6c6644e82f0cd5c8538915eb728d7e5c9eaab1c",
+          "path": "data/chunk-000/episode_000083.parquet"
+        },
+        {
+          "bytes": 584467487,
+          "git_blob_oid": "a988e81414e4e47de04563b1f9b0535d22fb9561",
+          "lfs_sha256": "8d7a8e66ad7683b3e30275681801caa256b90ae13b864a2a59d1400500576f61",
+          "path": "data/chunk-000/episode_000084.parquet"
+        },
+        {
+          "bytes": 580548006,
+          "git_blob_oid": "6f7a2f7c740009342eda385c233af16045c4791d",
+          "lfs_sha256": "d0811bcf4f9ec114d4171fc18102d41be3bd465ece42f4e65592406c509ca2ac",
+          "path": "data/chunk-000/episode_000085.parquet"
+        },
+        {
+          "bytes": 591023143,
+          "git_blob_oid": "07648fdeff6b6ab7fb582d8c3ddb644e96fcda39",
+          "lfs_sha256": "6bc038486f1ea53fa1a47135fc791e50e506e286fb51e719de263c4aa86d596e",
+          "path": "data/chunk-000/episode_000086.parquet"
+        },
+        {
+          "bytes": 590900182,
+          "git_blob_oid": "bb7e5421def52b21575a754346c7fa5553f59a12",
+          "lfs_sha256": "0b7ff9076d598358fa645159b0ed895b56e870515b40b1746c8a4ed203e7e806",
+          "path": "data/chunk-000/episode_000087.parquet"
+        },
+        {
+          "bytes": 598466349,
+          "git_blob_oid": "02c380bbf9e5ff779982f4d227878fbf8ea49726",
+          "lfs_sha256": "7824549ba7076ebb9d74116e11250e9e80cf81242bb2bf7edb057b8ef414db5f",
+          "path": "data/chunk-000/episode_000088.parquet"
+        },
+        {
+          "bytes": 596378080,
+          "git_blob_oid": "50d6525b9ed8b0a3c668ba95fe8dbec8dfe09ff3",
+          "lfs_sha256": "5ac6f310ea01010ffaef36f93e6be56a04d76624cab34e53d4d61d5fb3dfa159",
+          "path": "data/chunk-000/episode_000089.parquet"
+        },
+        {
+          "bytes": 577970084,
+          "git_blob_oid": "6692a4fc684093116c42d6d0bc6f4a2ab6b1964e",
+          "lfs_sha256": "dd771e124e34f91870eb9dbf98684a07c4dfb0401d14797b1091140dcf922a32",
+          "path": "data/chunk-000/episode_000090.parquet"
+        },
+        {
+          "bytes": 589039719,
+          "git_blob_oid": "462410040f6c2c8a918f16072acffec628a98ab4",
+          "lfs_sha256": "8fd530ba368269da869a7c23c29d8c5e63c033e653d61fa8e2a1a19fdf696af9",
+          "path": "data/chunk-000/episode_000091.parquet"
+        },
+        {
+          "bytes": 585455568,
+          "git_blob_oid": "9f5fb18b1c6108158031c50e59bf871fdf7ceaa5",
+          "lfs_sha256": "1af67fd86a8f1be65c199968799a8286e6d2407211e9815b44b8d9cac5763398",
+          "path": "data/chunk-000/episode_000092.parquet"
+        },
+        {
+          "bytes": 601126908,
+          "git_blob_oid": "88d45f8c51bb998c4c6de595f32e58949b15be9c",
+          "lfs_sha256": "2df6590e185bccb98f8e35291f3d04bca8ccee607c4448158768befc382dd009",
+          "path": "data/chunk-000/episode_000093.parquet"
+        },
+        {
+          "bytes": 597490098,
+          "git_blob_oid": "bc728bc1859e4ff46e6a1551b918f8ec0a438fd9",
+          "lfs_sha256": "6a8137736d96c0ce936a1ec72c88edf1d97aca365f40053a20e86e00c3464019",
+          "path": "data/chunk-000/episode_000094.parquet"
+        },
+        {
+          "bytes": 571800831,
+          "git_blob_oid": "f67693595ce24d2495d18465d2e19371a4771da2",
+          "lfs_sha256": "e9037fb588f3c12a1cdee8f03c085329597033466906bc5e77ae0c9043796bdc",
+          "path": "data/chunk-000/episode_000095.parquet"
+        },
+        {
+          "bytes": 586004370,
+          "git_blob_oid": "b36f11874ad758aad4cfdf1156d543bb96396947",
+          "lfs_sha256": "cbbfbc4dfb0deceee92b566db5046ce7ad1978578be4bd793b234582bfcf2a84",
+          "path": "data/chunk-000/episode_000096.parquet"
+        },
+        {
+          "bytes": 570588785,
+          "git_blob_oid": "997d70de8e219fa0e767fc1a55611e760d189ed1",
+          "lfs_sha256": "7745c1886357ba1ac6b54365b6c272c3182a970d8ea8c04f76fbd739fea5be40",
+          "path": "data/chunk-000/episode_000097.parquet"
+        },
+        {
+          "bytes": 580735430,
+          "git_blob_oid": "ac093a4c7cb774b3d9bbcd365cfd706722aedc44",
+          "lfs_sha256": "a67f009a879ee9a199db607515d51c715e5c56592de5ef04af88edc3845ecb32",
+          "path": "data/chunk-000/episode_000098.parquet"
+        },
+        {
+          "bytes": 592547757,
+          "git_blob_oid": "45f3150414a99ec3a218fcbcf968cdd0c402d5ca",
+          "lfs_sha256": "b5e5893f5c3e66295954362cbfb0f278bfe93465ac49cab5fecb25a6f364f73d",
+          "path": "data/chunk-000/episode_000099.parquet"
+        },
+        {
+          "bytes": 589398840,
+          "git_blob_oid": "b1db5a2ae65095d1e74939cb8d41bfb12c45b2d9",
+          "lfs_sha256": "d429dc664ab830c25b140836750952a9e70b0e8f2dec54bc3d2e3d7d0f006232",
+          "path": "data/chunk-000/episode_000100.parquet"
+        },
+        {
+          "bytes": 587491604,
+          "git_blob_oid": "74c976caad84582d362b19b8a3dfe382afbdfbdd",
+          "lfs_sha256": "0c3a0be5e016a0f3ee7684264d90349f21c843343c715f38157e1d22eb94d156",
+          "path": "data/chunk-000/episode_000101.parquet"
+        },
+        {
+          "bytes": 596641316,
+          "git_blob_oid": "1d51ece3cf576490435d869d7aa8986e0404e457",
+          "lfs_sha256": "4c3c5f5078c1772a24663a36466a27ff7ac1d2de77e911ec468b186e87209332",
+          "path": "data/chunk-000/episode_000102.parquet"
+        },
+        {
+          "bytes": 590240898,
+          "git_blob_oid": "6116e860b072b208fe090f8ad780580fff391897",
+          "lfs_sha256": "801e0566f76956f44f6050815822000fabf1a607b11070290a1601c65b3e8423",
+          "path": "data/chunk-000/episode_000103.parquet"
+        },
+        {
+          "bytes": 578517068,
+          "git_blob_oid": "4414f7e561bfd6d14917d3dea122e9f83f156b7d",
+          "lfs_sha256": "084ac6cbcf6906bc7a9858e95f787102e37f21ac15c656dc87052d4197628660",
+          "path": "data/chunk-000/episode_000104.parquet"
+        },
+        {
+          "bytes": 561256570,
+          "git_blob_oid": "9e5fd2857a846062687be8f59515fe199cf5dc6e",
+          "lfs_sha256": "cabea4e1496e4f41b81eb621fff1d5073d8e40ea380640d16e538f9a8fcb72a6",
+          "path": "data/chunk-000/episode_000105.parquet"
+        },
+        {
+          "bytes": 585975821,
+          "git_blob_oid": "a76fa3fd6c08c253a747a923af46a3eabc695d51",
+          "lfs_sha256": "7b799a12b5aa6f224a056f545fd998b9bc3e0d0bef3319fe61cfe95dee1545d3",
+          "path": "data/chunk-000/episode_000106.parquet"
+        },
+        {
+          "bytes": 595229462,
+          "git_blob_oid": "ac1c690da21f46426a4e57bf9e0ffc9784792128",
+          "lfs_sha256": "9d0cbf3215076be88e1ace1542979d1f7aa820fe7aa59a9cdcb6d58c5c9c2aa0",
+          "path": "data/chunk-000/episode_000107.parquet"
+        },
+        {
+          "bytes": 589057850,
+          "git_blob_oid": "8b3605767b131e99352b7c4d6951f39f3b2b7af6",
+          "lfs_sha256": "cab5a2e2691afe7de218649583b72996fbf01bd6171ccba2a4a1849540952681",
+          "path": "data/chunk-000/episode_000108.parquet"
+        },
+        {
+          "bytes": 585126162,
+          "git_blob_oid": "59e163d5060bb8eef1e85a44c432cd7c1a18f9d4",
+          "lfs_sha256": "bd6b86dd9680a0e77a9b883a4416b8379436bdb1db33301857fa8c4ac66a2534",
+          "path": "data/chunk-000/episode_000109.parquet"
+        },
+        {
+          "bytes": 583832189,
+          "git_blob_oid": "b38685e254cfb9ecf5a2f0885838813172e3af56",
+          "lfs_sha256": "049e102388d9aecf043f13f391b3a36899bbbc2d4d8065dc770eb7e17367c719",
+          "path": "data/chunk-000/episode_000110.parquet"
+        },
+        {
+          "bytes": 606150245,
+          "git_blob_oid": "73fffcbc705b6122cbe2913dc30867e5795dca44",
+          "lfs_sha256": "107d10903139f02680095b0be4c27d07d8b7f2cb7a8fa8e1f37ec53f6bdf8c3c",
+          "path": "data/chunk-000/episode_000111.parquet"
+        },
+        {
+          "bytes": 582101105,
+          "git_blob_oid": "3191baf5efc4ee667539ddb1a44a0f03996e26ce",
+          "lfs_sha256": "803ef2529e6649189e92609066d3c8b7c2857a62f9627aac331262e33ade04b2",
+          "path": "data/chunk-000/episode_000112.parquet"
+        },
+        {
+          "bytes": 609864920,
+          "git_blob_oid": "c66033ef9a07736b23b6c9da00a5417ca1618c1a",
+          "lfs_sha256": "d49230038b412d055997a1fb59a567769edf2349ae0d3a282c224b08128d35f0",
+          "path": "data/chunk-000/episode_000113.parquet"
+        },
+        {
+          "bytes": 617255675,
+          "git_blob_oid": "ec0473a726c3758f14ceb9f8433430263fac8224",
+          "lfs_sha256": "38318e7810d452771750fa74d242fa84a3547c39b6cfff1b3e7b76568617b62d",
+          "path": "data/chunk-000/episode_000114.parquet"
+        },
+        {
+          "bytes": 605453050,
+          "git_blob_oid": "738e65e88638fc2113622100616f2bbefac8d68d",
+          "lfs_sha256": "6e5a202d1ee07cdb3d14fddf56b2d0274ed7d4520b8149abab0c4ab796d6c09c",
+          "path": "data/chunk-000/episode_000115.parquet"
+        },
+        {
+          "bytes": 607453466,
+          "git_blob_oid": "73b6da6df622a7fe9dfd6962faf458302b8c029c",
+          "lfs_sha256": "24ca88b5b1912ece6446d2e7158f018ac94c7e31c7756b1fafe0b5b50e558e47",
+          "path": "data/chunk-000/episode_000116.parquet"
+        },
+        {
+          "bytes": 591983157,
+          "git_blob_oid": "ae4d384da0f8e30e317e2a0693b6f603eeca4b3f",
+          "lfs_sha256": "25d32e4030a89d5ac5c43330e5fcdcdf0394581b6ac28798960ba2882d7d0654",
+          "path": "data/chunk-000/episode_000117.parquet"
+        },
+        {
+          "bytes": 586143094,
+          "git_blob_oid": "bc57d85e4c9ab8722254d2b596c1ca207c530927",
+          "lfs_sha256": "692feef8f24125b6d5a7702955efeba79a243090240ed461cc80c14538e3ab90",
+          "path": "data/chunk-000/episode_000118.parquet"
+        },
+        {
+          "bytes": 584531436,
+          "git_blob_oid": "ee8e3082be3107a899910064f8a111cb3757276f",
+          "lfs_sha256": "c6c1afa3fabf7af07c6ed1d6b47bf9ca35c2d0cd735dccda78a5f3c7c7e42a7f",
+          "path": "data/chunk-000/episode_000119.parquet"
+        },
+        {
+          "bytes": 585935642,
+          "git_blob_oid": "dee3fe0540deed1c7517225884487824b4c31bea",
+          "lfs_sha256": "461fa80074332fd1811e8a4743cf31b196ca30cd2bcfac0ca1f23915239a7bc3",
+          "path": "data/chunk-000/episode_000120.parquet"
+        },
+        {
+          "bytes": 572908268,
+          "git_blob_oid": "28a50189aa5b7cf73d730af083b1d8de305d136c",
+          "lfs_sha256": "dcdfdcb4e5e0874ebe7752281904c56cefd94558315b30d6d684ffa4abb1e37d",
+          "path": "data/chunk-000/episode_000121.parquet"
+        },
+        {
+          "bytes": 569293306,
+          "git_blob_oid": "9dfe3cdcf40e28c7876dd0e79ce0c69b048a0773",
+          "lfs_sha256": "e97eccbd750de05b463218d806ed996cedc25e0631ee23f837cac3164b67f880",
+          "path": "data/chunk-000/episode_000122.parquet"
+        }
+      ],
+      "projection_columns": [
+        "observation.state",
+        "action",
+        "episode_index",
+        "frame_index",
+        "timestamp"
+      ],
+      "repo_id": "physical-intelligence/aloha_pen_uncap_diverse",
+      "revision": "e82d8b40b8ac66c0b40273dd80a077dfc40b732e",
+      "total_source_bytes_including_embedded_images": 72113570581,
+      "video_payload_decoded": false
+    },
+    "design": {
+      "batch_sizes": [
+        1,
+        8,
+        32,
+        128
+      ],
+      "batch_tail_policy": "include the final non-empty partial batch to keep all 36,900 rows; this isolates the reducer defect and intentionally does not replay the historical DataLoader drop_last=True behavior",
+      "feature_construction": "map projected raw observation.state to state and raw action to actions; preserve their 14-component order; do not construct a 50-step action horizon or apply ALOHA/model transforms",
+      "material_normalized_action_effect_threshold": {
+        "max_absolute_component_delta": 0.05,
+        "median_row_l2_delta": 0.01,
+        "requires_both": true
+      },
+      "mean_std_absolute_tolerance": 1e-05,
+      "oracle": "full-array float64 two-pass mean/std and NumPy q01/q99",
+      "orders": [
+        "natural",
+        "episode_cluster_seed_0",
+        "episode_cluster_seed_1",
+        "episode_cluster_seed_2",
+        "episode_cluster_seed_3",
+        "episode_cluster_seed_4",
+        "episode_cluster_seed_5",
+        "episode_cluster_seed_6",
+        "episode_cluster_seed_7",
+        "episode_cluster_seed_8",
+        "episode_cluster_seed_9"
+      ],
+      "permutation_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "primary_batch_size": 32,
+      "primary_downstream_normalization": {
+        "interpretation": "descriptive raw low-dimensional effect, not a complete historical model-input transform replay",
+        "reason": "the pinned pi0_aloha_pen_uncap config uses Pi0, for which use_quantile_norm is false",
+        "rule": "z = (x - mean) / (std + 1e-6)"
+      },
+      "quantile_rule": "descriptive; compare error with max(1e-3, 2*final histogram bin width)"
+    },
+    "evidence_target": "E2 exact reducer/RunningStats loop replay on pinned public low-dimensional projection",
+    "source": {
+      "config_path": "src/openpi/training/config.py",
+      "fix_head_commit": "7725f3be346a9aa03b772b6f93ea3bf565736416",
+      "fix_merge_commit": "35e10d257cebae65f8619533c903a5325cc1b202",
+      "fixed_config_sha256": "1e83719b891c7ec98ee5780946187d5a51ece04dc54e49691882b2bad2355682",
+      "fixed_script_sha256": "8a64773495b714d6b18eded99d7cf87eb19d1bb3dd4a9fb47172b03de5d56a38",
+      "fixed_stats_sha256": "6c2cea4946fb07e51801530400d2b2fd94730e195cd290d6b6960114eca9739d",
+      "fixed_transforms_sha256": "63aa3609ce0928da3d8f8ed35f8571b311b69dc4d1546490c2e80a29af46aa88",
+      "followup_pull_request": 623,
+      "issue": 570,
+      "parent_commit": "4eea7da317f88ba8a8aa6fa66cc606bcf0f04166",
+      "parent_script_sha256": "9de4bca0ddbf6819b91d0143ba3d5e0f4aa07ae42d7d10bc80c0e2e4626bb491",
+      "parent_stats_sha256": "8cac9875e6a4d34e55631a9cc7a697ccc6c3d587438d1972b554280ef58ca8da",
+      "pull_request": 619,
+      "repo": "Physical-Intelligence/openpi",
+      "running_stats_path": "src/openpi/shared/normalize.py",
+      "script_path": "scripts/compute_norm_stats.py",
+      "test_head_commit": "6eb4446ae0d58759dfc50e2121ad346206df5ea6",
+      "test_merge_commit": "144696f8dd01e024e36dc41ab005b13e264f2548",
+      "transforms_path": "src/openpi/transforms.py"
+    }
+  },
+  "status": "retrospective case/input freeze before RD7/RD8 implementation; no replacement after observed outcomes"
+}

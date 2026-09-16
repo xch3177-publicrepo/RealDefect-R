@@ -1,0 +1,189 @@
+{
+  "created_utc": "2026-09-16T04:03:47.688907+00:00",
+  "phase": "cosmos",
+  "items": [
+    {
+      "public_path": "cosmos_tail/RUN_SUMMARY.json",
+      "raw_sha256": "0b9a6d406ac1857c1de338eb29100fae4a79a4534a0df1f831c6da0ddc60937c",
+      "public_sha256": "0b9a6d406ac1857c1de338eb29100fae4a79a4534a0df1f831c6da0ddc60937c",
+      "bytes": 440,
+      "source": "<COSMOS_RUN>/RUN_SUMMARY.json"
+    },
+    {
+      "public_path": "cosmos_tail/commands.json",
+      "raw_sha256": "9568d34ff8bd9127b2470640199bef643f549f6705f03ac6cb35b897feb85757",
+      "public_sha256": "46bb97c475d9e085eac0835249df05f599e12ed2951cd42927695200962bd4b8",
+      "bytes": 2024,
+      "source": "<COSMOS_RUN>/commands.json"
+    },
+    {
+      "public_path": "cosmos_tail/SCIENTIFIC_COMPARISON.json",
+      "raw_sha256": "95f99ea1281479432ecea0e8f14f2c3a9d670d8899eec90e9defde53e2b5d61f",
+      "public_sha256": "95f99ea1281479432ecea0e8f14f2c3a9d670d8899eec90e9defde53e2b5d61f",
+      "bytes": 18381,
+      "source": "<COSMOS_RUN>/SCIENTIFIC_COMPARISON.json"
+    },
+    {
+      "public_path": "cosmos_tail/INPUT_SCOPE.json",
+      "raw_sha256": "6a0a39877b70b65ff1cc5500ff7ed1f17727dd7995ee319418f5c177c7d0bbbe",
+      "public_sha256": "4cc242cca21dd1dde5b58c9c50422fde3a1f59393763631f0b10961937f08b55",
+      "bytes": 453,
+      "source": "<COSMOS_RUN>/INPUT_SCOPE.json"
+    },
+    {
+      "public_path": "cosmos_tail/CODE_IDENTITY_CHECK.json",
+      "raw_sha256": "2650f7fdcf5e80744f98233d802255eda399486bbe1e518f902100749d7b3848",
+      "public_sha256": "2650f7fdcf5e80744f98233d802255eda399486bbe1e518f902100749d7b3848",
+      "bytes": 12338,
+      "source": "<COSMOS_RUN>/CODE_IDENTITY_CHECK.json"
+    },
+    {
+      "public_path": "cosmos_tail/executed_supervisor.py.txt",
+      "raw_sha256": "b93016c9b57c6fd3be09a83a103a337249a8374abb056d76c03cce842f7722d9",
+      "public_sha256": "39c796a8be33017bf8a3d4d924789918ea9152728ecfc60ec3d7001b4c6777d5",
+      "bytes": 4602,
+      "source": "<COSMOS_RUN>/SUPERVISOR.py"
+    },
+    {
+      "public_path": "cosmos_tail/supervisor.stdout.log",
+      "raw_sha256": "2a16a98c0940213b83a553f636ea63845b845ad3ebbe182c9cbbdb17565611bf",
+      "public_sha256": "d5a9d1e16bf9e69f6dfae7eb3e2b00241437db95f90d56204ecbfb545fdcb113",
+      "bytes": 2071,
+      "source": "<COSMOS_RUN>.supervisor.log"
+    },
+    {
+      "public_path": "cosmos_tail/logs/Cosmos_C1_C4.log",
+      "raw_sha256": "42747f1f4da099d84d327844894ec74f80042a072badc9d05417cd04fa1cdb4d",
+      "public_sha256": "42747f1f4da099d84d327844894ec74f80042a072badc9d05417cd04fa1cdb4d",
+      "bytes": 8094,
+      "source": "<COSMOS_RUN>/logs/Cosmos_C1_C4.log"
+    },
+    {
+      "public_path": "cosmos_tail/logs/Cosmos_C5.log",
+      "raw_sha256": "6cc6862312b6160a2aeb700212ac2345e0de28799b7933860b57c1ee06a06d0a",
+      "public_sha256": "6cc6862312b6160a2aeb700212ac2345e0de28799b7933860b57c1ee06a06d0a",
+      "bytes": 7500,
+      "source": "<COSMOS_RUN>/logs/Cosmos_C5.log"
+    },
+    {
+      "public_path": "cosmos_tail/logs/Cosmos_consumer.log",
+      "raw_sha256": "451ba431025d98ee4bd1b6a4ae2c34299d0330c64c31323ad8e5378146c68adf",
+      "public_sha256": "451ba431025d98ee4bd1b6a4ae2c34299d0330c64c31323ad8e5378146c68adf",
+      "bytes": 655,
+      "source": "<COSMOS_RUN>/logs/Cosmos_consumer.log"
+    },
+    {
+      "public_path": "cosmos_tail/logs/Cosmos_independent_metadata.log",
+      "raw_sha256": "a804c053db6bf46a24d34a28f30a5e5be56553efb0509f366b75513694f50ee7",
+      "public_sha256": "a804c053db6bf46a24d34a28f30a5e5be56553efb0509f366b75513694f50ee7",
+      "bytes": 613,
+      "source": "<COSMOS_RUN>/logs/Cosmos_independent_metadata.log"
+    },
+    {
+      "public_path": "cosmos_tail/logs/Cosmos_metadata.log",
+      "raw_sha256": "85749af47f9e4faad53ffb69dd40ce53dd3f2c0447190ee187103c3dbf16b1c8",
+      "public_sha256": "a275dab98df32bfe4255ad23043e0c8b8ae1c67ba0792cd0f580a4adb3073fe3",
+      "bytes": 1918,
+      "source": "<COSMOS_RUN>/logs/Cosmos_metadata.log"
+    },
+    {
+      "public_path": "cosmos_tail/logs/integrity.log",
+      "raw_sha256": "d069f4bee631311b4024ce2923262595f7b4c13ded87fe376185d535bf423837",
+      "public_sha256": "d069f4bee631311b4024ce2923262595f7b4c13ded87fe376185d535bf423837",
+      "bytes": 48,
+      "source": "<COSMOS_RUN>/logs/integrity.log"
+    },
+    {
+      "public_path": "cosmos_tail/metadata/audit.stderr.log",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "<COSMOS_RUN>/cosmos-metadata/audit.stderr.log"
+    },
+    {
+      "public_path": "cosmos_tail/metadata/audit.stdout.log",
+      "raw_sha256": "4b41efb3a6c8fc05cf7859d1fff9665b15dc87e9f2d1cdaec99cb7f2f0694fe9",
+      "public_sha256": "e732fd6e2272cb2c12cd9ff5514f86a8eda08319217f00818597549e1885847b",
+      "bytes": 399,
+      "source": "<COSMOS_RUN>/cosmos-metadata/audit.stdout.log"
+    },
+    {
+      "public_path": "cosmos_tail/metadata/historical_comparison.json",
+      "raw_sha256": "2fd87b12309e6948a8423492496012d4e42227ed4f1920225e74c819350020a5",
+      "public_sha256": "2fd87b12309e6948a8423492496012d4e42227ed4f1920225e74c819350020a5",
+      "bytes": 558,
+      "source": "<COSMOS_RUN>/cosmos-metadata/historical_comparison.json"
+    },
+    {
+      "public_path": "cosmos_tail/metadata/input_protocol.json",
+      "raw_sha256": "65a3b8b140e4c5b1076878e85e60d3ea5fed0413226b878f941c899c6045dad3",
+      "public_sha256": "65a3b8b140e4c5b1076878e85e60d3ea5fed0413226b878f941c899c6045dad3",
+      "bytes": 3572,
+      "source": "<COSMOS_RUN>/cosmos-metadata/input_protocol.json"
+    },
+    {
+      "public_path": "cosmos_tail/metadata/preaudit_verified_inputs.json",
+      "raw_sha256": "f351eacad1199835a0b3c3a280845da81b00c0966571bd87bfeb1340a8ac9025",
+      "public_sha256": "f351eacad1199835a0b3c3a280845da81b00c0966571bd87bfeb1340a8ac9025",
+      "bytes": 5560,
+      "source": "<COSMOS_RUN>/cosmos-metadata/preaudit_verified_inputs.json"
+    },
+    {
+      "public_path": "cosmos_tail/metadata/rerun.json",
+      "raw_sha256": "740b35ea07633c69a08f1f9b2b6525b2367b5ff79424d2fa987cbda6fddb0701",
+      "public_sha256": "2e8492d9cdedefff71e5bf95998c31b3730bfaf2ac1777e50638ac106aa5760a",
+      "bytes": 65891,
+      "source": "<COSMOS_RUN>/cosmos-metadata/rerun.json"
+    },
+    {
+      "public_path": "cosmos_tail/metadata/run.json",
+      "raw_sha256": "704563cf9039d0a4d5071a4bb584076d3f1316b2363a7579663bdd1c3827aa41",
+      "public_sha256": "e91f201c2434ed2082b8d61c1b4a59bc73c2324ff6a6d22143f01b57aa4d75d9",
+      "bytes": 769,
+      "source": "<COSMOS_RUN>/cosmos-metadata/run.json"
+    },
+    {
+      "public_path": "cosmos_tail/independent_metadata.json",
+      "raw_sha256": "a4f19210f59801933c555cef85ba649f0dde6dd6d8a6c612e0f96740f2a37576",
+      "public_sha256": "a4f19210f59801933c555cef85ba649f0dde6dd6d8a6c612e0f96740f2a37576",
+      "bytes": 7294,
+      "source": "<COSMOS_RUN>/cosmos-independent.json"
+    },
+    {
+      "public_path": "cosmos_tail/cosmos-c5/results.json",
+      "raw_sha256": "6abae1a46e817c198036f9fd4331141417abe2ef484e2f8f38c5a4b562361931",
+      "public_sha256": "6abae1a46e817c198036f9fd4331141417abe2ef484e2f8f38c5a4b562361931",
+      "bytes": 44591,
+      "source": "<COSMOS_RUN>/cosmos-c5/results.json"
+    },
+    {
+      "public_path": "cosmos_tail/cosmos-c5/range_receipts.jsonl",
+      "raw_sha256": "7d2cf68842057c6bd0add67cc25a87ae764c24acae3e51d866c1257e3fc8ea0e",
+      "public_sha256": "7d2cf68842057c6bd0add67cc25a87ae764c24acae3e51d866c1257e3fc8ea0e",
+      "bytes": 59650,
+      "source": "<COSMOS_RUN>/cosmos-c5/range_receipts.jsonl"
+    },
+    {
+      "public_path": "cosmos_tail/cosmos-consumer/results.json",
+      "raw_sha256": "3be8c1d255d9418dc283150274c692fd96adbfb1594bccfb2e3d9735cbbea1f0",
+      "public_sha256": "3be8c1d255d9418dc283150274c692fd96adbfb1594bccfb2e3d9735cbbea1f0",
+      "bytes": 12690,
+      "source": "<COSMOS_RUN>/cosmos-consumer/results.json"
+    },
+    {
+      "public_path": "cosmos_tail/C1_C4_results.json",
+      "raw_sha256": "f5644f0c56afac3d372c6c65501671796954ee5a39556c032a3246065fd5751e",
+      "public_sha256": "f5644f0c56afac3d372c6c65501671796954ee5a39556c032a3246065fd5751e",
+      "bytes": 91012,
+      "source": "<COSMOS_RUNTIME>/experiments/cosmos_frame_check_20260914/cosmos_frame_check_results.json"
+    },
+    {
+      "public_path": "cosmos_tail/EXECUTED_SOURCE_CORRESPONDENCE.json",
+      "raw_sha256": "0030185e506c56a990daca12589dd78039977e2e57de1079bd2b4851af5a6b00",
+      "public_sha256": "0030185e506c56a990daca12589dd78039977e2e57de1079bd2b4851af5a6b00",
+      "bytes": 24130,
+      "source": "read-only candidate/runtime source hash inventory"
+    }
+  ],
+  "raw_and_public_hashes_distinct": true
+}

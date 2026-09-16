@@ -1,0 +1,1615 @@
+{
+  "splits": {
+    "failure": {
+      "aggregate_single_shard_violations": {
+        "D1": {
+          "dataset_chain_breaks": 0,
+          "dataset_span_length_mismatches": 0,
+          "duplicate_episode_ids": 0,
+          "duplicate_episode_indices": 0,
+          "empty_episode_ids": 0,
+          "empty_tasks": 0,
+          "episode_index_gaps": 0,
+          "episode_index_stat_inconsistent_rows": 10879,
+          "global_index_any_stat_inconsistent_rows": 10879,
+          "global_index_location_inconsistent_rows": 10879,
+          "global_index_std_analytic_mismatch_rows": 0,
+          "local_vs_global_index_stat_inconsistent_rows": 10879,
+          "negative_chunk_or_file_indices": 0,
+          "nonpositive_lengths": 0
+        },
+        "D2": {
+          "duration_vs_length_fps_mismatches": 0,
+          "files_not_starting_at_zero": 0,
+          "invalid_or_reversed_intervals": 0,
+          "negative_chunk_or_file_indices": 0,
+          "within_file_chain_breaks": 0,
+          "within_file_overlaps": 0
+        },
+        "D3": {
+          "features_missing_metrics": 0,
+          "frame_index_analytic_mismatches": 0,
+          "mean_outside_min_max": 4,
+          "negative_standard_deviation": 0,
+          "nonconstant_task_index_stats": 0,
+          "nonfinite_stat_values": 0,
+          "nonmonotone_quantiles": 0,
+          "sample_count_mismatches": 0,
+          "stat_shape_mismatches": 0,
+          "timestamp_analytic_mismatches": 0
+        }
+      },
+      "audit_version": "1",
+      "cross_shard": {
+        "final_episode_stop": 14268,
+        "final_frame_stop": 3721431,
+        "global_continuity_violations": {
+          "dataset_span_length_mismatches": 0,
+          "duplicate_episode_ids": 0,
+          "global_dataset_chain_breaks": 0,
+          "global_episode_sequence_breaks": 0,
+          "nonconstant_task_index_summaries": 0,
+          "nonintegral_task_index_summaries": 0
+        },
+        "identity_summary": {
+          "global_identity_inconsistent_rows": 10879,
+          "inconsistent_rows_matching_lab_local_pattern": 10879,
+          "mismatch_by_lab": {
+            "CLVR": 388,
+            "GuptaLab": 182,
+            "ILIAD": 1169,
+            "IPRL": 1295,
+            "IRIS": 191,
+            "PennPAL": 100,
+            "RAD": 468,
+            "RAIL": 2686,
+            "REAL": 1505,
+            "RPL": 567,
+            "TRI": 1723,
+            "WEIRD": 605
+          }
+        },
+        "lab_rows": {
+          "AUTOLab": 3389,
+          "CLVR": 388,
+          "GuptaLab": 182,
+          "ILIAD": 1169,
+          "IPRL": 1295,
+          "IRIS": 191,
+          "PennPAL": 100,
+          "RAD": 468,
+          "RAIL": 2686,
+          "REAL": 1505,
+          "RPL": 567,
+          "TRI": 1723,
+          "WEIRD": 605
+        },
+        "rows_checked": 14268,
+        "task_referential_summary": {
+          "companion_task_text_mismatch_rows": 230,
+          "global_task_rows": 52,
+          "lab_local_vocabulary_sizes": {
+            "AUTOLab": 3,
+            "CLVR": 1,
+            "GuptaLab": 2,
+            "ILIAD": 3,
+            "IPRL": 4,
+            "IRIS": 1,
+            "PennPAL": 1,
+            "RAD": 4,
+            "RAIL": 18,
+            "REAL": 9,
+            "RPL": 7,
+            "TRI": 10,
+            "WEIRD": 1
+          },
+          "mismatch_by_lab": {
+            "GuptaLab": 182,
+            "ILIAD": 2,
+            "IPRL": 3,
+            "RAD": 3,
+            "RAIL": 17,
+            "REAL": 8,
+            "RPL": 6,
+            "TRI": 9
+          },
+          "rows_matching_lab_local_task_vocabulary": 14268
+        }
+      },
+      "cross_shard_video_lineage": {
+        "camera_count": 3,
+        "per_camera": {
+          "observation.image.exterior_image_1_left": {
+            "file_count": 256,
+            "rows_checked": 14268,
+            "violations": {
+              "duration_vs_length_fps_mismatches": 0,
+              "files_not_starting_at_zero": 0,
+              "invalid_or_reversed_intervals": 0,
+              "negative_chunk_or_file_indices": 0,
+              "within_file_chain_breaks": 0,
+              "within_file_overlaps": 0
+            }
+          },
+          "observation.image.exterior_image_2_left": {
+            "file_count": 248,
+            "rows_checked": 14268,
+            "violations": {
+              "duration_vs_length_fps_mismatches": 0,
+              "files_not_starting_at_zero": 0,
+              "invalid_or_reversed_intervals": 0,
+              "negative_chunk_or_file_indices": 0,
+              "within_file_chain_breaks": 0,
+              "within_file_overlaps": 0
+            }
+          },
+          "observation.image.wrist_image_left": {
+            "file_count": 142,
+            "rows_checked": 14268,
+            "violations": {
+              "duration_vs_length_fps_mismatches": 0,
+              "files_not_starting_at_zero": 0,
+              "invalid_or_reversed_intervals": 0,
+              "negative_chunk_or_file_indices": 0,
+              "within_file_chain_breaks": 0,
+              "within_file_overlaps": 0
+            }
+          }
+        },
+        "status": "pass",
+        "violations": {
+          "duration_vs_length_fps_mismatches": 0,
+          "files_not_starting_at_zero": 0,
+          "invalid_or_reversed_intervals": 0,
+          "negative_chunk_or_file_indices": 0,
+          "within_file_chain_breaks": 0,
+          "within_file_overlaps": 0
+        }
+      },
+      "dataset": {
+        "repo_id": "nvidia/Cosmos3-DROID",
+        "revision": "dabaaffe428d67cf93fd355b82658934ee59bfec",
+        "scope": "complete episode metadata; trajectories and videos excluded",
+        "split": "failure"
+      },
+      "declared_count_checks": {
+        "all_known_hashes_match": true,
+        "all_known_shards_present": true,
+        "episode_rows_match_info": true,
+        "final_frame_stop_matches_info": true,
+        "task_rows_match_info": true
+      },
+      "limitations": [
+        "No trajectory, image, video, calibration, or task-success value is decoded.",
+        "A mismatch is a metadata referential inconsistency, not proof of downstream policy harm.",
+        "Rows sharing one conversion pattern are affected records, not independent root-cause bugs.",
+        "Per-shard video file-start counts are partial views; collection-level video lineage is authoritative."
+      ],
+      "manifests": {
+        "companions": {
+          "info": {
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/info.json",
+            "remote_path": "failure/meta/info.json",
+            "sha256": "a2ed78c6fcbaa5a05f474474d78598906087b4fa4fc4f45730a05ccff4986b01",
+            "size_bytes": 4522
+          },
+          "stats": {
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/stats.json",
+            "remote_path": "failure/meta/stats.json",
+            "sha256": "9a089db94a4e00594367300ff9391dca0643396d4e925f310bafcc311acb274c",
+            "size_bytes": 34412
+          },
+          "tasks": {
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/tasks.parquet",
+            "remote_path": "failure/meta/tasks.parquet",
+            "sha256": "e42ab024bd0e41d7e90358618e77bc8df799d9b5453f0b2d45146e6c77eb08e7",
+            "size_bytes": 5490
+          }
+        },
+        "episode_metadata": [
+          {
+            "expected_sha256": "45243e378c44b8fad4a6d52e1bf7e5dec4f645390ab66fd6593fc2e44cd2be73",
+            "expected_size_bytes": 75911196,
+            "known_revision_match": true,
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/episodes/file-000.parquet",
+            "remote_path": "failure/meta/episodes/chunk-000/file-000.parquet",
+            "sha256": "45243e378c44b8fad4a6d52e1bf7e5dec4f645390ab66fd6593fc2e44cd2be73",
+            "size_bytes": 75911196
+          }
+        ]
+      },
+      "per_shard": [
+        {
+          "audit_version": "1",
+          "contracts": {
+            "D0": {
+              "missing_required_columns": [],
+              "parquet": {
+                "columns": 222,
+                "created_by": "parquet-cpp-arrow version 23.0.1",
+                "row_groups": 1,
+                "rows": 14268
+              },
+              "provenance": {
+                "known_profile": null,
+                "known_profile_match": false,
+                "sha256": "45243e378c44b8fad4a6d52e1bf7e5dec4f645390ab66fd6593fc2e44cd2be73",
+                "size_bytes": 75911196
+              },
+              "status": "pass",
+              "violations": {
+                "known_profile_column_count_mismatch": 0,
+                "known_profile_row_count_mismatch": 0,
+                "known_profile_size_mismatch": 0,
+                "missing_required_columns": 0
+              }
+            },
+            "D1": {
+              "index_stat_diagnosis": {
+                "inconsistent_rows": 10879,
+                "inconsistent_rows_matching_lab_local_pattern": 10879,
+                "mismatch_by_lab": {
+                  "CLVR": 388,
+                  "GuptaLab": 182,
+                  "ILIAD": 1169,
+                  "IPRL": 1295,
+                  "IRIS": 191,
+                  "PennPAL": 100,
+                  "RAD": 468,
+                  "RAIL": 2686,
+                  "REAL": 1505,
+                  "RPL": 567,
+                  "TRI": 1723,
+                  "WEIRD": 605
+                }
+              },
+              "row_count": 14268,
+              "status": "violations",
+              "violations": {
+                "dataset_chain_breaks": 0,
+                "dataset_span_length_mismatches": 0,
+                "duplicate_episode_ids": 0,
+                "duplicate_episode_indices": 0,
+                "empty_episode_ids": 0,
+                "empty_tasks": 0,
+                "episode_index_gaps": 0,
+                "episode_index_stat_inconsistent_rows": 10879,
+                "global_index_any_stat_inconsistent_rows": 10879,
+                "global_index_location_inconsistent_rows": 10879,
+                "global_index_std_analytic_mismatch_rows": 0,
+                "local_vs_global_index_stat_inconsistent_rows": 10879,
+                "negative_chunk_or_file_indices": 0,
+                "nonpositive_lengths": 0
+              }
+            },
+            "D2": {
+              "fps": 15.0,
+              "note": "Camera file identities and timestamp offsets are intentionally audited independently.",
+              "per_camera": {
+                "observation.image.exterior_image_1_left": {
+                  "file_count": 256,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.exterior_image_2_left": {
+                  "file_count": 248,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.wrist_image_left": {
+                  "file_count": 142,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                }
+              },
+              "status": "pass",
+              "violations": {
+                "duration_vs_length_fps_mismatches": 0,
+                "files_not_starting_at_zero": 0,
+                "invalid_or_reversed_intervals": 0,
+                "negative_chunk_or_file_indices": 0,
+                "within_file_chain_breaks": 0,
+                "within_file_overlaps": 0
+              }
+            },
+            "D3": {
+              "complete_feature_count": 20,
+              "feature_count": 20,
+              "feature_rows_checked": 285360,
+              "image_count_rule": "LeRobot estimate_num_samples(length), not raw episode length",
+              "incomplete_features": {},
+              "rows_checked": 14268,
+              "status": "violations",
+              "violations": {
+                "features_missing_metrics": 0,
+                "frame_index_analytic_mismatches": 0,
+                "mean_outside_min_max": 4,
+                "negative_standard_deviation": 0,
+                "nonconstant_task_index_stats": 0,
+                "nonfinite_stat_values": 0,
+                "nonmonotone_quantiles": 0,
+                "sample_count_mismatches": 0,
+                "stat_shape_mismatches": 0,
+                "timestamp_analytic_mismatches": 0
+              }
+            },
+            "D4": {
+              "declared_fps": 15,
+              "info_codebase_version": "v3.0",
+              "missing_from_global_stats": [],
+              "missing_from_info": [],
+              "scope_note": "D4 checks companion referential coverage; raw trajectory recomputation is out of scope.",
+              "status": "pass",
+              "tasks_rows": 52,
+              "violations": {
+                "empty_tasks_table": 0,
+                "episode_stat_features_missing_from_global_stats": 0,
+                "episode_stat_features_missing_from_info": 0
+              }
+            }
+          },
+          "input": {
+            "companion_manifest": {
+              "info": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/info.json",
+                "sha256": "a2ed78c6fcbaa5a05f474474d78598906087b4fa4fc4f45730a05ccff4986b01",
+                "size_bytes": 4522
+              },
+              "stats": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/stats.json",
+                "sha256": "9a089db94a4e00594367300ff9391dca0643396d4e925f310bafcc311acb274c",
+                "size_bytes": 34412
+              },
+              "tasks": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/tasks.parquet",
+                "sha256": "e42ab024bd0e41d7e90358618e77bc8df799d9b5453f0b2d45146e6c77eb08e7",
+                "size_bytes": 5490
+              }
+            },
+            "fps_used": 15.0,
+            "info": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/info.json",
+            "parquet": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/episodes/file-000.parquet",
+            "stats": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/stats.json",
+            "tasks": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/failure/tasks.parquet"
+          },
+          "scope": "episode metadata and summary statistics only; no trajectory or video validation",
+          "summary": {
+            "audit_execution_succeeded": true,
+            "columns": 222,
+            "gpu_used": false,
+            "local_vs_global_index_stat_inconsistent_rows": 10879,
+            "natural_metadata_inconsistency_detected": true,
+            "rows": 14268
+          },
+          "timing_ms": {
+            "D0": 43.77416695933789,
+            "D1": 250.88208308443427,
+            "D2": 82.72270893212408,
+            "D3": 18773.08858395554,
+            "D4": 4.417499992996454,
+            "total": 19155.032958020456
+          }
+        }
+      ],
+      "summary": {
+        "declared_count_checks_passed": true,
+        "declared_frames_represented": 3721431,
+        "elapsed_s": 19.57514791598078,
+        "episode_metadata_shards": 1,
+        "episode_rows": 14268,
+        "gpu_used": false,
+        "identity_inconsistent_rows": 10879,
+        "task_companion_mismatch_rows": 230,
+        "task_rows": 52
+      }
+    },
+    "success": {
+      "aggregate_single_shard_violations": {
+        "D1": {
+          "dataset_chain_breaks": 0,
+          "dataset_span_length_mismatches": 0,
+          "duplicate_episode_ids": 0,
+          "duplicate_episode_indices": 0,
+          "empty_episode_ids": 0,
+          "empty_tasks": 0,
+          "episode_index_gaps": 0,
+          "episode_index_stat_inconsistent_rows": 50623,
+          "global_index_any_stat_inconsistent_rows": 50625,
+          "global_index_location_inconsistent_rows": 50623,
+          "global_index_std_analytic_mismatch_rows": 920,
+          "local_vs_global_index_stat_inconsistent_rows": 50623,
+          "negative_chunk_or_file_indices": 0,
+          "nonpositive_lengths": 0
+        },
+        "D2": {
+          "duration_vs_length_fps_mismatches": 0,
+          "files_not_starting_at_zero": 2,
+          "invalid_or_reversed_intervals": 0,
+          "negative_chunk_or_file_indices": 0,
+          "within_file_chain_breaks": 0,
+          "within_file_overlaps": 0
+        },
+        "D3": {
+          "features_missing_metrics": 0,
+          "frame_index_analytic_mismatches": 0,
+          "mean_outside_min_max": 0,
+          "negative_standard_deviation": 0,
+          "nonconstant_task_index_stats": 0,
+          "nonfinite_stat_values": 0,
+          "nonmonotone_quantiles": 0,
+          "sample_count_mismatches": 0,
+          "stat_shape_mismatches": 0,
+          "timestamp_analytic_mismatches": 0
+        }
+      },
+      "audit_version": "1",
+      "cross_shard": {
+        "final_episode_stop": 57639,
+        "final_frame_stop": 18691281,
+        "global_continuity_violations": {
+          "dataset_span_length_mismatches": 0,
+          "duplicate_episode_ids": 0,
+          "global_dataset_chain_breaks": 0,
+          "global_episode_sequence_breaks": 0,
+          "nonconstant_task_index_summaries": 0,
+          "nonintegral_task_index_summaries": 0
+        },
+        "identity_summary": {
+          "global_identity_inconsistent_rows": 50623,
+          "inconsistent_rows_matching_lab_local_pattern": 50623,
+          "mismatch_by_lab": {
+            "CLVR": 4702,
+            "GuptaLab": 1115,
+            "ILIAD": 2071,
+            "IPRL": 4418,
+            "IRIS": 3171,
+            "PennPAL": 2794,
+            "RAD": 999,
+            "RAIL": 5414,
+            "REAL": 3503,
+            "RPL": 1950,
+            "TRI": 18102,
+            "WEIRD": 2384
+          }
+        },
+        "lab_rows": {
+          "AUTOLab": 7016,
+          "CLVR": 4702,
+          "GuptaLab": 1115,
+          "ILIAD": 2071,
+          "IPRL": 4418,
+          "IRIS": 3171,
+          "PennPAL": 2794,
+          "RAD": 999,
+          "RAIL": 5414,
+          "REAL": 3503,
+          "RPL": 1950,
+          "TRI": 18102,
+          "WEIRD": 2384
+        },
+        "rows_checked": 57639,
+        "task_referential_summary": {
+          "companion_task_text_mismatch_rows": 50623,
+          "global_task_rows": 53086,
+          "lab_local_vocabulary_sizes": {
+            "AUTOLab": 6454,
+            "CLVR": 4639,
+            "GuptaLab": 1083,
+            "ILIAD": 2046,
+            "IPRL": 4109,
+            "IRIS": 3115,
+            "PennPAL": 2717,
+            "RAD": 746,
+            "RAIL": 5264,
+            "REAL": 3302,
+            "RPL": 1347,
+            "TRI": 17194,
+            "WEIRD": 1329
+          },
+          "mismatch_by_lab": {
+            "CLVR": 4702,
+            "GuptaLab": 1115,
+            "ILIAD": 2071,
+            "IPRL": 4418,
+            "IRIS": 3171,
+            "PennPAL": 2794,
+            "RAD": 999,
+            "RAIL": 5414,
+            "REAL": 3503,
+            "RPL": 1950,
+            "TRI": 18102,
+            "WEIRD": 2384
+          },
+          "rows_matching_lab_local_task_vocabulary": 57639
+        }
+      },
+      "cross_shard_video_lineage": {
+        "camera_count": 3,
+        "per_camera": {
+          "observation.image.exterior_image_1_left": {
+            "file_count": 1205,
+            "rows_checked": 57639,
+            "violations": {
+              "duration_vs_length_fps_mismatches": 0,
+              "files_not_starting_at_zero": 0,
+              "invalid_or_reversed_intervals": 0,
+              "negative_chunk_or_file_indices": 0,
+              "within_file_chain_breaks": 0,
+              "within_file_overlaps": 0
+            }
+          },
+          "observation.image.exterior_image_2_left": {
+            "file_count": 1198,
+            "rows_checked": 57639,
+            "violations": {
+              "duration_vs_length_fps_mismatches": 0,
+              "files_not_starting_at_zero": 0,
+              "invalid_or_reversed_intervals": 0,
+              "negative_chunk_or_file_indices": 0,
+              "within_file_chain_breaks": 0,
+              "within_file_overlaps": 0
+            }
+          },
+          "observation.image.wrist_image_left": {
+            "file_count": 660,
+            "rows_checked": 57639,
+            "violations": {
+              "duration_vs_length_fps_mismatches": 0,
+              "files_not_starting_at_zero": 0,
+              "invalid_or_reversed_intervals": 0,
+              "negative_chunk_or_file_indices": 0,
+              "within_file_chain_breaks": 0,
+              "within_file_overlaps": 0
+            }
+          }
+        },
+        "status": "pass",
+        "violations": {
+          "duration_vs_length_fps_mismatches": 0,
+          "files_not_starting_at_zero": 0,
+          "invalid_or_reversed_intervals": 0,
+          "negative_chunk_or_file_indices": 0,
+          "within_file_chain_breaks": 0,
+          "within_file_overlaps": 0
+        }
+      },
+      "dataset": {
+        "repo_id": "nvidia/Cosmos3-DROID",
+        "revision": "dabaaffe428d67cf93fd355b82658934ee59bfec",
+        "scope": "complete episode metadata; trajectories and videos excluded",
+        "split": "success"
+      },
+      "declared_count_checks": {
+        "all_known_hashes_match": true,
+        "all_known_shards_present": true,
+        "episode_rows_match_info": true,
+        "final_frame_stop_matches_info": true,
+        "task_rows_match_info": true
+      },
+      "limitations": [
+        "No trajectory, image, video, calibration, or task-success value is decoded.",
+        "A mismatch is a metadata referential inconsistency, not proof of downstream policy harm.",
+        "Rows sharing one conversion pattern are affected records, not independent root-cause bugs.",
+        "Per-shard video file-start counts are partial views; collection-level video lineage is authoritative."
+      ],
+      "manifests": {
+        "companions": {
+          "info": {
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+            "remote_path": "success/meta/info.json",
+            "sha256": "bde3ee8b4c6a437ad530630bb8a6954ba9eafb80e3fdfc0e983252aeaff2d30a",
+            "size_bytes": 4526
+          },
+          "stats": {
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+            "remote_path": "success/meta/stats.json",
+            "sha256": "ebc095389765fc7ce1f25b64a37d2ead03e56aca8645a1977668e1ff4c58724b",
+            "size_bytes": 34444
+          },
+          "tasks": {
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet",
+            "remote_path": "success/meta/tasks.parquet",
+            "sha256": "497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44",
+            "size_bytes": 2409362
+          }
+        },
+        "episode_metadata": [
+          {
+            "expected_sha256": "34c4593b97aa4696580ef974b77c711395cec22ed22ae99ef70b2bf4101b9917",
+            "expected_size_bytes": 80080877,
+            "known_revision_match": true,
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-000.parquet",
+            "remote_path": "success/meta/episodes/chunk-000/file-000.parquet",
+            "sha256": "34c4593b97aa4696580ef974b77c711395cec22ed22ae99ef70b2bf4101b9917",
+            "size_bytes": 80080877
+          },
+          {
+            "expected_sha256": "ee66a83456b1b92667955b893bfec38204459c82577563cd34080ced888d234b",
+            "expected_size_bytes": 61590380,
+            "known_revision_match": true,
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-001.parquet",
+            "remote_path": "success/meta/episodes/chunk-000/file-001.parquet",
+            "sha256": "ee66a83456b1b92667955b893bfec38204459c82577563cd34080ced888d234b",
+            "size_bytes": 61590380
+          },
+          {
+            "expected_sha256": "38a9226fb6fc8c2d2b6aaa7e4238bc8cc6321131fd2f06b951bec0f232f3e042",
+            "expected_size_bytes": 58286935,
+            "known_revision_match": true,
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-002.parquet",
+            "remote_path": "success/meta/episodes/chunk-000/file-002.parquet",
+            "sha256": "38a9226fb6fc8c2d2b6aaa7e4238bc8cc6321131fd2f06b951bec0f232f3e042",
+            "size_bytes": 58286935
+          },
+          {
+            "expected_sha256": "b5215e4461bc6a3b7e6586f0c2773d8fb55eb3aa85004f35affcc565d792b508",
+            "expected_size_bytes": 71074101,
+            "known_revision_match": true,
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-003.parquet",
+            "remote_path": "success/meta/episodes/chunk-000/file-003.parquet",
+            "sha256": "b5215e4461bc6a3b7e6586f0c2773d8fb55eb3aa85004f35affcc565d792b508",
+            "size_bytes": 71074101
+          },
+          {
+            "expected_sha256": "c60734b53bef8c913665802ff18a11f1c4fe64b09ee4e8418eaaa148d9db9a7d",
+            "expected_size_bytes": 39789260,
+            "known_revision_match": true,
+            "local_path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-004.parquet",
+            "remote_path": "success/meta/episodes/chunk-000/file-004.parquet",
+            "sha256": "c60734b53bef8c913665802ff18a11f1c4fe64b09ee4e8418eaaa148d9db9a7d",
+            "size_bytes": 39789260
+          }
+        ]
+      },
+      "per_shard": [
+        {
+          "audit_version": "1",
+          "contracts": {
+            "D0": {
+              "missing_required_columns": [],
+              "parquet": {
+                "columns": 222,
+                "created_by": "parquet-cpp-arrow version 23.0.1",
+                "row_groups": 1,
+                "rows": 14904
+              },
+              "provenance": {
+                "known_profile": {
+                  "columns": 222,
+                  "fps": 15.0,
+                  "path": "success/meta/episodes/chunk-000/file-000.parquet",
+                  "repo_id": "nvidia/Cosmos3-DROID",
+                  "revision": "dabaaffe428d67cf93fd355b82658934ee59bfec",
+                  "rows": 14904,
+                  "sha256": "34c4593b97aa4696580ef974b77c711395cec22ed22ae99ef70b2bf4101b9917",
+                  "size_bytes": 80080877
+                },
+                "known_profile_match": true,
+                "sha256": "34c4593b97aa4696580ef974b77c711395cec22ed22ae99ef70b2bf4101b9917",
+                "size_bytes": 80080877
+              },
+              "status": "pass",
+              "violations": {
+                "known_profile_column_count_mismatch": 0,
+                "known_profile_row_count_mismatch": 0,
+                "known_profile_size_mismatch": 0,
+                "missing_required_columns": 0
+              }
+            },
+            "D1": {
+              "index_stat_diagnosis": {
+                "inconsistent_rows": 7888,
+                "inconsistent_rows_matching_lab_local_pattern": 7888,
+                "mismatch_by_lab": {
+                  "CLVR": 4702,
+                  "GuptaLab": 1115,
+                  "ILIAD": 2071
+                }
+              },
+              "row_count": 14904,
+              "status": "violations",
+              "violations": {
+                "dataset_chain_breaks": 0,
+                "dataset_span_length_mismatches": 0,
+                "duplicate_episode_ids": 0,
+                "duplicate_episode_indices": 0,
+                "empty_episode_ids": 0,
+                "empty_tasks": 0,
+                "episode_index_gaps": 0,
+                "episode_index_stat_inconsistent_rows": 7888,
+                "global_index_any_stat_inconsistent_rows": 7890,
+                "global_index_location_inconsistent_rows": 7888,
+                "global_index_std_analytic_mismatch_rows": 2,
+                "local_vs_global_index_stat_inconsistent_rows": 7888,
+                "negative_chunk_or_file_indices": 0,
+                "nonpositive_lengths": 0
+              }
+            },
+            "D2": {
+              "fps": 15.0,
+              "note": "Camera file identities and timestamp offsets are intentionally audited independently.",
+              "per_camera": {
+                "observation.image.exterior_image_1_left": {
+                  "file_count": 290,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.exterior_image_2_left": {
+                  "file_count": 275,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.wrist_image_left": {
+                  "file_count": 142,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                }
+              },
+              "status": "pass",
+              "violations": {
+                "duration_vs_length_fps_mismatches": 0,
+                "files_not_starting_at_zero": 0,
+                "invalid_or_reversed_intervals": 0,
+                "negative_chunk_or_file_indices": 0,
+                "within_file_chain_breaks": 0,
+                "within_file_overlaps": 0
+              }
+            },
+            "D3": {
+              "complete_feature_count": 20,
+              "feature_count": 20,
+              "feature_rows_checked": 298080,
+              "image_count_rule": "LeRobot estimate_num_samples(length), not raw episode length",
+              "incomplete_features": {},
+              "rows_checked": 14904,
+              "status": "pass",
+              "violations": {
+                "features_missing_metrics": 0,
+                "frame_index_analytic_mismatches": 0,
+                "mean_outside_min_max": 0,
+                "negative_standard_deviation": 0,
+                "nonconstant_task_index_stats": 0,
+                "nonfinite_stat_values": 0,
+                "nonmonotone_quantiles": 0,
+                "sample_count_mismatches": 0,
+                "stat_shape_mismatches": 0,
+                "timestamp_analytic_mismatches": 0
+              }
+            },
+            "D4": {
+              "declared_fps": 15,
+              "info_codebase_version": "v3.0",
+              "missing_from_global_stats": [],
+              "missing_from_info": [],
+              "scope_note": "D4 checks companion referential coverage; raw trajectory recomputation is out of scope.",
+              "status": "pass",
+              "tasks_rows": 53086,
+              "violations": {
+                "empty_tasks_table": 0,
+                "episode_stat_features_missing_from_global_stats": 0,
+                "episode_stat_features_missing_from_info": 0
+              }
+            }
+          },
+          "input": {
+            "companion_manifest": {
+              "info": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+                "sha256": "bde3ee8b4c6a437ad530630bb8a6954ba9eafb80e3fdfc0e983252aeaff2d30a",
+                "size_bytes": 4526
+              },
+              "stats": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+                "sha256": "ebc095389765fc7ce1f25b64a37d2ead03e56aca8645a1977668e1ff4c58724b",
+                "size_bytes": 34444
+              },
+              "tasks": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet",
+                "sha256": "497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44",
+                "size_bytes": 2409362
+              }
+            },
+            "fps_used": 15.0,
+            "info": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+            "parquet": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-000.parquet",
+            "stats": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+            "tasks": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet"
+          },
+          "scope": "episode metadata and summary statistics only; no trajectory or video validation",
+          "summary": {
+            "audit_execution_succeeded": true,
+            "columns": 222,
+            "gpu_used": false,
+            "local_vs_global_index_stat_inconsistent_rows": 7888,
+            "natural_metadata_inconsistency_detected": true,
+            "rows": 14904
+          },
+          "timing_ms": {
+            "D0": 62.895209062844515,
+            "D1": 296.8905000016093,
+            "D2": 86.05933398939669,
+            "D3": 19966.408040956594,
+            "D4": 437.1188330696896,
+            "total": 20849.458541022614
+          }
+        },
+        {
+          "audit_version": "1",
+          "contracts": {
+            "D0": {
+              "missing_required_columns": [],
+              "parquet": {
+                "columns": 222,
+                "created_by": "parquet-cpp-arrow version 23.0.1",
+                "row_groups": 1,
+                "rows": 11382
+              },
+              "provenance": {
+                "known_profile": null,
+                "known_profile_match": false,
+                "sha256": "ee66a83456b1b92667955b893bfec38204459c82577563cd34080ced888d234b",
+                "size_bytes": 61590380
+              },
+              "status": "pass",
+              "violations": {
+                "known_profile_column_count_mismatch": 0,
+                "known_profile_row_count_mismatch": 0,
+                "known_profile_size_mismatch": 0,
+                "missing_required_columns": 0
+              }
+            },
+            "D1": {
+              "index_stat_diagnosis": {
+                "inconsistent_rows": 11382,
+                "inconsistent_rows_matching_lab_local_pattern": 11382,
+                "mismatch_by_lab": {
+                  "IPRL": 4418,
+                  "IRIS": 3171,
+                  "PennPAL": 2794,
+                  "RAD": 999
+                }
+              },
+              "row_count": 11382,
+              "status": "violations",
+              "violations": {
+                "dataset_chain_breaks": 0,
+                "dataset_span_length_mismatches": 0,
+                "duplicate_episode_ids": 0,
+                "duplicate_episode_indices": 0,
+                "empty_episode_ids": 0,
+                "empty_tasks": 0,
+                "episode_index_gaps": 0,
+                "episode_index_stat_inconsistent_rows": 11382,
+                "global_index_any_stat_inconsistent_rows": 11382,
+                "global_index_location_inconsistent_rows": 11382,
+                "global_index_std_analytic_mismatch_rows": 0,
+                "local_vs_global_index_stat_inconsistent_rows": 11382,
+                "negative_chunk_or_file_indices": 0,
+                "nonpositive_lengths": 0
+              }
+            },
+            "D2": {
+              "fps": 15.0,
+              "note": "Camera file identities and timestamp offsets are intentionally audited independently.",
+              "per_camera": {
+                "observation.image.exterior_image_1_left": {
+                  "file_count": 225,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.exterior_image_2_left": {
+                  "file_count": 230,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.wrist_image_left": {
+                  "file_count": 141,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                }
+              },
+              "status": "pass",
+              "violations": {
+                "duration_vs_length_fps_mismatches": 0,
+                "files_not_starting_at_zero": 0,
+                "invalid_or_reversed_intervals": 0,
+                "negative_chunk_or_file_indices": 0,
+                "within_file_chain_breaks": 0,
+                "within_file_overlaps": 0
+              }
+            },
+            "D3": {
+              "complete_feature_count": 20,
+              "feature_count": 20,
+              "feature_rows_checked": 227640,
+              "image_count_rule": "LeRobot estimate_num_samples(length), not raw episode length",
+              "incomplete_features": {},
+              "rows_checked": 11382,
+              "status": "pass",
+              "violations": {
+                "features_missing_metrics": 0,
+                "frame_index_analytic_mismatches": 0,
+                "mean_outside_min_max": 0,
+                "negative_standard_deviation": 0,
+                "nonconstant_task_index_stats": 0,
+                "nonfinite_stat_values": 0,
+                "nonmonotone_quantiles": 0,
+                "sample_count_mismatches": 0,
+                "stat_shape_mismatches": 0,
+                "timestamp_analytic_mismatches": 0
+              }
+            },
+            "D4": {
+              "declared_fps": 15,
+              "info_codebase_version": "v3.0",
+              "missing_from_global_stats": [],
+              "missing_from_info": [],
+              "scope_note": "D4 checks companion referential coverage; raw trajectory recomputation is out of scope.",
+              "status": "pass",
+              "tasks_rows": 53086,
+              "violations": {
+                "empty_tasks_table": 0,
+                "episode_stat_features_missing_from_global_stats": 0,
+                "episode_stat_features_missing_from_info": 0
+              }
+            }
+          },
+          "input": {
+            "companion_manifest": {
+              "info": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+                "sha256": "bde3ee8b4c6a437ad530630bb8a6954ba9eafb80e3fdfc0e983252aeaff2d30a",
+                "size_bytes": 4526
+              },
+              "stats": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+                "sha256": "ebc095389765fc7ce1f25b64a37d2ead03e56aca8645a1977668e1ff4c58724b",
+                "size_bytes": 34444
+              },
+              "tasks": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet",
+                "sha256": "497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44",
+                "size_bytes": 2409362
+              }
+            },
+            "fps_used": 15.0,
+            "info": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+            "parquet": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-001.parquet",
+            "stats": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+            "tasks": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet"
+          },
+          "scope": "episode metadata and summary statistics only; no trajectory or video validation",
+          "summary": {
+            "audit_execution_succeeded": true,
+            "columns": 222,
+            "gpu_used": false,
+            "local_vs_global_index_stat_inconsistent_rows": 11382,
+            "natural_metadata_inconsistency_detected": true,
+            "rows": 11382
+          },
+          "timing_ms": {
+            "D0": 36.875125020742416,
+            "D1": 204.3016670504585,
+            "D2": 69.25416691228747,
+            "D3": 15754.285334027372,
+            "D4": 17.964374972507358,
+            "total": 16082.83400000073
+          }
+        },
+        {
+          "audit_version": "1",
+          "contracts": {
+            "D0": {
+              "missing_required_columns": [],
+              "parquet": {
+                "columns": 222,
+                "created_by": "parquet-cpp-arrow version 23.0.1",
+                "row_groups": 1,
+                "rows": 10867
+              },
+              "provenance": {
+                "known_profile": null,
+                "known_profile_match": false,
+                "sha256": "38a9226fb6fc8c2d2b6aaa7e4238bc8cc6321131fd2f06b951bec0f232f3e042",
+                "size_bytes": 58286935
+              },
+              "status": "pass",
+              "violations": {
+                "known_profile_column_count_mismatch": 0,
+                "known_profile_row_count_mismatch": 0,
+                "known_profile_size_mismatch": 0,
+                "missing_required_columns": 0
+              }
+            },
+            "D1": {
+              "index_stat_diagnosis": {
+                "inconsistent_rows": 10867,
+                "inconsistent_rows_matching_lab_local_pattern": 10867,
+                "mismatch_by_lab": {
+                  "RAIL": 5414,
+                  "REAL": 3503,
+                  "RPL": 1950
+                }
+              },
+              "row_count": 10867,
+              "status": "violations",
+              "violations": {
+                "dataset_chain_breaks": 0,
+                "dataset_span_length_mismatches": 0,
+                "duplicate_episode_ids": 0,
+                "duplicate_episode_indices": 0,
+                "empty_episode_ids": 0,
+                "empty_tasks": 0,
+                "episode_index_gaps": 0,
+                "episode_index_stat_inconsistent_rows": 10867,
+                "global_index_any_stat_inconsistent_rows": 10867,
+                "global_index_location_inconsistent_rows": 10867,
+                "global_index_std_analytic_mismatch_rows": 0,
+                "local_vs_global_index_stat_inconsistent_rows": 10867,
+                "negative_chunk_or_file_indices": 0,
+                "nonpositive_lengths": 0
+              }
+            },
+            "D2": {
+              "fps": 15.0,
+              "note": "Camera file identities and timestamp offsets are intentionally audited independently.",
+              "per_camera": {
+                "observation.image.exterior_image_1_left": {
+                  "file_count": 201,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.exterior_image_2_left": {
+                  "file_count": 192,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.wrist_image_left": {
+                  "file_count": 108,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                }
+              },
+              "status": "pass",
+              "violations": {
+                "duration_vs_length_fps_mismatches": 0,
+                "files_not_starting_at_zero": 0,
+                "invalid_or_reversed_intervals": 0,
+                "negative_chunk_or_file_indices": 0,
+                "within_file_chain_breaks": 0,
+                "within_file_overlaps": 0
+              }
+            },
+            "D3": {
+              "complete_feature_count": 20,
+              "feature_count": 20,
+              "feature_rows_checked": 217340,
+              "image_count_rule": "LeRobot estimate_num_samples(length), not raw episode length",
+              "incomplete_features": {},
+              "rows_checked": 10867,
+              "status": "pass",
+              "violations": {
+                "features_missing_metrics": 0,
+                "frame_index_analytic_mismatches": 0,
+                "mean_outside_min_max": 0,
+                "negative_standard_deviation": 0,
+                "nonconstant_task_index_stats": 0,
+                "nonfinite_stat_values": 0,
+                "nonmonotone_quantiles": 0,
+                "sample_count_mismatches": 0,
+                "stat_shape_mismatches": 0,
+                "timestamp_analytic_mismatches": 0
+              }
+            },
+            "D4": {
+              "declared_fps": 15,
+              "info_codebase_version": "v3.0",
+              "missing_from_global_stats": [],
+              "missing_from_info": [],
+              "scope_note": "D4 checks companion referential coverage; raw trajectory recomputation is out of scope.",
+              "status": "pass",
+              "tasks_rows": 53086,
+              "violations": {
+                "empty_tasks_table": 0,
+                "episode_stat_features_missing_from_global_stats": 0,
+                "episode_stat_features_missing_from_info": 0
+              }
+            }
+          },
+          "input": {
+            "companion_manifest": {
+              "info": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+                "sha256": "bde3ee8b4c6a437ad530630bb8a6954ba9eafb80e3fdfc0e983252aeaff2d30a",
+                "size_bytes": 4526
+              },
+              "stats": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+                "sha256": "ebc095389765fc7ce1f25b64a37d2ead03e56aca8645a1977668e1ff4c58724b",
+                "size_bytes": 34444
+              },
+              "tasks": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet",
+                "sha256": "497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44",
+                "size_bytes": 2409362
+              }
+            },
+            "fps_used": 15.0,
+            "info": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+            "parquet": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-002.parquet",
+            "stats": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+            "tasks": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet"
+          },
+          "scope": "episode metadata and summary statistics only; no trajectory or video validation",
+          "summary": {
+            "audit_execution_succeeded": true,
+            "columns": 222,
+            "gpu_used": false,
+            "local_vs_global_index_stat_inconsistent_rows": 10867,
+            "natural_metadata_inconsistency_detected": true,
+            "rows": 10867
+          },
+          "timing_ms": {
+            "D0": 38.22433401364833,
+            "D1": 198.6473749857396,
+            "D2": 67.55466700997204,
+            "D3": 14747.46324995067,
+            "D4": 11.900375015102327,
+            "total": 15064.00458398275
+          }
+        },
+        {
+          "audit_version": "1",
+          "contracts": {
+            "D0": {
+              "missing_required_columns": [],
+              "parquet": {
+                "columns": 222,
+                "created_by": "parquet-cpp-arrow version 23.0.1",
+                "row_groups": 1,
+                "rows": 13118
+              },
+              "provenance": {
+                "known_profile": null,
+                "known_profile_match": false,
+                "sha256": "b5215e4461bc6a3b7e6586f0c2773d8fb55eb3aa85004f35affcc565d792b508",
+                "size_bytes": 71074101
+              },
+              "status": "pass",
+              "violations": {
+                "known_profile_column_count_mismatch": 0,
+                "known_profile_row_count_mismatch": 0,
+                "known_profile_size_mismatch": 0,
+                "missing_required_columns": 0
+              }
+            },
+            "D1": {
+              "index_stat_diagnosis": {
+                "inconsistent_rows": 13118,
+                "inconsistent_rows_matching_lab_local_pattern": 13118,
+                "mismatch_by_lab": {
+                  "TRI": 13118
+                }
+              },
+              "row_count": 13118,
+              "status": "violations",
+              "violations": {
+                "dataset_chain_breaks": 0,
+                "dataset_span_length_mismatches": 0,
+                "duplicate_episode_ids": 0,
+                "duplicate_episode_indices": 0,
+                "empty_episode_ids": 0,
+                "empty_tasks": 0,
+                "episode_index_gaps": 0,
+                "episode_index_stat_inconsistent_rows": 13118,
+                "global_index_any_stat_inconsistent_rows": 13118,
+                "global_index_location_inconsistent_rows": 13118,
+                "global_index_std_analytic_mismatch_rows": 22,
+                "local_vs_global_index_stat_inconsistent_rows": 13118,
+                "negative_chunk_or_file_indices": 0,
+                "nonpositive_lengths": 0
+              }
+            },
+            "D2": {
+              "fps": 15.0,
+              "note": "Camera file identities and timestamp offsets are intentionally audited independently.",
+              "per_camera": {
+                "observation.image.exterior_image_1_left": {
+                  "file_count": 240,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.exterior_image_2_left": {
+                  "file_count": 241,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.wrist_image_left": {
+                  "file_count": 129,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                }
+              },
+              "status": "pass",
+              "violations": {
+                "duration_vs_length_fps_mismatches": 0,
+                "files_not_starting_at_zero": 0,
+                "invalid_or_reversed_intervals": 0,
+                "negative_chunk_or_file_indices": 0,
+                "within_file_chain_breaks": 0,
+                "within_file_overlaps": 0
+              }
+            },
+            "D3": {
+              "complete_feature_count": 20,
+              "feature_count": 20,
+              "feature_rows_checked": 262360,
+              "image_count_rule": "LeRobot estimate_num_samples(length), not raw episode length",
+              "incomplete_features": {},
+              "rows_checked": 13118,
+              "status": "pass",
+              "violations": {
+                "features_missing_metrics": 0,
+                "frame_index_analytic_mismatches": 0,
+                "mean_outside_min_max": 0,
+                "negative_standard_deviation": 0,
+                "nonconstant_task_index_stats": 0,
+                "nonfinite_stat_values": 0,
+                "nonmonotone_quantiles": 0,
+                "sample_count_mismatches": 0,
+                "stat_shape_mismatches": 0,
+                "timestamp_analytic_mismatches": 0
+              }
+            },
+            "D4": {
+              "declared_fps": 15,
+              "info_codebase_version": "v3.0",
+              "missing_from_global_stats": [],
+              "missing_from_info": [],
+              "scope_note": "D4 checks companion referential coverage; raw trajectory recomputation is out of scope.",
+              "status": "pass",
+              "tasks_rows": 53086,
+              "violations": {
+                "empty_tasks_table": 0,
+                "episode_stat_features_missing_from_global_stats": 0,
+                "episode_stat_features_missing_from_info": 0
+              }
+            }
+          },
+          "input": {
+            "companion_manifest": {
+              "info": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+                "sha256": "bde3ee8b4c6a437ad530630bb8a6954ba9eafb80e3fdfc0e983252aeaff2d30a",
+                "size_bytes": 4526
+              },
+              "stats": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+                "sha256": "ebc095389765fc7ce1f25b64a37d2ead03e56aca8645a1977668e1ff4c58724b",
+                "size_bytes": 34444
+              },
+              "tasks": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet",
+                "sha256": "497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44",
+                "size_bytes": 2409362
+              }
+            },
+            "fps_used": 15.0,
+            "info": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+            "parquet": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-003.parquet",
+            "stats": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+            "tasks": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet"
+          },
+          "scope": "episode metadata and summary statistics only; no trajectory or video validation",
+          "summary": {
+            "audit_execution_succeeded": true,
+            "columns": 222,
+            "gpu_used": false,
+            "local_vs_global_index_stat_inconsistent_rows": 13118,
+            "natural_metadata_inconsistency_detected": true,
+            "rows": 13118
+          },
+          "timing_ms": {
+            "D0": 40.223582996986806,
+            "D1": 223.03895908407867,
+            "D2": 76.57304196618497,
+            "D3": 17101.495250011794,
+            "D4": 8.301208028569818,
+            "total": 17449.761166004464
+          }
+        },
+        {
+          "audit_version": "1",
+          "contracts": {
+            "D0": {
+              "missing_required_columns": [],
+              "parquet": {
+                "columns": 222,
+                "created_by": "parquet-cpp-arrow version 23.0.1",
+                "row_groups": 1,
+                "rows": 7368
+              },
+              "provenance": {
+                "known_profile": null,
+                "known_profile_match": false,
+                "sha256": "c60734b53bef8c913665802ff18a11f1c4fe64b09ee4e8418eaaa148d9db9a7d",
+                "size_bytes": 39789260
+              },
+              "status": "pass",
+              "violations": {
+                "known_profile_column_count_mismatch": 0,
+                "known_profile_row_count_mismatch": 0,
+                "known_profile_size_mismatch": 0,
+                "missing_required_columns": 0
+              }
+            },
+            "D1": {
+              "index_stat_diagnosis": {
+                "inconsistent_rows": 7368,
+                "inconsistent_rows_matching_lab_local_pattern": 2384,
+                "mismatch_by_lab": {
+                  "TRI": 4984,
+                  "WEIRD": 2384
+                }
+              },
+              "row_count": 7368,
+              "status": "violations",
+              "violations": {
+                "dataset_chain_breaks": 0,
+                "dataset_span_length_mismatches": 0,
+                "duplicate_episode_ids": 0,
+                "duplicate_episode_indices": 0,
+                "empty_episode_ids": 0,
+                "empty_tasks": 0,
+                "episode_index_gaps": 0,
+                "episode_index_stat_inconsistent_rows": 7368,
+                "global_index_any_stat_inconsistent_rows": 7368,
+                "global_index_location_inconsistent_rows": 7368,
+                "global_index_std_analytic_mismatch_rows": 896,
+                "local_vs_global_index_stat_inconsistent_rows": 7368,
+                "negative_chunk_or_file_indices": 0,
+                "nonpositive_lengths": 0
+              }
+            },
+            "D2": {
+              "fps": 15.0,
+              "note": "Camera file identities and timestamp offsets are intentionally audited independently.",
+              "per_camera": {
+                "observation.image.exterior_image_1_left": {
+                  "file_count": 250,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 1,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.exterior_image_2_left": {
+                  "file_count": 261,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 1,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                },
+                "observation.image.wrist_image_left": {
+                  "file_count": 140,
+                  "violations": {
+                    "duration_vs_length_fps_mismatches": 0,
+                    "files_not_starting_at_zero": 0,
+                    "invalid_or_reversed_intervals": 0,
+                    "negative_chunk_or_file_indices": 0,
+                    "within_file_chain_breaks": 0,
+                    "within_file_overlaps": 0
+                  }
+                }
+              },
+              "status": "violations",
+              "violations": {
+                "duration_vs_length_fps_mismatches": 0,
+                "files_not_starting_at_zero": 2,
+                "invalid_or_reversed_intervals": 0,
+                "negative_chunk_or_file_indices": 0,
+                "within_file_chain_breaks": 0,
+                "within_file_overlaps": 0
+              }
+            },
+            "D3": {
+              "complete_feature_count": 20,
+              "feature_count": 20,
+              "feature_rows_checked": 147360,
+              "image_count_rule": "LeRobot estimate_num_samples(length), not raw episode length",
+              "incomplete_features": {},
+              "rows_checked": 7368,
+              "status": "pass",
+              "violations": {
+                "features_missing_metrics": 0,
+                "frame_index_analytic_mismatches": 0,
+                "mean_outside_min_max": 0,
+                "negative_standard_deviation": 0,
+                "nonconstant_task_index_stats": 0,
+                "nonfinite_stat_values": 0,
+                "nonmonotone_quantiles": 0,
+                "sample_count_mismatches": 0,
+                "stat_shape_mismatches": 0,
+                "timestamp_analytic_mismatches": 0
+              }
+            },
+            "D4": {
+              "declared_fps": 15,
+              "info_codebase_version": "v3.0",
+              "missing_from_global_stats": [],
+              "missing_from_info": [],
+              "scope_note": "D4 checks companion referential coverage; raw trajectory recomputation is out of scope.",
+              "status": "pass",
+              "tasks_rows": 53086,
+              "violations": {
+                "empty_tasks_table": 0,
+                "episode_stat_features_missing_from_global_stats": 0,
+                "episode_stat_features_missing_from_info": 0
+              }
+            }
+          },
+          "input": {
+            "companion_manifest": {
+              "info": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+                "sha256": "bde3ee8b4c6a437ad530630bb8a6954ba9eafb80e3fdfc0e983252aeaff2d30a",
+                "size_bytes": 4526
+              },
+              "stats": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+                "sha256": "ebc095389765fc7ce1f25b64a37d2ead03e56aca8645a1977668e1ff4c58724b",
+                "size_bytes": 34444
+              },
+              "tasks": {
+                "path": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet",
+                "sha256": "497e5b675bc75460fae7fc6e81d6689a7a1ce85b6cdd136e14616f4b72cf7f44",
+                "size_bytes": 2409362
+              }
+            },
+            "fps_used": 15.0,
+            "info": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/info.json",
+            "parquet": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/episodes/file-004.parquet",
+            "stats": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/stats.json",
+            "tasks": "<EXTENDED_RUNTIME>/experiments/work/cosmos3-droid/success/tasks.parquet"
+          },
+          "scope": "episode metadata and summary statistics only; no trajectory or video validation",
+          "summary": {
+            "audit_execution_succeeded": true,
+            "columns": 222,
+            "gpu_used": false,
+            "local_vs_global_index_stat_inconsistent_rows": 7368,
+            "natural_metadata_inconsistency_detected": true,
+            "rows": 7368
+          },
+          "timing_ms": {
+            "D0": 26.451334008015692,
+            "D1": 127.54283403046429,
+            "D2": 44.08283298835158,
+            "D3": 9506.820500013418,
+            "D4": 9.271832997910678,
+            "total": 9714.301167055964
+          }
+        }
+      ],
+      "summary": {
+        "declared_count_checks_passed": true,
+        "declared_frames_represented": 18691281,
+        "elapsed_s": 80.9467643329408,
+        "episode_metadata_shards": 5,
+        "episode_rows": 57639,
+        "gpu_used": false,
+        "identity_inconsistent_rows": 50623,
+        "task_companion_mismatch_rows": 50623,
+        "task_rows": 53086
+      }
+    }
+  },
+  "summary": {
+    "all_declared_count_checks_passed": true,
+    "declared_frames_represented": 22412712,
+    "episode_metadata_shards": 6,
+    "episode_rows": 71907,
+    "gpu_used": false,
+    "identity_inconsistent_rows": 61502,
+    "scope": "complete public episode metadata for both splits; no trajectories or videos",
+    "splits": 2,
+    "task_companion_mismatch_rows": 50853
+  }
+}

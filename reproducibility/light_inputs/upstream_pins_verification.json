@@ -1,0 +1,200 @@
+[
+  {
+    "case": "RD7_old",
+    "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/d69b446ef33766fca481ff0ada48292706af5065/gr00t/utils/video.py",
+    "revision": "d69b446ef33766fca481ff0ada48292706af5065",
+    "path": "gr00t/utils/video.py",
+    "exit_code": 0,
+    "expected_sha256": "2b119dcfeb164f9f840b8fe2483dbf177b989dc7e0ac921e7f324a3be155a3d2",
+    "actual_sha256": "2b119dcfeb164f9f840b8fe2483dbf177b989dc7e0ac921e7f324a3be155a3d2",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD7_fixed",
+    "url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/cdf6d6e3c48a9c033e2b188c8c3ff4cccc5ad04e/gr00t/utils/video.py",
+    "revision": "cdf6d6e3c48a9c033e2b188c8c3ff4cccc5ad04e",
+    "path": "gr00t/utils/video.py",
+    "exit_code": 0,
+    "expected_sha256": "5fc5cfbbf3e6c0c3860333d285a1a08af35d232e35cf679e989e43124bb3f106",
+    "actual_sha256": "5fc5cfbbf3e6c0c3860333d285a1a08af35d232e35cf679e989e43124bb3f106",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD8_parent_script",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/4eea7da317f88ba8a8aa6fa66cc606bcf0f04166/scripts/compute_norm_stats.py",
+    "revision": "4eea7da317f88ba8a8aa6fa66cc606bcf0f04166",
+    "path": "scripts/compute_norm_stats.py",
+    "exit_code": 0,
+    "expected_sha256": "9de4bca0ddbf6819b91d0143ba3d5e0f4aa07ae42d7d10bc80c0e2e4626bb491",
+    "actual_sha256": "9de4bca0ddbf6819b91d0143ba3d5e0f4aa07ae42d7d10bc80c0e2e4626bb491",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD8_parent_stats",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/4eea7da317f88ba8a8aa6fa66cc606bcf0f04166/src/openpi/shared/normalize.py",
+    "revision": "4eea7da317f88ba8a8aa6fa66cc606bcf0f04166",
+    "path": "src/openpi/shared/normalize.py",
+    "exit_code": 0,
+    "expected_sha256": "8cac9875e6a4d34e55631a9cc7a697ccc6c3d587438d1972b554280ef58ca8da",
+    "actual_sha256": "8cac9875e6a4d34e55631a9cc7a697ccc6c3d587438d1972b554280ef58ca8da",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD8_fixed_script",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/7725f3be346a9aa03b772b6f93ea3bf565736416/scripts/compute_norm_stats.py",
+    "revision": "7725f3be346a9aa03b772b6f93ea3bf565736416",
+    "path": "scripts/compute_norm_stats.py",
+    "exit_code": 0,
+    "expected_sha256": "8a64773495b714d6b18eded99d7cf87eb19d1bb3dd4a9fb47172b03de5d56a38",
+    "actual_sha256": "8a64773495b714d6b18eded99d7cf87eb19d1bb3dd4a9fb47172b03de5d56a38",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD8_fixed_stats",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/7725f3be346a9aa03b772b6f93ea3bf565736416/src/openpi/shared/normalize.py",
+    "revision": "7725f3be346a9aa03b772b6f93ea3bf565736416",
+    "path": "src/openpi/shared/normalize.py",
+    "exit_code": 0,
+    "expected_sha256": "6c2cea4946fb07e51801530400d2b2fd94730e195cd290d6b6960114eca9739d",
+    "actual_sha256": "6c2cea4946fb07e51801530400d2b2fd94730e195cd290d6b6960114eca9739d",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD8_config",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/7725f3be346a9aa03b772b6f93ea3bf565736416/src/openpi/training/config.py",
+    "revision": "7725f3be346a9aa03b772b6f93ea3bf565736416",
+    "path": "src/openpi/training/config.py",
+    "exit_code": 0,
+    "expected_sha256": "1e83719b891c7ec98ee5780946187d5a51ece04dc54e49691882b2bad2355682",
+    "actual_sha256": "1e83719b891c7ec98ee5780946187d5a51ece04dc54e49691882b2bad2355682",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD8_transforms",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/7725f3be346a9aa03b772b6f93ea3bf565736416/src/openpi/transforms.py",
+    "revision": "7725f3be346a9aa03b772b6f93ea3bf565736416",
+    "path": "src/openpi/transforms.py",
+    "exit_code": 0,
+    "expected_sha256": "63aa3609ce0928da3d8f8ed35f8571b311b69dc4d1546490c2e80a29af46aa88",
+    "actual_sha256": "63aa3609ce0928da3d8f8ed35f8571b311b69dc4d1546490c2e80a29af46aa88",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD1_old",
+    "url": "https://raw.githubusercontent.com/huggingface/lerobot/7f40b3bf82ef9d0fb96d3ba6dc8cc33dd6cd90fe/src/lerobot/datasets/lerobot_dataset.py",
+    "revision": "7f40b3bf82ef9d0fb96d3ba6dc8cc33dd6cd90fe",
+    "path": "src/lerobot/datasets/lerobot_dataset.py",
+    "exit_code": 0,
+    "expected_sha256": "bef8f912c8be5503051f8368608562456b700eacfda4d91911d8bdf629fac393",
+    "actual_sha256": "bef8f912c8be5503051f8368608562456b700eacfda4d91911d8bdf629fac393",
+    "hash_match": true,
+    "stderr": ""
+  },
+  {
+    "case": "RD1_proposed",
+    "url": "https://raw.githubusercontent.com/huggingface/lerobot/1e6a0d09bcc5de620344525311ad86575fa8c8da/src/lerobot/datasets/lerobot_dataset.py",
+    "revision": "1e6a0d09bcc5de620344525311ad86575fa8c8da",
+    "path": "src/lerobot/datasets/lerobot_dataset.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "3b51b5d4acdfef8964e2d7f23f39d9239e184e9ab80e274144b0481b28f793d0",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD3_old",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/9b36e719cc63ff3b206d7c843aca3f089e581df3/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/deploy/gear_assembly/config/ur_10e/joint_pos_env_cfg.py",
+    "revision": "9b36e719cc63ff3b206d7c843aca3f089e581df3",
+    "path": "source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/deploy/gear_assembly/config/ur_10e/joint_pos_env_cfg.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "007bc455ac5fdaf935705be52fdb0b19faf7a8ac9a26c9342f7c1e5ab8eb0eba",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD3_fixed",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/a880ba4d49aaa51262a76be06242b2eb42d20063/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/deploy/gear_assembly/config/ur_10e/joint_pos_env_cfg.py",
+    "revision": "a880ba4d49aaa51262a76be06242b2eb42d20063",
+    "path": "source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/deploy/gear_assembly/config/ur_10e/joint_pos_env_cfg.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "8ef994bea307febb37f653ba1405b7ad220bed6a1508615f73f827dd390bf1a5",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD4_field_semantics",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/mdp/observations.py",
+    "revision": "37ddf626871758333d6ed89cf64ad702aef127d0",
+    "path": "source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/mdp/observations.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "d2f9297f98c624a6a5c8c1a42c3221b4d51a46a4e5cb531190ef85a1bf079237",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD5_old",
+    "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/53ed0ff33019aa29f4ca12aefaa67d2d53e65112/robosuite/examples/third_party_controller/mink_controller.py",
+    "revision": "53ed0ff33019aa29f4ca12aefaa67d2d53e65112",
+    "path": "robosuite/examples/third_party_controller/mink_controller.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "6e24e7038e2abf417a5ea9ac6302754ff874c8e95ccfd4fc98c9f549b2cc1fb2",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD5_fixed",
+    "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/43a498d4e2adc445012fa9d6e00821d5c22a14e3/robosuite/examples/third_party_controller/mink_controller.py",
+    "revision": "43a498d4e2adc445012fa9d6e00821d5c22a14e3",
+    "path": "robosuite/examples/third_party_controller/mink_controller.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "f04576764d571b1121d8216d354305179340a46f440c429ff2b9e81acd066fda",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD6_old",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/072217ef94d2ac8710a2113048a398bc4b69efec/src/openpi/policies/aloha_policy.py",
+    "revision": "072217ef94d2ac8710a2113048a398bc4b69efec",
+    "path": "src/openpi/policies/aloha_policy.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "2b7eb887528a4339421185bbdd0958d0a94fa9b03dc300b0fe9bd8f4c7023abd",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD6_fixed",
+    "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/acda45e1544031df86d5ac68e86892a510cb47af/src/openpi/policies/aloha_policy.py",
+    "revision": "acda45e1544031df86d5ac68e86892a510cb47af",
+    "path": "src/openpi/policies/aloha_policy.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "be600dfd1ede817519ba65eed753278044e70c144c688528dfb818d1b6b31c7c",
+    "hash_match": null,
+    "stderr": ""
+  },
+  {
+    "case": "RD2_fixed",
+    "url": "https://raw.githubusercontent.com/huggingface/lerobot/ec40ccde0d892d6ada167f371e93eef997b2e669/src/lerobot/datasets/v30/convert_dataset_v21_to_v30.py",
+    "revision": "ec40ccde0d892d6ada167f371e93eef997b2e669",
+    "path": "src/lerobot/datasets/v30/convert_dataset_v21_to_v30.py",
+    "exit_code": 0,
+    "expected_sha256": null,
+    "actual_sha256": "7441e8cbfbe453cc1137c67ce12552541b6267f2d268ab3e6805e571fd44b87d",
+    "hash_match": null,
+    "stderr": ""
+  }
+]

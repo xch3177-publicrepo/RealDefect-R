@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-09-16T03:53:15.593208+00:00",
+  "outcomes": [
+    {
+      "case": "RD1",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD2",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD3",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD4",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD5",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD6",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD7",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD8",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "expected_recorded_outcome": true
+    }
+  ],
+  "case_results": {
+    "real-defect-groot-172-audit.json": "00aeb877a333398701a6467e098f17a959cdd47a4ba3b7a847aab703a5005bb8",
+    "real-defect-groot-172.json": "b0a1c04f8a7d514d4ae9cad2c0d97f6169fc9b5501ff834a00198eb9b710b15b",
+    "real-defect-isaaclab-4559.json": "8fa6bc23ec73c22bbe8b499b2a997fe015514761d721a448bb5ab344067c07e4",
+    "real-defect-isaaclab-quaternion-migration.json": "447d60647e12ef02cf3d261402898eb82e9682761d68f27d60e052e968534153",
+    "real-defect-lerobot-2057.json": "c5578544507ad62d64cc4927470daa1d4b2a2578d1784aff1effa7f05aff4ec6",
+    "real-defect-lerobot-2610.json": "adffd92c95b6aad49a29ac2be2aaea15e0c75b5fd957109ee7390f5f0b07c3a9",
+    "real-defect-openpi-557.json": "a8b7c48f762e4d6d87580dd48400f46cef887e6baa593792ccc7136e8fd440ee",
+    "real-defect-openpi-570-audit.json": "8d45b6922446a1550eeed309f5f37c351c1a8179fbf73f0a395b1a22c029e5a6",
+    "real-defect-openpi-570.json": "ef842ec62150e65893f0d1198ad255575539db52bc919af4cee143a7bdbfc05a",
+    "real-defect-robosuite-626.json": "222d3837f05f86f975cfa571b12ba472d45ae2201b6e7079ce06ccfc30f39d05"
+  },
+  "seconds": 860.1271670409478,
+  "interpretation": "expected process outcomes recorded; RD8 remains a scientific negative, not reproduced"
+}

@@ -1,0 +1,158 @@
+{
+  "buggy_issues": [
+    "episode 4 starts at 285, expected 1128"
+  ],
+  "buggy_rows": [
+    {
+      "dataset_from_index": 0,
+      "dataset_to_index": 214,
+      "episode_index": 0,
+      "length": 214
+    },
+    {
+      "dataset_from_index": 214,
+      "dataset_to_index": 498,
+      "episode_index": 1,
+      "length": 284
+    },
+    {
+      "dataset_from_index": 498,
+      "dataset_to_index": 843,
+      "episode_index": 2,
+      "length": 345
+    },
+    {
+      "dataset_from_index": 843,
+      "dataset_to_index": 1128,
+      "episode_index": 3,
+      "length": 285
+    },
+    {
+      "dataset_from_index": 285,
+      "dataset_to_index": 563,
+      "episode_index": 4,
+      "length": 278
+    }
+  ],
+  "file_lfs_evidence": [
+    {
+      "sha256": "ef7e4c224eccd84b6467987d8b65777b38c4d533c1e4bc3084234eb2edf5f040",
+      "size": 28005402
+    },
+    {
+      "sha256": "ee424759f47e856d7b2f93706d70cb0cefe4366d477e54daff9bb6dc65b905df",
+      "size": 37410833
+    },
+    {
+      "sha256": "27625daed9225e5136088b4adc06e0af594da8024a3fd64a911543c4a510266b",
+      "size": 35344252
+    },
+    {
+      "sha256": "e9308a33462de5c06b7594bdfe96def4b6b17cf84cb958cd6f81e3170b15f4dc",
+      "size": 28705859
+    },
+    {
+      "sha256": "68d449be4c75832e9b72cbb4127e048e28a45ff7b1023af6ca5cb5a4ac17e0f7",
+      "size": 36225726
+    }
+  ],
+  "fixed_issues": [],
+  "fixed_rows": [
+    {
+      "dataset_from_index": 0,
+      "dataset_to_index": 214,
+      "episode_index": 0,
+      "length": 214
+    },
+    {
+      "dataset_from_index": 214,
+      "dataset_to_index": 498,
+      "episode_index": 1,
+      "length": 284
+    },
+    {
+      "dataset_from_index": 498,
+      "dataset_to_index": 843,
+      "episode_index": 2,
+      "length": 345
+    },
+    {
+      "dataset_from_index": 843,
+      "dataset_to_index": 1128,
+      "episode_index": 3,
+      "length": 285
+    },
+    {
+      "dataset_from_index": 1128,
+      "dataset_to_index": 1406,
+      "episode_index": 4,
+      "length": 278
+    }
+  ],
+  "frozen_inputs": {
+    "dataset": "HuggingFaceVLA/libero",
+    "dataset_revision": "affa19c0de0f6bce2a7edd26dddef8a532e7e6f6",
+    "episodes_sha256": "0479a2ced6117700e4638a1da54dccd9f60ae5f47485ea6d91390c869befcf08",
+    "merged_fix_commit": "ec40ccde0d892d6ada167f371e93eef997b2e669"
+  },
+  "limitations": [
+    "This executes the historical metadata-index loop, not the full converter dependency stack.",
+    "The first five public episode lengths and actual LFS sizes are sufficient to cross the default 100 MiB file boundary.",
+    "The contract checks cross-row global continuity; each faulty row remains individually well typed and length-consistent."
+  ],
+  "public_episode_metadata": [
+    {
+      "episode_index": 0,
+      "length": 214,
+      "tasks": [
+        "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      ]
+    },
+    {
+      "episode_index": 1,
+      "length": 284,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ]
+    },
+    {
+      "episode_index": 2,
+      "length": 345,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ]
+    },
+    {
+      "episode_index": 3,
+      "length": 285,
+      "tasks": [
+        "put the yellow and white mug in the microwave and close it"
+      ]
+    },
+    {
+      "episode_index": 4,
+      "length": 278,
+      "tasks": [
+        "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      ]
+    }
+  ],
+  "sources": {
+    "dataset": "https://huggingface.co/datasets/HuggingFaceVLA/libero",
+    "pull_request": "https://github.com/huggingface/lerobot/pull/2057",
+    "release_notes": "https://github.com/huggingface/lerobot/releases"
+  },
+  "summary": {
+    "buggy_contract_accepted": false,
+    "buggy_contract_violations": 1,
+    "case": "LeRobot PR #2057: v2.1-to-v3 global frame offset reset",
+    "episodes_evaluated": 5,
+    "evidence_class": "merged upstream bugfix reproduced with public v2.1 metadata and file sizes",
+    "first_output_file_closes_after_episode": 2,
+    "fixed_contract_accepted": true,
+    "fixed_contract_violations": 0,
+    "full_upstream_converter_execution": false,
+    "reproduced": true,
+    "target_file_size_mb": 100.0
+  }
+}

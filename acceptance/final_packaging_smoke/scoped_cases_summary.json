@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-09-16T03:54:32.968832+00:00",
+  "outcomes": [
+    {
+      "case": "RD3",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    },
+    {
+      "case": "RD6",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expected_recorded_outcome": true
+    }
+  ],
+  "case_results": {
+    "real-defect-isaaclab-4559.json": "8fa6bc23ec73c22bbe8b499b2a997fe015514761d721a448bb5ab344067c07e4",
+    "real-defect-openpi-557.json": "a8b7c48f762e4d6d87580dd48400f46cef887e6baa593792ccc7136e8fd440ee"
+  },
+  "seconds": 0.18113366700708866,
+  "interpretation": "expected process outcomes recorded; RD8 remains a scientific negative, not reproduced"
+}

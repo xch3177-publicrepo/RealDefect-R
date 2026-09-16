@@ -1,0 +1,59 @@
+{
+  "amendment": "A3",
+  "generated_utc": "2026-09-15T00:15:30.700366+00:00",
+  "decision_boundary_deg": 1e-06,
+  "decision_boundary_changed": false,
+  "evaluation_changed": "trace/arccos replaced by relative-quaternion 2*atan2(||vec||,|w|)",
+  "samples_per_check": 20000,
+  "seed": 20260915,
+  "numpy": "1.26.4",
+  "checks": {
+    "V1_identical_max_deg": 1.4575132579752722e-14,
+    "V1_criterion_deg": 1e-12,
+    "V1_identical_negligible": true,
+    "V1b_same_convention_exactly_zero": true,
+    "V2_double_cover_max_deg": 1.4575132579752722e-14,
+    "V2_double_cover_negligible": true,
+    "V2b_same_convention_negated_exactly_zero": true,
+    "V3_boundary_straddle": {
+      "below": {
+        "applied_angle_deg": 5e-07,
+        "max_relative_error": 3.717541631654978e-08,
+        "accepted_fraction": 1.0,
+        "classified_correctly": true
+      },
+      "just_below": {
+        "applied_angle_deg": 9.9e-07,
+        "max_relative_error": 1.8075920092514232e-08,
+        "accepted_fraction": 1.0,
+        "classified_correctly": true
+      },
+      "just_above": {
+        "applied_angle_deg": 1.0099999999999999e-06,
+        "max_relative_error": 1.6571988483778438e-08,
+        "accepted_fraction": 0.0,
+        "classified_correctly": true
+      },
+      "above": {
+        "applied_angle_deg": 2e-06,
+        "max_relative_error": 1.0972035776544422e-08,
+        "accepted_fraction": 0.0,
+        "classified_correctly": true
+      }
+    },
+    "V4_stable_max_relative_error_vs_applied": 1.9947651788910808e-11,
+    "V4_agreement_with_legacy_at_or_above_1_deg": 3.5197631847184793e-12,
+    "V4_descriptive_small_angle_disagreement": {
+      "max_relative_disagreement": 3.40440221989393e-06,
+      "legacy_max_relative_error_vs_applied": 3.4044005293223965e-06,
+      "stable_max_relative_error_vs_applied": 1.9947651788910808e-11
+    },
+    "V5_legacy_floor_on_identical_orientations_deg": {
+      "max": 2.699869328381916e-06,
+      "fraction_above_1e_6_deg": 0.05555
+    },
+    "V5_stable_floor_on_identical_orientations_deg": 1.4575132579752722e-14
+  },
+  "failures": [],
+  "status": "PASS"
+}

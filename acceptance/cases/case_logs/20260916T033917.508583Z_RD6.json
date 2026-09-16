@@ -1,0 +1,14 @@
+{
+  "name": "RD6",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/run_real_defect_openpi_557.py"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:17.508583+00:00",
+  "finished_utc": "2026-09-16T03:39:17.555624+00:00",
+  "duration_seconds": 0.04701916710473597,
+  "exit_code": 0,
+  "output_file": "20260916T033917.508583Z_RD6.log"
+}

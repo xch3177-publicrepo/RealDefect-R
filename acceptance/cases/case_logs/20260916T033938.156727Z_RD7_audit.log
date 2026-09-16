@@ -1,0 +1,8 @@
+{
+  "checkpoint_count": 10,
+  "event_count": 32,
+  "output": "<CASES_RUN>/cases-all/code/results/real-defect-groot-172-audit.json",
+  "output_sha256": "00aeb877a333398701a6467e098f17a959cdd47a4ba3b7a847aab703a5005bb8",
+  "result_sha256": "b0a1c04f8a7d514d4ae9cad2c0d97f6169fc9b5501ff834a00198eb9b710b15b",
+  "status": "AUDIT_PASS"
+}

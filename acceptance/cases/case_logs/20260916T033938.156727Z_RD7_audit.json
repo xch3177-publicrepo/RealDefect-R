@@ -1,0 +1,18 @@
+{
+  "name": "RD7_audit",
+  "argv": [
+    "<ENVIRONMENT>/bin/python",
+    "-B",
+    "<CASES_RUN>/cases-all/code/scripts/audit_real_defect_groot_172.py",
+    "--run-dir",
+    "<CASES_RUN>/cases-all/code/runs/p13-real-defect-groot-172",
+    "--result",
+    "<CASES_RUN>/cases-all/code/results/real-defect-groot-172.json"
+  ],
+  "cwd": "<CASES_RUN>/cases-all/code",
+  "started_utc": "2026-09-16T03:39:38.156727+00:00",
+  "finished_utc": "2026-09-16T03:39:40.708718+00:00",
+  "duration_seconds": 2.5519527080468833,
+  "exit_code": 0,
+  "output_file": "20260916T033938.156727Z_RD7_audit.log"
+}

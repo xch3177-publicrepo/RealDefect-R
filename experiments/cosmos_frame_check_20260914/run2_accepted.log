@@ -1,0 +1,82 @@
+success/chunk-000/file-015 rows=315748 eps=1247 fail=0 fetched_MiB=1.6 charged_MiB=182.8
+success/chunk-000/file-014 rows=328770 eps=1156 fail=0 fetched_MiB=3.4 charged_MiB=184.6
+success/chunk-000/file-028 rows=317041 eps=1881 fail=0 fetched_MiB=5.0 charged_MiB=186.2
+success/chunk-000/file-042 rows=316246 eps=841 fail=0 fetched_MiB=6.8 charged_MiB=188.0
+success/chunk-000/file-045 rows=316373 eps=1001 fail=0 fetched_MiB=8.5 charged_MiB=189.7
+failure/chunk-000/file-008 rows=154731 eps=567 fail=0 fetched_MiB=9.5 charged_MiB=190.7
+success/chunk-000/file-061 rows=247627 eps=40 fail=0 fetched_MiB=11.3 charged_MiB=192.5
+success/chunk-000/file-051 rows=315628 eps=1244 fail=0 fetched_MiB=13.0 charged_MiB=194.2
+failure/chunk-000/file-000 rows=319476 eps=1534 fail=0 fetched_MiB=14.6 charged_MiB=195.8
+success/chunk-000/file-052 rows=316904 eps=1270 fail=0 fetched_MiB=16.3 charged_MiB=197.5
+success/chunk-000/file-033 rows=283950 eps=1425 fail=0 fetched_MiB=17.8 charged_MiB=199.0
+success/chunk-000/file-006 rows=308819 eps=894 fail=0 fetched_MiB=19.5 charged_MiB=200.7
+success/chunk-000/file-011 rows=240951 eps=1493 fail=0 fetched_MiB=20.9 charged_MiB=202.1
+success/chunk-000/file-055 rows=315989 eps=422 fail=0 fetched_MiB=22.9 charged_MiB=204.1
+success/chunk-000/file-056 rows=315853 eps=463 fail=0 fetched_MiB=24.9 charged_MiB=206.0
+success/chunk-000/file-020 rows=315110 eps=1479 fail=0 fetched_MiB=26.5 charged_MiB=207.7
+success/chunk-000/file-032 rows=314027 eps=1236 fail=0 fetched_MiB=28.1 charged_MiB=209.3
+success/chunk-000/file-001 rows=312661 eps=1247 fail=0 fetched_MiB=29.8 charged_MiB=211.0
+success/chunk-000/file-058 rows=312278 eps=134 fail=0 fetched_MiB=31.8 charged_MiB=213.0
+success/chunk-000/file-002 rows=308005 eps=949 fail=0 fetched_MiB=33.5 charged_MiB=214.7
+success/chunk-000/file-013 rows=319332 eps=915 fail=0 fetched_MiB=35.3 charged_MiB=216.5
+success/chunk-000/file-031 rows=315407 eps=842 fail=0 fetched_MiB=37.0 charged_MiB=218.2
+success/chunk-000/file-050 rows=316992 eps=1224 fail=0 fetched_MiB=38.7 charged_MiB=219.9
+success/chunk-000/file-044 rows=316601 eps=1109 fail=0 fetched_MiB=40.3 charged_MiB=221.5
+success/chunk-000/file-022 rows=179078 eps=510 fail=0 fetched_MiB=41.4 charged_MiB=222.6
+success/chunk-000/file-004 rows=313246 eps=617 fail=0 fetched_MiB=43.2 charged_MiB=224.4
+failure/chunk-000/file-009 rows=332222 eps=1009 fail=0 fetched_MiB=44.9 charged_MiB=226.1
+success/chunk-000/file-027 rows=254778 eps=395 fail=0 fetched_MiB=46.3 charged_MiB=227.5
+failure/chunk-000/file-006 rows=372523 eps=2686 fail=0 fetched_MiB=48.2 charged_MiB=229.4
+success/chunk-000/file-005 rows=309897 eps=539 fail=0 fetched_MiB=50.0 charged_MiB=231.2
+success/chunk-000/file-003 rows=312092 eps=404 fail=0 fetched_MiB=51.6 charged_MiB=232.8
+success/chunk-000/file-021 rows=314739 eps=1182 fail=0 fetched_MiB=53.3 charged_MiB=234.5
+success/chunk-000/file-023 rows=319908 eps=1397 fail=0 fetched_MiB=54.9 charged_MiB=236.1
+success/chunk-000/file-039 rows=319476 eps=885 fail=0 fetched_MiB=56.7 charged_MiB=237.9
+success/chunk-000/file-040 rows=315320 eps=820 fail=0 fetched_MiB=58.4 charged_MiB=239.6
+success/chunk-000/file-036 rows=318359 eps=313 fail=0 fetched_MiB=60.3 charged_MiB=241.5
+failure/chunk-000/file-001 rows=317101 eps=1130 fail=0 fetched_MiB=62.0 charged_MiB=243.2
+success/chunk-000/file-030 rows=373940 eps=2050 fail=0 fetched_MiB=63.9 charged_MiB=245.1
+failure/chunk-000/file-002 rows=323897 eps=1295 fail=0 fetched_MiB=65.5 charged_MiB=246.7
+success/chunk-000/file-057 rows=315699 eps=412 fail=0 fetched_MiB=67.5 charged_MiB=248.7
+success/chunk-000/file-000 rows=313318 eps=1216 fail=0 fetched_MiB=69.2 charged_MiB=250.4
+failure/chunk-000/file-011 rows=353002 eps=605 fail=0 fetched_MiB=71.1 charged_MiB=252.3
+success/chunk-000/file-029 rows=314243 eps=1483 fail=0 fetched_MiB=72.8 charged_MiB=254.0
+success/chunk-000/file-017 rows=315011 eps=686 fail=0 fetched_MiB=74.5 charged_MiB=255.7
+success/chunk-000/file-037 rows=313239 eps=1412 fail=0 fetched_MiB=76.2 charged_MiB=257.4
+success/chunk-000/file-048 rows=315645 eps=1124 fail=0 fetched_MiB=77.8 charged_MiB=259.0
+failure/chunk-000/file-005 rows=273601 eps=759 fail=0 fetched_MiB=79.4 charged_MiB=260.6
+success/chunk-000/file-007 rows=311573 eps=758 fail=0 fetched_MiB=81.1 charged_MiB=262.3
+success/chunk-000/file-025 rows=150210 eps=491 fail=0 fetched_MiB=82.1 charged_MiB=263.3
+success/chunk-000/file-047 rows=317205 eps=1158 fail=0 fetched_MiB=83.8 charged_MiB=265.0
+failure/chunk-000/file-004 rows=343687 eps=1295 fail=0 fetched_MiB=85.6 charged_MiB=266.8
+success/chunk-000/file-026 rows=316268 eps=604 fail=0 fetched_MiB=87.3 charged_MiB=268.5
+success/chunk-000/file-034 rows=317649 eps=1217 fail=0 fetched_MiB=88.9 charged_MiB=270.1
+success/chunk-000/file-035 rows=314883 eps=420 fail=0 fetched_MiB=90.8 charged_MiB=272.0
+success/chunk-000/file-041 rows=315334 eps=842 fail=0 fetched_MiB=92.5 charged_MiB=273.7
+success/chunk-000/file-012 rows=176885 eps=1115 fail=0 fetched_MiB=93.6 charged_MiB=274.8
+success/chunk-000/file-053 rows=212663 eps=891 fail=0 fetched_MiB=94.8 charged_MiB=276.0
+success/chunk-000/file-038 rows=316930 eps=1061 fail=0 fetched_MiB=96.5 charged_MiB=277.7
+success/chunk-000/file-010 rows=320951 eps=1706 fail=0 fetched_MiB=98.1 charged_MiB=279.3
+success/chunk-000/file-009 rows=320602 eps=1503 fail=0 fetched_MiB=99.8 charged_MiB=281.0
+success/chunk-000/file-008 rows=212837 eps=392 fail=0 fetched_MiB=101.1 charged_MiB=282.3
+success/chunk-000/file-060 rows=313689 eps=137 fail=0 fetched_MiB=103.1 charged_MiB=284.3
+success/chunk-000/file-049 rows=316354 eps=1246 fail=0 fetched_MiB=104.7 charged_MiB=285.9
+success/chunk-000/file-024 rows=320456 eps=906 fail=0 fetched_MiB=106.4 charged_MiB=287.6
+failure/chunk-000/file-007 rows=330861 eps=1505 fail=0 fetched_MiB=108.1 charged_MiB=289.2
+failure/chunk-000/file-003 rows=383603 eps=1169 fail=0 fetched_MiB=110.1 charged_MiB=291.3
+success/chunk-000/file-046 rows=315535 eps=1044 fail=0 fetched_MiB=111.7 charged_MiB=292.9
+success/chunk-000/file-016 rows=314214 eps=1012 fail=0 fetched_MiB=113.4 charged_MiB=294.6
+success/chunk-000/file-043 rows=316072 eps=930 fail=0 fetched_MiB=115.1 charged_MiB=296.3
+success/chunk-000/file-059 rows=313017 eps=119 fail=0 fetched_MiB=117.2 charged_MiB=298.3
+success/chunk-000/file-019 rows=253148 eps=520 fail=0 fetched_MiB=118.7 charged_MiB=299.9
+success/chunk-000/file-054 rows=318527 eps=657 fail=0 fetched_MiB=120.4 charged_MiB=301.6
+success/chunk-000/file-018 rows=317979 eps=953 fail=0 fetched_MiB=122.1 charged_MiB=303.3
+failure/chunk-000/file-010 rows=216727 eps=714 fail=0 fetched_MiB=123.3 charged_MiB=304.5
+Traceback (most recent call last):
+  File "<LOCAL_PATH:475333b7cf5c71e7>", line 395, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "<LOCAL_PATH:475333b7cf5c71e7>", line 388, in main
+    print("\n" + json.dumps({k: report[k] for k in (
+                                ~~~~~~^^^
+KeyError: 'mebibytes_transferred'

@@ -1,0 +1,14 @@
+Collecting numpydantic==1.8.1
+  Using cached numpydantic-1.8.1-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: pydantic==2.13.5 in <ENVIRONMENT>/lib/python3.12/site-packages (2.13.5)
+Requirement already satisfied: numpy>=1.24.0 in <ENVIRONMENT>/lib/python3.12/site-packages (from numpydantic==1.8.1) (1.26.4)
+Requirement already satisfied: annotated-types>=0.6.0 in <ENVIRONMENT>/lib/python3.12/site-packages (from pydantic==2.13.5) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in <ENVIRONMENT>/lib/python3.12/site-packages (from pydantic==2.13.5) (2.46.5)
+Requirement already satisfied: typing-extensions>=4.14.1 in <ENVIRONMENT>/lib/python3.12/site-packages (from pydantic==2.13.5) (4.16.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in <ENVIRONMENT>/lib/python3.12/site-packages (from pydantic==2.13.5) (0.4.4)
+Using cached numpydantic-1.8.1-py3-none-any.whl (87 kB)
+Installing collected packages: numpydantic
+Successfully installed numpydantic-1.8.1
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: <ENVIRONMENT>/bin/python -m pip install --upgrade pip

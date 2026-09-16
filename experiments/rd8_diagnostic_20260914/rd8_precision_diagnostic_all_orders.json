@@ -1,0 +1,5176 @@
+{
+  "diagnostic_id": "RD8-PD",
+  "relationship_to_rd8": "separate diagnostic; RD8's frozen criterion, denominator and NOT_REPRODUCED outcome are unchanged and not re-decided by this run",
+  "generated_utc": "2026-09-15T00:27:05.229302+00:00",
+  "environment": {
+    "python_version": "3.12.3",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "numpy": "1.26.4",
+    "pydantic": "2.13.5",
+    "numpydantic": "1.8.1"
+  },
+  "pinned_reducer": {
+    "path": "reproducibility/light_inputs/upstream_pinned_sources/RD8_fixed_stats.py",
+    "sha256": "6c2cea4946fb07e51801530400d2b2fd94730e195cd290d6b6960114eca9739d",
+    "variance_expression": "self._mean_of_squares - self._mean ** 2",
+    "imported_unmodified": true
+  },
+  "input": {
+    "projection_dtype": {
+      "state": "float32",
+      "actions": "float32"
+    },
+    "index_dtypes": {
+      "episode_index": "int64",
+      "frame_index": "int64",
+      "timestamp": "float32"
+    },
+    "rows": 36900,
+    "components": 14,
+    "orders_executed": [
+      "natural",
+      "episode_cluster_seed_0",
+      "episode_cluster_seed_1",
+      "episode_cluster_seed_2",
+      "episode_cluster_seed_3",
+      "episode_cluster_seed_4",
+      "episode_cluster_seed_5",
+      "episode_cluster_seed_6",
+      "episode_cluster_seed_7",
+      "episode_cluster_seed_8",
+      "episode_cluster_seed_9"
+    ],
+    "order_definition": "frozen RD8 complete_orders; frame order preserved inside each episode",
+    "episode_files": 123,
+    "recovery_report": "experiments/rd8_diagnostic_20260914/rd8_projection_recovery.json"
+  },
+  "oracle": {
+    "definition": "float64 two-pass full-array mean and population std",
+    "crosscheck_against_frozen_rd8_oracle": {
+      "state": {
+        "max_abs_mean_difference": 0.0,
+        "max_abs_std_difference": 0.0,
+        "frozen_count": 36900
+      },
+      "actions": {
+        "max_abs_mean_difference": 0.0,
+        "max_abs_std_difference": 0.0,
+        "frozen_count": 36900
+      }
+    }
+  },
+  "tolerance": 1e-05,
+  "batch_sizes": [
+    1,
+    8,
+    32,
+    128
+  ],
+  "scope": "all_orders",
+  "arm_rollup": {
+    "D1_native_pinned_float32": {
+      "conditions": 44,
+      "within_1e_5": 20,
+      "above_1e_5": 24,
+      "max_absolute_mean_error": 2.8040971213227905e-05,
+      "max_absolute_std_error": 0.00032345332924951786
+    },
+    "D2_pinned_float64_input": {
+      "conditions": 44,
+      "within_1e_5": 44,
+      "above_1e_5": 0,
+      "max_absolute_mean_error": 1.2212453270876722e-14,
+      "max_absolute_std_error": 1.4906131884373508e-13
+    },
+    "D3_float64_accumulator": {
+      "conditions": 44,
+      "within_1e_5": 44,
+      "above_1e_5": 0,
+      "max_absolute_mean_error": 1.2212453270876722e-14,
+      "max_absolute_std_error": 1.514470776564636e-08
+    },
+    "D4_stable_variance_float32": {
+      "conditions": 44,
+      "within_1e_5": 35,
+      "above_1e_5": 9,
+      "max_absolute_mean_error": 2.8040971213227905e-05,
+      "max_absolute_std_error": 4.688590206719523e-06
+    },
+    "D5_float64_accum_stable_variance": {
+      "conditions": 44,
+      "within_1e_5": 44,
+      "above_1e_5": 0,
+      "max_absolute_mean_error": 1.2212453270876722e-14,
+      "max_absolute_std_error": 1.8207657603852567e-14
+    }
+  },
+  "d1_vs_frozen_rd8": {
+    "compared_conditions": 44,
+    "exact_matches": 44,
+    "note": "D1 re-executes the unmodified pinned reducer on the same verified projections; exact agreement with the archived per-condition errors is the control that the diagnostic instrument reproduces the frozen replay before any variant is read",
+    "per_condition": [
+      {
+        "order_name": "natural",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "natural",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "natural",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "natural",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_0",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_0",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_0",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_0",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_1",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_1",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_1",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_1",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_2",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_2",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_2",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_2",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_3",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_3",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_3",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_3",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_4",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_4",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_4",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_4",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_5",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_5",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_5",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_5",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_6",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_6",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_6",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_6",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_7",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_7",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_7",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_7",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_8",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_8",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_8",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_8",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_9",
+        "batch_size": 1,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_9",
+        "batch_size": 8,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_9",
+        "batch_size": 32,
+        "exact_match_with_frozen_result": true
+      },
+      {
+        "order_name": "episode_cluster_seed_9",
+        "batch_size": 128,
+        "exact_match_with_frozen_result": true
+      }
+    ]
+  },
+  "arms": [
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.556280678861938e-06,
+          "max_absolute_std_error": 0.0002099039333618713,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.578904092140569e-06,
+          "max_absolute_std_error": 2.646573738489255e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 8.556280678861938e-06,
+      "max_absolute_std_error": 0.0002099039333618713,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.2878543599326164e-06,
+          "max_absolute_std_error": 4.163600758416708e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 9.297417996600998e-07,
+          "max_absolute_std_error": 1.3134552966642676e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.2878543599326164e-06,
+      "max_absolute_std_error": 4.163600758416708e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.27024760271577e-07,
+          "max_absolute_std_error": 3.0609148300719813e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.315601078192955e-07,
+          "max_absolute_std_error": 5.2688355866442604e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.315601078192955e-07,
+      "max_absolute_std_error": 5.2688355866442604e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.308396998580321e-07,
+          "max_absolute_std_error": 2.517022446496542e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.3387473446767615e-07,
+          "max_absolute_std_error": 3.0932660523425026e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.308396998580321e-07,
+      "max_absolute_std_error": 3.0932660523425026e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.439293542825908e-15,
+          "max_absolute_std_error": 1.9845236565174673e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.4416913763379853e-15,
+          "max_absolute_std_error": 6.17284001691587e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.439293542825908e-15,
+      "max_absolute_std_error": 6.17284001691587e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.4424906541753444e-15,
+          "max_absolute_std_error": 3.338995746560158e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.4424906541753444e-15,
+          "max_absolute_std_error": 1.725009024511337e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.4424906541753444e-15,
+      "max_absolute_std_error": 3.338995746560158e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.9262369477246466e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 6.827871601444713e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.9262369477246466e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "natural",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.765254609153999e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 7.049916206369744e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.765254609153999e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.439293542825908e-15,
+          "max_absolute_std_error": 1.8887484354301876e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.4416913763379853e-15,
+          "max_absolute_std_error": 1.5144605500228003e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.439293542825908e-15,
+      "max_absolute_std_error": 1.5144605500228003e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.4424906541753444e-15,
+          "max_absolute_std_error": 1.888711589903558e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.4424906541753444e-15,
+          "max_absolute_std_error": 1.5144587278692612e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.4424906541753444e-15,
+      "max_absolute_std_error": 1.5144587278692612e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.888756623324994e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.5144587278692612e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.5144587278692612e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.888752529377591e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.5144587278692612e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.5144587278692612e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.556280678861938e-06,
+          "max_absolute_std_error": 2.053615503205819e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.578904092140569e-06,
+          "max_absolute_std_error": 1.2802247580517845e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.556280678861938e-06,
+      "max_absolute_std_error": 2.053615503205819e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.2878543599326164e-06,
+          "max_absolute_std_error": 8.168191241164635e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 9.297417996600998e-07,
+          "max_absolute_std_error": 1.076880524197854e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.2878543599326164e-06,
+      "max_absolute_std_error": 1.076880524197854e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.27024760271577e-07,
+          "max_absolute_std_error": 2.3567383755640492e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.315601078192955e-07,
+          "max_absolute_std_error": 1.8077342328615131e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.315601078192955e-07,
+      "max_absolute_std_error": 2.3567383755640492e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.308396998580321e-07,
+          "max_absolute_std_error": 6.764728671670994e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.3387473446767615e-07,
+          "max_absolute_std_error": 6.833032999142841e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.308396998580321e-07,
+      "max_absolute_std_error": 6.833032999142841e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.439293542825908e-15,
+          "max_absolute_std_error": 1.6653345369377348e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.4416913763379853e-15,
+          "max_absolute_std_error": 6.772360450213455e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.439293542825908e-15,
+      "max_absolute_std_error": 1.6653345369377348e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.4424906541753444e-15,
+          "max_absolute_std_error": 1.63202784619898e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.4424906541753444e-15,
+          "max_absolute_std_error": 7.993605777301127e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.4424906541753444e-15,
+      "max_absolute_std_error": 1.63202784619898e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.6986412276764895e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 6.938893903907228e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.6986412276764895e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "natural",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.7263968032921184e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 6.994405055138486e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.7263968032921184e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1473093333269624e-05,
+          "max_absolute_std_error": 0.00019954272334207768,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.553022418698262e-06,
+          "max_absolute_std_error": 2.7099936642266398e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.1473093333269624e-05,
+      "max_absolute_std_error": 0.00019954272334207768,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0460954371627196e-06,
+          "max_absolute_std_error": 2.1203078583581503e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.938450399809668e-06,
+          "max_absolute_std_error": 4.9098051029108913e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 3.938450399809668e-06,
+      "max_absolute_std_error": 4.9098051029108913e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.5004898940881333e-07,
+          "max_absolute_std_error": 4.714943722589071e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1966367401416989e-06,
+          "max_absolute_std_error": 1.2672162490748318e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.1966367401416989e-06,
+      "max_absolute_std_error": 1.2672162490748318e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.046161128952065e-07,
+          "max_absolute_std_error": 3.5328489982056066e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.4296242373544885e-07,
+          "max_absolute_std_error": 1.8017653998364525e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.046161128952065e-07,
+      "max_absolute_std_error": 3.5328489982056066e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.440092820663267e-15,
+          "max_absolute_std_error": 6.410150188429498e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-15,
+          "max_absolute_std_error": 9.353628982466944e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.440092820663267e-15,
+      "max_absolute_std_error": 6.410150188429498e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9984014443252818e-15,
+          "max_absolute_std_error": 1.759703494030873e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.0547118733938987e-15,
+          "max_absolute_std_error": 7.327471962526033e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.9984014443252818e-15,
+      "max_absolute_std_error": 1.759703494030873e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.6708856520608606e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 8.104628079763643e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.6708856520608606e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.7041923427996153e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "max_absolute_std_error": 6.855627177060342e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.7041923427996153e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.440092820663267e-15,
+          "max_absolute_std_error": 1.888727965693171e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-15,
+          "max_absolute_std_error": 1.514458020102083e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.440092820663267e-15,
+      "max_absolute_std_error": 1.514458020102083e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9984014443252818e-15,
+          "max_absolute_std_error": 1.8887433145264865e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.0547118733938987e-15,
+          "max_absolute_std_error": 1.5144583226378572e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.9984014443252818e-15,
+      "max_absolute_std_error": 1.5144583226378572e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.8887648112198008e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.514460044871324e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.514460044871324e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.888762771184993e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "max_absolute_std_error": 1.514458829177112e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.514458829177112e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1473093333269624e-05,
+          "max_absolute_std_error": 1.9083412857723303e-06,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.553022418698262e-06,
+          "max_absolute_std_error": 1.643124649564065e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1473093333269624e-05,
+      "max_absolute_std_error": 1.9083412857723303e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0460954371627196e-06,
+          "max_absolute_std_error": 8.615226076980065e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.938450399809668e-06,
+          "max_absolute_std_error": 7.69186957044754e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.938450399809668e-06,
+      "max_absolute_std_error": 8.615226076980065e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.5004898940881333e-07,
+          "max_absolute_std_error": 2.2819204864577003e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1966367401416989e-06,
+          "max_absolute_std_error": 2.1784399287239076e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1966367401416989e-06,
+      "max_absolute_std_error": 2.2819204864577003e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.046161128952065e-07,
+          "max_absolute_std_error": 7.918043670729347e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.4296242373544885e-07,
+          "max_absolute_std_error": 7.646529492921772e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.046161128952065e-07,
+      "max_absolute_std_error": 7.918043670729347e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.440092820663267e-15,
+          "max_absolute_std_error": 1.6819878823071122e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-15,
+          "max_absolute_std_error": 7.188694084447889e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.440092820663267e-15,
+      "max_absolute_std_error": 1.6819878823071122e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9984014443252818e-15,
+          "max_absolute_std_error": 1.6986412276764895e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.0547118733938987e-15,
+          "max_absolute_std_error": 7.882583474838611e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.9984014443252818e-15,
+      "max_absolute_std_error": 1.6986412276764895e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.7319479184152442e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 7.077671781985373e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.7319479184152442e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_0",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.7208456881689926e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "max_absolute_std_error": 6.9111383282915995e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.7208456881689926e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.362046211716983e-05,
+          "max_absolute_std_error": 4.0963514812114576e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.250090435393595e-06,
+          "max_absolute_std_error": 4.6922481494807156e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.362046211716983e-05,
+      "max_absolute_std_error": 4.6922481494807156e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.268861476119383e-07,
+          "max_absolute_std_error": 1.1860050515039022e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.5079389252002926e-06,
+          "max_absolute_std_error": 2.571812911596194e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 2.5079389252002926e-06,
+      "max_absolute_std_error": 2.571812911596194e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.406803385537117e-07,
+          "max_absolute_std_error": 5.730770274298136e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.4350553192432614e-06,
+          "max_absolute_std_error": 1.2128270107172878e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.4350553192432614e-06,
+      "max_absolute_std_error": 1.2128270107172878e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.7646782596590924e-07,
+          "max_absolute_std_error": 8.987443023689146e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.0512775011916062e-07,
+          "max_absolute_std_error": 1.8017653998364525e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.7646782596590924e-07,
+      "max_absolute_std_error": 1.8017653998364525e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.773959005888173e-15,
+          "max_absolute_std_error": 2.4480417692984702e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 5.2610693579424606e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.884981308350689e-15,
+      "max_absolute_std_error": 5.2610693579424606e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.107825191113079e-15,
+          "max_absolute_std_error": 1.9539925233402755e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.1094237467877974e-15,
+          "max_absolute_std_error": 1.1296519275560968e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.107825191113079e-15,
+      "max_absolute_std_error": 1.9539925233402755e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 7.771561172376096e-16,
+          "max_absolute_std_error": 1.8707257964933888e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 7.105427357601002e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.8707257964933888e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.8041124150158794e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 7.965850201685498e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.8041124150158794e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.773959005888173e-15,
+          "max_absolute_std_error": 1.888682918393947e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 1.514460146179175e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.884981308350689e-15,
+      "max_absolute_std_error": 1.514460146179175e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.107825191113079e-15,
+          "max_absolute_std_error": 1.8887085090346645e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.1094237467877974e-15,
+          "max_absolute_std_error": 1.514459437024218e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.107825191113079e-15,
+      "max_absolute_std_error": 1.514459437024218e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 7.771561172376096e-16,
+          "max_absolute_std_error": 1.8887555963686964e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.514459538332069e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.514459538332069e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.888733086596872e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 1.514459031792814e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.514459031792814e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.362046211716983e-05,
+          "max_absolute_std_error": 2.0685166643996666e-06,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.250090435393595e-06,
+          "max_absolute_std_error": 4.688590206719523e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.362046211716983e-05,
+      "max_absolute_std_error": 4.688590206719523e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.268861476119383e-07,
+          "max_absolute_std_error": 7.297703845526859e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.5079389252002926e-06,
+          "max_absolute_std_error": 7.111704016793396e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.5079389252002926e-06,
+      "max_absolute_std_error": 7.297703845526859e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.406803385537117e-07,
+          "max_absolute_std_error": 2.0839356648649776e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.4350553192432614e-06,
+          "max_absolute_std_error": 2.816663265958752e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.4350553192432614e-06,
+      "max_absolute_std_error": 2.816663265958752e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.7646782596590924e-07,
+          "max_absolute_std_error": 7.200423943198864e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.0512775011916062e-07,
+          "max_absolute_std_error": 7.305006988200802e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.7646782596590924e-07,
+      "max_absolute_std_error": 7.305006988200802e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.773959005888173e-15,
+          "max_absolute_std_error": 1.6930901125533637e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 6.6058269965196814e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.884981308350689e-15,
+      "max_absolute_std_error": 1.6930901125533637e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.107825191113079e-15,
+          "max_absolute_std_error": 1.6764367671839864e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.1094237467877974e-15,
+          "max_absolute_std_error": 8.18789480661053e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.107825191113079e-15,
+      "max_absolute_std_error": 1.6764367671839864e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 7.771561172376096e-16,
+          "max_absolute_std_error": 1.7319479184152442e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 6.8833827526759706e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.7319479184152442e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_1",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.709743457922741e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 6.966649479522857e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.709743457922741e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.81321099002841e-06,
+          "max_absolute_std_error": 3.646781607208327e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.051508739836954e-06,
+          "max_absolute_std_error": 6.884463982019529e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 9.81321099002841e-06,
+      "max_absolute_std_error": 6.884463982019529e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.524815134301143e-07,
+          "max_absolute_std_error": 2.43016306986088e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.0181606563408607e-06,
+          "max_absolute_std_error": 1.4507555526829807e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.0181606563408607e-06,
+      "max_absolute_std_error": 1.4507555526829807e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.194942728798836e-07,
+          "max_absolute_std_error": 6.274662657873575e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.913232205585373e-07,
+          "max_absolute_std_error": 6.689346271418484e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.913232205585373e-07,
+      "max_absolute_std_error": 6.689346271418484e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.884675685103758e-07,
+          "max_absolute_std_error": 5.266286686761434e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.336953519061936e-07,
+          "max_absolute_std_error": 1.8017653998364525e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.884675685103758e-07,
+      "max_absolute_std_error": 5.266286686761434e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0658141036401503e-14,
+          "max_absolute_std_error": 1.3652967645327863e-13,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.88418203051333e-15,
+          "max_absolute_std_error": 1.5404344466674047e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0658141036401503e-14,
+      "max_absolute_std_error": 1.3652967645327863e-13,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 4.363176486776865e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 6.179778910819778e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.884981308350689e-15,
+      "max_absolute_std_error": 6.179778910819778e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.992850329202156e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 7.049916206369744e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.992850329202156e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.8263168755083825e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 8.0629947163402e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.440892098500626e-16,
+      "max_absolute_std_error": 1.8263168755083825e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0658141036401503e-14,
+          "max_absolute_std_error": 1.88889788532709e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.88418203051333e-15,
+          "max_absolute_std_error": 1.5144629800234455e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0658141036401503e-14,
+      "max_absolute_std_error": 1.5144629800234455e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 1.8886962271924546e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 1.5144527548693887e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.884981308350689e-15,
+      "max_absolute_std_error": 1.5144527548693887e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.8887474084738898e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.514460348794877e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.514460348794877e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.8887484354301876e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.514459031792814e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.440892098500626e-16,
+      "max_absolute_std_error": 1.514459031792814e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.81321099002841e-06,
+          "max_absolute_std_error": 2.433563905335223e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.051508739836954e-06,
+          "max_absolute_std_error": 2.5428229948054604e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 9.81321099002841e-06,
+      "max_absolute_std_error": 2.5428229948054604e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.524815134301143e-07,
+          "max_absolute_std_error": 6.976098345656823e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.0181606563408607e-06,
+          "max_absolute_std_error": 8.980665898716822e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0181606563408607e-06,
+      "max_absolute_std_error": 8.980665898716822e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.194942728798836e-07,
+          "max_absolute_std_error": 1.760691927810143e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.913232205585373e-07,
+          "max_absolute_std_error": 2.424154973423853e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.913232205585373e-07,
+      "max_absolute_std_error": 2.424154973423853e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.884675685103758e-07,
+          "max_absolute_std_error": 5.8611991815560316e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.336953519061936e-07,
+          "max_absolute_std_error": 9.863470332160951e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.884675685103758e-07,
+      "max_absolute_std_error": 9.863470332160951e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0658141036401503e-14,
+          "max_absolute_std_error": 1.7319479184152442e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.88418203051333e-15,
+          "max_absolute_std_error": 7.077671781985373e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0658141036401503e-14,
+      "max_absolute_std_error": 1.7319479184152442e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 1.7486012637846216e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.884981308350689e-15,
+          "max_absolute_std_error": 8.021361352916756e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.884981308350689e-15,
+      "max_absolute_std_error": 1.7486012637846216e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.687538997430238e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 7.077671781985373e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.687538997430238e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_2",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.7041923427996153e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 6.938893903907228e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.440892098500626e-16,
+      "max_absolute_std_error": 1.7041923427996153e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1353884043718843e-05,
+          "max_absolute_std_error": 4.1052476398822924e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3622987225403449e-05,
+          "max_absolute_std_error": 0.00015083572908010379,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.3622987225403449e-05,
+      "max_absolute_std_error": 0.00015083572908010379,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9341368016068117e-06,
+          "max_absolute_std_error": 2.2211454554693644e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.107118926708011e-07,
+          "max_absolute_std_error": 1.233198599252805e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.9341368016068117e-06,
+      "max_absolute_std_error": 2.2211454554693644e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.4037233058150633e-06,
+          "max_absolute_std_error": 1.4609314755303915e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.541393620576372e-07,
+          "max_absolute_std_error": 6.356620353795139e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.4037233058150633e-06,
+      "max_absolute_std_error": 1.4609314755303915e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.076768580611571e-07,
+          "max_absolute_std_error": 6.9128649986816004e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.3387473446767615e-07,
+          "max_absolute_std_error": 2.549373668767063e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.076768580611571e-07,
+      "max_absolute_std_error": 6.9128649986816004e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.176836406102666e-14,
+          "max_absolute_std_error": 1.4906131884373508e-13,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.6629367034256575e-15,
+          "max_absolute_std_error": 3.749778265671466e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.176836406102666e-14,
+      "max_absolute_std_error": 1.4906131884373508e-13,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 3.007316617953393e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 9.159339953157541e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 3.007316617953393e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.7041923427996153e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.8263168755083825e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.5543122344752192e-15,
+      "max_absolute_std_error": 1.8263168755083825e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.7819079545233762e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 6.855627177060342e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.7819079545233762e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.176836406102666e-14,
+          "max_absolute_std_error": 1.8886491398584226e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.6629367034256575e-15,
+          "max_absolute_std_error": 1.5144616644091613e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.176836406102666e-14,
+      "max_absolute_std_error": 1.5144616644091613e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.8887729991146074e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.5144604487149493e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.5144604487149493e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.8887555963686964e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.514455993945063e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.5543122344752192e-15,
+      "max_absolute_std_error": 1.514455993945063e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.8887443414827843e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 1.514457310947126e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.514457310947126e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1353884043718843e-05,
+          "max_absolute_std_error": 2.1653430038459653e-06,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3622987225403449e-05,
+          "max_absolute_std_error": 9.185964246760658e-07,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.3622987225403449e-05,
+      "max_absolute_std_error": 2.1653430038459653e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9341368016068117e-06,
+          "max_absolute_std_error": 8.250576944146548e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.107118926708011e-07,
+          "max_absolute_std_error": 8.181081295743908e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.9341368016068117e-06,
+      "max_absolute_std_error": 8.250576944146548e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.4037233058150633e-06,
+          "max_absolute_std_error": 1.7980658728600218e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.541393620576372e-07,
+          "max_absolute_std_error": 2.3314300975907365e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.4037233058150633e-06,
+      "max_absolute_std_error": 2.3314300975907365e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.076768580611571e-07,
+          "max_absolute_std_error": 4.597727884525504e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.3387473446767615e-07,
+          "max_absolute_std_error": 1.0285239226970333e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.076768580611571e-07,
+      "max_absolute_std_error": 1.0285239226970333e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.176836406102666e-14,
+          "max_absolute_std_error": 1.7708057242771247e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.6629367034256575e-15,
+          "max_absolute_std_error": 8.215650382226158e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.176836406102666e-14,
+      "max_absolute_std_error": 1.7708057242771247e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.6819878823071122e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 7.91033905045424e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.6819878823071122e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.7263968032921184e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 7.216449660063518e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.5543122344752192e-15,
+      "max_absolute_std_error": 1.7263968032921184e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_3",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.7319479184152442e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 6.855627177060342e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.7319479184152442e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1362931754188565e-05,
+          "max_absolute_std_error": 0.0001594958526336121,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.298926871640127e-05,
+          "max_absolute_std_error": 0.0001687494750443469,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.298926871640127e-05,
+      "max_absolute_std_error": 0.0001687494750443469,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.238188332670532e-06,
+          "max_absolute_std_error": 2.1203078583581503e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.50927865333928e-07,
+          "max_absolute_std_error": 2.549373668767063e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.238188332670532e-06,
+      "max_absolute_std_error": 2.1203078583581503e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.576508932954468e-06,
+          "max_absolute_std_error": 1.9469640895025675e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.068339761323145e-06,
+          "max_absolute_std_error": 9.076082271672337e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.576508932954468e-06,
+      "max_absolute_std_error": 1.9469640895025675e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.036253269974367e-07,
+          "max_absolute_std_error": 4.628084345953409e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.5290464145697484e-07,
+          "max_absolute_std_error": 1.4615889016161843e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.036253269974367e-07,
+      "max_absolute_std_error": 4.628084345953409e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-14,
+          "max_absolute_std_error": 1.3165857293273575e-13,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-15,
+          "max_absolute_std_error": 6.888933867799096e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-14,
+      "max_absolute_std_error": 1.3165857293273575e-13,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.219646771412954e-15,
+          "max_absolute_std_error": 2.008115895790752e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.886579864025407e-15,
+          "max_absolute_std_error": 2.628453010800058e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.219646771412954e-15,
+      "max_absolute_std_error": 2.628453010800058e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.84297022087776e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 7.494005416219807e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.84297022087776e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.7930101847696278e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "max_absolute_std_error": 6.938893903907228e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.7930101847696278e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-14,
+          "max_absolute_std_error": 1.8886317371125116e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-15,
+          "max_absolute_std_error": 1.514454374407226e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-14,
+      "max_absolute_std_error": 1.514454374407226e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.219646771412954e-15,
+          "max_absolute_std_error": 1.888716696929471e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.886579864025407e-15,
+          "max_absolute_std_error": 1.5144622722562673e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.219646771412954e-15,
+      "max_absolute_std_error": 1.5144622722562673e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.888739220579083e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 1.514458930484963e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.514458930484963e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.8887371805442754e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "max_absolute_std_error": 1.5144582213300062e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.5144582213300062e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1362931754188565e-05,
+          "max_absolute_std_error": 1.6363829897780846e-06,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.298926871640127e-05,
+          "max_absolute_std_error": 3.5815542558659264e-06,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.298926871640127e-05,
+      "max_absolute_std_error": 3.5815542558659264e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.238188332670532e-06,
+          "max_absolute_std_error": 8.101565332208072e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.50927865333928e-07,
+          "max_absolute_std_error": 7.713189288244271e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.238188332670532e-06,
+      "max_absolute_std_error": 8.101565332208072e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.576508932954468e-06,
+          "max_absolute_std_error": 2.464612210428818e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.068339761323145e-06,
+          "max_absolute_std_error": 1.34486061731387e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.576508932954468e-06,
+      "max_absolute_std_error": 2.464612210428818e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.036253269974367e-07,
+          "max_absolute_std_error": 5.342785944217887e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.5290464145697484e-07,
+          "max_absolute_std_error": 1.0215501675125971e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.036253269974367e-07,
+      "max_absolute_std_error": 1.0215501675125971e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-14,
+          "max_absolute_std_error": 1.6486811915683575e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-15,
+          "max_absolute_std_error": 7.105427357601002e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-14,
+      "max_absolute_std_error": 1.6486811915683575e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.219646771412954e-15,
+          "max_absolute_std_error": 1.6819878823071122e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.886579864025407e-15,
+          "max_absolute_std_error": 7.965850201685498e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.219646771412954e-15,
+      "max_absolute_std_error": 1.6819878823071122e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.7486012637846216e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 6.9111383282915995e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.1102230246251565e-15,
+      "max_absolute_std_error": 1.7486012637846216e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_4",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.715294573045867e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "max_absolute_std_error": 6.966649479522857e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.715294573045867e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.8040971213227905e-05,
+          "max_absolute_std_error": 0.00032345332924951786,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3205754711975715e-05,
+          "max_absolute_std_error": 0.00027832516388330564,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 2.8040971213227905e-05,
+      "max_absolute_std_error": 0.00032345332924951786,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.761351174467407e-06,
+          "max_absolute_std_error": 2.2298313931329306e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.4065789578632248e-06,
+          "max_absolute_std_error": 2.684362126498252e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.761351174467407e-06,
+      "max_absolute_std_error": 2.2298313931329306e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.744910498428624e-07,
+          "max_absolute_std_error": 1.4053837829597349e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.915026031200199e-07,
+          "max_absolute_std_error": 9.076082271672337e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.915026031200199e-07,
+      "max_absolute_std_error": 9.076082271672337e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.844160374466554e-07,
+          "max_absolute_std_error": 2.9815060340332433e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.2269779614548781e-07,
+          "max_absolute_std_error": 7.139806326855735e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.844160374466554e-07,
+      "max_absolute_std_error": 2.9815060340332433e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.2212453270876722e-14,
+          "max_absolute_std_error": 1.191408083300871e-13,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.552713678800501e-15,
+          "max_absolute_std_error": 3.547162563677375e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.2212453270876722e-14,
+      "max_absolute_std_error": 1.191408083300871e-13,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.84297022087776e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 2.1219137558148304e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.220446049250313e-15,
+      "max_absolute_std_error": 2.1219137558148304e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.7319479184152442e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 6.938893903907228e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.7319479184152442e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.8263168755083825e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.771561172376096e-16,
+          "max_absolute_std_error": 8.215650382226158e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 7.771561172376096e-16,
+      "max_absolute_std_error": 1.8263168755083825e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.2212453270876722e-14,
+          "max_absolute_std_error": 1.888927569915211e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.552713678800501e-15,
+          "max_absolute_std_error": 1.514454171791524e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.2212453270876722e-14,
+      "max_absolute_std_error": 1.514454171791524e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.8887760799835007e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 1.5144605500228003e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.220446049250313e-15,
+      "max_absolute_std_error": 1.5144605500228003e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.888757650281292e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 1.5144606513306513e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.5144606513306513e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.8887494623864853e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.771561172376096e-16,
+          "max_absolute_std_error": 1.5144587278692612e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 7.771561172376096e-16,
+      "max_absolute_std_error": 1.5144587278692612e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.8040971213227905e-05,
+          "max_absolute_std_error": 1.8259843075907334e-06,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3205754711975715e-05,
+          "max_absolute_std_error": 1.7530614515315346e-06,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 2.8040971213227905e-05,
+      "max_absolute_std_error": 1.8259843075907334e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.761351174467407e-06,
+          "max_absolute_std_error": 8.764237688918541e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.4065789578632248e-06,
+          "max_absolute_std_error": 8.13890440626297e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.761351174467407e-06,
+      "max_absolute_std_error": 8.764237688918541e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.744910498428624e-07,
+          "max_absolute_std_error": 1.636900829049548e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.915026031200199e-07,
+          "max_absolute_std_error": 2.3314300975907365e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.915026031200199e-07,
+      "max_absolute_std_error": 2.3314300975907365e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.844160374466554e-07,
+          "max_absolute_std_error": 1.2725193149210057e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.2269779614548781e-07,
+          "max_absolute_std_error": 1.0576386444416386e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.844160374466554e-07,
+      "max_absolute_std_error": 1.2725193149210057e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.2212453270876722e-14,
+          "max_absolute_std_error": 1.8207657603852567e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.552713678800501e-15,
+          "max_absolute_std_error": 6.5503158452884236e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.2212453270876722e-14,
+      "max_absolute_std_error": 1.8207657603852567e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.687538997430238e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 7.854827899222983e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.220446049250313e-15,
+      "max_absolute_std_error": 1.687538997430238e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.881784197001252e-16,
+          "max_absolute_std_error": 1.6819878823071122e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 7.077671781985373e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.881784197001252e-16,
+      "max_absolute_std_error": 1.6819878823071122e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_5",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.7208456881689926e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.771561172376096e-16,
+          "max_absolute_std_error": 6.994405055138486e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 7.771561172376096e-16,
+      "max_absolute_std_error": 1.7208456881689926e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5828047341459595e-05,
+          "max_absolute_std_error": 0.00015650562222371822,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.6996527315899e-06,
+          "max_absolute_std_error": 2.809741453561887e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.5828047341459595e-05,
+      "max_absolute_std_error": 0.00015650562222371822,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.103486714337798e-06,
+          "max_absolute_std_error": 4.681466181405414e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.525788247414006e-06,
+          "max_absolute_std_error": 9.619974655247776e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.525788247414006e-06,
+      "max_absolute_std_error": 9.619974655247776e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.918079121787102e-07,
+          "max_absolute_std_error": 3.0609148300719813e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.244996520379573e-07,
+          "max_absolute_std_error": 2.338207202814968e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.918079121787102e-07,
+      "max_absolute_std_error": 3.0609148300719813e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.036253269974367e-07,
+          "max_absolute_std_error": 4.076741381781046e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.4296242373544885e-07,
+          "max_absolute_std_error": 7.139806326855735e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.036253269974367e-07,
+      "max_absolute_std_error": 4.076741381781046e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.328271240363392e-15,
+          "max_absolute_std_error": 6.103451077876798e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.43769498715119e-15,
+          "max_absolute_std_error": 8.711087406965135e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.43769498715119e-15,
+      "max_absolute_std_error": 8.711087406965135e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9984014443252818e-15,
+          "max_absolute_std_error": 1.8096635301390052e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.7755575615628914e-15,
+          "max_absolute_std_error": 1.3197776205231548e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.7755575615628914e-15,
+      "max_absolute_std_error": 1.8096635301390052e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.7208456881689926e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 2.6353919047039653e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 2.6353919047039653e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 1.8263168755083825e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "max_absolute_std_error": 6.938893903907228e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.551115123125783e-16,
+      "max_absolute_std_error": 1.8263168755083825e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.328271240363392e-15,
+          "max_absolute_std_error": 1.8887607172723975e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.43769498715119e-15,
+          "max_absolute_std_error": 1.5144509327158495e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.43769498715119e-15,
+      "max_absolute_std_error": 1.5144509327158495e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9984014443252818e-15,
+          "max_absolute_std_error": 1.888734099675382e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.7755575615628914e-15,
+          "max_absolute_std_error": 1.51445771617853e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.7755575615628914e-15,
+      "max_absolute_std_error": 1.51445771617853e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.8887371805442754e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.51445670310002e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.51445670310002e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 1.8887504754649953e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "max_absolute_std_error": 1.5144586265614102e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.551115123125783e-16,
+      "max_absolute_std_error": 1.5144586265614102e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5828047341459595e-05,
+          "max_absolute_std_error": 1.6173680508768662e-06,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 6.6996527315899e-06,
+          "max_absolute_std_error": 1.3545499325529065e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.5828047341459595e-05,
+      "max_absolute_std_error": 1.6173680508768662e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.103486714337798e-06,
+          "max_absolute_std_error": 1.1036785813045569e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.525788247414006e-06,
+          "max_absolute_std_error": 7.429049480867089e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.525788247414006e-06,
+      "max_absolute_std_error": 1.1036785813045569e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.918079121787102e-07,
+          "max_absolute_std_error": 1.7631236778892223e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.244996520379573e-07,
+          "max_absolute_std_error": 1.8843952617753068e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.918079121787102e-07,
+      "max_absolute_std_error": 1.8843952617753068e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.036253269974367e-07,
+          "max_absolute_std_error": 6.764728671670994e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.4296242373544885e-07,
+          "max_absolute_std_error": 1.0215501675125971e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.036253269974367e-07,
+      "max_absolute_std_error": 1.0215501675125971e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.328271240363392e-15,
+          "max_absolute_std_error": 1.7486012637846216e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 8.43769498715119e-15,
+          "max_absolute_std_error": 7.271960811294775e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.43769498715119e-15,
+      "max_absolute_std_error": 1.7486012637846216e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.9984014443252818e-15,
+          "max_absolute_std_error": 1.6764367671839864e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.7755575615628914e-15,
+          "max_absolute_std_error": 7.771561172376096e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.7755575615628914e-15,
+      "max_absolute_std_error": 1.6764367671839864e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 1.7541523789077473e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.3322676295501878e-15,
+          "max_absolute_std_error": 7.049916206369744e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.3322676295501878e-15,
+      "max_absolute_std_error": 1.7541523789077473e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_6",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.551115123125783e-16,
+          "max_absolute_std_error": 1.715294573045867e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.6653345369377348e-16,
+          "max_absolute_std_error": 7.077671781985373e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.551115123125783e-16,
+      "max_absolute_std_error": 1.715294573045867e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.381377054862305e-06,
+          "max_absolute_std_error": 0.00010075547520746464,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.2163891378813574e-05,
+          "max_absolute_std_error": 0.00017533323808278933,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.2163891378813574e-05,
+      "max_absolute_std_error": 0.00017533323808278933,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0460954371627196e-06,
+          "max_absolute_std_error": 3.0609148300719813e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.107118926708011e-07,
+          "max_absolute_std_error": 1.7263815868806542e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0460954371627196e-06,
+      "max_absolute_std_error": 3.0609148300719813e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.268861476119383e-07,
+          "max_absolute_std_error": 9.11078627477413e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.068339761323145e-06,
+          "max_absolute_std_error": 1.3419770759678928e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.068339761323145e-06,
+      "max_absolute_std_error": 1.3419770759678928e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.228346165482179e-07,
+          "max_absolute_std_error": 5.730770274298136e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.621717132862301e-07,
+          "max_absolute_std_error": 5.601561504267605e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.228346165482179e-07,
+      "max_absolute_std_error": 5.730770274298136e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0658141036401503e-14,
+          "max_absolute_std_error": 1.0992595722569831e-13,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 9.325873406851315e-15,
+          "max_absolute_std_error": 1.1234069230425803e-13,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0658141036401503e-14,
+      "max_absolute_std_error": 1.1234069230425803e-13,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.219646771412954e-15,
+          "max_absolute_std_error": 4.338196468722799e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.3128387266192476e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.219646771412954e-15,
+      "max_absolute_std_error": 4.338196468722799e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.7014167852380524e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.8193779816044753e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.8193779816044753e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 1.887379141862766e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "max_absolute_std_error": 1.008915173628111e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.661338147750939e-16,
+      "max_absolute_std_error": 1.887379141862766e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0658141036401503e-14,
+          "max_absolute_std_error": 1.888775053027203e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 9.325873406851315e-15,
+          "max_absolute_std_error": 1.514470776564636e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0658141036401503e-14,
+      "max_absolute_std_error": 1.514470776564636e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.219646771412954e-15,
+          "max_absolute_std_error": 1.8887955227642195e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.514458020102083e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.219646771412954e-15,
+      "max_absolute_std_error": 1.514458020102083e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.888728978771681e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 1.5144604487149493e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.5144604487149493e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 1.8887484354301876e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "max_absolute_std_error": 1.514458930484963e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.661338147750939e-16,
+      "max_absolute_std_error": 1.514458930484963e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.381377054862305e-06,
+          "max_absolute_std_error": 1.6103180618953772e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.2163891378813574e-05,
+          "max_absolute_std_error": 3.4070903440486244e-06,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.2163891378813574e-05,
+      "max_absolute_std_error": 3.4070903440486244e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0460954371627196e-06,
+          "max_absolute_std_error": 8.652600022029944e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.107118926708011e-07,
+          "max_absolute_std_error": 7.69186957044754e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0460954371627196e-06,
+      "max_absolute_std_error": 8.652600022029944e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 9.268861476119383e-07,
+          "max_absolute_std_error": 2.464612210428818e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.068339761323145e-06,
+          "max_absolute_std_error": 1.3373483975787082e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.068339761323145e-06,
+      "max_absolute_std_error": 2.464612210428818e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.228346165482179e-07,
+          "max_absolute_std_error": 3.634684699049817e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.621717132862301e-07,
+          "max_absolute_std_error": 1.0303302373781964e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.228346165482179e-07,
+      "max_absolute_std_error": 1.0303302373781964e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0658141036401503e-14,
+          "max_absolute_std_error": 1.6819878823071122e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 9.325873406851315e-15,
+          "max_absolute_std_error": 7.799316747991725e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0658141036401503e-14,
+      "max_absolute_std_error": 1.6819878823071122e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 3.219646771412954e-15,
+          "max_absolute_std_error": 1.759703494030873e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 7.743805596760467e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.219646771412954e-15,
+      "max_absolute_std_error": 1.759703494030873e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.6819878823071122e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.7763568394002505e-15,
+          "max_absolute_std_error": 6.938893903907228e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.7763568394002505e-15,
+      "max_absolute_std_error": 1.6819878823071122e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_7",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.661338147750939e-16,
+          "max_absolute_std_error": 1.7263968032921184e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-16,
+          "max_absolute_std_error": 6.994405055138486e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.661338147750939e-16,
+      "max_absolute_std_error": 1.7263968032921184e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.052885598295532e-06,
+          "max_absolute_std_error": 0.00010093919213186031,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1916385110444239e-05,
+          "max_absolute_std_error": 0.00010197737173471555,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.1916385110444239e-05,
+      "max_absolute_std_error": 0.00010197737173471555,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.2751453654091804e-06,
+          "max_absolute_std_error": 6.9128649986816004e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.2604326568309574e-06,
+          "max_absolute_std_error": 2.1570705932713596e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 2.2604326568309574e-06,
+      "max_absolute_std_error": 2.1570705932713596e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.129096289444249e-07,
+          "max_absolute_std_error": 3.2531277709968442e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.007696749492752e-07,
+          "max_absolute_std_error": 1.8017653998364525e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.129096289444249e-07,
+      "max_absolute_std_error": 3.2531277709968442e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 7.420439060989992e-07,
+          "max_absolute_std_error": 7.928691550390665e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.7229331356923865e-07,
+          "max_absolute_std_error": 4.1810508194933815e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 7.420439060989992e-07,
+      "max_absolute_std_error": 7.928691550390665e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.328271240363392e-15,
+          "max_absolute_std_error": 3.5388358909926865e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.107825191113079e-15,
+          "max_absolute_std_error": 9.145462165349727e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.328271240363392e-15,
+      "max_absolute_std_error": 3.5388358909926865e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.7041923427996153e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 2.3328561304936102e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.220446049250313e-15,
+      "max_absolute_std_error": 2.3328561304936102e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.637578961322106e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.6167622796103842e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.5543122344752192e-15,
+      "max_absolute_std_error": 1.637578961322106e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.8707257964933888e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 6.744604874597826e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.440892098500626e-16,
+      "max_absolute_std_error": 1.8707257964933888e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.328271240363392e-15,
+          "max_absolute_std_error": 1.8887361535879776e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.107825191113079e-15,
+          "max_absolute_std_error": 1.5144631826391475e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.328271240363392e-15,
+      "max_absolute_std_error": 1.5144631826391475e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.8887658381760986e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 1.514458930484963e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.220446049250313e-15,
+      "max_absolute_std_error": 1.514458930484963e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.8887678782109063e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.514459234408516e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.5543122344752192e-15,
+      "max_absolute_std_error": 1.514459234408516e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.8887422875701887e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.514458930484963e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.440892098500626e-16,
+      "max_absolute_std_error": 1.514458930484963e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.052885598295532e-06,
+          "max_absolute_std_error": 1.2936562823195885e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1916385110444239e-05,
+          "max_absolute_std_error": 2.6576822618473717e-06,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 1.1916385110444239e-05,
+      "max_absolute_std_error": 2.6576822618473717e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.2751453654091804e-06,
+          "max_absolute_std_error": 8.697611779961978e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.2604326568309574e-06,
+          "max_absolute_std_error": 7.111704016793396e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.2604326568309574e-06,
+      "max_absolute_std_error": 8.697611779961978e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 8.129096289444249e-07,
+          "max_absolute_std_error": 1.7631236778892223e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.007696749492752e-07,
+          "max_absolute_std_error": 2.850815516430849e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 8.129096289444249e-07,
+      "max_absolute_std_error": 2.850815516430849e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 7.420439060989992e-07,
+          "max_absolute_std_error": 6.764728671670994e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.7229331356923865e-07,
+          "max_absolute_std_error": 9.340388540390876e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 7.420439060989992e-07,
+      "max_absolute_std_error": 9.340388540390876e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.328271240363392e-15,
+          "max_absolute_std_error": 1.7486012637846216e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.107825191113079e-15,
+          "max_absolute_std_error": 6.827871601444713e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.328271240363392e-15,
+      "max_absolute_std_error": 1.7486012637846216e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.73749903353837e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 7.355227538141662e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.220446049250313e-15,
+      "max_absolute_std_error": 1.73749903353837e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.5543122344752192e-15,
+          "max_absolute_std_error": 1.6986412276764895e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 7.105427357601002e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.5543122344752192e-15,
+      "max_absolute_std_error": 1.6986412276764895e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_8",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 1.7263968032921184e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.440892098500626e-16,
+          "max_absolute_std_error": 6.994405055138486e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 4.440892098500626e-16,
+      "max_absolute_std_error": 1.7263968032921184e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.100762312973181e-05,
+          "max_absolute_std_error": 0.00017979868476022953,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.2612252175636662e-05,
+          "max_absolute_std_error": 9.980180220041379e-05,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 2.100762312973181e-05,
+      "max_absolute_std_error": 0.00017979868476022953,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0438820695624074e-06,
+          "max_absolute_std_error": 1.0206021622521932e-05,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.363010067149787e-07,
+          "max_absolute_std_error": 2.549373668767063e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0438820695624074e-06,
+      "max_absolute_std_error": 1.0206021622521932e-05,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.278721378372154e-07,
+          "max_absolute_std_error": 6.274662657873575e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.197995819385739e-07,
+          "max_absolute_std_error": 6.145453887843044e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 7.197995819385739e-07,
+      "max_absolute_std_error": 6.274662657873575e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D1_native_pinned_float32",
+      "arm_description": "upstream repaired RunningStats, unmodified, float32 projection",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.228346165482179e-07,
+          "max_absolute_std_error": 5.730770274298136e-06,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.123508182685143e-07,
+          "max_absolute_std_error": 3.0932660523425026e-06,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.228346165482179e-07,
+      "max_absolute_std_error": 5.730770274298136e-06,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.995204332975845e-15,
+          "max_absolute_std_error": 8.765210779415611e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.329070518200751e-15,
+          "max_absolute_std_error": 1.0634548797128218e-13,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.995204332975845e-15,
+      "max_absolute_std_error": 1.0634548797128218e-13,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 2.6229018956769323e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.1086244689504383e-15,
+          "max_absolute_std_error": 3.8441472227646045e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.1086244689504383e-15,
+      "max_absolute_std_error": 3.8441472227646045e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.6645352591003757e-15,
+          "max_absolute_std_error": 3.314015728506092e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.2184697695261093e-14,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.6645352591003757e-15,
+      "max_absolute_std_error": 3.314015728506092e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D2_pinned_float64_input",
+      "arm_description": "upstream repaired RunningStats, unmodified, identical values cast to float64",
+      "upstream_code_unmodified": true,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.7755575615628914e-16,
+          "max_absolute_std_error": 1.765254609153999e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "max_absolute_std_error": 8.0629947163402e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.3306690738754696e-16,
+      "max_absolute_std_error": 1.765254609153999e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.995204332975845e-15,
+          "max_absolute_std_error": 1.8886563007969315e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.329070518200751e-15,
+          "max_absolute_std_error": 1.514454475715077e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.995204332975845e-15,
+      "max_absolute_std_error": 1.514454475715077e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 1.8887269387368733e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.1086244689504383e-15,
+          "max_absolute_std_error": 1.5144615631013103e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.1086244689504383e-15,
+      "max_absolute_std_error": 1.5144615631013103e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.6645352591003757e-15,
+          "max_absolute_std_error": 1.8887770930620107e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 1.5144584239457082e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.6645352591003757e-15,
+      "max_absolute_std_error": 1.5144584239457082e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D3_float64_accumulator",
+      "arm_description": "float32 input preserved; running accumulators in float64; E[x^2]-E[x]^2 retained",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.7755575615628914e-16,
+          "max_absolute_std_error": 1.888746381517592e-09,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "max_absolute_std_error": 1.5144585252535592e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.3306690738754696e-16,
+      "max_absolute_std_error": 1.5144585252535592e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.100762312973181e-05,
+          "max_absolute_std_error": 2.828475885285897e-06,
+          "within_1e_5": false
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.2612252175636662e-05,
+          "max_absolute_std_error": 4.003136791802531e-06,
+          "within_1e_5": false
+        }
+      },
+      "max_absolute_mean_error": 2.100762312973181e-05,
+      "max_absolute_std_error": 4.003136791802531e-06,
+      "within_1e_5": false
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 1.0438820695624074e-06,
+          "max_absolute_std_error": 9.360284136672448e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.363010067149787e-07,
+          "max_absolute_std_error": 7.752359930668362e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 1.0438820695624074e-06,
+      "max_absolute_std_error": 9.360284136672448e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.278721378372154e-07,
+          "max_absolute_std_error": 2.464612210428818e-07,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 7.197995819385739e-07,
+          "max_absolute_std_error": 2.0334068737137834e-07,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 7.197995819385739e-07,
+      "max_absolute_std_error": 2.464612210428818e-07,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D4_stable_variance_float32",
+      "arm_description": "float32 accumulators preserved; Chan/Welford M2 replaces E[x^2]-E[x]^2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 6.228346165482179e-07,
+          "max_absolute_std_error": 8.136432522176662e-08,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 4.123508182685143e-07,
+          "max_absolute_std_error": 4.615921966877323e-08,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 6.228346165482179e-07,
+      "max_absolute_std_error": 8.136432522176662e-08,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 1,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 5.995204332975845e-15,
+          "max_absolute_std_error": 1.687538997430238e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 5.329070518200751e-15,
+          "max_absolute_std_error": 6.8833827526759706e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 5.995204332975845e-15,
+      "max_absolute_std_error": 1.687538997430238e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 8,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.220446049250313e-15,
+          "max_absolute_std_error": 1.6986412276764895e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.1086244689504383e-15,
+          "max_absolute_std_error": 7.771561172376096e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.1086244689504383e-15,
+      "max_absolute_std_error": 1.6986412276764895e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 32,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.6645352591003757e-15,
+          "max_absolute_std_error": 1.6986412276764895e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 1.1102230246251565e-15,
+          "max_absolute_std_error": 7.077671781985373e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 2.6645352591003757e-15,
+      "max_absolute_std_error": 1.6986412276764895e-14,
+      "within_1e_5": true
+    },
+    {
+      "arm": "D5_float64_accum_stable_variance",
+      "arm_description": "float64 accumulators and Chan/Welford M2",
+      "upstream_code_unmodified": false,
+      "order_name": "episode_cluster_seed_9",
+      "batch_size": 128,
+      "per_feature": {
+        "state": {
+          "max_absolute_mean_error": 2.7755575615628914e-16,
+          "max_absolute_std_error": 1.7208456881689926e-14,
+          "within_1e_5": true
+        },
+        "actions": {
+          "max_absolute_mean_error": 3.3306690738754696e-16,
+          "max_absolute_std_error": 6.966649479522857e-15,
+          "within_1e_5": true
+        }
+      },
+      "max_absolute_mean_error": 3.3306690738754696e-16,
+      "max_absolute_std_error": 1.7208456881689926e-14,
+      "within_1e_5": true
+    }
+  ]
+}

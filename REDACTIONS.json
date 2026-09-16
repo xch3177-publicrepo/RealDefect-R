@@ -1,0 +1,65 @@
+{
+  "operations": [
+    {
+      "path": "reproducibility/results/cross_case_information.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "reproducibility/results/real-defect-groot-172-audit.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "reproducibility/results/real-defect-groot-172.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "reproducibility/results/real-defect-openpi-570-audit.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "reproducibility/results/real-defect-openpi-570.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "original/results/p8-droid-full-metadata-audit.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "experiments/gx_baseline_20260914/failed_runs/gx_baseline_results__run1_harness_failure.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "experiments/rd8_diagnostic_20260914/rd8_projection_recovery.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "experiments/cosmos_frame_check_20260914/run2_accepted.log",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "experiments/results/20260912-cosmos-metadata/rerun.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "experiments/results/20260912-cosmos-metadata/run.json",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "experiments/results/20260912-cosmos-metadata/audit.stdout.log",
+      "operation": "replace local filesystem paths/private working-source URL/private email with distinct tokens; numerical payload retained"
+    },
+    {
+      "path": "experiments/cosmos_frame_check_20260914/run_frame_check.py",
+      "operation": "portable metadata-root default; C1-C4 logic unchanged"
+    }
+  ],
+  "excluded_classes": [
+    "private git history",
+    "LLM development studies and signed human decisions",
+    "agent prompts/reviews/worklogs",
+    "unrelated projects",
+    "nested historical raw archives",
+    "large upstream HDF5/videos/Parquets; recovered with hash checks"
+  ],
+  "public_upstream_provenance_preserved": true
+}

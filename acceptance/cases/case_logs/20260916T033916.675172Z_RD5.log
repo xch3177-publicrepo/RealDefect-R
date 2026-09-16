@@ -1,0 +1,42 @@
+{
+  "buggy_contract_violations": 9666,
+  "case": "robosuite PR #626: base translation leaked into Mink IK delta actions",
+  "evidence_class": "merged upstream bugfix with public-action and embedded-model exact branch replay",
+  "fixed_contract_accepted": true,
+  "fixed_contract_violations": 0,
+  "input_shape_range_baseline_accepted": true,
+  "max_endpoint_error_m": 1.0702074565242015,
+  "median_buggy_delta_norm_m": 1.0540523374091482,
+  "median_correct_delta_norm_m": 0.026583711473925964,
+  "median_endpoint_error_m": 1.0702074565242012,
+  "min_endpoint_error_m": 1.0702074565242012,
+  "public_transitions_replayed": 9666,
+  "reproduced": true
+}
+{
+  "base_translation_m": [
+    -0.56,
+    0.0,
+    0.912
+  ],
+  "buggy_world_delta_m": [
+    -0.5498000000000001,
+    0.00435,
+    0.9084
+  ],
+  "contract_accepted": false,
+  "correct_world_delta_m": [
+    0.0102,
+    0.00435,
+    -0.003600000000000006
+  ],
+  "demo_id": "demo_0",
+  "error_norm_m": 1.0702074565242012,
+  "source_delta_m": [
+    0.0102,
+    0.00435,
+    -0.003600000000000006
+  ],
+  "step": 1
+}
+wrote <CASES_RUN>/cases-all/code/results/real-defect-robosuite-626.json

@@ -1,0 +1,11 @@
+numpy==1.26.4
+pandas==2.1.4
+pyarrow==14.0.2
+h5py==3.11.0
+av==15.1.0
+great_expectations==1.6.3
+huggingface_hub==0.34.4
+fsspec==2025.7.0
+certifi==2026.7.22
+numpydantic==1.8.1
+pydantic==2.13.5

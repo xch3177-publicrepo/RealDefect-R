@@ -1,0 +1,53 @@
+{
+  "amendment": "Public snapshot clean rerun: regenerated fixture manifest; scientific rules unchanged",
+  "arms": [
+    "A_declared_schema",
+    "B_disjoint_reference_fitted",
+    "C_information_enriched"
+  ],
+  "artifact_manifest_sha256": "0a7e19c464d8d30f8a97910681dcd8439faca6938f5d9da87ba25808eb5958b9",
+  "artifact_table_sha256": {
+    "RD1/faulty_enriched": "c81eaec58d5b5093775220c68e94dfbd3e7a51adb19ebe130ec15dd00abe5bd6",
+    "RD1/faulty_public": "a9afcf8273276a0a3bbb744bc0ae2e22094f48272e0a0685f2d071fe41eb71b7",
+    "RD1/reference_enriched": "1d106c5535d3d4406bbc88070a6596fd98282f3d710bc41d48af8f57db1eed6d",
+    "RD1/reference_public": "5f86c5725dfb2bc219deef414dc1b51109578937a797b33f645195db1b152893",
+    "RD2/faulty_enriched": "9a0b088c94d6e5d3247140a91365caf32f8777358bff801b8b9936c8b65c7020",
+    "RD2/faulty_public": "bde4722d48e9e2ef84829ac65b8af4ad9d5b2bfd7365330734f00d13f034cc54",
+    "RD2/reference_enriched": "8e45ac42185e6e284af48255fde8e5ff5f6ff024c208dcb2f3cf30cbda6d95bb",
+    "RD2/reference_public": "357249a28990ea72a68a3f6a0ce53229052987c2bbe5d83a704cc96a61a874f2",
+    "RD4/faulty_enriched": "7981942af4c39614b761a1780fa33f016445ebc3a522bc5b72bbb234a210e0fc",
+    "RD4/faulty_public": "cf411a703e46471af638acbb46fb750c31ea973bb84e3a2aee91f266fb6efb05",
+    "RD4/reference_enriched": "af43a67b6c01abc37ee1343da74ad492b8399b26034ccf5a0f637dfcbace412f",
+    "RD4/reference_public": "4ed091ae71428a378eda299558649baa4a14a6539694883da240eb0dd59e5367",
+    "RD5/faulty_enriched": "5235c8bd4c3a6375e2191bc87ec4b140ba517f272fe352a560561e83caf03fd5",
+    "RD5/faulty_public": "ffd9cfb10bbd065c55d5d3f19d7c39a287520e80a3c08072d7c584f8bf82a7a0",
+    "RD5/reference_enriched": "ad2c5d436f5365c9b86a000020a77ed8ab37996622a57d34752e61982845cb32",
+    "RD5/reference_public": "508acc14868589534ca805a58ac6fb5df46d686d319ff4a61f5c35ebb28d9081",
+    "RD6/faulty_enriched": "114642eb9ba632bb44fe4b041b6579d7c391b3d8c15c07c7f6963ea5f5395e38",
+    "RD6/faulty_public": "40cfd7bcb824a66ae72daef48cd0dd54ec493f83d1849bdcd825061ec3364ba1",
+    "RD6/reference_enriched": "32852d4a599ebbb5210a339687d64101c07abc0eb94b9e5f93a3a195e81b2c4c",
+    "RD6/reference_public": "274c2f54cb4048c4497666aa1539a3c8add3d0f1a7360e1b227844138ceace48",
+    "RD7/faulty_enriched": "e52244c185ccb9968b86a272d986de7bf487c1ce69efeb0bdc82e4f18ffa1e7a",
+    "RD7/faulty_public": "e432f1a76ecffb8e92de5a81493c13a54daea82807ba41b92278bec9429c6b1d",
+    "RD7/reference_enriched": "f72a9f0476cfe88234005804ef15a1034c1e48fcc581302e7271bf757609cd5a",
+    "RD7/reference_public": "6dec5ddcc919825c71f2aff841254905e3838a65bba584097360725d22d17432",
+    "RD8/armb_fixture": "12b2156959d23b8336adf776de1f6d1d7345c959f6f3f0fdd2b3ddb77ca34c41",
+    "RD8/faulty_enriched": "fabaddce240b325068d7a9dc06a5eb2afee4d3a0528cde662544479781dad49d",
+    "RD8/faulty_public": "8056bfa104b643f494de61bb38deed2294df14a208adc09faa38141684b2996f",
+    "RD8/reference_enriched": "adec6228982c77ecb7721db6950643532da6376cf12b762e3d4dc03cf41d5835",
+    "RD8/reference_public": "88e4f43988bdc5c06a4b045a5089f6e69e0b42b9ffffdedfa4518efaf8341355"
+  },
+  "build_artifacts_sha256": "99f5ba132a7b71365ca59fdb9f567a1d1a87553a1c14f70e969535b3b5defab4",
+  "cases": [
+    "RD1",
+    "RD2",
+    "RD4",
+    "RD5",
+    "RD6",
+    "RD7",
+    "RD8"
+  ],
+  "frozen_utc": "2026-09-16T03:43:59.193173+00:00",
+  "protocol_sha256": "bccab0636038abcddc6c35f2d786396455f5707ba2d17aa1f1de78685b151d23",
+  "suites_sha256": "0ee7f8553ee043f404c73718c06b5f1801710546d5d9139b97457abb31434ce3"
+}

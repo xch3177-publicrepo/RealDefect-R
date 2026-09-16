@@ -1,0 +1,28 @@
+{
+  "success": {
+    "episode_rows": 57639,
+    "counts": {
+      "identity_bad": 50623,
+      "task_bad": 50623,
+      "identity_only": 0,
+      "task_only": 0,
+      "both_bad": 50623,
+      "neither_bad": 7016,
+      "local_task_matches": 57639,
+      "identity_bad_with_local_pattern": 50623
+    }
+  },
+  "failure": {
+    "episode_rows": 14268,
+    "counts": {
+      "identity_bad": 10879,
+      "task_bad": 230,
+      "identity_only": 10649,
+      "task_only": 0,
+      "both_bad": 230,
+      "neither_bad": 3389,
+      "local_task_matches": 14268,
+      "identity_bad_with_local_pattern": 10879
+    }
+  }
+}

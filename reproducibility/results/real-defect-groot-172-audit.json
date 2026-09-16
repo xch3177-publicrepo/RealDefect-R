@@ -1,0 +1,149 @@
+{
+  "audit_id": "P13-RD7-GROOT-172-POSTRUN-AUDIT-V1",
+  "auditor": {
+    "python": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 20:54:21) [Clang 16.0.6 ]",
+    "script": "<LOCAL_PATH:169ca806e1c5b419>",
+    "script_sha256": "138a6b85cc515903f552905b70430ef0070fff542aa9faeda2ab3f7021e0d54f"
+  },
+  "checkpoint_inventory": [
+    {
+      "checkpoint_sha256": "48afcd81c402da98603d2b3abdbf1f17b80344c608564fa2cf8e49f65350a658",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-00-232a7eb2bd25.json",
+      "remote_checkpoint": "<LOCAL_PATH:169e42e31bb7326e>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000000.mp4",
+      "video_index": 0
+    },
+    {
+      "checkpoint_sha256": "f4ba86befa1ae30ad4286982bc1a247601af89b30e858d0987239e898fa904bb",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-01-193916b0e6ce.json",
+      "remote_checkpoint": "<LOCAL_PATH:f5cf4e0199ee81df>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000001.mp4",
+      "video_index": 1
+    },
+    {
+      "checkpoint_sha256": "06a87a3378e3a1589319cfed3d564ad7029e2624acf868c5ae6e55f734fca428",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-02-51c5229f2b9c.json",
+      "remote_checkpoint": "<LOCAL_PATH:c5cb860a41e76825>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000002.mp4",
+      "video_index": 2
+    },
+    {
+      "checkpoint_sha256": "dd56073b503afc0ab4d0cd4711bd1fe1c4d02f3dec18374427cfa239cc3a4ed4",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-03-a33630c4a147.json",
+      "remote_checkpoint": "<LOCAL_PATH:24d100a53b30be07>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000003.mp4",
+      "video_index": 3
+    },
+    {
+      "checkpoint_sha256": "501af3c5c071c1d8675e40974ecb4e281348111f5a9d49ff3b68d418e5d6da7b",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-04-97fad0325afb.json",
+      "remote_checkpoint": "<LOCAL_PATH:21aa91508fa9e0e3>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000004.mp4",
+      "video_index": 4
+    },
+    {
+      "checkpoint_sha256": "f5762cbbba64cfb17e16f0e9915c4af8184878a57ecf7d0eb3aecc273c1cd1a7",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-05-45922f55f446.json",
+      "remote_checkpoint": "<LOCAL_PATH:b705bcea99fded98>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000005.mp4",
+      "video_index": 5
+    },
+    {
+      "checkpoint_sha256": "619618e150396b2885f648744c5c2df9f1d33fb04599224a46b625c3a5b19ed4",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-06-c0e7e407b25b.json",
+      "remote_checkpoint": "<LOCAL_PATH:313b866c201cc293>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000006.mp4",
+      "video_index": 6
+    },
+    {
+      "checkpoint_sha256": "41973b92df20c4e67870971976112e7d6f1a79ed85d9d5caffcf70e1052cc41f",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-07-30089c28de67.json",
+      "remote_checkpoint": "<LOCAL_PATH:83102ac976a51deb>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000007.mp4",
+      "video_index": 7
+    },
+    {
+      "checkpoint_sha256": "50c557de935d9d14dcdcac83166760003e3c98ee614c4ddb46c430dddc3853c0",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-08-d494585d4868.json",
+      "remote_checkpoint": "<LOCAL_PATH:50885182e8881fa3>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000008.mp4",
+      "video_index": 8
+    },
+    {
+      "checkpoint_sha256": "289377528bbd0009e91454ad072750c14f05685186da6fac85bcb0b864c2f85c",
+      "local_checkpoint": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/video-checkpoints/video-09-ab794a05ddb1.json",
+      "remote_checkpoint": "<LOCAL_PATH:0bf18ec43d3f79c2>",
+      "selected_path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000009.mp4",
+      "video_index": 9
+    }
+  ],
+  "created_utc": "2026-09-12T18:12:05.824358+00:00",
+  "event_ledger": {
+    "event_count": 32,
+    "event_log_sha256": "13d23b0af8cfabed471244c9c1adfb7047d28427f9beae7a28ab9c4d4b4af229",
+    "event_tail_sha256": "51a104a4a723ebc405124abac16b630e620f32e82bd9a233655184b9747d33d6",
+    "final_event": "RUN_COMPLETE",
+    "first_event": "RUN_START",
+    "remote_result_path": "<LOCAL_PATH:d3a026bf967e0dbb>"
+  },
+  "frozen_roots": {
+    "amendment_sha256": "58ad7063ddd44872d8fa1535e585f39079537d0a0715967f4784adf6d2adbd0c",
+    "binding_sha256": "cd588642c0f9c24baae67399617846a3e577318f62536eea4d0939fa67a9ccc4",
+    "manifest_sha256": "7255524dc1776ef3e96e12fceea138ac76ae3bb15c55df42dc7e5a9e402e0d17",
+    "sidecar_compressed_sha256": "f7bbec200ec62622cf8355f2b4f1bf151f710c14425dc6ade466fee7e75891ba",
+    "sidecar_uncompressed_sha256": "48d1e500f907ce7ec70ccb71f270c9db8dfd06f757e19d4c9a4de6eafc58fe4a"
+  },
+  "inputs": {
+    "amendment": "<LOCAL_PATH:afc4bfaee2829189>",
+    "candidate_sidecar": "<LOCAL_PATH:8d551b8d47267ea7>",
+    "event_log": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172/events.jsonl",
+    "event_log_sha256": "13d23b0af8cfabed471244c9c1adfb7047d28427f9beae7a28ab9c4d4b4af229",
+    "formal_script": "<LOCAL_PATH:213fcd42af5c4028>",
+    "formal_script_sha256": "9055c5d373fa3e771e07489a2e1db4f51d18945bab56ce958683253a21e3c51b",
+    "manifest": "<LOCAL_PATH:138a5f51735d65ca>",
+    "remote_checkpoint_root": "<LOCAL_PATH:f9f8361622963fc7>",
+    "result": "runs/reproduction_paper_a/code/results/real-defect-groot-172.json",
+    "result_sha256": "5ab5a1a1f427f9d333a4fca659e5916b82fb0077acd16255e3e48fcaf684a82e",
+    "run_dir": "runs/reproduction_paper_a/code/runs/p13-real-defect-groot-172"
+  },
+  "limitations": [
+    "The audit verifies the captured input LFS hashes against the pre-outcome manifest; it deliberately does not reopen or rehash the large video files.",
+    "Remote absolute checkpoint paths are validated for one common formal root and then rebased through their video-checkpoints-relative suffix onto --run-dir.",
+    "This is a compact-evidence audit, not a second decode or an independent execution of the historical GR00T stack."
+  ],
+  "recomputed": {
+    "fixed_total_correct": 2238,
+    "fixed_wrong_by_group": {
+      "continuous_pts_negative_control": 0,
+      "late": 0,
+      "regular": 0,
+      "sparse": 0
+    },
+    "old_negative_control_correct": 2038,
+    "old_wrong_by_group": {
+      "continuous_pts_negative_control": 0,
+      "late": 50,
+      "regular": 100,
+      "sparse": 50
+    },
+    "queries_per_branch": 2238,
+    "video_count": 10
+  },
+  "schema_version": 1,
+  "scope": "compact post-run integrity and deterministic metric audit; no video decode, no download, no mutation of formal evidence",
+  "status": "AUDIT_PASS",
+  "verified": {
+    "aggregate_metrics_recomputed": true,
+    "captured_input_sizes_and_lfs_hashes": true,
+    "continuous_pts_negative_control_2038_all_correct": true,
+    "event_ledger_32_line_hash_chain": true,
+    "final_event_run_complete": true,
+    "fixed_all_queries_correct": true,
+    "fixed_ten_video_membership": true,
+    "formal_script_and_execution_binding_consistent": true,
+    "frozen_roots_and_binding": true,
+    "old_three_outside_groups_all_wrong": true,
+    "per_query_oracle_fields_and_metrics_recomputed": true,
+    "ten_checkpoint_byte_hashes_and_content_identities": true
+  }
+}

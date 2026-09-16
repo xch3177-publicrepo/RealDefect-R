@@ -1,0 +1,32 @@
+[
+  {
+    "case": "RD1",
+    "relative_path": "data/raw/lerobot/pusht/meta/episodes/chunk-000/file-000.parquet",
+    "url": "https://huggingface.co/datasets/lerobot/pusht/resolve/7628202a2180972f291ba1bc6723834921e72c19/meta/episodes/chunk-000/file-000.parquet",
+    "expected_sha256": "bc1226f33d3d1635ec1954f9942073709be8e106fde5f4f16b9d52edc4e0ebc4"
+  },
+  {
+    "case": "RD2",
+    "relative_path": "data/raw/lerobot/libero-v21/meta/episodes.jsonl",
+    "url": "https://huggingface.co/datasets/HuggingFaceVLA/libero/resolve/affa19c0de0f6bce2a7edd26dddef8a532e7e6f6/meta/episodes.jsonl",
+    "expected_sha256": "0479a2ced6117700e4638a1da54dccd9f60ae5f47485ea6d91390c869befcf08"
+  },
+  {
+    "case": "RD4",
+    "relative_path": "data/raw/isaaclab/franka_stack_v51.hdf5",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/IsaacLab/Mimic/franka_stack_datasets/dataset.hdf5",
+    "expected_sha256": "e0954647328801b091b81604915acd4eff2093b2b26ff0b05753c8f85fbb61b3"
+  },
+  {
+    "case": "RD4_converter",
+    "relative_path": "data/raw/isaaclab/hdf5_dataset_file_handler_beta2_patch1.py",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py",
+    "expected_sha256": "b5c4365cfd46107dfe56288b092bbdb03d993dbb83e23415742965db7df8d793"
+  },
+  {
+    "case": "RD5",
+    "relative_path": "data/raw/robomimic/low_dim_v15.hdf5",
+    "url": "https://huggingface.co/datasets/robomimic/robomimic_datasets/resolve/33d08702ad61296b55a74c4f810ab54462f319e9/v1.5/lift/ph/low_dim_v15.hdf5",
+    "expected_sha256": "0d302b37fb08e99b00de287b833925589ad3b65d199306e55562938bcbd746f1"
+  }
+]

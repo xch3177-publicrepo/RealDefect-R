@@ -91,6 +91,8 @@ class Renderer:
         s=re.sub(LINK_PATTERN,link,s)
         def code(m):
             value=esc(m[1])
+            # Keep literal command-line flags as two hyphens in the printed PDF.
+            value=value.replace('--', '-{}-')
             # Optional breakpoints for long literal identifiers and paths.
             value=value.replace(r'\_',r'\_\allowbreak{}').replace('/',r'/\allowbreak{}')
             return save(r'\texttt{'+value+'}')

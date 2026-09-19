@@ -8,7 +8,7 @@ frame-identity checks, and the paper's figure/build sources. It carries **no pri
 Start with [REPRO.md](REPRO.md), [REGISTRY.md](REGISTRY.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 The complete file manifest is `MANIFEST.json`; `SOURCE_MAP.json` binds the selected historical
 source and every current experiment/script/result. The fixed public version is recorded in
-`ARTIFACT_INFO.json`. This package version is `public-v1.0.1-20260919`; the previous fixed tag
+`ARTIFACT_INFO.json`. This package version is `public-v1.0.2-20260919`; the previous fixed tag
 remains available. Input recovery uses public pinned revisions and explicit digest verification.
 
 ```sh
@@ -27,6 +27,8 @@ For a short end-to-end experiment, run native GX on all seven paired fixtures:
 This executes 42 branch validations and six frozen-result/plan comparisons. It requires about
 32.6 MB of public input payloads, excluding dependency installation. [REPRO.md](REPRO.md) includes
 the fixed-tag download command, which needs no GitHub login.
+
+Verified execution evidence: the [19 September 2026 public-v1.0.1 receipt](https://github.com/xch3177-publicrepo/RealDefect-R/releases/download/public-v1.0.1-20260919/PUBLIC_ACCESS_VERIFICATION.json) records anonymous retrieval followed by 42 completed native-GX validation branches and six matching comparisons, with fresh input/run directories and a preinstalled package-only environment. This v1.0.2 patch changes the manuscript and review-facing documentation; the replay code is unchanged. Expected faulty-artifact rejections are successful scientific outcomes, not failed installation or execution.
 
 The smoke and GX routes are **not** all eight replays. A full run is:
 

@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "path": "PROTOCOL.json",
+      "sha256": "6166dd580699a43ae2049305c0f6b27a067c104131e6fc65a27955833d444fbb",
+      "size_bytes": 4356
+    },
+    {
+      "path": "VERIFIED_INPUTS.json",
+      "sha256": "7ff8cf3a3b8bfcf2ef47f82832c2f3b392e500c1a1f4bc7376c0980a2e868e62",
+      "size_bytes": 2060
+    },
+    {
+      "path": "by_source_prefix.csv",
+      "sha256": "6196a78ad6c944235da445bf2f047d2d3d601169002354477f06f39ae2c0c604",
+      "size_bytes": 828
+    },
+    {
+      "path": "by_split_source_prefix.csv",
+      "sha256": "9cf256f811c2770525c0cc9c4555a79cddf685a3bae02c6fb9187908dd013085",
+      "size_bytes": 2275
+    },
+    {
+      "path": "results.json",
+      "sha256": "0cb771370bdc3a118bfa419fa58b28ebd9eab8321a2fe927bfd96f3870b59e74",
+      "size_bytes": 4041
+    }
+  ]
+}

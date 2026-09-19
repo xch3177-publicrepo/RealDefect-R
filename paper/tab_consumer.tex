@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\caption{Targeted output-field violations in the scoped consumer replay.}
+\label{tab:consumer}
+\renewcommand{\arraystretch}{1.13}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Input condition} & \textbf{Affected ($n=2$)} & \textbf{Controls ($n=2$)} \\
+\midrule
+Original summaries & 16/16 & 0/16 \\
+Summary-only correction & 0/16 & 0/16 \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}
+\begin{minipage}{\columnwidth}\footnotesize
+Each cell scores eight episode-index summary fields in two preselected records (16 outputs). Same pinned \texttt{update\_meta\_data}, frame reference and offsets; empty video mapping. Other metadata and complete merge behavior are outside this verdict.
+\end{minipage}
+\end{table}

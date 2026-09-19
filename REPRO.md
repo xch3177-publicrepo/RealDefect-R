@@ -9,9 +9,9 @@ source pin. Run `verify_public.py` first. Every manifest file must exist with it
 Download the fixed snapshot without a GitHub login:
 
 ```sh
-curl -q -fL https://github.com/xch3177-publicrepo/RealDefect-R/archive/refs/tags/public-v1.0.2-20260919.tar.gz -o realdefect-r-public-v1.0.2-20260919.tar.gz
+curl -q -fL https://github.com/xch3177-publicrepo/RealDefect-R/archive/refs/tags/public-v1.1.0-20260919.tar.gz -o realdefect-r-public-v1.1.0-20260919.tar.gz
 mkdir realdefect-snapshot
-tar -xzf realdefect-r-public-v1.0.2-20260919.tar.gz --strip-components=1 -C realdefect-snapshot
+tar -xzf realdefect-r-public-v1.1.0-20260919.tar.gz --strip-components=1 -C realdefect-snapshot
 cd realdefect-snapshot
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
@@ -138,3 +138,9 @@ file manifest and source mapping identify this final snapshot.
 Post-publication access tests are separate release evidence: their records bind the downloaded tag,
 source/archive identity and manifest hash. They are not inserted retroactively into the tested fixed
 snapshot. This keeps the snapshot identity stable and avoids a self-referential acceptance hash.
+
+## Source-prefix regrouping and scientific figures (v1.1.0)
+
+The additional Cosmos grouping analysis is a separately versioned re-analysis of the same 12 hash-verified metadata objects. It is not a new consumer experiment. Follow [the grouping protocol and commands](research/20260919-round6-evidence-charts/cosmos_group_analysis/README.md) to recover metadata and reproduce the 13-group table. This optional analysis is separate from the existing `all` suite.
+
+`python scripts/make_figures.py` regenerates the pipeline map, the 44-condition RD8 CSV and vector figure, the Cosmos joint/source-group figure, and three tables from packaged evidence. It uses only the Python standard library. The original seven identity-summary predicates and eight consumer target fields remain distinct.

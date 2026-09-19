@@ -1,0 +1,135 @@
+{
+  "analysis_version": "source-prefix-identity-v1",
+  "combined": {
+    "coherent_prefixes": [
+      "AUTOLab"
+    ],
+    "episode_rows": 71907,
+    "identity_coherent": 10405,
+    "identity_coherent_iff_numbering_coincides": true,
+    "identity_discrepant": 61502,
+    "local_global_coincident_rows": 10405,
+    "local_summary_matches": 71907,
+    "source_prefix_count": 13
+  },
+  "finished_utc": "2026-09-19T21:26:58.344937+00:00",
+  "interpretation": "Observed metadata values match source-prefix-local numbering. This supports a localized release-level numbering discrepancy; it does not identify the upstream implementation that introduced it or establish institution-level prevalence.",
+  "protocol_sha256": "6166dd580699a43ae2049305c0f6b27a067c104131e6fc65a27955833d444fbb",
+  "runtime": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "pyarrow": "14.0.2",
+    "python": "3.12.2"
+  },
+  "script_sha256": "33e79e1c4ec3e9b0a6eca6f6a7bf4c0b8fbf742d2f8c94b8e6fed09dab474154",
+  "source_revision": "dabaaffe428d67cf93fd355b82658934ee59bfec",
+  "splits": {
+    "failure": {
+      "all_seven_local_summary_fields_match_rows": 14268,
+      "coherent_prefixes": [
+        "AUTOLab"
+      ],
+      "counts": {
+        "both_bad": 230,
+        "identity_bad": 10879,
+        "identity_only": 10649,
+        "neither_bad": 3389,
+        "task_bad": 230,
+        "task_only": 0
+      },
+      "episode_rows": 14268,
+      "global_and_per_group_counts_match_frozen_audit": true,
+      "global_summary_field_violations": {
+        "stats/episode_index/max": 10879,
+        "stats/episode_index/mean": 10879,
+        "stats/episode_index/min": 10879,
+        "stats/episode_index/std": 0,
+        "stats/index/max": 10879,
+        "stats/index/mean": 10879,
+        "stats/index/min": 10879
+      },
+      "identity_coherent_iff_numbering_coincides": true,
+      "local_global_numbering_coincides_rows": 3389,
+      "local_summary_field_violations": {
+        "stats/episode_index/max": 0,
+        "stats/episode_index/mean": 0,
+        "stats/episode_index/min": 0,
+        "stats/episode_index/std": 0,
+        "stats/index/max": 0,
+        "stats/index/mean": 0,
+        "stats/index/min": 0
+      },
+      "missing_prefix_rows": 0,
+      "source_prefix_count": 13,
+      "source_prefixes": [
+        "AUTOLab",
+        "CLVR",
+        "GuptaLab",
+        "ILIAD",
+        "IPRL",
+        "IRIS",
+        "PennPAL",
+        "RAD",
+        "RAIL",
+        "REAL",
+        "RPL",
+        "TRI",
+        "WEIRD"
+      ]
+    },
+    "success": {
+      "all_seven_local_summary_fields_match_rows": 57639,
+      "coherent_prefixes": [
+        "AUTOLab"
+      ],
+      "counts": {
+        "both_bad": 50623,
+        "identity_bad": 50623,
+        "identity_only": 0,
+        "neither_bad": 7016,
+        "task_bad": 50623,
+        "task_only": 0
+      },
+      "episode_rows": 57639,
+      "global_and_per_group_counts_match_frozen_audit": true,
+      "global_summary_field_violations": {
+        "stats/episode_index/max": 50623,
+        "stats/episode_index/mean": 50623,
+        "stats/episode_index/min": 50623,
+        "stats/episode_index/std": 0,
+        "stats/index/max": 50623,
+        "stats/index/mean": 50623,
+        "stats/index/min": 50623
+      },
+      "identity_coherent_iff_numbering_coincides": true,
+      "local_global_numbering_coincides_rows": 7016,
+      "local_summary_field_violations": {
+        "stats/episode_index/max": 0,
+        "stats/episode_index/mean": 0,
+        "stats/episode_index/min": 0,
+        "stats/episode_index/std": 0,
+        "stats/index/max": 0,
+        "stats/index/mean": 0,
+        "stats/index/min": 0
+      },
+      "missing_prefix_rows": 0,
+      "source_prefix_count": 13,
+      "source_prefixes": [
+        "AUTOLab",
+        "CLVR",
+        "GuptaLab",
+        "ILIAD",
+        "IPRL",
+        "IRIS",
+        "PennPAL",
+        "RAD",
+        "RAIL",
+        "REAL",
+        "RPL",
+        "TRI",
+        "WEIRD"
+      ]
+    }
+  },
+  "started_utc": "2026-09-19T21:26:56.719759+00:00"
+}

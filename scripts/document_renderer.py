@@ -253,7 +253,7 @@ class Renderer:
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,booktabs,array,longtable,tabularx,xurl,tikz,graphicx}
-\usetikzlibrary{arrows.meta,positioning}
+\usetikzlibrary{arrows.meta,positioning,plotmarks,patterns}
 \usepackage{placeins}
 \usepackage[hidelinks]{hyperref}
 \setlength{\emergencystretch}{1em}

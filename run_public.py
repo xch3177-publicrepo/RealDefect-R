@@ -41,8 +41,9 @@ def main():
   py('projection_recovery','experiments/rd8_diagnostic_20260914/recover_projections.py')
   if a.suite!='gx':
    py('RD3_RD6_scoped_smoke','reproducibility/reproduce.py','--work-dir',str(out/'cases-smoke'),'--cases','RD3,RD6')
-   py('RD8_condition_matrix','experiments/rd8_diagnostic_20260914/extract_rd8_condition_matrix.py')
+   # Bind the published plots before the extractor writes fresh provenance in this runtime copy.
    py('figure_generation','scripts/make_figures.py')
+   py('RD8_condition_matrix','experiments/rd8_diagnostic_20260914/extract_rd8_condition_matrix.py')
   if a.suite in {'cases','all'}:
    cmd=['reproducibility/reproduce.py','--work-dir',str(out/'cases-all')]
    if a.download:cmd+=['--download']

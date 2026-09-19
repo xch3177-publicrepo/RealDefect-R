@@ -1,0 +1,692 @@
+{
+  "generator": "scripts/rd8_chart_data.py",
+  "new_experiment": false,
+  "frozen_rd8_status": "NOT_REPRODUCED",
+  "sources": {
+    "original": {
+      "path": "reproducibility/results/real-defect-openpi-570.json",
+      "sha256": "abe0adcfdc1cd297528ee3396dc8d4e986ab13e2c76373883724f7d6af4ec0d8",
+      "archival_sha256": "f6193ca2c4a7111fbe25a59c908927bd63a838fb3cab982037b88fed0f03b6b7",
+      "identity_mode": "source_mapped_public_derivative",
+      "public_derivative_sha256": "abe0adcfdc1cd297528ee3396dc8d4e986ab13e2c76373883724f7d6af4ec0d8",
+      "public_source_mapping": {
+        "path": "SOURCE_MAP.json",
+        "public_path": "reproducibility/results/real-defect-openpi-570.json",
+        "source_sha256": "f6193ca2c4a7111fbe25a59c908927bd63a838fb3cab982037b88fed0f03b6b7",
+        "public_sha256": "abe0adcfdc1cd297528ee3396dc8d4e986ab13e2c76373883724f7d6af4ec0d8"
+      }
+    },
+    "matrix": {
+      "path": "experiments/rd8_diagnostic_20260914/rd8_condition_matrix.json",
+      "sha256": "8ae1688c02db87bd24a78fef409a89b51ae70dd60444872a1792e137b8b1919a",
+      "archival_sha256": "8ae1688c02db87bd24a78fef409a89b51ae70dd60444872a1792e137b8b1919a",
+      "identity_mode": "exact_archival_bytes"
+    },
+    "diagnostic": {
+      "path": "experiments/rd8_diagnostic_20260914/rd8_precision_diagnostic_all_orders.json",
+      "sha256": "c57c0180e39815f5bdc0475640993dc9aceb000d25d67290c4cd4d53733165d4",
+      "archival_sha256": "c57c0180e39815f5bdc0475640993dc9aceb000d25d67290c4cd4d53733165d4",
+      "identity_mode": "exact_archival_bytes"
+    }
+  },
+  "data_definition": "Per condition and arm, maximum absolute mean or population-std error over 14 state and 14 action components against the same float64 two-pass full-array reference.",
+  "csv_column_mapping": {
+    "batch": "diagnostic.arms[i].batch_size",
+    "order": "diagnostic.arms[i].order_name",
+    "order_index": "zero-based position in matrix.orders",
+    "{metric}_err_{D1..D5}": "diagnostic.arms[i].max_absolute_{metric}_error",
+    "passes_{D1..D5}": "both exported mean and std errors <= tolerance; cross-checked against diagnostic.arms[i].within_1e_5"
+  },
+  "condition_source_indexes": [
+    {
+      "order": "natural",
+      "batch": 1,
+      "matrix_cell": 0,
+      "diagnostic_arms": {
+        "D1": 0,
+        "D2": 4,
+        "D3": 8,
+        "D4": 12,
+        "D5": 16
+      }
+    },
+    {
+      "order": "natural",
+      "batch": 8,
+      "matrix_cell": 1,
+      "diagnostic_arms": {
+        "D1": 1,
+        "D2": 5,
+        "D3": 9,
+        "D4": 13,
+        "D5": 17
+      }
+    },
+    {
+      "order": "natural",
+      "batch": 32,
+      "matrix_cell": 2,
+      "diagnostic_arms": {
+        "D1": 2,
+        "D2": 6,
+        "D3": 10,
+        "D4": 14,
+        "D5": 18
+      }
+    },
+    {
+      "order": "natural",
+      "batch": 128,
+      "matrix_cell": 3,
+      "diagnostic_arms": {
+        "D1": 3,
+        "D2": 7,
+        "D3": 11,
+        "D4": 15,
+        "D5": 19
+      }
+    },
+    {
+      "order": "episode_cluster_seed_0",
+      "batch": 1,
+      "matrix_cell": 4,
+      "diagnostic_arms": {
+        "D1": 20,
+        "D2": 24,
+        "D3": 28,
+        "D4": 32,
+        "D5": 36
+      }
+    },
+    {
+      "order": "episode_cluster_seed_0",
+      "batch": 8,
+      "matrix_cell": 5,
+      "diagnostic_arms": {
+        "D1": 21,
+        "D2": 25,
+        "D3": 29,
+        "D4": 33,
+        "D5": 37
+      }
+    },
+    {
+      "order": "episode_cluster_seed_0",
+      "batch": 32,
+      "matrix_cell": 6,
+      "diagnostic_arms": {
+        "D1": 22,
+        "D2": 26,
+        "D3": 30,
+        "D4": 34,
+        "D5": 38
+      }
+    },
+    {
+      "order": "episode_cluster_seed_0",
+      "batch": 128,
+      "matrix_cell": 7,
+      "diagnostic_arms": {
+        "D1": 23,
+        "D2": 27,
+        "D3": 31,
+        "D4": 35,
+        "D5": 39
+      }
+    },
+    {
+      "order": "episode_cluster_seed_1",
+      "batch": 1,
+      "matrix_cell": 8,
+      "diagnostic_arms": {
+        "D1": 40,
+        "D2": 44,
+        "D3": 48,
+        "D4": 52,
+        "D5": 56
+      }
+    },
+    {
+      "order": "episode_cluster_seed_1",
+      "batch": 8,
+      "matrix_cell": 9,
+      "diagnostic_arms": {
+        "D1": 41,
+        "D2": 45,
+        "D3": 49,
+        "D4": 53,
+        "D5": 57
+      }
+    },
+    {
+      "order": "episode_cluster_seed_1",
+      "batch": 32,
+      "matrix_cell": 10,
+      "diagnostic_arms": {
+        "D1": 42,
+        "D2": 46,
+        "D3": 50,
+        "D4": 54,
+        "D5": 58
+      }
+    },
+    {
+      "order": "episode_cluster_seed_1",
+      "batch": 128,
+      "matrix_cell": 11,
+      "diagnostic_arms": {
+        "D1": 43,
+        "D2": 47,
+        "D3": 51,
+        "D4": 55,
+        "D5": 59
+      }
+    },
+    {
+      "order": "episode_cluster_seed_2",
+      "batch": 1,
+      "matrix_cell": 12,
+      "diagnostic_arms": {
+        "D1": 60,
+        "D2": 64,
+        "D3": 68,
+        "D4": 72,
+        "D5": 76
+      }
+    },
+    {
+      "order": "episode_cluster_seed_2",
+      "batch": 8,
+      "matrix_cell": 13,
+      "diagnostic_arms": {
+        "D1": 61,
+        "D2": 65,
+        "D3": 69,
+        "D4": 73,
+        "D5": 77
+      }
+    },
+    {
+      "order": "episode_cluster_seed_2",
+      "batch": 32,
+      "matrix_cell": 14,
+      "diagnostic_arms": {
+        "D1": 62,
+        "D2": 66,
+        "D3": 70,
+        "D4": 74,
+        "D5": 78
+      }
+    },
+    {
+      "order": "episode_cluster_seed_2",
+      "batch": 128,
+      "matrix_cell": 15,
+      "diagnostic_arms": {
+        "D1": 63,
+        "D2": 67,
+        "D3": 71,
+        "D4": 75,
+        "D5": 79
+      }
+    },
+    {
+      "order": "episode_cluster_seed_3",
+      "batch": 1,
+      "matrix_cell": 16,
+      "diagnostic_arms": {
+        "D1": 80,
+        "D2": 84,
+        "D3": 88,
+        "D4": 92,
+        "D5": 96
+      }
+    },
+    {
+      "order": "episode_cluster_seed_3",
+      "batch": 8,
+      "matrix_cell": 17,
+      "diagnostic_arms": {
+        "D1": 81,
+        "D2": 85,
+        "D3": 89,
+        "D4": 93,
+        "D5": 97
+      }
+    },
+    {
+      "order": "episode_cluster_seed_3",
+      "batch": 32,
+      "matrix_cell": 18,
+      "diagnostic_arms": {
+        "D1": 82,
+        "D2": 86,
+        "D3": 90,
+        "D4": 94,
+        "D5": 98
+      }
+    },
+    {
+      "order": "episode_cluster_seed_3",
+      "batch": 128,
+      "matrix_cell": 19,
+      "diagnostic_arms": {
+        "D1": 83,
+        "D2": 87,
+        "D3": 91,
+        "D4": 95,
+        "D5": 99
+      }
+    },
+    {
+      "order": "episode_cluster_seed_4",
+      "batch": 1,
+      "matrix_cell": 20,
+      "diagnostic_arms": {
+        "D1": 100,
+        "D2": 104,
+        "D3": 108,
+        "D4": 112,
+        "D5": 116
+      }
+    },
+    {
+      "order": "episode_cluster_seed_4",
+      "batch": 8,
+      "matrix_cell": 21,
+      "diagnostic_arms": {
+        "D1": 101,
+        "D2": 105,
+        "D3": 109,
+        "D4": 113,
+        "D5": 117
+      }
+    },
+    {
+      "order": "episode_cluster_seed_4",
+      "batch": 32,
+      "matrix_cell": 22,
+      "diagnostic_arms": {
+        "D1": 102,
+        "D2": 106,
+        "D3": 110,
+        "D4": 114,
+        "D5": 118
+      }
+    },
+    {
+      "order": "episode_cluster_seed_4",
+      "batch": 128,
+      "matrix_cell": 23,
+      "diagnostic_arms": {
+        "D1": 103,
+        "D2": 107,
+        "D3": 111,
+        "D4": 115,
+        "D5": 119
+      }
+    },
+    {
+      "order": "episode_cluster_seed_5",
+      "batch": 1,
+      "matrix_cell": 24,
+      "diagnostic_arms": {
+        "D1": 120,
+        "D2": 124,
+        "D3": 128,
+        "D4": 132,
+        "D5": 136
+      }
+    },
+    {
+      "order": "episode_cluster_seed_5",
+      "batch": 8,
+      "matrix_cell": 25,
+      "diagnostic_arms": {
+        "D1": 121,
+        "D2": 125,
+        "D3": 129,
+        "D4": 133,
+        "D5": 137
+      }
+    },
+    {
+      "order": "episode_cluster_seed_5",
+      "batch": 32,
+      "matrix_cell": 26,
+      "diagnostic_arms": {
+        "D1": 122,
+        "D2": 126,
+        "D3": 130,
+        "D4": 134,
+        "D5": 138
+      }
+    },
+    {
+      "order": "episode_cluster_seed_5",
+      "batch": 128,
+      "matrix_cell": 27,
+      "diagnostic_arms": {
+        "D1": 123,
+        "D2": 127,
+        "D3": 131,
+        "D4": 135,
+        "D5": 139
+      }
+    },
+    {
+      "order": "episode_cluster_seed_6",
+      "batch": 1,
+      "matrix_cell": 28,
+      "diagnostic_arms": {
+        "D1": 140,
+        "D2": 144,
+        "D3": 148,
+        "D4": 152,
+        "D5": 156
+      }
+    },
+    {
+      "order": "episode_cluster_seed_6",
+      "batch": 8,
+      "matrix_cell": 29,
+      "diagnostic_arms": {
+        "D1": 141,
+        "D2": 145,
+        "D3": 149,
+        "D4": 153,
+        "D5": 157
+      }
+    },
+    {
+      "order": "episode_cluster_seed_6",
+      "batch": 32,
+      "matrix_cell": 30,
+      "diagnostic_arms": {
+        "D1": 142,
+        "D2": 146,
+        "D3": 150,
+        "D4": 154,
+        "D5": 158
+      }
+    },
+    {
+      "order": "episode_cluster_seed_6",
+      "batch": 128,
+      "matrix_cell": 31,
+      "diagnostic_arms": {
+        "D1": 143,
+        "D2": 147,
+        "D3": 151,
+        "D4": 155,
+        "D5": 159
+      }
+    },
+    {
+      "order": "episode_cluster_seed_7",
+      "batch": 1,
+      "matrix_cell": 32,
+      "diagnostic_arms": {
+        "D1": 160,
+        "D2": 164,
+        "D3": 168,
+        "D4": 172,
+        "D5": 176
+      }
+    },
+    {
+      "order": "episode_cluster_seed_7",
+      "batch": 8,
+      "matrix_cell": 33,
+      "diagnostic_arms": {
+        "D1": 161,
+        "D2": 165,
+        "D3": 169,
+        "D4": 173,
+        "D5": 177
+      }
+    },
+    {
+      "order": "episode_cluster_seed_7",
+      "batch": 32,
+      "matrix_cell": 34,
+      "diagnostic_arms": {
+        "D1": 162,
+        "D2": 166,
+        "D3": 170,
+        "D4": 174,
+        "D5": 178
+      }
+    },
+    {
+      "order": "episode_cluster_seed_7",
+      "batch": 128,
+      "matrix_cell": 35,
+      "diagnostic_arms": {
+        "D1": 163,
+        "D2": 167,
+        "D3": 171,
+        "D4": 175,
+        "D5": 179
+      }
+    },
+    {
+      "order": "episode_cluster_seed_8",
+      "batch": 1,
+      "matrix_cell": 36,
+      "diagnostic_arms": {
+        "D1": 180,
+        "D2": 184,
+        "D3": 188,
+        "D4": 192,
+        "D5": 196
+      }
+    },
+    {
+      "order": "episode_cluster_seed_8",
+      "batch": 8,
+      "matrix_cell": 37,
+      "diagnostic_arms": {
+        "D1": 181,
+        "D2": 185,
+        "D3": 189,
+        "D4": 193,
+        "D5": 197
+      }
+    },
+    {
+      "order": "episode_cluster_seed_8",
+      "batch": 32,
+      "matrix_cell": 38,
+      "diagnostic_arms": {
+        "D1": 182,
+        "D2": 186,
+        "D3": 190,
+        "D4": 194,
+        "D5": 198
+      }
+    },
+    {
+      "order": "episode_cluster_seed_8",
+      "batch": 128,
+      "matrix_cell": 39,
+      "diagnostic_arms": {
+        "D1": 183,
+        "D2": 187,
+        "D3": 191,
+        "D4": 195,
+        "D5": 199
+      }
+    },
+    {
+      "order": "episode_cluster_seed_9",
+      "batch": 1,
+      "matrix_cell": 40,
+      "diagnostic_arms": {
+        "D1": 200,
+        "D2": 204,
+        "D3": 208,
+        "D4": 212,
+        "D5": 216
+      }
+    },
+    {
+      "order": "episode_cluster_seed_9",
+      "batch": 8,
+      "matrix_cell": 41,
+      "diagnostic_arms": {
+        "D1": 201,
+        "D2": 205,
+        "D3": 209,
+        "D4": 213,
+        "D5": 217
+      }
+    },
+    {
+      "order": "episode_cluster_seed_9",
+      "batch": 32,
+      "matrix_cell": 42,
+      "diagnostic_arms": {
+        "D1": 202,
+        "D2": 206,
+        "D3": 210,
+        "D4": 214,
+        "D5": 218
+      }
+    },
+    {
+      "order": "episode_cluster_seed_9",
+      "batch": 128,
+      "matrix_cell": 43,
+      "diagnostic_arms": {
+        "D1": 203,
+        "D2": 207,
+        "D3": 211,
+        "D4": 215,
+        "D5": 219
+      }
+    }
+  ],
+  "arm_names": {
+    "D1": "D1_native_pinned_float32",
+    "D2": "D2_pinned_float64_input",
+    "D3": "D3_float64_accumulator",
+    "D4": "D4_stable_variance_float32",
+    "D5": "D5_float64_accum_stable_variance"
+  },
+  "rollup": {
+    "D1": {
+      "conditions": 44,
+      "failed": 24,
+      "mean": {
+        "min": 2.7646782596590924e-07,
+        "max": 2.8040971213227905e-05,
+        "above_tolerance": 9
+      },
+      "std": {
+        "min": 1.8017653998364525e-06,
+        "max": 0.00032345332924951786,
+        "above_tolerance": 24
+      }
+    },
+    "D2": {
+      "conditions": 44,
+      "failed": 0,
+      "mean": {
+        "min": 3.3306690738754696e-16,
+        "max": 1.2212453270876722e-14,
+        "above_tolerance": 0
+      },
+      "std": {
+        "min": 1.637578961322106e-14,
+        "max": 1.4906131884373508e-13,
+        "above_tolerance": 0
+      }
+    },
+    "D3": {
+      "conditions": 44,
+      "failed": 0,
+      "mean": {
+        "min": 3.3306690738754696e-16,
+        "max": 1.2212453270876722e-14,
+        "above_tolerance": 0
+      },
+      "std": {
+        "min": 1.5144509327158495e-08,
+        "max": 1.514470776564636e-08,
+        "above_tolerance": 0
+      }
+    },
+    "D4": {
+      "conditions": 44,
+      "failed": 9,
+      "mean": {
+        "min": 2.7646782596590924e-07,
+        "max": 2.8040971213227905e-05,
+        "above_tolerance": 9
+      },
+      "std": {
+        "min": 6.833032999142841e-08,
+        "max": 4.688590206719523e-06,
+        "above_tolerance": 0
+      }
+    },
+    "D5": {
+      "conditions": 44,
+      "failed": 0,
+      "mean": {
+        "min": 3.3306690738754696e-16,
+        "max": 1.2212453270876722e-14,
+        "above_tolerance": 0
+      },
+      "std": {
+        "min": 1.63202784619898e-14,
+        "max": 1.8207657603852567e-14,
+        "above_tolerance": 0
+      }
+    }
+  },
+  "D1_failed_by_batch": {
+    "1": 11,
+    "8": 8,
+    "32": 5,
+    "128": 0
+  },
+  "figure": {
+    "width_cm": 8.52,
+    "height_cm_before_caption": 4.97,
+    "font_pt": 9,
+    "selected_arms": [
+      "D1",
+      "D4",
+      "D3"
+    ],
+    "panel_metrics": [
+      "mean",
+      "std"
+    ],
+    "plotted_points": 264,
+    "batch_scale": "log2 with display-only arm/order offsets",
+    "error_scale": "log10; mean [1e-16,1e-3], std [1e-9,1e-3]",
+    "display_floors_or_zero_substitutions": false,
+    "tolerance": 1e-05
+  },
+  "scope": [
+    "RD8 remains NOT_REPRODUCED under the frozen 24/44 criterion.",
+    "D3 and D4 are controlled diagnostic variants, not upstream fixes.",
+    "D3 retains float32 elementwise squaring before float64 reductions and accumulators.",
+    "D4 std improvement does not remove its nine mean failures.",
+    "Points show selected finite conditions, not a monotonic law or a general accuracy guarantee.",
+    "D2 and D5 remain in the CSV and full artifact; omission from the compact figure is explicit."
+  ],
+  "outputs": {
+    "rd8_conditions.csv": {
+      "path": "paper/rd8_conditions.csv",
+      "sha256": "b5755ca91a991a97f6761025d7c446253b7e67faa2cf40f2040c2f8007aac793"
+    },
+    "fig_rd8_residuals.tikz": {
+      "path": "paper/fig_rd8_residuals.tikz",
+      "sha256": "f484028c49cbcb6592ea9bf7dea44f103e19b57f23fe8ea58c6290d6222dd303"
+    }
+  }
+}

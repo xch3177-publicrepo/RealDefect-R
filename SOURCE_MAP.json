@@ -2,22 +2,22 @@
   {
     "public_path": "paper/Paper_A_RealDefect_R.md",
     "source": "paper/Paper_A_RealDefect_R.md",
-    "source_sha256": "1acbccb8cce8c4abadaebbc4f79921bddea28f72cd7a1eaa592abd357bf6cce8",
-    "public_sha256": "1acbccb8cce8c4abadaebbc4f79921bddea28f72cd7a1eaa592abd357bf6cce8",
+    "source_sha256": "854ddb6e51eb29ea270f9007b3085c973024a0c6348ebceeb0353ea8404ca25d",
+    "public_sha256": "854ddb6e51eb29ea270f9007b3085c973024a0c6348ebceeb0353ea8404ca25d",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.tex",
     "source": "paper/Paper_A_RealDefect_R.tex",
-    "source_sha256": "2b7ed8700c17e433526cfbc155f029f414a3a7f41c6a01bbabd139e0ba035aed",
-    "public_sha256": "2b7ed8700c17e433526cfbc155f029f414a3a7f41c6a01bbabd139e0ba035aed",
+    "source_sha256": "9ab9b7b88d5d1e981432315f093d2ba952e9e314806c6c2e2a375ba0fd068778",
+    "public_sha256": "9ab9b7b88d5d1e981432315f093d2ba952e9e314806c6c2e2a375ba0fd068778",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.pdf",
     "source": "paper/Paper_A_RealDefect_R.pdf",
-    "source_sha256": "4901afbaa176d5e1ee606c01841506a190f58a757a35288a9b5f9a6ef4e2906c",
-    "public_sha256": "63b3babf607b36f82147df3ef8c1eb5ba000c01320ebea07209c6644289e666a",
+    "source_sha256": "609191255e9cb0ab43666d2deaa434782dcb40ebbaf3a508f31c7f8961c82895",
+    "public_sha256": "802bb43db5e926d61de6d9c52b9ef4c974d3704fdaac5f542bcf8daec8d57b8b",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
@@ -29,17 +29,17 @@
     "unchanged": true
   },
   {
-    "public_path": "paper/replay_protocol.tikz",
-    "source": "paper/replay_protocol.tikz",
-    "source_sha256": "c47ddc9d2ca3d4b861a6c334db5998328dc3b29885e98152bdd45582587cccd7",
-    "public_sha256": "c47ddc9d2ca3d4b861a6c334db5998328dc3b29885e98152bdd45582587cccd7",
+    "public_path": "paper/pipeline_coverage.tikz",
+    "source": "paper/pipeline_coverage.tikz",
+    "source_sha256": "ee345102515365075099855b09eaf07fd19e567217267b8bb2cb759b9cd52906",
+    "public_sha256": "ee345102515365075099855b09eaf07fd19e567217267b8bb2cb759b9cd52906",
     "unchanged": true
   },
   {
     "public_path": "paper/tab_cases.tex",
     "source": "paper/tab_cases.tex",
-    "source_sha256": "3160edf64b8ed14cbad7657f6f8f19fb42c0699590fd1dbf177eca8d45217f27",
-    "public_sha256": "3160edf64b8ed14cbad7657f6f8f19fb42c0699590fd1dbf177eca8d45217f27",
+    "source_sha256": "6e1fe89eb0b3d28b64af2674a4ee025958986476d4b46ec3b92ced13e654b915",
+    "public_sha256": "6e1fe89eb0b3d28b64af2674a4ee025958986476d4b46ec3b92ced13e654b915",
     "unchanged": true
   },
   {
@@ -50,25 +50,54 @@
     "unchanged": true
   },
   {
+    "public_path": "paper/tab_consumer.tex",
+    "source": "paper/tab_consumer.tex",
+    "source_sha256": "2a25453dee892826e8f970df34c183f92f9a83257113f9c6fe1c434725b0eed6",
+    "public_sha256": "2a25453dee892826e8f970df34c183f92f9a83257113f9c6fe1c434725b0eed6",
+    "unchanged": true
+  },
+  {
     "public_path": "paper/fig_cosmos_audit.tikz",
     "source": "paper/fig_cosmos_audit.tikz",
-    "source_sha256": "c08351bd8d4e5e310540712089cb590c49cb2debe37cd63837b24269d485751d",
-    "public_sha256": "c08351bd8d4e5e310540712089cb590c49cb2debe37cd63837b24269d485751d",
+    "source_sha256": "2b292e0b1ed75e31a3e3fd54ec26f359ee1a1fb05b89a1b9c0b6db143e19e543",
+    "public_sha256": "2b292e0b1ed75e31a3e3fd54ec26f359ee1a1fb05b89a1b9c0b6db143e19e543",
     "unchanged": true
+  },
+  {
+    "public_path": "paper/fig_rd8_residuals.tikz",
+    "source": "paper/fig_rd8_residuals.tikz",
+    "source_sha256": "f484028c49cbcb6592ea9bf7dea44f103e19b57f23fe8ea58c6290d6222dd303",
+    "public_sha256": "f484028c49cbcb6592ea9bf7dea44f103e19b57f23fe8ea58c6290d6222dd303",
+    "unchanged": true
+  },
+  {
+    "public_path": "paper/rd8_conditions.csv",
+    "source": "paper/rd8_conditions.csv",
+    "source_sha256": "b5755ca91a991a97f6761025d7c446253b7e67faa2cf40f2040c2f8007aac793",
+    "public_sha256": "b5755ca91a991a97f6761025d7c446253b7e67faa2cf40f2040c2f8007aac793",
+    "unchanged": true
+  },
+  {
+    "public_path": "paper/RD8_CHART_BINDING.json",
+    "source": "paper/RD8_CHART_BINDING.json",
+    "source_sha256": "5c4badf13d713c9319cd60528bee8798d6bec1d384f05f9fd36d82c45cb10402",
+    "public_sha256": "0385df4fadb1b37525e461cbb60ce02e19a4db95a89467a66f900a54870d7774",
+    "unchanged": false,
+    "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
   {
     "public_path": "paper/FIGURE_BINDING.json",
     "source": "paper/FIGURE_BINDING.json",
-    "source_sha256": "f9e584aac11716c4340f7eaa2d8481b56eadec2afd67f29d16c68e2757744147",
-    "public_sha256": "4717426c86c21d74cc5b13dc923167e647d7701ed4fc8666aed70c8f2bb742a3",
+    "source_sha256": "c6cfd60e7f106e48bc559fc40aeade6c0ea38876089487806a192b3c3aeadc87",
+    "public_sha256": "d0582830a14403c0c0234f413e18dd2f7872875188b81f2a8c83f23e8ab55bd6",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
   {
     "public_path": "scripts/make_figures.py",
     "source": "scripts/make_figures.py",
-    "source_sha256": "8b4279c9e57734e050f88d15c7988d952a41741c4c5e6a5cecfddc2344a62a44",
-    "public_sha256": "8b4279c9e57734e050f88d15c7988d952a41741c4c5e6a5cecfddc2344a62a44",
+    "source_sha256": "a4403aafd6ad908f1dcd7b2d8c3d48aa57f754d57925107ecca88bf55fa194da",
+    "public_sha256": "a4403aafd6ad908f1dcd7b2d8c3d48aa57f754d57925107ecca88bf55fa194da",
     "unchanged": true
   },
   {
@@ -81,8 +110,92 @@
   {
     "public_path": "scripts/document_renderer.py",
     "source": "scripts/document_renderer.py",
-    "source_sha256": "5db023e208e7f42c8dacb668418bb0abe8ec4a983c44a2bd4be0dc1b1ffbd4ce",
-    "public_sha256": "5db023e208e7f42c8dacb668418bb0abe8ec4a983c44a2bd4be0dc1b1ffbd4ce",
+    "source_sha256": "e08b94b8142c54c8d30846f8b0e2afcae467d2d288f01b95619ead9d74245326",
+    "public_sha256": "e08b94b8142c54c8d30846f8b0e2afcae467d2d288f01b95619ead9d74245326",
+    "unchanged": true
+  },
+  {
+    "public_path": "scripts/pipeline_coverage.py",
+    "source": "scripts/pipeline_coverage.py",
+    "source_sha256": "8a6157a55fbb7df96f91b7d15dda073ae6597042246959b5dfa00a14780e133d",
+    "public_sha256": "8a6157a55fbb7df96f91b7d15dda073ae6597042246959b5dfa00a14780e133d",
+    "unchanged": true
+  },
+  {
+    "public_path": "scripts/rd8_chart_data.py",
+    "source": "scripts/rd8_chart_data.py",
+    "source_sha256": "82ac3549fb989740e57c16b6c12ea8922f89dec48a7b25fc9cb9b03fb5945222",
+    "public_sha256": "82ac3549fb989740e57c16b6c12ea8922f89dec48a7b25fc9cb9b03fb5945222",
+    "unchanged": true
+  },
+  {
+    "public_path": "scripts/cosmos_summary_figure.py",
+    "source": "scripts/cosmos_summary_figure.py",
+    "source_sha256": "aff6fd7fbe746dd0db8957a3ae6dfe03cdfe3b98e7d6ac1a28a00976c2d0b61b",
+    "public_sha256": "aff6fd7fbe746dd0db8957a3ae6dfe03cdfe3b98e7d6ac1a28a00976c2d0b61b",
+    "unchanged": true
+  },
+  {
+    "public_path": "scripts/cosmos_group_chart_data.py",
+    "source": "scripts/cosmos_group_chart_data.py",
+    "source_sha256": "33e79e1c4ec3e9b0a6eca6f6a7bf4c0b8fbf742d2f8c94b8e6fed09dab474154",
+    "public_sha256": "33e79e1c4ec3e9b0a6eca6f6a7bf4c0b8fbf742d2f8c94b8e6fed09dab474154",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/README.md",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/README.md",
+    "source_sha256": "851adc30f0ad974fa3133515d891112e664c2664b3d0a5e6d5c8e2168bb9b7bc",
+    "public_sha256": "851adc30f0ad974fa3133515d891112e664c2664b3d0a5e6d5c8e2168bb9b7bc",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1.log",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1.log",
+    "source_sha256": "74458fc33a91b4367d53feb24ebda75f580c80ef9d23a94927acf6eede77e2e4",
+    "public_sha256": "74458fc33a91b4367d53feb24ebda75f580c80ef9d23a94927acf6eede77e2e4",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/PROTOCOL.json",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/PROTOCOL.json",
+    "source_sha256": "6166dd580699a43ae2049305c0f6b27a067c104131e6fc65a27955833d444fbb",
+    "public_sha256": "6166dd580699a43ae2049305c0f6b27a067c104131e6fc65a27955833d444fbb",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/VERIFIED_INPUTS.json",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/VERIFIED_INPUTS.json",
+    "source_sha256": "7ff8cf3a3b8bfcf2ef47f82832c2f3b392e500c1a1f4bc7376c0980a2e868e62",
+    "public_sha256": "7ff8cf3a3b8bfcf2ef47f82832c2f3b392e500c1a1f4bc7376c0980a2e868e62",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/results.json",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/results.json",
+    "source_sha256": "0cb771370bdc3a118bfa419fa58b28ebd9eab8321a2fe927bfd96f3870b59e74",
+    "public_sha256": "0cb771370bdc3a118bfa419fa58b28ebd9eab8321a2fe927bfd96f3870b59e74",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/by_source_prefix.csv",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/by_source_prefix.csv",
+    "source_sha256": "6196a78ad6c944235da445bf2f047d2d3d601169002354477f06f39ae2c0c604",
+    "public_sha256": "6196a78ad6c944235da445bf2f047d2d3d601169002354477f06f39ae2c0c604",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/by_split_source_prefix.csv",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/by_split_source_prefix.csv",
+    "source_sha256": "9cf256f811c2770525c0cc9c4555a79cddf685a3bae02c6fb9187908dd013085",
+    "public_sha256": "9cf256f811c2770525c0cc9c4555a79cddf685a3bae02c6fb9187908dd013085",
+    "unchanged": true
+  },
+  {
+    "public_path": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/MANIFEST.json",
+    "source": "research/20260919-round6-evidence-charts/cosmos_group_analysis/run1/MANIFEST.json",
+    "source_sha256": "27536ada65ae9a6189f31d6a6428aa7e79ed2ef388a075848ef5ba43211cd241",
+    "public_sha256": "27536ada65ae9a6189f31d6a6428aa7e79ed2ef388a075848ef5ba43211cd241",
     "unchanged": true
   },
   {
@@ -3773,8 +3886,8 @@
   {
     "public_path": "REPRO.md",
     "source": "publication/20260916/public_REPRO.md",
-    "source_sha256": "045d4e41b23c27cac799b8575d008c506305e7adabcf059521d4d35ecc157944",
-    "public_sha256": "045d4e41b23c27cac799b8575d008c506305e7adabcf059521d4d35ecc157944",
+    "source_sha256": "5dd022171a89f9c49f78bf01104dbe16c50a098ac02f5c151e3ea984b0fd8b3a",
+    "public_sha256": "5dd022171a89f9c49f78bf01104dbe16c50a098ac02f5c151e3ea984b0fd8b3a",
     "unchanged": true
   },
   {
@@ -3794,8 +3907,8 @@
   {
     "public_path": "run_public.py",
     "source": "publication/20260916/public_run_public.py",
-    "source_sha256": "b62e64fac7f7ede9e9d25b8e3c5b0638902fa9a0fd390c13ae92b13208014b9b",
-    "public_sha256": "b62e64fac7f7ede9e9d25b8e3c5b0638902fa9a0fd390c13ae92b13208014b9b",
+    "source_sha256": "932b80dda98ae31bda60eaa1c598a333f87ec4b6257cb2349f4d58ff7e330346",
+    "public_sha256": "932b80dda98ae31bda60eaa1c598a333f87ec4b6257cb2349f4d58ff7e330346",
     "unchanged": true
   },
   {
@@ -3815,8 +3928,8 @@
   {
     "public_path": "README.md",
     "source": "publication/20260916/public_README.md",
-    "source_sha256": "596e73eade668b79d6db0921cdaf217c44a19659453774f32bf425ae7f1fff05",
-    "public_sha256": "596e73eade668b79d6db0921cdaf217c44a19659453774f32bf425ae7f1fff05",
+    "source_sha256": "6297007bac0c80c5c09dbd5c0f110bd7bbddc6d40fedd6ae06f1b1f75395b340",
+    "public_sha256": "6297007bac0c80c5c09dbd5c0f110bd7bbddc6d40fedd6ae06f1b1f75395b340",
     "unchanged": true
   },
   {

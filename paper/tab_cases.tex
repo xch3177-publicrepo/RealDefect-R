@@ -5,18 +5,18 @@
 \label{tab:cases}
 \renewcommand{\arraystretch}{1.10}
 \setlength{\tabcolsep}{1.5pt}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.59cm}>{\raggedright\arraybackslash}p{2.64cm}>{\raggedright\arraybackslash}p{1.45cm}>{\raggedright\arraybackslash}p{3.49cm}>{\raggedright\arraybackslash}p{2.96cm}>{\raggedright\arraybackslash}p{5.55cm}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.58cm}>{\raggedright\arraybackslash}p{1.53cm}>{\raggedright\arraybackslash}p{1.65cm}>{\raggedright\arraybackslash}p{1.46cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{2.64cm}>{\raggedright\arraybackslash}p{5.12cm}@{}}
 \toprule
-\textbf{Case} & \textbf{Operation} & \textbf{Execution} & \textbf{Local property checked} & \textbf{Required reference} & \textbf{Replay outcome} \\
+\textbf{Case} & \textbf{Ecosystem} & \textbf{Stage} & \textbf{Execution} & \textbf{Local property checked} & \textbf{Required reference} & \textbf{Replay outcome} \\
 \midrule
-RD1 & LeRobot window~\cite{2} & E3 minimal path & In-bounds index; Boolean pad & Absolute row identity & 118/118 $\rightarrow$ 0/118 padding violations \\
-RD2 & LeRobot migration~\cite{4} & E2 loop & Nonnegative integers; end$-$start$=$length & Global continuity & 1/5 $\rightarrow$ 0/5 episode violations \\
-RD3 & Isaac Lab offset~\cite{1} & E3 constant & Width four; finite; unit norm & Quaternion convention & $120^{\circ} \to 0^{\circ}$ orientation error \\
-RD4 & Isaac Lab migration~\cite{3} & Body audit & Shape; finite; format/version & Field inventory; convention & 15,141/23,833 unconverted instances \\
-RD5 & robosuite motion~\cite{5} & E2 branch & Raw input shape; $[-1,1]$ range & Displacement semantics & 9,666/9,666 $\rightarrow$ 0/9,666 violations \\
-RD6 & OpenPI calibration~\cite{6} & E2 branch & Finite anchors; old-only round-trip & Encoder anchors & 2/2 $\rightarrow$ 0/2 anchor violations \\
-RD7 & GR00T loading~\cite{7} & E2 branch & Count, shape, dtype; readability & Requested-time mapping & 200/200 $\rightarrow$ 0/200 wrong non-control frames \\
-RD8 & OpenPI statistics~\cite{8} & E2 reducer & Finite mean/std; std $\geq0$ & Population statistic & \textbf{Negative:} 24/44 conditions fail \\
+RD1 & LeRobot~\cite{2} & Loading & E3 minimal path & In-bounds index; Boolean pad & Absolute row identity & 118/118 $\rightarrow$ 0/118 padding violations \\
+RD2 & LeRobot~\cite{4} & Migration & E2 loop & Nonnegative integers; end$-$start$=$length & Global continuity & 1/5 $\rightarrow$ 0/5 episode violations \\
+RD3 & Isaac Lab~\cite{1} & Controller input & E3 constant & Width four; finite; unit norm & Quaternion convention & $120^{\circ} \to 0^{\circ}$ orientation error \\
+RD4 & Isaac Lab~\cite{3} & Migration & Body audit & Shape; finite; format/version & Field inventory; convention & 15,141/23,833 unconverted instances \\
+RD5 & robosuite~\cite{5} & Controller input & E2 branch & Raw input shape; $[-1,1]$ range & Displacement semantics & 9,666/9,666 $\rightarrow$ 0/9,666 violations \\
+RD6 & OpenPI~\cite{6} & Preprocessing & E2 branch & Finite anchors; old-only round-trip & Encoder anchors & 2/2 $\rightarrow$ 0/2 anchor violations \\
+RD7 & GR00T~\cite{7} & Loading & E2 branch & Count, shape, dtype; readability & Requested-time mapping & 200/200 $\rightarrow$ 0/200 wrong non-control frames \\
+RD8 & OpenPI~\cite{8} & Statistics & E2 reducer & Finite mean/std; std $\geq0$ & Population statistic & \textbf{Negative:} 24/44 conditions fail \\
 \bottomrule
 \end{tabular}
 \par\vspace{3pt}

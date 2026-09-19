@@ -7,19 +7,25 @@ SHA-256 and JSON path, in paper/FIGURE_BINDING.json. Nothing is typed by hand. R
     python3 -B scripts/make_figures.py
 
 Outputs (all under paper/):
-    replay_protocol.tikz  Fig. 1  compact same-input parallel replay protocol
+    pipeline_coverage.tikz Fig. 1 categorical operation/reference map
+    fig_rd8_residuals.tikz Fig. 2 batch-size / numerical-error diagnostic
     tab_cases.tex         Table I compact case/local-property/reference/outcome matrix
     tab_gx.tex           Table II per-case paired outcomes and scoped flagged counts
-    fig_cosmos_audit.tikz Fig. 2  Cosmos split discrepancy proportions and counts
+    fig_cosmos_audit.tikz Fig. 3 joint outcomes and source-group identity discrepancies
+    tab_consumer.tex      Table III scoped function intervention
     FIGURE_BINDING.json   claim -> source file -> JSON path -> value
 
-Visual system. Monochrome, unfilled protocol boxes and grayscale statistical bars. All labels use
-8 pt serif type at IEEEtran print size; no decorative panels, title banners or reduced-font scaling.
+Visual system. Monochrome categorical map, diagnostic scatter and grayscale statistical bars.
+Category/table labels use 8 pt and numerical charts 9 pt serif type at IEEEtran print size;
+no decorative panels, title banners or reduced-font scaling.
 
 """
 from __future__ import annotations
 import hashlib, json, math
 from pathlib import Path
+from pipeline_coverage import generate as generate_pipeline
+from rd8_chart_data import generate as generate_rd8
+from cosmos_summary_figure import generate as generate_cosmos
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / 'paper'
@@ -311,13 +317,17 @@ def table_cases():
         ('RD8', r'OpenPI statistics~\cite{8}', 'E2 reducer', local['RD8'], 'Population statistic',
          f'\\textbf{{Negative:}} {rd8_fail}/{rd8_cond} conditions fail'),
     ]
-    widths=[0.59,2.64,1.45,3.49,2.96,5.55]
+    stages = {'RD1':'Loading','RD2':'Migration','RD3':'Controller input','RD4':'Migration','RD5':'Controller input','RD6':'Preprocessing','RD7':'Loading','RD8':'Statistics'}
+    ecosystems = {'RD1':r'LeRobot~\cite{2}', 'RD2':r'LeRobot~\cite{4}', 'RD3':r'Isaac Lab~\cite{1}', 'RD4':r'Isaac Lab~\cite{3}', 'RD5':r'robosuite~\cite{5}', 'RD6':r'OpenPI~\cite{6}', 'RD7':r'GR00T~\cite{7}', 'RD8':r'OpenPI~\cite{8}'}
+    rows = [(row[0], ecosystems[row[0]], stages[row[0]], *row[2:]) for row in rows]
+    BINDING['figures'][F]['stages'] = {'source':'case definitions', 'value':stages}
+    widths=[0.58,1.53,1.65,1.46,3.20,2.64,5.12]
     spec='@{}'+''.join(f'>{{\\raggedright\\arraybackslash}}p{{{w}cm}}' for w in widths)+'@{}'
     out = [r'\begin{table*}[t]', r'\centering', r'\footnotesize',
            r'\caption{Cases, local properties checked, required references and replay outcomes.}',
            r'\label{tab:cases}', r'\renewcommand{\arraystretch}{1.10}', r'\setlength{\tabcolsep}{1.5pt}',
            r'\begin{tabular}{'+spec+'}', r'\toprule',
-           r'\textbf{Case} & \textbf{Operation} & \textbf{Execution} & \textbf{Local property checked} & \textbf{Required reference} & \textbf{Replay outcome} \\',
+           r'\textbf{Case} & \textbf{Ecosystem} & \textbf{Stage} & \textbf{Execution} & \textbf{Local property checked} & \textbf{Required reference} & \textbf{Replay outcome} \\',
            r'\midrule']
     out += [' & '.join(row) + r' \\' for row in rows]
     out += [r'\bottomrule',r'\end{tabular}',r'\par\vspace{3pt}',
@@ -472,51 +482,53 @@ def fig_cosmos_audit():
             cohort[kind][cond] = bind(F, f'consumer_{kind}_{cond}_targeted_field_violations',
                                      'COSMOS_CONSUMER',
                                      f'derived: sum(records where kind={kind}, conditions.{cond}.violating_field_count)', value)
-    W=8.52
-    bx0,bx1=3.10,7.25
-    s=''
-    bars=[('success','Identity','idm',-0.27),('success','Task text','tkm',-0.86),
-          ('failure','Identity','idm',-1.74),('failure','Task text','tkm',-2.33)]
-    for tick in (0,25,50,75,100):
-        x=bx0+(bx1-bx0)*tick/100
-        s+=rule_v(x,-2.57,-0.04,color='rdline',lw=0.35)
-        s+=txt(x,-2.81,f'{tick}\\%',anchor='center')
-    for split,label,key,y in bars:
-        total,bad=sp[split]['rec'],sp[split][key]
-        bind(F,f'{split}_{key}_coherent','COSMOS',f'derived: {split}.episode_rows minus {key}',total-bad)
-        s+=txt(bx0-0.14,y,label,anchor='east')
-        mid=bx0+(bx1-bx0)*bad/total
-        s+=f'\\path[fill=white,draw=black,line width=0.4pt] ({bx0},{y-0.18}) rectangle ({bx1},{y+0.18});\n'
-        s+=f'\\path[fill=rdfill] ({bx0},{y-0.18}) rectangle ({mid:.4f},{y+0.18});\n'
-        s+=txt(bx1+0.14,y,n(bad))
-    for split,y in [('success',-0.27),('failure',-1.74)]:
-        s+=txt(0,y,split.capitalize(),font='\\bfseries')
-        s+=txt(0,y-0.36,f'$n={n(sp[split]["rec"])}$')
-    for x,fill,label in [(0,'rdfill','Discrepant'),(2.52,'white','Coherent under stated relation')]:
-        s+=f'\\path[fill={fill},draw=black,line width=0.4pt] ({x},-3.38) rectangle ({x+0.25},-3.16);\n'
-        s+=txt(x+0.37,-3.27,label)
-    cap=('Episode-summary discrepancies in the pinned Cosmos3-DROID release. Bar lengths show '
-         'within-split proportions; labels give discrepant record counts. Identity and task-text '
-         'relations are evaluated separately, without a downstream-harm inference.')
-    BINDING.setdefault('layout',{})[F]={'width_cm':W,'drawing_height_cm':3.56,'single_column':True}
-    return figure(s,cap,'fig:cosmos-audit',wide=False)
+    drawing, details = generate_cosmos(ROOT)
+    BINDING['cosmos_group_figure'] = details
+    return drawing
+
+
+def table_consumer():
+    F = 'tab_consumer'
+    records = get('COSMOS_CONSUMER', 'records')
+    out = [r'\begin{table}[t]',r'\centering',r'\footnotesize',
+           r'\caption{Targeted output-field violations in the scoped consumer replay.}',
+           r'\label{tab:consumer}',r'\renewcommand{\arraystretch}{1.13}',
+           r'\setlength{\tabcolsep}{6pt}',r'\begin{tabular}{@{}lcc@{}}',r'\toprule',
+           r'\textbf{Input condition} & \textbf{Affected ($n=2$)} & \textbf{Controls ($n=2$)} \\',r'\midrule']
+    for cond, label in [('original','Original summaries'),('summary_corrected','Summary-only correction')]:
+        cells=[]
+        for kind in ('affected','control'):
+            chosen=[r for r in records if r['kind']==kind]
+            bad=sum(r['conditions'][cond]['violating_field_count'] for r in chosen)
+            total=len(chosen)*8
+            bind(F,kind+'_'+cond,'COSMOS_CONSUMER',f'derived: sum(records kind={kind}, conditions.{cond}.violating_field_count)',{'violations':bad,'targeted_fields':total,'records':len(chosen)})
+            cells.append(f'{bad}/{total}')
+        out.append(' & '.join([label,*cells])+r' \\')
+    out.extend([r'\bottomrule',r'\end{tabular}',r'\par\vspace{3pt}',r'\begin{minipage}{\columnwidth}\footnotesize',
+                r'Each cell scores eight episode-index summary fields in two preselected records (16 outputs). Same pinned \texttt{update\_meta\_data}, frame reference and offsets; empty video mapping. Other metadata and complete merge behavior are outside this verdict.',
+                r'\end{minipage}',r'\end{table}',''])
+    return '\n'.join(out)
 
 
 if __name__ == '__main__':
+    BINDING['pipeline_coverage'] = generate_pipeline(ROOT)
+    BINDING['rd8_chart'] = generate_rd8(ROOT)
     outputs = {
-        'replay_protocol.tikz': fig_protocol(),
+        'tab_consumer.tex': table_consumer(),
         'tab_cases.tex': table_cases(),
         'tab_gx.tex': table_gx(),
         'fig_cosmos_audit.tikz': fig_cosmos_audit(),
     }
     for name, body in outputs.items():
         (PAPER / name).write_text(body, encoding='utf-8')
-    for stale in ('fig_replay_outcomes.tikz', 'fig_check_matrix.tikz', 'fig_gx_matrix.tikz'):
+    for stale in ('replay_protocol.tikz', 'fig_replay_outcomes.tikz', 'fig_check_matrix.tikz', 'fig_gx_matrix.tikz'):
         p = PAPER / stale
         if p.exists():
             p.unlink()
-    BINDING['outputs'] = {name: hashlib.sha256((PAPER / name).read_bytes()).hexdigest() for name in outputs}
+    all_outputs = list(outputs) + ['pipeline_coverage.tikz','fig_rd8_residuals.tikz','rd8_conditions.csv','RD8_CHART_BINDING.json']
+    BINDING['outputs'] = {name: hashlib.sha256((PAPER / name).read_bytes()).hexdigest() for name in all_outputs}
     BINDING['removed_outputs'] = {
+        'replay_protocol.tikz':'protocol retained in prose; figure replaced by operation/reference coverage map',
         'fig_gx_matrix.tikz': 'replaced by Table II (tab_gx.tex): per-case symbolic paired outcomes and scoped C counts',
         'fig_replay_outcomes.tikz': 'replaced by Table I (tab_cases.tex); the dumbbell chart mixed '
                                     'non-comparable per-case denominators on one axis',

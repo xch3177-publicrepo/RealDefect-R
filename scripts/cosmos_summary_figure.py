@@ -21,7 +21,9 @@ def generate(root: Path):
     def rect(x0,y0,x1,y1,opts):
         return f'\\path[draw=black,line width=.4pt,{opts}] ({x0:.4f},{y0:.4f}) rectangle ({x1:.4f},{y1:.4f});\n'
     s = r'\begin{figure*}[t]'+'\n'+r'\centering'+'\n'
-    s += r'\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\fontsize{9}{10.5}\selectfont,inner sep=0pt]'+'\n'
+    s += r'\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\fontsize{9}{10.5}\selectfont,inner sep=0pt,text=black]'+'\n'
+    s += r'\definecolor{rdIdentity}{HTML}{0072B2}'+'\n'
+    s += r'\definecolor{rdJoint}{HTML}{D55E00}'+'\n'
     s += r'\path[use as bounding box] (0,-.33) rectangle (17.35,5.50);'+'\n'
     # Panel (a): mutually exclusive outcomes of the two summary relations.
     x0,x1 = 2.12,7.98
@@ -37,7 +39,9 @@ def generate(root: Path):
         assert c['task_only']==0 and sum(c[k] for k in ['both_bad','identity_only','neither_bad'])==total
         s+=node(x0-.16,y,split.capitalize()+r' split\\'+f'$n={total:,}$','anchor=east,align=right')
         left=x0
-        for key,opts in [('both_bad','fill=black!36'),('identity_only','fill=white,pattern=north east lines'),('neither_bad','fill=white')]:
+        # Solid / hatched / open remain distinct in grayscale. Color provides
+        # a redundant category cue; no text is reversed out of a colored bar.
+        for key,opts in [('both_bad','fill=rdJoint!45'),('identity_only','fill=white,pattern=north east lines,pattern color=rdIdentity'),('neither_bad','fill=white')]:
             n=c[key]
             if n == 0:
                 continue
@@ -52,7 +56,7 @@ def generate(root: Path):
             left+=width
         counts.append({'split':split,'records':total,'counts':c})
     # Short legend below panel; full relation names are in the caption.
-    for x,opts,label in [(1.37,'fill=black!36','Both'),(3.30,'fill=white,pattern=north east lines','Identity only'),(6.20,'fill=white','Neither')]:
+    for x,opts,label in [(1.37,'fill=rdJoint!45','Both'),(3.30,'fill=white,pattern=north east lines,pattern color=rdIdentity','Identity only'),(6.20,'fill=white','Neither')]:
         s+=rect(x,1.06,x+.23,1.28,opts)
         s+=node(x+.35,1.17,label,'anchor=west')
     s+=node(.02,5.25,'(a)','anchor=west')
@@ -72,7 +76,7 @@ def generate(root: Path):
         rate=100*bad/n
         s+=node(gx0-.17,y,r['source_prefix'],'anchor=east')
         if bad:
-            s+=rect(gx0,y-.085,gx0+(gx1-gx0)*rate/100,y+.085,'fill=black!36')
+            s+=rect(gx0,y-.085,gx0+(gx1-gx0)*rate/100,y+.085,'fill=rdIdentity!60')
         else:
             s+=f'\\draw[fill=white,line width=.5pt] ({gx0:.4f},{y:.4f}) circle[radius=.055cm];\n'
         s+=node(17.10,y,f'{n:,}','anchor=east')

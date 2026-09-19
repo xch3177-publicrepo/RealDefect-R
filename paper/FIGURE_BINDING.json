@@ -1859,7 +1859,7 @@
       },
       "fig_rd8_residuals.tikz": {
         "path": "paper/fig_rd8_residuals.tikz",
-        "sha256": "f484028c49cbcb6592ea9bf7dea44f103e19b57f23fe8ea58c6290d6222dd303"
+        "sha256": "f1cbe1ba961414320f195230003e2f16e2717033222e3301beead77b586c6c4b"
       }
     }
   },
@@ -2073,11 +2073,11 @@
     "tab_consumer.tex": "2a25453dee892826e8f970df34c183f92f9a83257113f9c6fe1c434725b0eed6",
     "tab_cases.tex": "6e1fe89eb0b3d28b64af2674a4ee025958986476d4b46ec3b92ced13e654b915",
     "tab_gx.tex": "45b6b3378b8ebbdb203220384645467f36d5d436a90bb3c173292a6012905ede",
-    "fig_cosmos_audit.tikz": "2b292e0b1ed75e31a3e3fd54ec26f359ee1a1fb05b89a1b9c0b6db143e19e543",
-    "pipeline_coverage.tikz": "ee345102515365075099855b09eaf07fd19e567217267b8bb2cb759b9cd52906",
-    "fig_rd8_residuals.tikz": "f484028c49cbcb6592ea9bf7dea44f103e19b57f23fe8ea58c6290d6222dd303",
+    "fig_cosmos_audit.tikz": "ebdb7fa7f6a1c1cebf1bd1b549d6fa1a24a2c15bd09e40545daea11c316cdb0a",
+    "pipeline_coverage.tikz": "e223ac7070897a80858385f51b14d43c07a7086119cc6e1595e6c4f01fab65ce",
+    "fig_rd8_residuals.tikz": "f1cbe1ba961414320f195230003e2f16e2717033222e3301beead77b586c6c4b",
     "rd8_conditions.csv": "b5755ca91a991a97f6761025d7c446253b7e67faa2cf40f2040c2f8007aac793",
-    "RD8_CHART_BINDING.json": "0385df4fadb1b37525e461cbb60ce02e19a4db95a89467a66f900a54870d7774"
+    "RD8_CHART_BINDING.json": "f27c380009efaf71d38707abf14db13201c7158cf689fa0a119812a7a5aa7e73"
   },
   "removed_outputs": {
     "replay_protocol.tikz": "protocol retained in prose; figure replaced by operation/reference coverage map",

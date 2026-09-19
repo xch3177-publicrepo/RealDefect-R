@@ -1,6 +1,8 @@
 \begin{figure*}[t]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\fontsize{9}{10.5}\selectfont,inner sep=0pt]
+\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\fontsize{9}{10.5}\selectfont,inner sep=0pt,text=black]
+\definecolor{rdIdentity}{HTML}{0072B2}
+\definecolor{rdJoint}{HTML}{D55E00}
 \path[use as bounding box] (0,-.33) rectangle (17.35,5.50);
 \draw[line width=.5pt,black!20] (2.1200,0.7600)--(2.1200,4.6000);
 \node[anchor=north] at (2.1200,0.5500) {0};
@@ -15,21 +17,21 @@
 \draw[line width=.5pt,] (2.1200,0.7600)--(7.9800,0.7600);
 \node[] at (5.0500,0.0300) {Episode records (\%)};
 \node[anchor=east,align=right] at (1.9600,3.8000) {Success split\\$n=57,639$};
-\path[draw=black,line width=.4pt,fill=black!36] (2.1200,3.6000) rectangle (7.2667,4.0000);
+\path[draw=black,line width=.4pt,fill=rdJoint!45] (2.1200,3.6000) rectangle (7.2667,4.0000);
 \node[] at (4.6934,4.2200) {50,623};
 \path[draw=black,line width=.4pt,fill=white] (7.2667,3.6000) rectangle (7.9800,4.0000);
 \node[] at (7.6234,4.2200) {7,016};
 \node[anchor=east,align=right] at (1.9600,2.2000) {Failure split\\$n=14,268$};
-\path[draw=black,line width=.4pt,fill=black!36] (2.1200,2.0000) rectangle (2.2145,2.4000);
+\path[draw=black,line width=.4pt,fill=rdJoint!45] (2.1200,2.0000) rectangle (2.2145,2.4000);
 \node[] at (2.7472,2.8500) {230};
 \draw[line width=.5pt,] (2.1672,2.4300)--(2.4472,2.6900);
-\path[draw=black,line width=.4pt,fill=white,pattern=north east lines] (2.2145,2.0000) rectangle (6.5881,2.4000);
+\path[draw=black,line width=.4pt,fill=white,pattern=north east lines,pattern color=rdIdentity] (2.2145,2.0000) rectangle (6.5881,2.4000);
 \node[] at (4.4013,2.6200) {10,649};
 \path[draw=black,line width=.4pt,fill=white] (6.5881,2.0000) rectangle (7.9800,2.4000);
 \node[] at (7.2841,2.6200) {3,389};
-\path[draw=black,line width=.4pt,fill=black!36] (1.3700,1.0600) rectangle (1.6000,1.2800);
+\path[draw=black,line width=.4pt,fill=rdJoint!45] (1.3700,1.0600) rectangle (1.6000,1.2800);
 \node[anchor=west] at (1.7200,1.1700) {Both};
-\path[draw=black,line width=.4pt,fill=white,pattern=north east lines] (3.3000,1.0600) rectangle (3.5300,1.2800);
+\path[draw=black,line width=.4pt,fill=white,pattern=north east lines,pattern color=rdIdentity] (3.3000,1.0600) rectangle (3.5300,1.2800);
 \node[anchor=west] at (3.6500,1.1700) {Identity only};
 \path[draw=black,line width=.4pt,fill=white] (6.2000,1.0600) rectangle (6.4300,1.2800);
 \node[anchor=west] at (6.5500,1.1700) {Neither};
@@ -45,40 +47,40 @@
 \node[anchor=east] at (17.1000,5.2500) {Episodes};
 \node[anchor=west] at (8.8500,5.2500) {(b)};
 \node[anchor=east] at (10.3800,4.8600) {TRI};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,4.7750) rectangle (15.6800,4.9450);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,4.7750) rectangle (15.6800,4.9450);
 \node[anchor=east] at (17.1000,4.8600) {19,825};
 \node[anchor=east] at (10.3800,4.5350) {RAIL};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,4.4500) rectangle (15.6800,4.6200);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,4.4500) rectangle (15.6800,4.6200);
 \node[anchor=east] at (17.1000,4.5350) {8,100};
 \node[anchor=east] at (10.3800,4.2100) {IPRL};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,4.1250) rectangle (15.6800,4.2950);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,4.1250) rectangle (15.6800,4.2950);
 \node[anchor=east] at (17.1000,4.2100) {5,713};
 \node[anchor=east] at (10.3800,3.8850) {CLVR};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,3.8000) rectangle (15.6800,3.9700);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,3.8000) rectangle (15.6800,3.9700);
 \node[anchor=east] at (17.1000,3.8850) {5,090};
 \node[anchor=east] at (10.3800,3.5600) {REAL};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,3.4750) rectangle (15.6800,3.6450);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,3.4750) rectangle (15.6800,3.6450);
 \node[anchor=east] at (17.1000,3.5600) {5,008};
 \node[anchor=east] at (10.3800,3.2350) {IRIS};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,3.1500) rectangle (15.6800,3.3200);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,3.1500) rectangle (15.6800,3.3200);
 \node[anchor=east] at (17.1000,3.2350) {3,362};
 \node[anchor=east] at (10.3800,2.9100) {ILIAD};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,2.8250) rectangle (15.6800,2.9950);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,2.8250) rectangle (15.6800,2.9950);
 \node[anchor=east] at (17.1000,2.9100) {3,240};
 \node[anchor=east] at (10.3800,2.5850) {WEIRD};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,2.5000) rectangle (15.6800,2.6700);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,2.5000) rectangle (15.6800,2.6700);
 \node[anchor=east] at (17.1000,2.5850) {2,989};
 \node[anchor=east] at (10.3800,2.2600) {PennPAL};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,2.1750) rectangle (15.6800,2.3450);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,2.1750) rectangle (15.6800,2.3450);
 \node[anchor=east] at (17.1000,2.2600) {2,894};
 \node[anchor=east] at (10.3800,1.9350) {RPL};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,1.8500) rectangle (15.6800,2.0200);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,1.8500) rectangle (15.6800,2.0200);
 \node[anchor=east] at (17.1000,1.9350) {2,517};
 \node[anchor=east] at (10.3800,1.6100) {RAD};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,1.5250) rectangle (15.6800,1.6950);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,1.5250) rectangle (15.6800,1.6950);
 \node[anchor=east] at (17.1000,1.6100) {1,467};
 \node[anchor=east] at (10.3800,1.2850) {GuptaLab};
-\path[draw=black,line width=.4pt,fill=black!36] (10.5500,1.2000) rectangle (15.6800,1.3700);
+\path[draw=black,line width=.4pt,fill=rdIdentity!60] (10.5500,1.2000) rectangle (15.6800,1.3700);
 \node[anchor=east] at (17.1000,1.2850) {1,297};
 \node[anchor=east] at (10.3800,0.9600) {AUTOLab};
 \draw[fill=white,line width=.5pt] (10.5500,0.9600) circle[radius=.055cm];

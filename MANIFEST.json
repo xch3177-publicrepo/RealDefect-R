@@ -10,7 +10,12 @@
     {
       "path": "ARTIFACT_INFO.json",
       "bytes": 845,
-      "sha256": "fd02845bcfd085a406a56982a28ba2dada656ff6bfd1afc7b42e86ee229ca6c5"
+      "sha256": "6db26c0547a900e40810a220e82e8b12aaac48d07408f6e5a5be90a6fe843c89"
+    },
+    {
+      "path": "ARTIFACT_OVERVIEW.md",
+      "bytes": 12270,
+      "sha256": "bec7a3f410946838bc07a94f1a0bf5adfedffa79daca5276590aa3678e51609d"
     },
     {
       "path": "HASH_CONVENTIONS.md",
@@ -100,7 +105,7 @@
     {
       "path": "README.md",
       "bytes": 3353,
-      "sha256": "6297007bac0c80c5c09dbd5c0f110bd7bbddc6d40fedd6ae06f1b1f75395b340"
+      "sha256": "d4af2949843c6cf86a89558917e8c3bf005d6df902f689103b55f4b424dd780c"
     },
     {
       "path": "REDACTIONS.json",
@@ -114,18 +119,18 @@
     },
     {
       "path": "REPRO.md",
-      "bytes": 9865,
-      "sha256": "5dd022171a89f9c49f78bf01104dbe16c50a098ac02f5c151e3ea984b0fd8b3a"
+      "bytes": 12103,
+      "sha256": "5d84b84c61fb27b43da5b43fb2ed1d2b244672004bc1832e0085706e51b9e779"
     },
     {
       "path": "SANITIZATION_SCAN.json",
       "bytes": 441,
-      "sha256": "b0f02ee2c2c0e72269954da9462a60693016966e1795f6937b28bd42ea8858c8"
+      "sha256": "a181068d64b71703af8c0e18e3943f42c2e08121c9ba3fefdc8ec45715870a1f"
     },
     {
       "path": "SOURCE_MAP.json",
-      "bytes": 267110,
-      "sha256": "a6aafc0d025635c18e2cb789a11973a27557a70f22d80a8b9d4299d82e1ed8eb"
+      "bytes": 267428,
+      "sha256": "4e254ee50ebdd1111b879a2614236504d7762d52e2b6317b06c8375f9dc6cc1a"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -2620,7 +2625,7 @@
     {
       "path": "paper/FIGURE_BINDING.json",
       "bytes": 60076,
-      "sha256": "d0582830a14403c0c0234f413e18dd2f7872875188b81f2a8c83f23e8ab55bd6"
+      "sha256": "2f7bb9e897f7204ea841a747a314d860efa698f9538512ef5728f71ba462fe50"
     },
     {
       "path": "paper/IEEEtran.cls",
@@ -2629,38 +2634,38 @@
     },
     {
       "path": "paper/Paper_A_RealDefect_R.md",
-      "bytes": 51888,
-      "sha256": "854ddb6e51eb29ea270f9007b3085c973024a0c6348ebceeb0353ea8404ca25d"
+      "bytes": 51937,
+      "sha256": "f054f376af0f6b7fbec6466ea7732ed2a91933db564c4fa8bc4b9319ecd2bf47"
     },
     {
       "path": "paper/Paper_A_RealDefect_R.pdf",
-      "bytes": 281816,
-      "sha256": "802bb43db5e926d61de6d9c52b9ef4c974d3704fdaac5f542bcf8daec8d57b8b"
+      "bytes": 282988,
+      "sha256": "369e7adcf9d0d98d971bc8d2b956e7af88de80f4f79bf1e4a3f99b171de78d4e"
     },
     {
       "path": "paper/Paper_A_RealDefect_R.tex",
-      "bytes": 55110,
-      "sha256": "9ab9b7b88d5d1e981432315f093d2ba952e9e314806c6c2e2a375ba0fd068778"
+      "bytes": 55186,
+      "sha256": "1f19bc9332e38cf202bd036f7e098122698c21eb0d9356f16eb6f481ab6ca085"
     },
     {
       "path": "paper/RD8_CHART_BINDING.json",
       "bytes": 15223,
-      "sha256": "0385df4fadb1b37525e461cbb60ce02e19a4db95a89467a66f900a54870d7774"
+      "sha256": "f27c380009efaf71d38707abf14db13201c7158cf689fa0a119812a7a5aa7e73"
     },
     {
       "path": "paper/fig_cosmos_audit.tikz",
-      "bytes": 5916,
-      "sha256": "2b292e0b1ed75e31a3e3fd54ec26f359ee1a1fb05b89a1b9c0b6db143e19e543"
+      "bytes": 6118,
+      "sha256": "ebdb7fa7f6a1c1cebf1bd1b549d6fa1a24a2c15bd09e40545daea11c316cdb0a"
     },
     {
       "path": "paper/fig_rd8_residuals.tikz",
-      "bytes": 33929,
-      "sha256": "f484028c49cbcb6592ea9bf7dea44f103e19b57f23fe8ea58c6290d6222dd303"
+      "bytes": 35207,
+      "sha256": "f1cbe1ba961414320f195230003e2f16e2717033222e3301beead77b586c6c4b"
     },
     {
       "path": "paper/pipeline_coverage.tikz",
-      "bytes": 2940,
-      "sha256": "ee345102515365075099855b09eaf07fd19e567217267b8bb2cb759b9cd52906"
+      "bytes": 3263,
+      "sha256": "e223ac7070897a80858385f51b14d43c07a7086119cc6e1595e6c4f01fab65ce"
     },
     {
       "path": "paper/rd8_conditions.csv",
@@ -2974,8 +2979,8 @@
     },
     {
       "path": "scripts/cosmos_summary_figure.py",
-      "bytes": 4906,
-      "sha256": "aff6fd7fbe746dd0db8957a3ae6dfe03cdfe3b98e7d6ac1a28a00976c2d0b61b"
+      "bytes": 5241,
+      "sha256": "4f3062f654d4d711e9b1c2fff4b8829eb5d6325e2eec099ccbf11e73cef44722"
     },
     {
       "path": "scripts/document_renderer.py",
@@ -2989,13 +2994,13 @@
     },
     {
       "path": "scripts/pipeline_coverage.py",
-      "bytes": 3379,
-      "sha256": "8a6157a55fbb7df96f91b7d15dda073ae6597042246959b5dfa00a14780e133d"
+      "bytes": 3855,
+      "sha256": "d8f8209e57698650ff6408a15e9c8983743780ccab8dee741ba6ad3f30982338"
     },
     {
       "path": "scripts/rd8_chart_data.py",
-      "bytes": 13613,
-      "sha256": "82ac3549fb989740e57c16b6c12ea8922f89dec48a7b25fc9cb9b03fb5945222"
+      "bytes": 13944,
+      "sha256": "688b48e11269f5533c48bc071a317c04ff8ff66f3972e9107c5afc9bd3994f9b"
     },
     {
       "path": "verify_public.py",

@@ -4,14 +4,36 @@ Use a tagged release/commit, not a moving checkout. The complete snapshot includ
 GX, RD8-PD, Cosmos, C5 and scoped consumer-replay code and results; its identity is not merely the historical `5d50746`
 source pin. Run `verify_public.py` first. Every manifest file must exist with its exact SHA-256.
 
+## Paper-to-execution map
+
+The [artifact overview](ARTIFACT_OVERVIEW.md) maps every main evidence item to its command,
+fresh output files and expected scientific result. It also gives narrower, supported RD8-PD,
+source-prefix and consumer routes. The map distinguishes **executing an analysis** from
+**regenerating a figure from shipped results**. Source-prefix regrouping is an additional command;
+it is not included in `--suite all`.
+
+| Paper evidence | Execution entry | Expected result to inspect |
+|---|---|---|
+| Table I: eight cases | `run_public.py --suite cases --download` | Per-case scoped outcomes; RD4 is a single-path audit; RD8 executes successfully as an expected scientific negative, with 24/44 numerical conditions failing |
+| Table II: GX pairs | `run_public.py --suite gx --download` | 42 branch validations; 1, 1 and 7 separated pairs in the declared, fitted and informed suites; six comparisons |
+| Fig. 2: RD8-PD | `run_public.py --suite extended --download`, or the isolated diagnostic route in the overview | 44 conditions per arm; D1 has 24 failures; D4 retains nine mean failures and zero std failures; D3 passes 44/44 |
+| Fig. 3: metadata and source groups | Metadata recovery followed by `scripts/cosmos_group_chart_data.py`, as documented below | 13 source-prefix groups; 10,405 globally coherent and 61,502 identity-discrepant records; all 71,907 satisfy the seven prefix-local checks |
+| Cosmos C1–C5 | `run_public.py --suite extended --download` | 22,412,712 rows, 74 files; zero violations of each specified constraint; separate C5 output |
+| Table III: scoped consumer | `run_public.py --suite extended --download`, or the direct consumer route in the overview | Two affected records: 16/16 targeted field violations become 0/16; two controls: 0/16 in both conditions |
+
+Suite commands additionally require a new external `--work-dir`, as shown below. Commands describe
+supported replay paths, not a claim that every path was rerun for this release. A completion receipt
+must name the exact tag, manifest, executed steps and fresh result paths; a GX-only receipt does not
+certify RD8-PD, the source-group analysis or the consumer replay.
+
 ## Fast native GX replay from the public tag
 
 Download the fixed snapshot without a GitHub login:
 
 ```sh
-curl -q -fL https://github.com/xch3177-publicrepo/RealDefect-R/archive/refs/tags/public-v1.1.0-20260919.tar.gz -o realdefect-r-public-v1.1.0-20260919.tar.gz
+curl -q -fL https://github.com/xch3177-publicrepo/RealDefect-R/archive/refs/tags/public-v1.1.1-20260919.tar.gz -o realdefect-r-public-v1.1.1-20260919.tar.gz
 mkdir realdefect-snapshot
-tar -xzf realdefect-r-public-v1.1.0-20260919.tar.gz --strip-components=1 -C realdefect-snapshot
+tar -xzf realdefect-r-public-v1.1.1-20260919.tar.gz --strip-components=1 -C realdefect-snapshot
 cd realdefect-snapshot
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
@@ -139,8 +161,8 @@ Post-publication access tests are separate release evidence: their records bind 
 source/archive identity and manifest hash. They are not inserted retroactively into the tested fixed
 snapshot. This keeps the snapshot identity stable and avoids a self-referential acceptance hash.
 
-## Source-prefix regrouping and scientific figures (v1.1.0)
+## Source-prefix regrouping and scientific figures
 
 The additional Cosmos grouping analysis is a separately versioned re-analysis of the same 12 hash-verified metadata objects. It is not a new consumer experiment. Follow [the grouping protocol and commands](research/20260919-round6-evidence-charts/cosmos_group_analysis/README.md) to recover metadata and reproduce the 13-group table. This optional analysis is separate from the existing `all` suite.
 
-`python scripts/make_figures.py` regenerates the pipeline map, the 44-condition RD8 CSV and vector figure, the Cosmos joint/source-group figure, and three tables from packaged evidence. It uses only the Python standard library. The original seven identity-summary predicates and eight consumer target fields remain distinct.
+`python scripts/make_figures.py` regenerates the pipeline map, the 44-condition RD8 CSV and vector figure, the Cosmos joint/source-group figure, and three tables from packaged evidence. It uses only the Python standard library. This is a rendering check, not a fresh execution of those experiments. The original seven identity-summary predicates and eight consumer target fields remain distinct.

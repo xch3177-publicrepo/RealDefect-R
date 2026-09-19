@@ -1,6 +1,8 @@
 \begin{figure*}[t]
 \centering
-\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\footnotesize,inner sep=0pt]
+\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\footnotesize,inner sep=0pt,text=black]
+\definecolor{rdCorpus}{HTML}{0072B2}
+\definecolor{rdAudit}{HTML}{D55E00}
 \node[] at (8.750,0.920) {Framework and consumer operations};
 \node[] at (15.500,0.920) {Publisher release};
 \draw[line width=.5pt] (3.18,.65)--(14.33,.65);
@@ -13,31 +15,31 @@
 \node[align=center] at (15.500,0.280) {Re-release};
 \node[anchor=east] at (2.980,-0.440) {Convention / frame semantics};
 \draw[black!20,line width=.4pt] (3.18,-0.700)--(16.63,-0.700);
-\draw plot[mark=o,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(8.150,-0.440)};
+\draw plot[mark=o,mark size=2.1pt,mark options={draw=rdCorpus,line width=.5pt,fill=rdCorpus!12}] coordinates {(8.150,-0.440)};
 \node[anchor=west] at (8.410,-0.440) {RD4};
-\draw plot[mark=o,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(10.400,-0.440)};
+\draw plot[mark=o,mark size=2.1pt,mark options={draw=rdCorpus,line width=.5pt,fill=rdCorpus!12}] coordinates {(10.400,-0.440)};
 \node[anchor=west] at (10.660,-0.440) {RD3, RD5};
 \node[anchor=east] at (2.980,-0.970) {Calibration anchor};
 \draw[black!20,line width=.4pt] (3.18,-1.230)--(16.63,-1.230);
-\draw plot[mark=triangle,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(5.900,-0.970)};
+\draw plot[mark=triangle,mark size=2.1pt,mark options={draw=rdCorpus,line width=.5pt,fill=rdCorpus!12}] coordinates {(5.900,-0.970)};
 \node[anchor=west] at (6.160,-0.970) {RD6};
 \node[anchor=east] at (2.980,-1.500) {Requested-time correspondence};
 \draw[black!20,line width=.4pt] (3.18,-1.760)--(16.63,-1.760);
-\draw plot[mark=square,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(3.650,-1.500)};
+\draw plot[mark=square,mark size=2.1pt,mark options={draw=rdCorpus,line width=.5pt,fill=rdCorpus!12}] coordinates {(3.650,-1.500)};
 \node[anchor=west] at (3.910,-1.500) {RD7};
 \node[anchor=east] at (2.980,-2.030) {Identity / interval};
 \draw[black!20,line width=.4pt] (3.18,-2.290)--(16.63,-2.290);
-\draw plot[mark=diamond,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(3.650,-2.030)};
+\draw plot[mark=diamond,mark size=2.1pt,mark options={draw=rdCorpus,line width=.5pt,fill=rdCorpus!12}] coordinates {(3.650,-2.030)};
 \node[anchor=west] at (3.910,-2.030) {RD1};
-\draw plot[mark=diamond,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(8.150,-2.030)};
+\draw plot[mark=diamond,mark size=2.1pt,mark options={draw=rdCorpus,line width=.5pt,fill=rdCorpus!12}] coordinates {(8.150,-2.030)};
 \node[anchor=west] at (8.410,-2.030) {RD2};
-\draw plot[mark=diamond,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(14.900,-2.030)};
+\draw plot[mark=diamond,mark size=2.1pt,mark options={draw=rdAudit,line width=.5pt,fill=rdAudit!12}] coordinates {(14.900,-2.030)};
 \node[anchor=west] at (15.160,-2.030) {Cosmos};
 \node[anchor=east] at (2.980,-2.560) {Population statistic};
 \draw[black!20,line width=.4pt] (3.18,-2.820)--(16.63,-2.820);
-\draw plot[mark=star,mark size=2.1pt,mark options={line width=.5pt,fill=white}] coordinates {(12.650,-2.560)};
+\draw plot[mark=star,mark size=2.1pt,mark options={draw=rdCorpus,line width=.5pt,fill=rdCorpus!12}] coordinates {(12.650,-2.560)};
 \node[anchor=west] at (12.910,-2.560) {RD8};
 \end{tikzpicture}
-\caption{Case coverage by operation and required semantic reference. Columns are operation categories, not a prescribed execution order; symbols distinguish reference kinds. RD3 and RD5 share a broad convention/frame-semantics category but use different rules. Cosmos is the complementary re-release audit, outside the eight-case corpus.}
+\caption{Case coverage by operation and required semantic reference. Columns are operation categories, not a prescribed execution order; symbols distinguish reference kinds. Blue marks denote corpus cases; the orange mark denotes the complementary audit. RD3 and RD5 share a broad convention/frame-semantics category but use different rules. Cosmos is the complementary re-release audit, outside the eight-case corpus.}
 \label{fig:pipeline-coverage}
 \end{figure*}

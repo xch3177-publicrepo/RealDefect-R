@@ -35,20 +35,25 @@ def _node(x, y, text, options=""):
 
 
 def _marker(x, y, arm, size=0.043):
+    # Shapes preserve arm identity without color. The restrained Okabe--Ito
+    # palette adds a redundant arm cue without changing positions or sizes.
     # Explicit coordinates avoid a pgfplots or plotmarks dependency.
     if arm == "D1":
-        return rf"\draw[draw=black,fill=white,line width=0.45pt] ({x:.5f},{y:.5f}) circle[radius={size:.5f}cm];" + "\n"
+        return rf"\draw[draw=rdPinned,fill=white,line width=0.45pt] ({x:.5f},{y:.5f}) circle[radius={size:.5f}cm];" + "\n"
     if arm == "D4":
-        return (rf"\path[draw=black,fill=black,line width=0.45pt] ({x:.5f},{y+size:.5f}) -- "
+        return (rf"\path[draw=rdStable,fill=rdStable,line width=0.45pt] ({x:.5f},{y+size:.5f}) -- "
                 rf"({x-size:.5f},{y-size*.75:.5f}) -- ({x+size:.5f},{y-size*.75:.5f}) -- cycle;" + "\n")
-    return (rf"\path[draw=black,fill=black,line width=0.45pt] ({x:.5f},{y+size:.5f}) -- "
+    return (rf"\path[draw=rdAccum,fill=rdAccum,line width=0.45pt] ({x:.5f},{y+size:.5f}) -- "
             rf"({x+size:.5f},{y:.5f}) -- ({x:.5f},{y-size:.5f}) -- ({x-size:.5f},{y:.5f}) -- cycle;" + "\n")
 
 
 def draw_tikz(rows):
     """Two metric panels at 8.52 cm width. Native 9 pt type; no downscaling."""
     out = [r"\begin{figure}[t]", r"\centering",
-           r"\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\fontsize{9}{10.5}\selectfont,inner sep=0pt]",
+           r"\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\fontsize{9}{10.5}\selectfont,inner sep=0pt,text=black]",
+           r"\definecolor{rdPinned}{HTML}{0072B2}",
+           r"\definecolor{rdStable}{HTML}{D55E00}",
+           r"\definecolor{rdAccum}{HTML}{009E73}",
            r"\path[use as bounding box] (0,-1.32) rectangle (8.52,3.65);"]
     body = "\n".join(out) + "\n"
     # Both panels use log batch positions. Metric-specific y ranges are explicitly ticked.

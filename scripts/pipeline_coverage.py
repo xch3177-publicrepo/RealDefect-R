@@ -26,7 +26,9 @@ def generate(root: Path):
     def node(x, y, text, extra=''):
         return f'\\node[{extra}] at ({x:.3f},{y:.3f}) {{{text}}};\n'
     body = r'\begin{figure*}[t]'+'\n'+r'\centering'+'\n'
-    body += r'\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\footnotesize,inner sep=0pt]'+'\n'
+    body += r'\begin{tikzpicture}[x=1cm,y=1cm,font=\rmfamily\footnotesize,inner sep=0pt,text=black]'+'\n'
+    body += r'\definecolor{rdCorpus}{HTML}{0072B2}'+'\n'
+    body += r'\definecolor{rdAudit}{HTML}{D55E00}'+'\n'
     body += node(8.75, .92, 'Framework and consumer operations')
     body += node(xs[-1], .92, 'Publisher release')
     body += r'\draw[line width=.5pt] (3.18,.65)--(14.33,.65);'+'\n'
@@ -41,11 +43,15 @@ def generate(root: Path):
         for op,x in zip(operations,xs):
             cases = [c for c,v in CASES.items() if v == (op,kind)]
             if cases:
-                body += f'\\draw plot[mark={mark},mark size=2.1pt,mark options={{line width=.5pt,fill=white}}] coordinates {{({x-.60:.3f},{y:.3f})}};\n'
+                # Shape encodes the reference kind independently of color; the
+                # labeled audit column also preserves the corpus/audit distinction.
+                color = 'rdAudit' if cases == ['Cosmos'] else 'rdCorpus'
+                body += f'\\draw plot[mark={mark},mark size=2.1pt,mark options={{draw={color},line width=.5pt,fill={color}!12}}] coordinates {{({x-.60:.3f},{y:.3f})}};\n'
                 body += node(x-.34,y,', '.join(cases),'anchor=west')
     body += r'\end{tikzpicture}'+'\n'
     body += (r'\caption{Case coverage by operation and required semantic reference. Columns are operation '
              r'categories, not a prescribed execution order; symbols distinguish reference kinds. '
+             r'Blue marks denote corpus cases; the orange mark denotes the complementary audit. '
              r'RD3 and RD5 share a broad convention/frame-semantics category but use different rules. '
              r'Cosmos is the complementary re-release audit, outside the eight-case corpus.}'+'\n'
              r'\label{fig:pipeline-coverage}'+'\n'+r'\end{figure*}'+'\n')

@@ -1,26 +1,26 @@
 \begin{table*}[t]
 \centering
 \footnotesize
-\caption{Cases, execution scope, required references and local outcomes.}
+\caption{Cases, local properties checked, required references and replay outcomes.}
 \label{tab:cases}
-\renewcommand{\arraystretch}{1.08}
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}lllp{3.35cm}l@{}}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.59cm}>{\raggedright\arraybackslash}p{2.64cm}>{\raggedright\arraybackslash}p{1.45cm}>{\raggedright\arraybackslash}p{3.49cm}>{\raggedright\arraybackslash}p{2.96cm}>{\raggedright\arraybackslash}p{5.55cm}@{}}
 \toprule
-\textbf{Case} & \textbf{Operation / ecosystem} & \textbf{Execution} & \textbf{Reference} & \textbf{Local outcome} \\
+\textbf{Case} & \textbf{Operation} & \textbf{Execution} & \textbf{Local property checked} & \textbf{Required reference} & \textbf{Replay outcome} \\
 \midrule
-RD1 & LeRobot window selection~\cite{2} & E3 minimal path & absolute row identity & 118/118 $\rightarrow$ 0/118 padding violations \\
-RD2 & LeRobot migration~\cite{4} & E2 loop & global interval continuity & 1/5 $\rightarrow$ 0/5 episode violations \\
-RD3 & Isaac Lab grasp offset~\cite{1} & E3 constant & quaternion convention & $120^{\circ} \to 0^{\circ}$ orientation error \\
-RD4 & Isaac Lab conversion~\cite{3} & Body audit & field inventory + convention & 15,141/23,833 stored quaternions unconverted \\
-RD5 & robosuite displacement~\cite{5} & E2 branch & displacement vs. position & 9,666/9,666 $\rightarrow$ 0/9,666 violations \\
-RD6 & OpenPI calibration~\cite{6} & E2 calibration & encoder anchors & 2/2 $\rightarrow$ 0/2 anchor violations \\
-RD7 & GR00T frame loading~\cite{7} & E2 branch & requested-time mapping & 200/200 $\rightarrow$ 0/200 wrong non-control frames \\
-RD8 & OpenPI statistics~\cite{8} & E2 reduction & full-population statistic & \textbf{Negative:} 24/44 conditions exceed $10^{-5}$ \\
+RD1 & LeRobot window~\cite{2} & E3 minimal path & In-bounds index; Boolean pad & Absolute row identity & 118/118 $\rightarrow$ 0/118 padding violations \\
+RD2 & LeRobot migration~\cite{4} & E2 loop & Nonnegative integers; end$-$start$=$length & Global continuity & 1/5 $\rightarrow$ 0/5 episode violations \\
+RD3 & Isaac Lab offset~\cite{1} & E3 constant & Width four; finite; unit norm & Quaternion convention & $120^{\circ} \to 0^{\circ}$ orientation error \\
+RD4 & Isaac Lab migration~\cite{3} & Body audit & Shape; finite; format/version & Field inventory; convention & 15,141/23,833 unconverted instances \\
+RD5 & robosuite motion~\cite{5} & E2 branch & Raw input shape; $[-1,1]$ range & Displacement semantics & 9,666/9,666 $\rightarrow$ 0/9,666 violations \\
+RD6 & OpenPI calibration~\cite{6} & E2 branch & Finite anchors; old-only round-trip & Encoder anchors & 2/2 $\rightarrow$ 0/2 anchor violations \\
+RD7 & GR00T loading~\cite{7} & E2 branch & Count, shape, dtype; readability & Requested-time mapping & 200/200 $\rightarrow$ 0/200 wrong non-control frames \\
+RD8 & OpenPI statistics~\cite{8} & E2 reducer & Finite mean/std; std $\geq0$ & Population statistic & \textbf{Negative:} 24/44 conditions fail \\
 \bottomrule
 \end{tabular}
 \par\vspace{3pt}
 \begin{minipage}{\textwidth}\footnotesize
-Arrows: faulty $\to$ reference; denominators are case-specific. E2: branch/loop; E3: constant/minimal path. RD4 is a single-body audit, without a repaired converter run. RD1 bare-index disagreement is 117/118; RD5 $[-1,1]$ is the raw normalized-action bound, not the output displacement bound. RD7 has 2,038 correct controls. RD8 coverage is 36,900/36,900 after repair, but its maximum residual is $ 3.235\times10^{-4}$; the complete numerical criterion stays negative. Full scopes and source identities are in the registry.
+Arrows: faulty $\to$ reference; denominators are case-specific. E2: branch/loop; E3: constant/minimal path. RD4 is an unpaired audit; RD5 checks raw input, not transformed displacement; RD6 round-trip applies only to the old pair. RD1 bare-index disagreement: 117/118; RD7 controls: 2,038 correct. RD8 restores 36,900/36,900 rows, but 24/44 conditions exceed $10^{-5}$ (max $ 3.235\times10^{-4}$). Exact local-check definitions and scopes are in the registry.
 \end{minipage}
 \end{table*}

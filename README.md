@@ -8,7 +8,8 @@ frame-identity checks, and the paper's figure/build sources. It carries **no pri
 Start with [REPRO.md](REPRO.md), [REGISTRY.md](REGISTRY.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 The complete file manifest is `MANIFEST.json`; `SOURCE_MAP.json` binds the selected historical
 source and every current experiment/script/result. The fixed public version is recorded in
-`ARTIFACT_INFO.json`. Input recovery uses public pinned revisions and explicit digest verification.
+`ARTIFACT_INFO.json`. This package version is `public-v1.0.1-20260919`; the previous fixed tag
+remains available. Input recovery uses public pinned revisions and explicit digest verification.
 
 ```sh
 python3.12 -m venv .venv

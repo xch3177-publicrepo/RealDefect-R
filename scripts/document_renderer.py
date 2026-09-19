@@ -83,7 +83,12 @@ class Renderer:
             return save(f'\\textsuperscript{{\\hyperlink{{source-{n}}}{{{n}}}}}')
         s=re.sub(r'\\\((.*?)\\\)',lambda m:save(m[0]),s)
         s=re.sub(r'\[\^([^]]+)\]',cite,s)
-        s=re.sub(LINK_PATTERN,lambda m:save(r'\href{'+urltex(m[2])+'}{'+esc(m[1])+'}'),s)
+        def link(m):
+            # An explicit URL label must remain readable in print and break at URL boundaries.
+            if m[1] == m[2]:
+                return save(r'\url{' + urltex(m[2]) + '}')
+            return save(r'\href{' + urltex(m[2]) + '}{' + esc(m[1]) + '}')
+        s=re.sub(LINK_PATTERN,link,s)
         def code(m):
             value=esc(m[1])
             # Optional breakpoints for long literal identifiers and paths.

@@ -1,0 +1,127 @@
+{
+  "retrieved_utc": "2026-09-19T18:42:00.176696+00:00",
+  "scope": "Read-only verification of existing RD4 field and target-convention authority. No new experiment, inputs or outcome modification. These are public upstream sources, not author-authored policy requirements.",
+  "files": [
+    {
+      "file": "RD4_converter.py",
+      "upstream_repository": "https://github.com/isaac-sim/IsaacLab",
+      "revision": "ffff603eafc6b74264a5261cc0183d6a65390d78",
+      "upstream_path": "source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py",
+      "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py",
+      "github_url": "https://github.com/isaac-sim/IsaacLab/blob/ffff603eafc6b74264a5261cc0183d6a65390d78/source/isaaclab/isaaclab/utils/datasets/hdf5_dataset_file_handler.py",
+      "sha256": "b5c4365cfd46107dfe56288b092bbdb03d993dbb83e23415742965db7df8d793",
+      "bytes": 13314,
+      "role": "format0 WXYZ / format1 XYZW; all-quaternion conversion promise; root_pose-only selector",
+      "line_ranges": [
+        [
+          20,
+          23
+        ],
+        [
+          288,
+          292
+        ],
+        [
+          331,
+          333
+        ],
+        [
+          344,
+          349
+        ]
+      ],
+      "license": "BSD-3-Clause; original file header retained; repository license archived alongside"
+    },
+    {
+      "file": "RD4_observations.py",
+      "upstream_repository": "https://github.com/isaac-sim/IsaacLab",
+      "revision": "37ddf626871758333d6ed89cf64ad702aef127d0",
+      "upstream_path": "source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/mdp/observations.py",
+      "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/mdp/observations.py",
+      "github_url": "https://github.com/isaac-sim/IsaacLab/blob/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/mdp/observations.py",
+      "sha256": "d2f9297f98c624a6a5c8c1a42c3221b4d51a46a4e5cb531190ef85a1bf079237",
+      "bytes": 20406,
+      "role": "Named orientation field calculations and embedded object quaternion slices",
+      "line_ranges": [
+        [
+          63,
+          74
+        ],
+        [
+          105,
+          166
+        ],
+        [
+          254,
+          258
+        ]
+      ],
+      "license": "BSD-3-Clause; original file header retained; repository license archived alongside"
+    },
+    {
+      "file": "RD4_stack_env_cfg.py",
+      "upstream_repository": "https://github.com/isaac-sim/IsaacLab",
+      "revision": "37ddf626871758333d6ed89cf64ad702aef127d0",
+      "upstream_path": "source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/stack_env_cfg.py",
+      "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/stack_env_cfg.py",
+      "github_url": "https://github.com/isaac-sim/IsaacLab/blob/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation/stack/stack_env_cfg.py",
+      "sha256": "26f0dbd936b05f404b76e15df065e144099def3d7fd3ca5743640350d3b7787c",
+      "bytes": 6548,
+      "role": "Observation names mapped to source functions",
+      "line_ranges": [
+        [
+          78,
+          93
+        ]
+      ],
+      "license": "BSD-3-Clause; original file header retained; repository license archived alongside"
+    },
+    {
+      "file": "RD4_rigid_object_data.py",
+      "upstream_repository": "https://github.com/isaac-sim/IsaacLab",
+      "revision": "37ddf626871758333d6ed89cf64ad702aef127d0",
+      "upstream_path": "source/isaaclab/isaaclab/assets/rigid_object/rigid_object_data.py",
+      "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab/isaaclab/assets/rigid_object/rigid_object_data.py",
+      "github_url": "https://github.com/isaac-sim/IsaacLab/blob/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab/isaaclab/assets/rigid_object/rigid_object_data.py",
+      "sha256": "5cc9e908106694d6fe0a4e2f56bf124874bac0b7e09810c308a6b321a60b0093",
+      "bytes": 26497,
+      "role": "root_quat_w alias and explicit WXYZ root-link quaternion convention",
+      "line_ranges": [
+        [
+          407,
+          412
+        ],
+        [
+          575,
+          577
+        ]
+      ],
+      "license": "BSD-3-Clause; original file header retained; repository license archived alongside"
+    },
+    {
+      "file": "RD4_frame_transformer_data.py",
+      "upstream_repository": "https://github.com/isaac-sim/IsaacLab",
+      "revision": "37ddf626871758333d6ed89cf64ad702aef127d0",
+      "upstream_path": "source/isaaclab/isaaclab/sensors/frame_transformer/frame_transformer_data.py",
+      "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab/isaaclab/sensors/frame_transformer/frame_transformer_data.py",
+      "github_url": "https://github.com/isaac-sim/IsaacLab/blob/37ddf626871758333d6ed89cf64ad702aef127d0/source/isaaclab/isaaclab/sensors/frame_transformer/frame_transformer_data.py",
+      "sha256": "35cad20e539358d79bc4a75b7dcf186126f53d28d802cd579329ed57180f5828",
+      "bytes": 2005,
+      "role": "target_quat_w is explicitly WXYZ",
+      "line_ranges": [
+        [
+          41,
+          45
+        ]
+      ],
+      "license": "BSD-3-Clause; original file header retained; repository license archived alongside"
+    }
+  ],
+  "license_file": {
+    "file": "LICENSE-IsaacLab.txt",
+    "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/37ddf626871758333d6ed89cf64ad702aef127d0/LICENSE",
+    "revision": "37ddf626871758333d6ed89cf64ad702aef127d0",
+    "sha256": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62",
+    "bytes": 1630
+  }
+}

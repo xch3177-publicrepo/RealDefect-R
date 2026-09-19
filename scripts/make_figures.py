@@ -8,16 +8,14 @@ SHA-256 and JSON path, in paper/FIGURE_BINDING.json. Nothing is typed by hand. R
 
 Outputs (all under paper/):
     replay_protocol.tikz  Fig. 1  compact same-input parallel replay protocol
-    tab_cases.tex         Table I compact eight-case operation/scope/reference/outcome matrix
-    fig_gx_matrix.tikz    Fig. 2  stacked paired-outcome counts of three Great Expectations suites
-    fig_cosmos_audit.tikz Fig. 3  Cosmos split proportions, targeted consumer fields, frame-check strip
+    tab_cases.tex         Table I compact case/local-property/reference/outcome matrix
+    tab_gx.tex           Table II per-case paired outcomes and scoped flagged counts
+    fig_cosmos_audit.tikz Fig. 2  Cosmos split discrepancy proportions and counts
     FIGURE_BINDING.json   claim -> source file -> JSON path -> value
 
-Visual system. One restrained family: ink for text, navy for structure, teal for a separation or a
-measured positive, coral only for a retained failure, pale greys for context. Every mark also carries
-a word or a shape, so the figures survive greyscale and colour-vision deficiency; no 3D, no
-gradients, no decorative fills. Figure type is set to 8 pt (\\footnotesize at IEEEtran 10 pt) so the
-labels stay legible at two-column print size.
+Visual system. Monochrome, unfilled protocol boxes and grayscale statistical bars. All labels use
+8 pt serif type at IEEEtran print size; no decorative panels, title banners or reduced-font scaling.
+
 """
 from __future__ import annotations
 import hashlib, json, math
@@ -69,18 +67,11 @@ def n(v):
 # ---------------------------------------------------------------------------------------------
 # Shared drawing vocabulary
 # ---------------------------------------------------------------------------------------------
-COLORS = r"""\definecolor{rdink}{HTML}{14181F}
-\definecolor{rdink2}{HTML}{4A5462}
-\definecolor{rdmute}{HTML}{667180}
-\definecolor{rdnavy}{HTML}{1F3A5F}
-\definecolor{rdnavy2}{HTML}{4A6E9B}
-\definecolor{rdteal}{HTML}{16706E}
-\definecolor{rdteal2}{HTML}{CFE3E2}
-\definecolor{rdcoral}{HTML}{BC4127}
-\definecolor{rdcoral2}{HTML}{F2DCD6}
-\definecolor{rdline}{HTML}{CFD5DC}
-\definecolor{rdfill}{HTML}{EDF0F3}
-\definecolor{rdfill2}{HTML}{F7F8FA}
+COLORS = r"""\definecolor{rdink}{gray}{0}
+\definecolor{rdink2}{gray}{0}
+\definecolor{rdmute}{gray}{0}
+\definecolor{rdline}{gray}{0.78}
+\definecolor{rdfill}{gray}{0.62}
 """
 
 ARROW = r'$\rightarrow$'
@@ -95,7 +86,7 @@ GAP = 0.07          # gap between a card title and its body
 def figure(body, caption, label, wide):
     env = 'figure*' if wide else 'figure'
     return (f'\\begin{{{env}}}[t]\n\\centering\n' + COLORS +
-            '\\begin{tikzpicture}[x=1cm,y=1cm,font=\\sffamily\\footnotesize,inner sep=0pt,'
+            '\\begin{tikzpicture}[x=1cm,y=1cm,font=\\rmfamily\\footnotesize,inner sep=0pt,'
             'line cap=round,line join=round]\n' + body +
             f'\\end{{tikzpicture}}\n\\caption{{{caption}}}\n\\label{{{label}}}\n\\end{{{env}}}\n')
 
@@ -141,7 +132,7 @@ def wrap(text, width_cm, cpc=CPC):
 def tbox(x, ytop, lines, width, color='rdink2', font='', align='left'):
     """A text block whose top edge sits exactly at ytop. Returns (tikz, height)."""
     body = r'\\'.join(lines)
-    node = (f'\\node[anchor=north west,text={color},inner sep=0pt,font=\\sffamily\\footnotesize{font},'
+    node = (f'\\node[anchor=north west,text={color},inner sep=0pt,font=\\rmfamily\\footnotesize{font},'
             f'text width={width:.2f}cm,align={align}] at ({x:.3f},{ytop:.3f}) {{{body}}};\n')
     return node, LH * len(lines)
 
@@ -149,13 +140,7 @@ def tbox(x, ytop, lines, width, color='rdink2', font='', align='left'):
 def txt(x, y, s, anchor='west', color='rdink', font=''):
     """A single unwrapped line, vertically centred on y."""
     return (f'\\node[anchor={anchor},text={color},inner sep=0pt,'
-            f'font=\\sffamily\\footnotesize{font}] at ({x:.3f},{y:.3f}) {{{s}}};\n')
-
-
-def panel(x0, y0, x1, y1, fill='rdfill2', draw='rdline', radius=1.8, lw=0.5):
-    d = f'draw={draw},line width={lw}pt' if draw else 'draw=none'
-    return (f'\\path[fill={fill},{d},rounded corners={radius}pt] '
-            f'({x0:.3f},{y0:.3f}) rectangle ({x1:.3f},{y1:.3f});\n')
+            f'font=\\rmfamily\\footnotesize{font}] at ({x:.3f},{y:.3f}) {{{s}}};\n')
 
 
 def rule_h(x0, x1, y, color='rdline', lw=0.5):
@@ -166,43 +151,10 @@ def rule_v(x, y0, y1, color='rdline', lw=0.5):
     return f'\\draw[{color},line width={lw}pt] ({x:.3f},{y0:.3f}) -- ({x:.3f},{y1:.3f});\n'
 
 
-def arrow(x0, y0, x1, y1, color='rdnavy2'):
+def arrow(x0, y0, x1, y1, color='black'):
     return (f'\\draw[{color},line width=0.7pt,-{{Straight Barb[length=1.6pt,width=2.6pt]}}] '
             f'({x0:.3f},{y0:.3f}) -- ({x1:.3f},{y1:.3f});\n')
 
-
-def card(x, ytop, width, title, body, fill='rdfill2', draw='rdline', tcolor='rdink',
-         bcolor='rdink2', height=None, lw=0.5):
-    """Titled card with a wrapped body; height is derived from the wrapped line count."""
-    inner = width - 2 * PAD
-    lines = wrap(body, inner) if isinstance(body, str) else body
-    h = height if height is not None else PAD + LH + GAP + LH * len(lines) + PAD
-    s = panel(x, ytop - h, x + width, ytop, fill=fill, draw=draw, lw=lw)
-    s += txt(x + PAD, ytop - PAD - LH / 2, title, color=tcolor, font='\\bfseries')
-    blk, _ = tbox(x + PAD, ytop - PAD - LH - GAP, lines, inner, color=bcolor)
-    return s + blk, h
-
-
-def section_rule(y, index, title, W, color='rdnavy'):
-    """A numbered band header: a small square, small-caps title, then a hairline to the margin."""
-    w_lab = 0.52 + vlen(title) * 0.175
-    s = f'\\path[fill=white] (-0.05,{y - 0.22:.3f}) rectangle ({w_lab:.3f},{y + 0.20:.3f});\n'
-    s += (f'\\path[fill={color},rounded corners=0.6pt] (0,{y - 0.17:.3f}) rectangle '
-          f'(0.22,{y + 0.13:.3f});\n')
-    s += txt(0.34, y - 0.02, f'\\textbf{{{index}}}', color='white')
-    label = f'\\textsc{{{title}}}'
-    s += txt(0.44, y - 0.02, label, color=color, font='\\bfseries')
-    s += rule_h(0.52 + vlen(title) * 0.175, W, y - 0.02, color='rdline', lw=0.5)
-    return s
-
-
-def legend_chip(x, y, rejected):
-    h = 0.17
-    if rejected:
-        return (f'\\path[fill=rdnavy,rounded corners=0.7pt] ({x:.3f},{y - h:.3f}) rectangle '
-                f'({x + 2 * h:.3f},{y + h:.3f});\n')
-    return (f'\\path[draw=rdmute,line width=0.7pt,rounded corners=0.7pt] ({x:.3f},{y - h:.3f}) '
-            f'rectangle ({x + 2 * h:.3f},{y + h:.3f});\n')
 
 
 # =============================================================================================
@@ -222,37 +174,37 @@ def fig_protocol():
     bind(F, 'cases_meeting_local_rule', 'RD1..RD7', 'derived: count of per-case reproduced flags', ok)
 
     W = 8.52
-    s = txt(0, 0, r'\textbf{Pinned sources, verified input, versioned rule}', color='rdink')
-    s += rule_h(0, W, -0.23, color='rdink2')
-
-    def box(x0, y, w, label, color='rdink2'):
-        return (f'\\draw[{color},line width=0.6pt] ({x0:.2f},{y-0.27:.2f}) rectangle '
-                f'({x0+w:.2f},{y+0.27:.2f});\n' +
-                txt(x0+w/2, y, label, anchor='center', color=color))
-    # Same input forks before execution. Neither branch consumes the other's output.
-    s += box(0.0, -1.10, 1.70, 'Same input')
-    s += box(2.65, -0.68, 2.36, 'Faulty path')
-    s += box(2.65, -1.52, 2.36, 'Reference path', color='rdteal')
-    s += rule_h(1.70, 2.14, -1.10, color='rdink2')
-    s += rule_v(2.14, -1.52, -0.68, color='rdink2')
-    s += arrow(2.14, -0.68, 2.56, -0.68, color='rdink2')
-    s += arrow(2.14, -1.52, 2.56, -1.52, color='rdink2')
-    s += rule_h(5.01, 5.50, -0.68, color='rdink2')
-    s += rule_h(5.01, 5.50, -1.52, color='rdink2')
-    s += rule_v(5.50, -1.52, -0.68, color='rdink2')
-    s += arrow(5.50, -1.10, 6.04, -1.10, color='rdink2')
-    s += box(6.12, -1.10, 2.40, r'Apply $V_c(\cdot,R_c)$')
-    s += txt(3.83, -2.07, 'paired execution', anchor='center', color='rdmute')
-    s += txt(0, -2.64, r'\textbf{RD4}', color='rdink')
-    s += arrow(0.72, -2.64, 1.10, -2.64, color='rdink2')
-    s += box(1.19, -2.64, 3.82, 'Single-path coverage audit')
-    s += arrow(5.02, -2.64, 6.04, -2.64, color='rdink2')
-    s += box(6.12, -2.64, 2.40, 'Retain outcome')
-    s += arrow(7.32, -1.39, 7.32, -2.29, color='rdink2')
-    cap = ('Execution structure. Both paired paths receive the same input and fixed criterion; '
-           'RD4 instead audits one converter body. Logs retain scientific outcomes separately '
-           'from recovery or execution failures (Table~\\ref{tab:cases}).')
-    BINDING.setdefault('layout', {})[F] = {'width_cm': W, 'drawing_height_cm': 2.91, 'single_column': True}
+    s = ''
+    # Three evidence-bearing stages: compact monochrome, no decorative title banner.
+    for x,w,title in [(0,2.17,'Pinned inputs'),(2.67,3.31,'Execution'),(6.54,1.98,'Retained')]:
+        s += txt(x+w/2,0,title,anchor='center',font='\\bfseries')
+        s += rule_h(x,x+w,-0.25,color='black',lw=0.6)
+    for j,label in enumerate(['Source revision','Input SHA-256',r'Reference $R_c$','Rule + tolerance','Scope']):
+        s += txt(0.08,-0.52-j*0.42,label)
+    for j,label in enumerate(['Verdict','Residuals','Logs','Environment']):
+        s += txt(6.68,-0.59-j*0.46,label)
+    def branch(y,label):
+        st=f'\\draw[black,line width=0.5pt] (3.12,{y-0.23:.2f}) rectangle (5.62,{y+0.23:.2f});\n'
+        return st+txt(4.37,y,label,anchor='center')
+    s += branch(-0.61,'Faulty path')
+    s += branch(-1.28,'Reference path')
+    # One pinned input is forked, never fed serially through the two paths.
+    s += rule_h(2.19,2.81,-0.945,color='black')
+    s += rule_v(2.81,-1.28,-0.61,color='black')
+    for y in (-0.61,-1.28):
+        s += arrow(2.81,y,3.05,y)
+        s += rule_h(5.62,5.99,y,color='black')
+    s += rule_v(5.99,-1.28,-0.61,color='black')
+    s += arrow(5.99,-0.945,6.46,-0.945)
+    s += txt(4.37,-1.73,'same input; fixed rule',anchor='center')
+    s += branch(-2.22,'RD4: one-path audit')
+    s += arrow(2.19,-2.22,3.05,-2.22)
+    s += arrow(5.68,-2.22,6.46,-2.22)
+    s += rule_h(0,W,-2.59,color='black',lw=0.6)
+    cap = ('Replay protocol: pinned identities, an explicit rule and scope, case-appropriate execution, '
+           'and retained evidence. A normally executed negative verdict (RD8) remains distinct from '
+           'recovery or execution failure.')
+    BINDING.setdefault('layout', {})[F] = {'width_cm': W, 'drawing_height_cm': 2.75, 'single_column': True}
     return figure(s, cap, 'fig:replay-protocol', wide=False)
 
 
@@ -324,48 +276,67 @@ def table_cases():
     rd8_covered = round(rd8_cov * rd8_rows)
     bind(F, 'rd8_old_covered_rows', 'RD8', 'derived: coverage * projection.rows', rd8_covered)
 
+    # Short property labels are audited summaries of these archived definitions, not a new suite.
+    local = {
+        'RD1': r'In-bounds index; Boolean pad',
+        'RD2': r'Nonnegative integers; end$-$start$=$length',
+        'RD3': r'Width four; finite; unit norm',
+        'RD4': r'Shape; finite; format/version',
+        'RD5': r'Raw input shape; $[-1,1]$ range',
+        'RD6': r'Finite anchors; old-only round-trip',
+        'RD7': r'Count, shape, dtype; readability',
+        'RD8': r'Finite mean/std; std $\geq0$',
+    }
+    for i,row in enumerate(get('CROSS','rows')):
+        bind(F, row['case'].lower()+'_local_property_definition', 'CROSS',
+             f'rows.{i}.structure',row['structure'])
+        if row['case']=='RD6':
+            bind(F,'rd6_local_roundtrip_scope','CROSS',f'rows.{i}.roundtrip',row['roundtrip'])
     A = ARROW
     rows = [
-        ('RD1', r'LeRobot window selection~\cite{2}', 'E3 minimal path', 'absolute row identity',
+        ('RD1', r'LeRobot window~\cite{2}', 'E3 minimal path', local['RD1'], 'Absolute row identity',
          f'{rd1_v}/{rd1_u} {A} {rd1_f}/{rd1_u} padding violations'),
-        ('RD2', r'LeRobot migration~\cite{4}', 'E2 loop', 'global interval continuity',
+        ('RD2', r'LeRobot migration~\cite{4}', 'E2 loop', local['RD2'], 'Global continuity',
          f'{rd2_v}/{rd2_u} {A} {rd2_f}/{rd2_u} episode violations'),
-        ('RD3', r'Isaac Lab grasp offset~\cite{1}', 'E3 constant', 'quaternion convention',
+        ('RD3', r'Isaac Lab offset~\cite{1}', 'E3 constant', local['RD3'], 'Quaternion convention',
          f'${rd3_o:.0f}^{{\\circ}} \\to {rd3_f:.0f}^{{\\circ}}$ orientation error'),
-        ('RD4', r'Isaac Lab conversion~\cite{3}', 'Body audit', 'field inventory + convention',
-         f'{n(rd4_m)}/{n(rd4_d)} stored quaternions unconverted'),
-        ('RD5', r'robosuite displacement~\cite{5}', 'E2 branch', 'displacement vs. position',
+        ('RD4', r'Isaac Lab migration~\cite{3}', 'Body audit', local['RD4'], 'Field inventory; convention',
+         f'{n(rd4_m)}/{n(rd4_d)} unconverted instances'),
+        ('RD5', r'robosuite motion~\cite{5}', 'E2 branch', local['RD5'], 'Displacement semantics',
          f'{n(rd5_v)}/{n(rd5_u)} {A} {rd5_f}/{n(rd5_u)} violations'),
-        ('RD6', r'OpenPI calibration~\cite{6}', 'E2 calibration', 'encoder anchors',
+        ('RD6', r'OpenPI calibration~\cite{6}', 'E2 branch', local['RD6'], 'Encoder anchors',
          f'{rd6_ni}/{rd6_na} {A} {rd6_fi}/{rd6_na} anchor violations'),
-        ('RD7', r'GR00T frame loading~\cite{7}', 'E2 branch', 'requested-time mapping',
+        ('RD7', r'GR00T loading~\cite{7}', 'E2 branch', local['RD7'], 'Requested-time mapping',
          f'{rd7_w}/{rd7_q} {A} {rd7_fw}/{rd7_q} wrong non-control frames'),
-        ('RD8', r'OpenPI statistics~\cite{8}', 'E2 reduction', 'full-population statistic',
-         f'\\textbf{{Negative:}} {rd8_fail}/{rd8_cond} conditions exceed $10^{{-5}}$'),
+        ('RD8', r'OpenPI statistics~\cite{8}', 'E2 reducer', local['RD8'], 'Population statistic',
+         f'\\textbf{{Negative:}} {rd8_fail}/{rd8_cond} conditions fail'),
     ]
+    widths=[0.59,2.64,1.45,3.49,2.96,5.55]
+    spec='@{}'+''.join(f'>{{\\raggedright\\arraybackslash}}p{{{w}cm}}' for w in widths)+'@{}'
     out = [r'\begin{table*}[t]', r'\centering', r'\footnotesize',
-           r'\caption{Cases, execution scope, required references and local outcomes.}',
-           r'\label{tab:cases}', r'\renewcommand{\arraystretch}{1.08}', r'\setlength{\tabcolsep}{4pt}',
-           r'\begin{tabular}{@{}lllp{3.35cm}l@{}}', r'\toprule',
-           r'\textbf{Case} & \textbf{Operation / ecosystem} & \textbf{Execution} & \textbf{Reference} & \textbf{Local outcome} \\',
+           r'\caption{Cases, local properties checked, required references and replay outcomes.}',
+           r'\label{tab:cases}', r'\renewcommand{\arraystretch}{1.10}', r'\setlength{\tabcolsep}{1.5pt}',
+           r'\begin{tabular}{'+spec+'}', r'\toprule',
+           r'\textbf{Case} & \textbf{Operation} & \textbf{Execution} & \textbf{Local property checked} & \textbf{Required reference} & \textbf{Replay outcome} \\',
            r'\midrule']
     out += [' & '.join(row) + r' \\' for row in rows]
-    out += [r'\bottomrule', r'\end{tabular}', r'\par\vspace{3pt}',
+    out += [r'\bottomrule',r'\end{tabular}',r'\par\vspace{3pt}',
             r'\begin{minipage}{\textwidth}\footnotesize',
-            r'Arrows: faulty $\to$ reference; denominators are case-specific. E2: branch/loop; E3: constant/minimal path. RD4 is a single-body audit, without a repaired converter run. '
-            f'RD1 bare-index disagreement is {rd1_bare}/{rd1_u}; RD5 $[-1,1]$ is the raw normalized-action bound, not the output displacement bound. '
-            f'RD7 has {n(rd7_ctl)} correct controls. RD8 coverage is {n(rd8_rows)}/{n(rd8_rows)} after repair, but its maximum residual is '
-            f'$ {rd8_max / 10 ** math.floor(math.log10(rd8_max)):.3f}\\times10^{{{math.floor(math.log10(rd8_max))}}}$; '
-            r'the complete numerical criterion stays negative. Full scopes and source identities are in the registry.',
-            r'\end{minipage}', r'\end{table*}', '']
+            r'Arrows: faulty $\to$ reference; denominators are case-specific. E2: branch/loop; E3: constant/minimal path. '
+            r'RD4 is an unpaired audit; RD5 checks raw input, not transformed displacement; RD6 round-trip applies only to the old pair. '
+            f'RD1 bare-index disagreement: {rd1_bare}/{rd1_u}; RD7 controls: {n(rd7_ctl)} correct. RD8 restores '
+            f'{n(rd8_rows)}/{n(rd8_rows)} rows, but {rd8_fail}/{rd8_cond} conditions exceed $10^{{-5}}$ '
+            f'(max $ {rd8_max / 10 ** math.floor(math.log10(rd8_max)):.3f}\\times10^{{{math.floor(math.log10(rd8_max))}}}$). '
+            r'Exact local-check definitions and scopes are in the registry.',
+            r'\end{minipage}',r'\end{table*}','']
     return '\n'.join(out)
 
 
 # =============================================================================================
-# Fig. 2  Case-wise portability of the case rules into Great Expectations
+# Table II  Per-case paired outcomes in Great Expectations
 # =============================================================================================
-def fig_gx_matrix():
-    F = 'fig_gx_matrix'
+def table_gx():
+    F = 'tab_gx'
     out = get('GX', 'outcomes')
     denom = bind(F, 'denominator', 'GX', 'denominator', get('GX', 'denominator'))
     V, C = {}, {}
@@ -398,56 +369,46 @@ def fig_gx_matrix():
     outside = bind(F, 'rd6_rows_outside_rule_scope', 'GX+GX_MANIFEST',
                    'derived: informed element_count minus applicable anchor count',
                    C['RD6'][1] - applicable)
-    arms = [('A_declared_schema', 'A: declared'),
-            ('B_disjoint_reference_fitted', 'B: ref.-fitted'),
-            ('C_information_enriched', 'C: case-informed')]
-    categories = [((False, True), 'Faulty only rejected', 'rdteal'),
-                  ((True, True), 'Both accepted', 'rdfill'),
-                  ((False, False), 'Both rejected', 'rdnavy'),
-                  ((True, False), 'Reference only rejected', 'rdcoral')]
-    counts = {}
-    for arm, _ in arms:
-        counts[arm] = []
-        for flags, label, _ in categories:
-            value = sum((V[(c, arm, 'faulty')], V[(c, arm, 'reference')]) == flags for c in cases)
-            counts[arm].append(bind(F, f'{arm}:{label}', 'GX',
-                                   'derived: count of branch-success pairs ' + repr(flags), value))
-        assert sum(counts[arm]) == denom
-    W, x0, x1 = 8.52, 2.30, 8.32
-    s = txt(x0, 0.0, 'Number of paired outcomes', color='rdink')
-    step = (x1-x0)/denom
-    for tick in range(denom+1):
-        x = x0+tick*step
-        s += rule_v(x, -2.48, -0.35, color='rdline', lw=0.35)
-        s += txt(x, -2.68, str(tick), anchor='center', color='rdink2')
-    for row, (arm, label) in enumerate(arms):
-        y = -0.66-row*0.75
-        s += txt(x0-0.16, y, label, anchor='east', color='rdink')
-        current = x0
-        for j, value in enumerate(counts[arm]):
-            if not value:
-                continue
-            end = current+value*step
-            color = categories[j][2]
-            s += f'\\path[fill={color},draw=white,line width=0.4pt] ({current:.3f},{y-0.23:.3f}) rectangle ({end:.3f},{y+0.23:.3f});\n'
-            s += txt((current+end)/2, y, str(value), anchor='center',
-                     color='rdink' if j == 1 else 'white', font='\\bfseries')
-            current = end
-    for j, (_, label, color) in enumerate(categories):
-        x,y=(0,-3.15) if j==0 else (4.30,-3.15) if j==1 else (0,-3.61) if j==2 else (4.30,-3.61)
-        s += f'\\path[fill={color},draw=rdline,line width=0.4pt] ({x:.2f},{y-0.11:.2f}) rectangle ({x+0.27:.2f},{y+0.11:.2f});\n'
-        s += txt(x+0.38,y,label,color='rdink2')
-    cap = (f'Paired outcomes of supplied rules in Great Expectations (native, {denom} pairs). '
-           'Suites vary predicates and references; these counts are portability evidence, not accuracy. '
-           'RD3 is NA; RD4 uses a constructed reference; RD6 covers only '
-           f'{applicable} anchors ({n(outside)} other rows outside scope); RD8 evaluates its primary condition. '
-           'All reference-only rejection counts are zero.')
-    BINDING.setdefault('layout', {})[F] = {'width_cm': W, 'drawing_height_cm': 3.78, 'single_column': True}
-    return figure(s, cap, 'fig:gx-matrix', wide=False)
+    arms = ['A_declared_schema','B_disjoint_reference_fitted','C_information_enriched']
+    symbols={(False,True):r'$\checkmark$',(True,True):r'$\circ$',(False,False):r'$\times$',
+             (True,False):r'$\triangle$'}
+    rendered=[]
+    separated=[]
+    for arm in arms:
+        separated.append(bind(F,arm+'_separated','GX','derived: faulty=false and reference=true count',
+                              sum((V[(c,arm,'faulty')],V[(c,arm,'reference')])==(False,True) for c in cases)))
+    for c in ['RD1','RD2','RD3','RD4','RD5','RD6','RD7','RD8']:
+        if c=='RD3':
+            rendered.append(r'RD3 & \multicolumn{3}{c}{NA} & --- \\')
+            continue
+        sym=[symbols[(V[(c,arm,'faulty')],V[(c,arm,'reference')])] for arm in arms]
+        fu,total,ru=C[c]
+        denominator=applicable if c=='RD6' else total
+        bind(F,c+'_displayed_applicable_denominator','GX_MANIFEST' if c=='RD6' else 'GX',
+             'derived: anchor count' if c=='RD6' else 'C expectation element_count',denominator)
+        flagged=f'{n(fu)}/{n(denominator)} $\\to$ {n(ru)}/{n(denominator)}'
+        rendered.append(' & '.join([c,*sym,flagged])+r' \\')
+    out=[r'\begin{table}[t]',r'\centering',r'\footnotesize',
+         r'\caption{Per-case paired outcomes in native Great Expectations 1.6.3.}',r'\label{tab:gx}',
+         r'\renewcommand{\arraystretch}{1.12}',r'\setlength{\tabcolsep}{5pt}',
+         r'\begin{tabular}{@{}lcccl@{}}',r'\toprule',
+         r'\textbf{Case} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{C: flagged / applicable} \\',r'\midrule',
+         *rendered,r'\midrule',
+         f'Separated & {separated[0]}/{denom} & {separated[1]}/{denom} & {separated[2]}/{denom} & faulty $\\to$ reference \\\\',
+         r'\bottomrule',r'\end{tabular}',r'\par\vspace{3pt}',
+         r'\begin{minipage}{\columnwidth}\footnotesize',
+         r'A: declared; B: reference-fitted; C: case-informed. '
+         r'$\checkmark$: faulty rejected/reference accepted; $\circ$: both accepted; $\times$: both rejected. '
+         r'RD3 is NA. RD4 uses a constructed reference; '
+         f'RD6 covers {applicable} anchors ({n(outside)} other rows outside scope); RD7 includes controls; '
+         'RD8 counts feature-statistic records at the primary condition. '
+         r'No reference-only rejections occurred. Predicates and references vary; counts assess supplied-rule portability.',
+         r'\end{minipage}',r'\end{table}','']
+    return '\n'.join(out)
 
 
 # =============================================================================================
-# Fig. 3  Cosmos split proportions, targeted consumer fields, frame-check strip
+# Fig. 2  Cosmos split summary-discrepancy proportions
 # =============================================================================================
 def fig_cosmos_audit():
     F = 'fig_cosmos_audit'
@@ -511,86 +472,52 @@ def fig_cosmos_audit():
             cohort[kind][cond] = bind(F, f'consumer_{kind}_{cond}_targeted_field_violations',
                                      'COSMOS_CONSUMER',
                                      f'derived: sum(records where kind={kind}, conditions.{cond}.violating_field_count)', value)
-    W = 17.8
-    s = txt(0, 0, r'\textbf{(a) Episode-summary relations}', color='rdink')
-    s += txt(9.10, 0, r'\textbf{(b) Scoped consumer: targeted fields only}', color='rdink')
-    # Normalized stacked bars; each split has its own explicitly labelled population.
-    bx0,bx1 = 3.12,7.16
-    bars = [('success','Identity', 'idm',-0.63),('success','Task text','tkm',-1.21),
-            ('failure','Identity','idm',-2.08),('failure','Task text','tkm',-2.66)]
+    W=8.52
+    bx0,bx1=3.10,7.25
+    s=''
+    bars=[('success','Identity','idm',-0.27),('success','Task text','tkm',-0.86),
+          ('failure','Identity','idm',-1.74),('failure','Task text','tkm',-2.33)]
     for tick in (0,25,50,75,100):
         x=bx0+(bx1-bx0)*tick/100
-        s += rule_v(x,-2.89,-0.37,color='rdline',lw=0.35)
-        s += txt(x,-3.11,f'{tick}\\%',anchor='center',color='rdink2')
+        s+=rule_v(x,-2.57,-0.04,color='rdline',lw=0.35)
+        s+=txt(x,-2.81,f'{tick}\\%',anchor='center')
     for split,label,key,y in bars:
         total,bad=sp[split]['rec'],sp[split][key]
-        good=bind(F,f'{split}_{key}_coherent','COSMOS',f'derived: {split}.episode_rows minus {key}',total-bad)
-        s += txt(bx0-0.15,y,label,anchor='east')
+        bind(F,f'{split}_{key}_coherent','COSMOS',f'derived: {split}.episode_rows minus {key}',total-bad)
+        s+=txt(bx0-0.14,y,label,anchor='east')
         mid=bx0+(bx1-bx0)*bad/total
-        s += f'\\path[fill=rdfill] ({bx0},{y-0.18}) rectangle ({bx1},{y+0.18});\n'
-        s += f'\\path[fill=rdcoral] ({bx0},{y-0.18}) rectangle ({mid:.4f},{y+0.18});\n'
-        s += txt(bx1+0.16,y,n(bad),color='rdcoral')
-    s += txt(0,-0.63,r'\textbf{Success}',color='rdink')
-    s += txt(0,-1.01,f'$n={n(sp["success"]["rec"])}$',color='rdink2')
-    s += txt(0,-2.08,r'\textbf{Failure}',color='rdink')
-    s += txt(0,-2.46,f'$n={n(sp["failure"]["rec"])}$',color='rdink2')
-    for x,color,lab in [(0,'rdcoral','Discrepant'),(2.55,'rdfill','Coherent under stated relation')]:
-        s += f'\\path[fill={color},draw=rdline,line width=0.4pt] ({x},-3.70) rectangle ({x+0.25},-3.48);\n'
-        s += txt(x+0.37,-3.59,lab,color='rdink2')
-    s += rule_v(8.72,-3.80,0.16,color='rdline')
-    # Consumer: equal denominators within these panels only; do not mix them with corpus cases.
-    cx0,cx1=12.10,17.60
-    total_fields=bind(F,'consumer_scored_fields_per_cohort','COSMOS_CONSUMER',
-                     'derived: affected-record count times number of output_summary keys',
-                     cr_affected*len(records[0]['conditions']['original']['output_summary']))
-    assert cr_affected==cr_controls and total_fields>0
-    for tick in (0,4,8,12,16):
-        x=cx0+(cx1-cx0)*tick/total_fields
-        s += rule_v(x,-2.25,-0.40,color='rdline',lw=0.35)
-        s += txt(x,-2.47,str(tick),anchor='center',color='rdink2')
-    for kind,y,label in [('affected',-0.89,f'Affected ($n={cr_affected}$)'),
-                         ('control',-1.78,f'Controls ($n={cr_controls}$)')]:
-        old=cohort[kind]['original'];fixed=cohort[kind]['summary_corrected']
-        xa=cx0+(cx1-cx0)*fixed/total_fields;xb=cx0+(cx1-cx0)*old/total_fields
-        s += txt(cx0-0.19,y,label,anchor='east')
-        if old!=fixed:
-            s += rule_h(xa,xb,y,color='rdink2',lw=1.0)
-        s += f'\\fill[rdcoral] ({xb:.3f},{y:.3f}) circle (2.1pt);\n'
-        s += f'\\draw[rdteal,line width=0.85pt] ({xa:.3f},{y+0.10:.3f}) -- ({xa+0.10:.3f},{y:.3f}) -- ({xa:.3f},{y-0.10:.3f}) -- ({xa-0.10:.3f},{y:.3f}) -- cycle;\n'
-        s += txt((xa+xb)/2,y+0.30,f'{old} $\\rightarrow$ {fixed}',anchor='center',color='rdink2')
-    s += txt((cx0+cx1)/2,-2.96,f'Incorrect fields (of {total_fields} per cohort)',anchor='center',color='rdink2')
-    s += r'\fill[rdcoral] (9.18,-3.59) circle (2.1pt);'+'\n'
-    s += txt(9.40,-3.59,'Original',color='rdink2')
-    s += r'\draw[rdteal,line width=0.85pt] (12.1,-3.49) -- (12.2,-3.59) -- (12.1,-3.69) -- (12,-3.59) -- cycle;'+'\n'
-    s += txt(12.34,-3.59,'Summary-only correction',color='rdink2')
-    # Frame checks are a numeric result strip, not a fourth prose card.
-    s += rule_h(0,W,-4.03,color='rdink2',lw=0.6)
-    s += txt(0,-4.36, f'\\textbf{{Frame checks:}} C1--C4: {n(eps)}/{n(eps)} episodes pass each; '
-             f'C5: {c5["violating_rows"]}/{n(c5["rows"])} violating rows.', color='rdink')
-    s += txt(0,-4.77,'C2/C3: index multisets; C5: row-wise index relation. Physical order and visual content untested.',color='rdink2')
-    cap = (f'Cosmos3-DROID: (a) discrepancy proportions with raw counts; (b) exact pinned metadata-function '
-           f'replay on {cr_records} selected records ({n(cr_frames)} frame rows). Only eight '
-           '\\texttt{stats/episode\\_index/} fields per record are scored: min, max, mean, '
-           'q01, q10, q50, q90, q99. Other metadata, complete merging and downstream harm are outside this comparison.')
-    BINDING.setdefault('layout', {})[F] = {'width_cm': W, 'drawing_height_cm': 4.94, 'single_column': False}
-    return figure(s, cap, 'fig:cosmos-audit', wide=True)
+        s+=f'\\path[fill=white,draw=black,line width=0.4pt] ({bx0},{y-0.18}) rectangle ({bx1},{y+0.18});\n'
+        s+=f'\\path[fill=rdfill] ({bx0},{y-0.18}) rectangle ({mid:.4f},{y+0.18});\n'
+        s+=txt(bx1+0.14,y,n(bad))
+    for split,y in [('success',-0.27),('failure',-1.74)]:
+        s+=txt(0,y,split.capitalize(),font='\\bfseries')
+        s+=txt(0,y-0.36,f'$n={n(sp[split]["rec"])}$')
+    for x,fill,label in [(0,'rdfill','Discrepant'),(2.52,'white','Coherent under stated relation')]:
+        s+=f'\\path[fill={fill},draw=black,line width=0.4pt] ({x},-3.38) rectangle ({x+0.25},-3.16);\n'
+        s+=txt(x+0.37,-3.27,label)
+    cap=('Episode-summary discrepancies in the pinned Cosmos3-DROID release. Bar lengths show '
+         'within-split proportions; labels give discrepant record counts. Identity and task-text '
+         'relations are evaluated separately, without a downstream-harm inference.')
+    BINDING.setdefault('layout',{})[F]={'width_cm':W,'drawing_height_cm':3.56,'single_column':True}
+    return figure(s,cap,'fig:cosmos-audit',wide=False)
 
 
 if __name__ == '__main__':
     outputs = {
         'replay_protocol.tikz': fig_protocol(),
         'tab_cases.tex': table_cases(),
-        'fig_gx_matrix.tikz': fig_gx_matrix(),
+        'tab_gx.tex': table_gx(),
         'fig_cosmos_audit.tikz': fig_cosmos_audit(),
     }
     for name, body in outputs.items():
         (PAPER / name).write_text(body, encoding='utf-8')
-    for stale in ('fig_replay_outcomes.tikz', 'fig_check_matrix.tikz'):
+    for stale in ('fig_replay_outcomes.tikz', 'fig_check_matrix.tikz', 'fig_gx_matrix.tikz'):
         p = PAPER / stale
         if p.exists():
             p.unlink()
     BINDING['outputs'] = {name: hashlib.sha256((PAPER / name).read_bytes()).hexdigest() for name in outputs}
     BINDING['removed_outputs'] = {
+        'fig_gx_matrix.tikz': 'replaced by Table II (tab_gx.tex): per-case symbolic paired outcomes and scoped C counts',
         'fig_replay_outcomes.tikz': 'replaced by Table I (tab_cases.tex); the dumbbell chart mixed '
                                     'non-comparable per-case denominators on one axis',
         'fig_check_matrix.tikz': 'folded into Table I, whose per-case local-check column carries the same '

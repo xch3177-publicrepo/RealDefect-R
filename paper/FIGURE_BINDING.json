@@ -395,9 +395,106 @@
         "source": "RD8",
         "json_path": "derived: coverage * projection.rows",
         "value": 1154
+      },
+      "rd1_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.0.structure",
+        "value": {
+          "definition": "integer in-bound query index and Boolean padding flag; does not check padding meaning",
+          "count_per_branch": 118,
+          "passes": {
+            "buggy": true,
+            "fixed": true
+          }
+        }
+      },
+      "rd2_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.1.structure",
+        "value": {
+          "definition": "nonnegative integer fields and individual end-start=length",
+          "count_per_branch": 5,
+          "passes": {
+            "buggy": true,
+            "fixed": true
+          }
+        }
+      },
+      "rd3_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.2.structure",
+        "value": {
+          "definition": "width four, finite values, unit norm within 1e-6",
+          "count_per_branch": 1,
+          "passes": {
+            "buggy": true,
+            "fixed": true
+          }
+        }
+      },
+      "rd4_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.3.structure",
+        "value": {
+          "definition": "declared quaternion arrays retain shape and finite values; fresh replay format/version baseline passes",
+          "count": 23833,
+          "passes": true,
+          "format_baseline_pass": true
+        }
+      },
+      "rd5_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.4.structure",
+        "value": {
+          "definition": "fresh replay input action shape/range baseline only; output structural suite not evaluated",
+          "count": 9666,
+          "passes": true
+        }
+      },
+      "rd6_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.5.structure",
+        "value": {
+          "definition": "two finite normalized anchor outputs, without imposing semantic endpoint bounds",
+          "count_per_branch": 2,
+          "passes": {
+            "old": true,
+            "fixed": true
+          }
+        }
+      },
+      "rd6_local_roundtrip_scope": {
+        "source": "CROSS",
+        "json_path": "rows.5.roundtrip",
+        "value": {
+          "status": "PASS_OLD",
+          "max_error_rad": 0.0,
+          "fixed": "NA: whole post-fix policy uses intentionally asymmetric transforms"
+        }
+      },
+      "rd7_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.6.structure",
+        "value": {
+          "definition": "fresh branch return count/shape/dtype/readability checks",
+          "videos": 10,
+          "both_branches_pass": true
+        }
+      },
+      "rd8_local_property_definition": {
+        "source": "CROSS",
+        "json_path": "rows.7.structure",
+        "value": {
+          "definition": "14 finite means/stds and nonnegative std, ignoring population coverage",
+          "conditions_per_branch": 44,
+          "passes": {
+            "old": true,
+            "fixed": true
+          }
+        }
       }
     },
-    "fig_gx_matrix": {
+    "tab_gx": {
       "denominator": {
         "source": "GX",
         "json_path": "denominator",
@@ -762,65 +859,55 @@
         "json_path": "derived: informed element_count minus applicable anchor count",
         "value": 73800
       },
-      "A_declared_schema:Faulty only rejected": {
+      "A_declared_schema_separated": {
         "source": "GX",
-        "json_path": "derived: count of branch-success pairs (False, True)",
+        "json_path": "derived: faulty=false and reference=true count",
         "value": 1
       },
-      "A_declared_schema:Both accepted": {
+      "B_disjoint_reference_fitted_separated": {
         "source": "GX",
-        "json_path": "derived: count of branch-success pairs (True, True)",
-        "value": 5
-      },
-      "A_declared_schema:Both rejected": {
-        "source": "GX",
-        "json_path": "derived: count of branch-success pairs (False, False)",
+        "json_path": "derived: faulty=false and reference=true count",
         "value": 1
       },
-      "A_declared_schema:Reference only rejected": {
+      "C_information_enriched_separated": {
         "source": "GX",
-        "json_path": "derived: count of branch-success pairs (True, False)",
-        "value": 0
-      },
-      "B_disjoint_reference_fitted:Faulty only rejected": {
-        "source": "GX",
-        "json_path": "derived: count of branch-success pairs (False, True)",
-        "value": 1
-      },
-      "B_disjoint_reference_fitted:Both accepted": {
-        "source": "GX",
-        "json_path": "derived: count of branch-success pairs (True, True)",
-        "value": 0
-      },
-      "B_disjoint_reference_fitted:Both rejected": {
-        "source": "GX",
-        "json_path": "derived: count of branch-success pairs (False, False)",
-        "value": 6
-      },
-      "B_disjoint_reference_fitted:Reference only rejected": {
-        "source": "GX",
-        "json_path": "derived: count of branch-success pairs (True, False)",
-        "value": 0
-      },
-      "C_information_enriched:Faulty only rejected": {
-        "source": "GX",
-        "json_path": "derived: count of branch-success pairs (False, True)",
+        "json_path": "derived: faulty=false and reference=true count",
         "value": 7
       },
-      "C_information_enriched:Both accepted": {
+      "RD1_displayed_applicable_denominator": {
         "source": "GX",
-        "json_path": "derived: count of branch-success pairs (True, True)",
-        "value": 0
+        "json_path": "C expectation element_count",
+        "value": 118
       },
-      "C_information_enriched:Both rejected": {
+      "RD2_displayed_applicable_denominator": {
         "source": "GX",
-        "json_path": "derived: count of branch-success pairs (False, False)",
-        "value": 0
+        "json_path": "C expectation element_count",
+        "value": 5
       },
-      "C_information_enriched:Reference only rejected": {
+      "RD4_displayed_applicable_denominator": {
         "source": "GX",
-        "json_path": "derived: count of branch-success pairs (True, False)",
-        "value": 0
+        "json_path": "C expectation element_count",
+        "value": 23833
+      },
+      "RD5_displayed_applicable_denominator": {
+        "source": "GX",
+        "json_path": "C expectation element_count",
+        "value": 9666
+      },
+      "RD6_displayed_applicable_denominator": {
+        "source": "GX_MANIFEST",
+        "json_path": "derived: anchor count",
+        "value": 2
+      },
+      "RD7_displayed_applicable_denominator": {
+        "source": "GX",
+        "json_path": "C expectation element_count",
+        "value": 2238
+      },
+      "RD8_displayed_applicable_denominator": {
+        "source": "GX",
+        "json_path": "C expectation element_count",
+        "value": 28
       }
     },
     "fig_cosmos_audit": {
@@ -1063,38 +1150,29 @@
         "source": "COSMOS",
         "json_path": "derived: failure.episode_rows minus tkm",
         "value": 14038
-      },
-      "consumer_scored_fields_per_cohort": {
-        "source": "COSMOS_CONSUMER",
-        "json_path": "derived: affected-record count times number of output_summary keys",
-        "value": 16
       }
     }
   },
   "layout": {
     "replay_protocol": {
       "width_cm": 8.52,
-      "drawing_height_cm": 2.91,
-      "single_column": true
-    },
-    "fig_gx_matrix": {
-      "width_cm": 8.52,
-      "drawing_height_cm": 3.78,
+      "drawing_height_cm": 2.75,
       "single_column": true
     },
     "fig_cosmos_audit": {
-      "width_cm": 17.8,
-      "drawing_height_cm": 4.94,
-      "single_column": false
+      "width_cm": 8.52,
+      "drawing_height_cm": 3.56,
+      "single_column": true
     }
   },
   "outputs": {
-    "replay_protocol.tikz": "7bc7b62fb24319927577356a081a2cc21e2bb1dd7374d8995b0dccb5d6bc9a2b",
-    "tab_cases.tex": "8cfe330a7e30af864f5ccecadbd277f70f844d838825748a8b94e1f37960b4bc",
-    "fig_gx_matrix.tikz": "0a7fbca9efec393b29f338e4a22131b01727875b50b470acdfe5320d84deb60b",
-    "fig_cosmos_audit.tikz": "dceb7743972d1253221888b83de74cd1dc0a3a6a39bc1a0a7211f6a18d60eeb2"
+    "replay_protocol.tikz": "c47ddc9d2ca3d4b861a6c334db5998328dc3b29885e98152bdd45582587cccd7",
+    "tab_cases.tex": "3160edf64b8ed14cbad7657f6f8f19fb42c0699590fd1dbf177eca8d45217f27",
+    "tab_gx.tex": "45b6b3378b8ebbdb203220384645467f36d5d436a90bb3c173292a6012905ede",
+    "fig_cosmos_audit.tikz": "c08351bd8d4e5e310540712089cb590c49cb2debe37cd63837b24269d485751d"
   },
   "removed_outputs": {
+    "fig_gx_matrix.tikz": "replaced by Table II (tab_gx.tex): per-case symbolic paired outcomes and scoped C counts",
     "fig_replay_outcomes.tikz": "replaced by Table I (tab_cases.tex); the dumbbell chart mixed non-comparable per-case denominators on one axis",
     "fig_check_matrix.tikz": "folded into Table I, whose per-case local-check column carries the same classification with its definition beside it"
   }

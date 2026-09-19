@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\caption{Per-case paired outcomes in native Great Expectations 1.6.3.}
+\label{tab:gx}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccl@{}}
+\toprule
+\textbf{Case} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{C: flagged / applicable} \\
+\midrule
+RD1 & $\circ$ & $\times$ & $\checkmark$ & 118/118 $\to$ 0/118 \\
+RD2 & $\circ$ & $\times$ & $\checkmark$ & 1/5 $\to$ 0/5 \\
+RD3 & \multicolumn{3}{c}{NA} & --- \\
+RD4 & $\circ$ & $\times$ & $\checkmark$ & 15,141/23,833 $\to$ 0/23,833 \\
+RD5 & $\checkmark$ & $\times$ & $\checkmark$ & 9,666/9,666 $\to$ 0/9,666 \\
+RD6 & $\times$ & $\times$ & $\checkmark$ & 2/2 $\to$ 0/2 \\
+RD7 & $\circ$ & $\times$ & $\checkmark$ & 200/2,238 $\to$ 0/2,238 \\
+RD8 & $\circ$ & $\checkmark$ & $\checkmark$ & 28/28 $\to$ 0/28 \\
+\midrule
+Separated & 1/7 & 1/7 & 7/7 & faulty $\to$ reference \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}
+\begin{minipage}{\columnwidth}\footnotesize
+A: declared; B: reference-fitted; C: case-informed. $\checkmark$: faulty rejected/reference accepted; $\circ$: both accepted; $\times$: both rejected. RD3 is NA. RD4 uses a constructed reference; RD6 covers 2 anchors (73,800 other rows outside scope); RD7 includes controls; RD8 counts feature-statistic records at the primary condition. No reference-only rejections occurred. Predicates and references vary; counts assess supplied-rule portability.
+\end{minipage}
+\end{table}

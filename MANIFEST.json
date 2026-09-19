@@ -10,7 +10,7 @@
     {
       "path": "ARTIFACT_INFO.json",
       "bytes": 845,
-      "sha256": "2b4e3a2fef5f5b84d59a5149428f9e9424c4bcee0bdb0b1152d4d06b97b29b7d"
+      "sha256": "39da2c65eb2df0d7946a4c31286cb57c35557c7e48cae5a9e6cd28c8a257b164"
     },
     {
       "path": "HASH_CONVENTIONS.md",
@@ -99,8 +99,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2367,
-      "sha256": "786517430ed17ab5b5cc8764d4962802a4214af4306866193e963b600a4eb027"
+      "bytes": 2459,
+      "sha256": "caea12906b250fad846dde70c9a6a1d3fea5f116d0b5c20037fceef60a1071fc"
     },
     {
       "path": "REDACTIONS.json",
@@ -115,22 +115,22 @@
     {
       "path": "REPRO.md",
       "bytes": 9077,
-      "sha256": "7814db90581033b323d22dc96f03dbc7971344317db5e4d1f04b5cc9c99107b0"
+      "sha256": "819e85caacd42c3fd9e32a5b4d4157990b7a7eecedab9c4430877261193dfc32"
     },
     {
       "path": "SANITIZATION_SCAN.json",
       "bytes": 441,
-      "sha256": "b58ee37482ca4b59ce02d13f5ac16169833c39db7613010cf2491e8d23918855"
+      "sha256": "86cf88a3d1ba8a5c4fde36b423bded409497a13c1a86e3d5824fe428b2ffb9c3"
     },
     {
       "path": "SOURCE_MAP.json",
-      "bytes": 258332,
-      "sha256": "28e7475b4ae3cc016f00e8ad792a16b35b251abffcddcc14b1ba99c1f611739e"
+      "bytes": 261258,
+      "sha256": "708b474be2304b4d712685fe8ac1214cc1f4a8e4bfd28dcb7d761e6219cf4161"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 5181,
-      "sha256": "ef42b3c6ed19e31f8304b1305a9bbdc2887ad531a6144107d005be924a0b950f"
+      "bytes": 5775,
+      "sha256": "39d4702aba695de2be4596d971254bba343970f836901e7e1a6c2d6ccb35e599"
     },
     {
       "path": "acceptance/cases/EXECUTED_SOURCE_CORRESPONDENCE.json",
@@ -2619,8 +2619,8 @@
     },
     {
       "path": "paper/FIGURE_BINDING.json",
-      "bytes": 33836,
-      "sha256": "0d96fa045637b349abac369eeb7aad24abd39647f7ae1f5b6c980bfae3a4a0a7"
+      "bytes": 36116,
+      "sha256": "4717426c86c21d74cc5b13dc923167e647d7701ed4fc8666aed70c8f2bb742a3"
     },
     {
       "path": "paper/IEEEtran.cls",
@@ -2629,38 +2629,38 @@
     },
     {
       "path": "paper/Paper_A_RealDefect_R.md",
-      "bytes": 46416,
-      "sha256": "29aba2985ff9fd27591ddd58708df368cc8cd7872fa0e0382a466c61d8762e30"
+      "bytes": 50247,
+      "sha256": "b8ff248f3748e68a5f88558884c5464da435d85e3cdbe89f89db8b5e72e78bfa"
     },
     {
       "path": "paper/Paper_A_RealDefect_R.pdf",
-      "bytes": 257313,
-      "sha256": "579debd2dd3e8f88407bb87678f989fb6e8146e1c331f14f9bf26a5cfd3670d7"
+      "bytes": 251845,
+      "sha256": "0342b2785ae1fb9ab842309d781f38072e40e466214abbc95838ecf9371f2d58"
     },
     {
       "path": "paper/Paper_A_RealDefect_R.tex",
-      "bytes": 49306,
-      "sha256": "65287231f3441c672c7ba99c483dd53195740948b8999510f27407977a277a8d"
+      "bytes": 53427,
+      "sha256": "44b7eb5abbdb79e9bff268cd9cbcdff16d30709208aad77011632ca0d81652ec"
     },
     {
       "path": "paper/fig_cosmos_audit.tikz",
-      "bytes": 6955,
-      "sha256": "dceb7743972d1253221888b83de74cd1dc0a3a6a39bc1a0a7211f6a18d60eeb2"
-    },
-    {
-      "path": "paper/fig_gx_matrix.tikz",
-      "bytes": 4686,
-      "sha256": "0a7fbca9efec393b29f338e4a22131b01727875b50b470acdfe5320d84deb60b"
+      "bytes": 3699,
+      "sha256": "c08351bd8d4e5e310540712089cb590c49cb2debe37cd63837b24269d485751d"
     },
     {
       "path": "paper/replay_protocol.tikz",
-      "bytes": 3347,
-      "sha256": "7bc7b62fb24319927577356a081a2cc21e2bb1dd7374d8995b0dccb5d6bc9a2b"
+      "bytes": 3615,
+      "sha256": "c47ddc9d2ca3d4b861a6c334db5998328dc3b29885e98152bdd45582587cccd7"
     },
     {
       "path": "paper/tab_cases.tex",
-      "bytes": 2023,
-      "sha256": "8cfe330a7e30af864f5ccecadbd277f70f844d838825748a8b94e1f37960b4bc"
+      "bytes": 2426,
+      "sha256": "3160edf64b8ed14cbad7657f6f8f19fb42c0699590fd1dbf177eca8d45217f27"
+    },
+    {
+      "path": "paper/tab_gx.tex",
+      "bytes": 1465,
+      "sha256": "45b6b3378b8ebbdb203220384645467f36d5d436a90bb3c173292a6012905ede"
     },
     {
       "path": "reproducibility/analysis/cross_case_information.py",
@@ -2863,6 +2863,41 @@
       "sha256": "921523ef7a9ee180410f92f0a3fe3876f0cf294855b5e872c236823152984dea"
     },
     {
+      "path": "research/20260919-round4-evidence-presentation/upstream_sources/LICENSE-IsaacLab.txt",
+      "bytes": 1630,
+      "sha256": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62"
+    },
+    {
+      "path": "research/20260919-round4-evidence-presentation/upstream_sources/RD4_converter.py",
+      "bytes": 13314,
+      "sha256": "b5c4365cfd46107dfe56288b092bbdb03d993dbb83e23415742965db7df8d793"
+    },
+    {
+      "path": "research/20260919-round4-evidence-presentation/upstream_sources/RD4_frame_transformer_data.py",
+      "bytes": 2005,
+      "sha256": "35cad20e539358d79bc4a75b7dcf186126f53d28d802cd579329ed57180f5828"
+    },
+    {
+      "path": "research/20260919-round4-evidence-presentation/upstream_sources/RD4_observations.py",
+      "bytes": 20406,
+      "sha256": "d2f9297f98c624a6a5c8c1a42c3221b4d51a46a4e5cb531190ef85a1bf079237"
+    },
+    {
+      "path": "research/20260919-round4-evidence-presentation/upstream_sources/RD4_rigid_object_data.py",
+      "bytes": 26497,
+      "sha256": "5cc9e908106694d6fe0a4e2f56bf124874bac0b7e09810c308a6b321a60b0093"
+    },
+    {
+      "path": "research/20260919-round4-evidence-presentation/upstream_sources/RD4_stack_env_cfg.py",
+      "bytes": 6548,
+      "sha256": "26f0dbd936b05f404b76e15df065e144099def3d7fd3ca5743640350d3b7787c"
+    },
+    {
+      "path": "research/20260919-round4-evidence-presentation/upstream_sources/SOURCE_MANIFEST.json",
+      "bytes": 6065,
+      "sha256": "85373cf2b15b87cf312237daf009e9247bdbb84c8a30053f87ffc989ff996f34"
+    },
+    {
       "path": "run_public.py",
       "bytes": 10056,
       "sha256": "b62e64fac7f7ede9e9d25b8e3c5b0638902fa9a0fd390c13ae92b13208014b9b"
@@ -2874,13 +2909,13 @@
     },
     {
       "path": "scripts/document_renderer.py",
-      "bytes": 19183,
-      "sha256": "4a96ce0a7ea82a9b179da45839949b1407c13bcc5eb2144d9d59cbe244bccca1"
+      "bytes": 19410,
+      "sha256": "b2d5d0d7df8ebc171d659320e05516231d496fe500a636dfe8b381a7ff40e2a6"
     },
     {
       "path": "scripts/make_figures.py",
-      "bytes": 34967,
-      "sha256": "6943494be381a2372cca5f214bd8a77ee62393e4fc624e6d13599009ff8e2918"
+      "bytes": 30272,
+      "sha256": "8b4279c9e57734e050f88d15c7988d952a41741c4c5e6a5cecfddc2344a62a44"
     },
     {
       "path": "verify_public.py",

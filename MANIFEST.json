@@ -10,12 +10,12 @@
     {
       "path": "ARTIFACT_INFO.json",
       "bytes": 844,
-      "sha256": "a0ec6d6eae35957bbda8a4ccde2327d7467099892ca3a6c1396c73e7bc974083"
+      "sha256": "bc7107e493e95422fa56c73b9f4784fe8e71fde5cf40c105b34a9a13fcaa4f26"
     },
     {
       "path": "ARTIFACT_OVERVIEW.md",
       "bytes": 12382,
-      "sha256": "ecf01586b098e52c0e6538bb0cc42d6da51c4a20f4c61c33a748f99199b17290"
+      "sha256": "4117d2930914cb7336ca21889c7884083064ff127da85ce5d10657246a745fdd"
     },
     {
       "path": "HASH_CONVENTIONS.md",
@@ -105,7 +105,7 @@
     {
       "path": "README.md",
       "bytes": 3353,
-      "sha256": "fcd2e1502b11e3cffcda96d12e588a22f560e5a15dff499c66cd25705cf07782"
+      "sha256": "0219e31179a7360fd73e5834efcfddbc5fbbafe9752309789abc972aad01cfaf"
     },
     {
       "path": "REDACTIONS.json",
@@ -120,7 +120,7 @@
     {
       "path": "REPRO.md",
       "bytes": 12103,
-      "sha256": "d1f68deb91e44051a430350d58b2b80cecde5382b02aeb4878d687198605419a"
+      "sha256": "ef7605f51c5fd9ba27e0feca7f0046046805a858a0973874200e7c34f735ad20"
     },
     {
       "path": "SANITIZATION_SCAN.json",
@@ -130,7 +130,7 @@
     {
       "path": "SOURCE_MAP.json",
       "bytes": 267428,
-      "sha256": "f40a318ba16fc67d21b95ef74a563070df1173427540907ca9b8f3d118bc307b"
+      "sha256": "c0280eb37eccf6b1f23f4c01358306a472bcafd8557c374ead5da27b995007dc"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -2634,18 +2634,18 @@
     },
     {
       "path": "paper/Paper_A_RealDefect_R.md",
-      "bytes": 52284,
-      "sha256": "c6c925d9e098fbd2876e5d265f975051d3a28e80a2d4877c4d7095d1392c1f3b"
+      "bytes": 54281,
+      "sha256": "2ce4d7c5cc5093befe69fa5ba29738c55406edb6b34bf388035efa75281ddafe"
     },
     {
       "path": "paper/Paper_A_RealDefect_R.pdf",
-      "bytes": 295041,
-      "sha256": "55368f7dab316e268dc1508fa02a73fce74499afe7d182a9c7f421f644b8f39a"
+      "bytes": 296382,
+      "sha256": "5a86ed1fbc72eb186ca72e115eb5ddf2e7268f1c4b8840514bd2c691428ce28f"
     },
     {
       "path": "paper/Paper_A_RealDefect_R.tex",
-      "bytes": 55533,
-      "sha256": "4fd3152abf738beb73c20ab9ed10d55c4703d577054c520d7d7d4c1dbaca31e4"
+      "bytes": 57542,
+      "sha256": "ff60c7753f0c6350998d53250416f30d88ece6f9b2d516e9266af53b113f0afd"
     },
     {
       "path": "paper/RD8_CHART_BINDING.json",

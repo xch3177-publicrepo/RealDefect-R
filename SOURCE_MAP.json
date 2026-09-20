@@ -2,22 +2,22 @@
   {
     "public_path": "paper/Paper_A_RealDefect_R.md",
     "source": "paper/Paper_A_RealDefect_R.md",
-    "source_sha256": "c6c925d9e098fbd2876e5d265f975051d3a28e80a2d4877c4d7095d1392c1f3b",
-    "public_sha256": "c6c925d9e098fbd2876e5d265f975051d3a28e80a2d4877c4d7095d1392c1f3b",
+    "source_sha256": "2ce4d7c5cc5093befe69fa5ba29738c55406edb6b34bf388035efa75281ddafe",
+    "public_sha256": "2ce4d7c5cc5093befe69fa5ba29738c55406edb6b34bf388035efa75281ddafe",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.tex",
     "source": "paper/Paper_A_RealDefect_R.tex",
-    "source_sha256": "4fd3152abf738beb73c20ab9ed10d55c4703d577054c520d7d7d4c1dbaca31e4",
-    "public_sha256": "4fd3152abf738beb73c20ab9ed10d55c4703d577054c520d7d7d4c1dbaca31e4",
+    "source_sha256": "ff60c7753f0c6350998d53250416f30d88ece6f9b2d516e9266af53b113f0afd",
+    "public_sha256": "ff60c7753f0c6350998d53250416f30d88ece6f9b2d516e9266af53b113f0afd",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.pdf",
     "source": "paper/Paper_A_RealDefect_R.pdf",
-    "source_sha256": "3a399f5abb9887b4e24c3ea007f625774fe54a80471d719755f38e1ebc54f7da",
-    "public_sha256": "55368f7dab316e268dc1508fa02a73fce74499afe7d182a9c7f421f644b8f39a",
+    "source_sha256": "6f1b9ca9373256dc577cb8efc24c4efc9a9cf14c1ea5d31edf03a8022c93dac0",
+    "public_sha256": "5a86ed1fbc72eb186ca72e115eb5ddf2e7268f1c4b8840514bd2c691428ce28f",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
@@ -3886,8 +3886,8 @@
   {
     "public_path": "REPRO.md",
     "source": "publication/20260916/public_REPRO.md",
-    "source_sha256": "d1f68deb91e44051a430350d58b2b80cecde5382b02aeb4878d687198605419a",
-    "public_sha256": "d1f68deb91e44051a430350d58b2b80cecde5382b02aeb4878d687198605419a",
+    "source_sha256": "ef7605f51c5fd9ba27e0feca7f0046046805a858a0973874200e7c34f735ad20",
+    "public_sha256": "ef7605f51c5fd9ba27e0feca7f0046046805a858a0973874200e7c34f735ad20",
     "unchanged": true
   },
   {
@@ -3928,15 +3928,15 @@
   {
     "public_path": "README.md",
     "source": "publication/20260916/public_README.md",
-    "source_sha256": "fcd2e1502b11e3cffcda96d12e588a22f560e5a15dff499c66cd25705cf07782",
-    "public_sha256": "fcd2e1502b11e3cffcda96d12e588a22f560e5a15dff499c66cd25705cf07782",
+    "source_sha256": "0219e31179a7360fd73e5834efcfddbc5fbbafe9752309789abc972aad01cfaf",
+    "public_sha256": "0219e31179a7360fd73e5834efcfddbc5fbbafe9752309789abc972aad01cfaf",
     "unchanged": true
   },
   {
     "public_path": "ARTIFACT_OVERVIEW.md",
     "source": "publication/20260919-round7/ARTIFACT_OVERVIEW.md",
-    "source_sha256": "ecf01586b098e52c0e6538bb0cc42d6da51c4a20f4c61c33a748f99199b17290",
-    "public_sha256": "ecf01586b098e52c0e6538bb0cc42d6da51c4a20f4c61c33a748f99199b17290",
+    "source_sha256": "4117d2930914cb7336ca21889c7884083064ff127da85ce5d10657246a745fdd",
+    "public_sha256": "4117d2930914cb7336ca21889c7884083064ff127da85ce5d10657246a745fdd",
     "unchanged": true
   },
   {

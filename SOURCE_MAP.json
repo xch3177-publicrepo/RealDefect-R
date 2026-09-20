@@ -2,22 +2,22 @@
   {
     "public_path": "paper/Paper_A_RealDefect_R.md",
     "source": "paper/Paper_A_RealDefect_R.md",
-    "source_sha256": "f054f376af0f6b7fbec6466ea7732ed2a91933db564c4fa8bc4b9319ecd2bf47",
-    "public_sha256": "f054f376af0f6b7fbec6466ea7732ed2a91933db564c4fa8bc4b9319ecd2bf47",
+    "source_sha256": "c6c925d9e098fbd2876e5d265f975051d3a28e80a2d4877c4d7095d1392c1f3b",
+    "public_sha256": "c6c925d9e098fbd2876e5d265f975051d3a28e80a2d4877c4d7095d1392c1f3b",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.tex",
     "source": "paper/Paper_A_RealDefect_R.tex",
-    "source_sha256": "1f19bc9332e38cf202bd036f7e098122698c21eb0d9356f16eb6f481ab6ca085",
-    "public_sha256": "1f19bc9332e38cf202bd036f7e098122698c21eb0d9356f16eb6f481ab6ca085",
+    "source_sha256": "4fd3152abf738beb73c20ab9ed10d55c4703d577054c520d7d7d4c1dbaca31e4",
+    "public_sha256": "4fd3152abf738beb73c20ab9ed10d55c4703d577054c520d7d7d4c1dbaca31e4",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.pdf",
     "source": "paper/Paper_A_RealDefect_R.pdf",
-    "source_sha256": "6a86dfec9cbbf180a2fcf27be552d677d2bb9e3234f0428fc7d4eaae92862159",
-    "public_sha256": "369e7adcf9d0d98d971bc8d2b956e7af88de80f4f79bf1e4a3f99b171de78d4e",
+    "source_sha256": "3a399f5abb9887b4e24c3ea007f625774fe54a80471d719755f38e1ebc54f7da",
+    "public_sha256": "55368f7dab316e268dc1508fa02a73fce74499afe7d182a9c7f421f644b8f39a",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
@@ -59,8 +59,8 @@
   {
     "public_path": "paper/fig_cosmos_audit.tikz",
     "source": "paper/fig_cosmos_audit.tikz",
-    "source_sha256": "ebdb7fa7f6a1c1cebf1bd1b549d6fa1a24a2c15bd09e40545daea11c316cdb0a",
-    "public_sha256": "ebdb7fa7f6a1c1cebf1bd1b549d6fa1a24a2c15bd09e40545daea11c316cdb0a",
+    "source_sha256": "e562ad9e9653a056124834cb515993e882de866cc627c699f86c71a2ef7d96fa",
+    "public_sha256": "e562ad9e9653a056124834cb515993e882de866cc627c699f86c71a2ef7d96fa",
     "unchanged": true
   },
   {
@@ -88,8 +88,8 @@
   {
     "public_path": "paper/FIGURE_BINDING.json",
     "source": "paper/FIGURE_BINDING.json",
-    "source_sha256": "aac2123f788e7395f920789516e5868829c09913d76ab7144fbf9dcf5167996c",
-    "public_sha256": "2f7bb9e897f7204ea841a747a314d860efa698f9538512ef5728f71ba462fe50",
+    "source_sha256": "fa47436965166864c66b1524f64a12cab2db29425dd28fc9499f5bdbaaee1e41",
+    "public_sha256": "755cb7900722983454fae157e832dd3d82fe477232aaaf7a10b31186ab1044c5",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
@@ -131,8 +131,8 @@
   {
     "public_path": "scripts/cosmos_summary_figure.py",
     "source": "scripts/cosmos_summary_figure.py",
-    "source_sha256": "4f3062f654d4d711e9b1c2fff4b8829eb5d6325e2eec099ccbf11e73cef44722",
-    "public_sha256": "4f3062f654d4d711e9b1c2fff4b8829eb5d6325e2eec099ccbf11e73cef44722",
+    "source_sha256": "4a9454b05515720cc75b40945fa2e30ff7c2e42bd216878ac191652704a0d91e",
+    "public_sha256": "4a9454b05515720cc75b40945fa2e30ff7c2e42bd216878ac191652704a0d91e",
     "unchanged": true
   },
   {
@@ -3886,8 +3886,8 @@
   {
     "public_path": "REPRO.md",
     "source": "publication/20260916/public_REPRO.md",
-    "source_sha256": "5d84b84c61fb27b43da5b43fb2ed1d2b244672004bc1832e0085706e51b9e779",
-    "public_sha256": "5d84b84c61fb27b43da5b43fb2ed1d2b244672004bc1832e0085706e51b9e779",
+    "source_sha256": "d1f68deb91e44051a430350d58b2b80cecde5382b02aeb4878d687198605419a",
+    "public_sha256": "d1f68deb91e44051a430350d58b2b80cecde5382b02aeb4878d687198605419a",
     "unchanged": true
   },
   {
@@ -3928,15 +3928,15 @@
   {
     "public_path": "README.md",
     "source": "publication/20260916/public_README.md",
-    "source_sha256": "d4af2949843c6cf86a89558917e8c3bf005d6df902f689103b55f4b424dd780c",
-    "public_sha256": "d4af2949843c6cf86a89558917e8c3bf005d6df902f689103b55f4b424dd780c",
+    "source_sha256": "fcd2e1502b11e3cffcda96d12e588a22f560e5a15dff499c66cd25705cf07782",
+    "public_sha256": "fcd2e1502b11e3cffcda96d12e588a22f560e5a15dff499c66cd25705cf07782",
     "unchanged": true
   },
   {
     "public_path": "ARTIFACT_OVERVIEW.md",
     "source": "publication/20260919-round7/ARTIFACT_OVERVIEW.md",
-    "source_sha256": "bec7a3f410946838bc07a94f1a0bf5adfedffa79daca5276590aa3678e51609d",
-    "public_sha256": "bec7a3f410946838bc07a94f1a0bf5adfedffa79daca5276590aa3678e51609d",
+    "source_sha256": "ecf01586b098e52c0e6538bb0cc42d6da51c4a20f4c61c33a748f99199b17290",
+    "public_sha256": "ecf01586b098e52c0e6538bb0cc42d6da51c4a20f4c61c33a748f99199b17290",
     "unchanged": true
   },
   {

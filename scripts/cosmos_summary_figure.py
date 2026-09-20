@@ -1,4 +1,4 @@
-"""Draw frozen joint outcomes and independently checked source-prefix counts using TikZ."""
+"""Draw frozen joint outcomes and independently checked source-prefix index offsets using TikZ."""
 import csv
 import hashlib
 import json
@@ -10,7 +10,19 @@ ANALYSIS = 'research/20260919-round6-evidence-charts/cosmos_group_analysis/run1'
 def generate(root: Path):
     result_path = root/ANALYSIS/'results.json'
     csv_path = root/ANALYSIS/'by_source_prefix.csv'
+    split_csv_path = root/ANALYSIS/'by_split_source_prefix.csv'
     data = json.loads(result_path.read_text())
+    split_groups = list(csv.DictReader(split_csv_path.open()))
+    assert len(split_groups) == 26
+    by_split = {split: {r['source_prefix']: r for r in split_groups if r['split'] == split}
+                for split in ['success', 'failure']}
+    prefixes = sorted(by_split['success'])
+    assert prefixes == sorted(by_split['failure'])
+    for split, rows in by_split.items():
+        assert sum(int(r['episode_rows']) for r in rows.values()) == data['splits'][split]['episode_rows']
+        for r in rows.values():
+            assert int(r['episode_offset_min']) == int(r['episode_offset_max'])
+            assert (int(r['episode_offset_min']) == 0) == (r['source_prefix'] == 'AUTOLab')
     groups = list(csv.DictReader(csv_path.open()))
     assert len(groups) == data['combined']['source_prefix_count'] == 13
     assert sum(int(r['episode_rows']) for r in groups) == data['combined']['episode_rows']
@@ -60,36 +72,49 @@ def generate(root: Path):
         s+=rect(x,1.06,x+.23,1.28,opts)
         s+=node(x+.35,1.17,label,'anchor=west')
     s+=node(.02,5.25,'(a)','anchor=west')
-    # Panel (b): per-prefix rates, sorted by rate and then population size.
-    gx0,gx1 = 10.55,15.68
-    for v in [0,50,100]:
-        x=gx0+(gx1-gx0)*v/100
+    # Panel (b): position encodes the constant global-minus-local episode offset.
+    # Keep the released source-prefix order, not a rank of risk or failure rate.
+    gx0,gx1 = 10.55,17.10
+    xmax = 60000
+    for v in [0,20000,40000,60000]:
+        x=gx0+(gx1-gx0)*v/xmax
         s+=line(x,.76,x,5.04,'black!20')
-        s+=node(x,.55,str(v),'anchor=north')
+        s+=node(x,.55,str(v//1000),'anchor=north')
     s+=line(gx0,.76,gx1,.76)
-    s+=node((gx0+gx1)/2,.03,'Identity-discrepant records (\\%)')
-    s+=node(17.10,5.25,'Episodes','anchor=east')
+    s+=node((gx0+gx1)/2,.03,r'Global $-$ source-local episode index ($10^3$)')
     s+=node(8.85,5.25,'(b)','anchor=west')
-    for i,r in enumerate(groups):
+    # Marker shape duplicates color; vertically separated points keep the two
+    # zero-offset observations visible without perturbing their x coordinates.
+    def marker(x,y,split):
+        if split == 'success':
+            return f'\\draw[draw=rdIdentity,fill=rdIdentity,line width=.5pt] ({x:.4f},{y:.4f}) circle[radius=.048cm];\n'
+        return f'\\path[draw=rdJoint,fill=white,line width=.6pt] ({x:.4f},{y+.060:.4f})--({x-.052:.4f},{y-.038:.4f})--({x+.052:.4f},{y-.038:.4f})--cycle;\n'
+    for x,split in [(10.75,'success'),(14.10,'failure')]:
+        s+=marker(x,5.25,split)
+        s+=node(x+.17,5.25,split.capitalize()+' split','anchor=west')
+    for i,prefix in enumerate(prefixes):
         y=4.86-i*.325
-        n,bad=int(r['episode_rows']),int(r['identity_discrepant'])
-        rate=100*bad/n
-        s+=node(gx0-.17,y,r['source_prefix'],'anchor=east')
-        if bad:
-            s+=rect(gx0,y-.085,gx0+(gx1-gx0)*rate/100,y+.085,'fill=rdIdentity!60')
-        else:
-            s+=f'\\draw[fill=white,line width=.5pt] ({gx0:.4f},{y:.4f}) circle[radius=.055cm];\n'
-        s+=node(17.10,y,f'{n:,}','anchor=east')
+        s+=node(gx0-.17,y,prefix,'anchor=east')
+        for split,dy in [('success',.058),('failure',-.058)]:
+            offset=int(by_split[split][prefix]['episode_offset_min'])
+            x=gx0+(gx1-gx0)*offset/xmax
+            s+=marker(x,y+dy,split)
+    # One direct annotation explains why the zero-offset group is exceptional.
+    s+=node(gx0+.25,4.86,r'$\Delta=0$: local = global','anchor=west')
     s+=r'\end{tikzpicture}'+'\n'
     s+=(r'\caption{Summary-layer audit of the pinned Cosmos3-DROID release. '
         r'(a) Joint outcomes of identity-summary and task-text relations: both discrepant, identity only, '
         r'or neither. Task-only discrepancies are zero. Success/failure are dataset outcome splits, '
         r'not audit verdicts; labels give exact record counts. '
-        r'(b) Identity-discrepancy rates by the 13 source prefixes parsed from episode identifiers, '
-        r'combining both splits (ties ordered by episode count). These are source groups, not an '
-        r'independently verified inventory of laboratories. AUTOLab has zero discrepancy; the other '
-        r'12 groups have 100\%. These relations do not evaluate visual content or downstream harm.}'+'\n'
+        r'(b) Global-minus-source-local episode-index offset, $\Delta$, by source prefix and split: '
+        r'$\mathrm{global}=\mathrm{source\mbox{-}local}+\Delta$. Each point is the constant offset '
+        r'for all records in that prefix/split; slight vertical separation makes coincident points visible. '
+        r'Only AUTOLab has $\Delta=0$ in both splits (10,405 records); all 61,502 records in the other '
+        r'12 prefixes have positive offsets and identity-summary disagreement. Offset magnitude reflects '
+        r'numbering position, not defect severity. Prefixes are not an independently verified inventory '
+        r'of laboratories. These checks do not evaluate visual content or downstream harm.}'+'\n'
         r'\label{fig:cosmos-audit}'+'\n'+r'\end{figure*}'+'\n')
-    return s, {'sources':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [result_path,csv_path]},
-               'joint_counts':counts,'source_prefix_rows':groups,'drawing_width_cm':17.35,
+    return s, {'sources':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [result_path,csv_path,split_csv_path]},
+               'joint_counts':counts,'source_prefix_rows':groups,
+               'episode_offsets':split_groups,'offset_axis_max':xmax,'prefix_order':prefixes,'drawing_width_cm':17.35,
                'drawing_height_cm':5.83,'font_size_pt':9}

@@ -31,9 +31,9 @@ certify RD8-PD, the source-group analysis or the consumer replay.
 Download the fixed snapshot without a GitHub login:
 
 ```sh
-curl -q -fL https://github.com/xch3177-publicrepo/RealDefect-R/archive/refs/tags/public-v1.1.1-20260919.tar.gz -o realdefect-r-public-v1.1.1-20260919.tar.gz
+curl -q -fL https://github.com/xch3177-publicrepo/RealDefect-R/archive/refs/tags/public-v1.1.2-20260919.tar.gz -o realdefect-r-public-v1.1.2-20260919.tar.gz
 mkdir realdefect-snapshot
-tar -xzf realdefect-r-public-v1.1.1-20260919.tar.gz --strip-components=1 -C realdefect-snapshot
+tar -xzf realdefect-r-public-v1.1.2-20260919.tar.gz --strip-components=1 -C realdefect-snapshot
 cd realdefect-snapshot
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt

@@ -1,9 +1,9 @@
 {
   "name": "RealDefect-R sanitized minimal public snapshot",
-  "version": "public-v1.1.1-20260919",
-  "built_utc": "2026-09-19T23:57:05.204415+00:00",
-  "working_source_commit": "420ff23838a1947ed471463b910909ab7593d81a",
-  "source_tree_was_dirty_at_build": false,
+  "version": "public-v1.1.2-20260919",
+  "built_utc": "2026-09-20T00:15:58.836838+00:00",
+  "working_source_commit": "b7d07af39c842306a484b28452c41aa0ca0abca2",
+  "source_tree_was_dirty_at_build": true,
   "source_content_rule": "SOURCE_MAP.json binds selected exact or sanitized source bytes; manifest binds every final package file including new experiments and paper; no private git history",
   "historical_source_commit": "5d50746be318692bc46a417af65e781bd3946b88",
   "license_selection": "mit-ccby",

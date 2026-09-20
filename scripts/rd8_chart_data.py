@@ -91,7 +91,7 @@ def draw_tikz(rows):
     body += _node(.10, 1.7, "Maximum absolute error", "rotate=90")
     body += _node(4.59, -.79, "Batch size", "anchor=north")
     # One unobtrusive shared line, with no title banner or colored text.
-    for arm, x, label in [("D1", .31, "Pinned repaired"), ("D4", 3.04, "Stable variance"), ("D3", 5.79, "Float64 accum.")]:
+    for arm, x, label in [("D1", .31, "D1: pinned"), ("D4", 3.04, "D4: stable variance"), ("D3", 5.79, "D3: float64 accum.")]:
         body += _marker(x, -1.23, arm, size=.055)
         body += _node(x+.15, -1.23, label, "anchor=west")
     body += r"\end{tikzpicture}" + "\n"

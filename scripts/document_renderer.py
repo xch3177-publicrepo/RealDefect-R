@@ -24,6 +24,8 @@ def esc(s):
     result=re.sub(r'[a-fA-F0-9]{30,}',lambda m:r'\allowbreak{}'.join(m[0][i:i+12] for i in range(0,len(m[0]),12)),result)
     for c in '、；。：':result=result.replace(c,c+r'\allowbreak{}')
     result=result.replace(r'\(\to\)',r'\(\to\)\allowbreak{}')
+    # Keep the resource name intact in prose, headings and bibliography labels.
+    result=result.replace('RealDefect-R', r'\mbox{RealDefect-R}')
     return result
 
 def urltex(s):

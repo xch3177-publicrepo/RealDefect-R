@@ -2,22 +2,22 @@
   {
     "public_path": "paper/Paper_A_RealDefect_R.md",
     "source": "paper/Paper_A_RealDefect_R.md",
-    "source_sha256": "2ce4d7c5cc5093befe69fa5ba29738c55406edb6b34bf388035efa75281ddafe",
-    "public_sha256": "2ce4d7c5cc5093befe69fa5ba29738c55406edb6b34bf388035efa75281ddafe",
+    "source_sha256": "bad127ebc82bbc1a4badd49abac4aaff5b0569d1ca9bfd235e91cdc5079145e9",
+    "public_sha256": "bad127ebc82bbc1a4badd49abac4aaff5b0569d1ca9bfd235e91cdc5079145e9",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.tex",
     "source": "paper/Paper_A_RealDefect_R.tex",
-    "source_sha256": "ff60c7753f0c6350998d53250416f30d88ece6f9b2d516e9266af53b113f0afd",
-    "public_sha256": "ff60c7753f0c6350998d53250416f30d88ece6f9b2d516e9266af53b113f0afd",
+    "source_sha256": "b75f40fe22f3b943bc829b1006b20d5f69cb7c79f8c2322b004ef55442d2bfd9",
+    "public_sha256": "b75f40fe22f3b943bc829b1006b20d5f69cb7c79f8c2322b004ef55442d2bfd9",
     "unchanged": true
   },
   {
     "public_path": "paper/Paper_A_RealDefect_R.pdf",
     "source": "paper/Paper_A_RealDefect_R.pdf",
-    "source_sha256": "6f1b9ca9373256dc577cb8efc24c4efc9a9cf14c1ea5d31edf03a8022c93dac0",
-    "public_sha256": "5a86ed1fbc72eb186ca72e115eb5ddf2e7268f1c4b8840514bd2c691428ce28f",
+    "source_sha256": "16b001c851ef8d5240c7dc93498fc393c45801e4f91b2d012fa491be851b5b2f",
+    "public_sha256": "ca3169f05d5ac8656d39a6a122173ad7833224756be5801fa2ff57a5a12921c1",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
@@ -66,8 +66,8 @@
   {
     "public_path": "paper/fig_rd8_residuals.tikz",
     "source": "paper/fig_rd8_residuals.tikz",
-    "source_sha256": "f1cbe1ba961414320f195230003e2f16e2717033222e3301beead77b586c6c4b",
-    "public_sha256": "f1cbe1ba961414320f195230003e2f16e2717033222e3301beead77b586c6c4b",
+    "source_sha256": "588b70dcb6e15b36864e05ef51a8f996cf4163a8287153a87fb0bf0e011a324d",
+    "public_sha256": "588b70dcb6e15b36864e05ef51a8f996cf4163a8287153a87fb0bf0e011a324d",
     "unchanged": true
   },
   {
@@ -80,16 +80,16 @@
   {
     "public_path": "paper/RD8_CHART_BINDING.json",
     "source": "paper/RD8_CHART_BINDING.json",
-    "source_sha256": "fddf0909bb40f13fae7227e5acabaa0ec6dfed289d290d13619aca83b652956e",
-    "public_sha256": "f27c380009efaf71d38707abf14db13201c7158cf689fa0a119812a7a5aa7e73",
+    "source_sha256": "8b649608aa42bc780bcb83912dfa4dc91bd3b0666066be394dd3b5caac9c90ef",
+    "public_sha256": "2c07aba401318e8b80ca9b2c748f0bc56dd83e1fad452996f2e0dbd304cc2293",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
   {
     "public_path": "paper/FIGURE_BINDING.json",
     "source": "paper/FIGURE_BINDING.json",
-    "source_sha256": "fa47436965166864c66b1524f64a12cab2db29425dd28fc9499f5bdbaaee1e41",
-    "public_sha256": "755cb7900722983454fae157e832dd3d82fe477232aaaf7a10b31186ab1044c5",
+    "source_sha256": "7103e5cc8412501b8e36ab32c7a6abaeb7eb56b37bef823ad401a82c6be70a8f",
+    "public_sha256": "9bae21a1d01444d9934a31ce40d0e7f93a13ee66270d0a124741b429054fc828",
     "unchanged": false,
     "derivative_operation": "portable adapter or rebuild from sanitized public result inputs"
   },
@@ -110,8 +110,8 @@
   {
     "public_path": "scripts/document_renderer.py",
     "source": "scripts/document_renderer.py",
-    "source_sha256": "e08b94b8142c54c8d30846f8b0e2afcae467d2d288f01b95619ead9d74245326",
-    "public_sha256": "e08b94b8142c54c8d30846f8b0e2afcae467d2d288f01b95619ead9d74245326",
+    "source_sha256": "a594f0c401d59cbb1108b2b39943b7ed07529c0aed68db6193c5729b0ce262de",
+    "public_sha256": "a594f0c401d59cbb1108b2b39943b7ed07529c0aed68db6193c5729b0ce262de",
     "unchanged": true
   },
   {
@@ -124,8 +124,8 @@
   {
     "public_path": "scripts/rd8_chart_data.py",
     "source": "scripts/rd8_chart_data.py",
-    "source_sha256": "688b48e11269f5533c48bc071a317c04ff8ff66f3972e9107c5afc9bd3994f9b",
-    "public_sha256": "688b48e11269f5533c48bc071a317c04ff8ff66f3972e9107c5afc9bd3994f9b",
+    "source_sha256": "fc2b45f949ca9bb9b544969b6a588406b4cfaf773c6381a6a3785f756cf6f41a",
+    "public_sha256": "fc2b45f949ca9bb9b544969b6a588406b4cfaf773c6381a6a3785f756cf6f41a",
     "unchanged": true
   },
   {
@@ -3886,8 +3886,8 @@
   {
     "public_path": "REPRO.md",
     "source": "publication/20260916/public_REPRO.md",
-    "source_sha256": "ef7605f51c5fd9ba27e0feca7f0046046805a858a0973874200e7c34f735ad20",
-    "public_sha256": "ef7605f51c5fd9ba27e0feca7f0046046805a858a0973874200e7c34f735ad20",
+    "source_sha256": "547738fc84fbf6d7b67149c8f49b7118c54e0714a4e7f4dacea8643502be300a",
+    "public_sha256": "547738fc84fbf6d7b67149c8f49b7118c54e0714a4e7f4dacea8643502be300a",
     "unchanged": true
   },
   {
@@ -3928,15 +3928,15 @@
   {
     "public_path": "README.md",
     "source": "publication/20260916/public_README.md",
-    "source_sha256": "0219e31179a7360fd73e5834efcfddbc5fbbafe9752309789abc972aad01cfaf",
-    "public_sha256": "0219e31179a7360fd73e5834efcfddbc5fbbafe9752309789abc972aad01cfaf",
+    "source_sha256": "36b13294dd9e367693fa7baae65fe2f9634f252b52f14c3e87af7a5b9a529adb",
+    "public_sha256": "36b13294dd9e367693fa7baae65fe2f9634f252b52f14c3e87af7a5b9a529adb",
     "unchanged": true
   },
   {
     "public_path": "ARTIFACT_OVERVIEW.md",
     "source": "publication/20260919-round7/ARTIFACT_OVERVIEW.md",
-    "source_sha256": "4117d2930914cb7336ca21889c7884083064ff127da85ce5d10657246a745fdd",
-    "public_sha256": "4117d2930914cb7336ca21889c7884083064ff127da85ce5d10657246a745fdd",
+    "source_sha256": "4e0123657dd007916cb59053cb57b7588603e2b3ca4f21397411e81459919cea",
+    "public_sha256": "4e0123657dd007916cb59053cb57b7588603e2b3ca4f21397411e81459919cea",
     "unchanged": true
   },
   {

@@ -308,11 +308,11 @@
 \node[rotate=90] at (0.10000,1.70000) {Maximum absolute error};
 \node[anchor=north] at (4.59000,-0.79000) {Batch size};
 \draw[draw=rdPinned,fill=white,line width=0.45pt] (0.31000,-1.23000) circle[radius=0.05500cm];
-\node[anchor=west] at (0.46000,-1.23000) {Pinned repaired};
+\node[anchor=west] at (0.46000,-1.23000) {D1: pinned};
 \path[draw=rdStable,fill=rdStable,line width=0.45pt] (3.04000,-1.17500) -- (2.98500,-1.27125) -- (3.09500,-1.27125) -- cycle;
-\node[anchor=west] at (3.19000,-1.23000) {Stable variance};
+\node[anchor=west] at (3.19000,-1.23000) {D4: stable variance};
 \path[draw=rdAccum,fill=rdAccum,line width=0.45pt] (5.79000,-1.17500) -- (5.84500,-1.23000) -- (5.79000,-1.28500) -- (5.73500,-1.23000) -- cycle;
-\node[anchor=west] at (5.94000,-1.23000) {Float64 accum.};
+\node[anchor=west] at (5.94000,-1.23000) {D3: float64 accum.};
 \end{tikzpicture}
 \caption{RD8 residuals over 44 conditions (four batch sizes, 11 orders); each point is the maximum error over the state and action components. D1 is the pinned repaired reducer; D4 uses stable variance with float32 accumulation; D3 uses float64 accumulation with float32 input. The ordinate ranges differ; small horizontal offsets separate orders and arms. Dashed lines mark the retained $10^{-5}$ tolerance. D1 fails 24/44 conditions; D4 retains nine mean failures; D3 passes all 44 with nonzero std residuals.}
 \label{fig:rd8}

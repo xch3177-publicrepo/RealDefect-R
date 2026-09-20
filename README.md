@@ -1,6 +1,6 @@
 # RealDefect-R — minimal public research snapshot
 
-**Replaying well-formed but wrong data in shared robot-learning pipelines.** This standalone,
+**Replaying well-formed but wrong data in shared robot-data pipelines.** This standalone,
 sanitized snapshot supplies the eight-case registry, scoped replay code, case rules and expected
 outcomes, native Great Expectations suites, the RD8 arithmetic diagnostic, Cosmos metadata and
 frame-identity checks, and the paper's figure/build sources. It carries **no private git history**.
@@ -8,7 +8,7 @@ frame-identity checks, and the paper's figure/build sources. It carries **no pri
 Start with [REPRO.md](REPRO.md), [REGISTRY.md](REGISTRY.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 The complete file manifest is `MANIFEST.json`; `SOURCE_MAP.json` binds the selected historical
 source and every current experiment/script/result. The fixed public version is recorded in
-`ARTIFACT_INFO.json`. This package version is `public-v1.1.3-20260919`; the previous fixed tag
+`ARTIFACT_INFO.json`. This package version is `public-v1.1.4-pre-llm-20260919`; the previous fixed tag
 remains available. Input recovery uses public pinned revisions and explicit digest verification.
 
 ```sh
@@ -45,3 +45,5 @@ The public mirror preserves public upstream source/dataset attribution. Sanitiza
 private working paths, account links, personal contact details, unrelated research and internal
 review/agent material. It is a minimized single-blind submission artifact, **not a claim of full
 anonymity**. Licenses in `LICENSES/` and the itemized notices govern third-party material.
+
+This is the frozen resource manuscript before a separate LLM reference-selection pilot. The pilot is not part of this paper or this artifact.

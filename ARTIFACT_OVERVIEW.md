@@ -1,6 +1,6 @@
 # Artifact overview: evidence, commands and verdicts
 
-Target snapshot: `public-v1.1.3-20260919`. Begin with the fixed snapshot and fresh
+Target snapshot: `public-v1.1.4-pre-llm-20260919`. Begin with the fixed snapshot and fresh
 CPython 3.12 environment described in [REPRO.md](REPRO.md). Run commands from
 that snapshot's root. Every work directory below is a **new sibling directory**;
 do not substitute a development checkout, old execution directory or historical
